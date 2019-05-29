@@ -1,54 +1,94 @@
 import numpy as np
 from sklearn.utils import shuffle
 
-print("loading data for subject 1")
-X = np.load("NirDataset\\croppedDataForSubject1.npy")
-y = np.load("NirDataset\\croppedLabelsForSubject1.npy")
-#for i in range(2,20):
-#    if (i == 6) or (i == 14) or (i == 26):
-#        continue
-#    print("loading data for subject {}".format(i))
-#    Xtmp = np.load("NirDataset\\croppedDataForSubject{}.npy".format(i))
-#    ytmp = np.load("NirDataset\\croppedLabelsForSubject{}.npy".format(i))
-#    X = np.concatenate((X, Xtmp), axis=0)
-#    y = np.concatenate((y, ytmp), axis=0)
-#    print(X.shape)
-#    print(y.shape)
-## print("INFO : SUBJECTS NUM : 41 (44 without 6,14,26)")
-#print("INFO : SUBJECTS NUM : 18 (20 without 6,14)")
+def loadSubjects(subjectNum):
+    label0Counter = 0
+    label1Counter = 0
+    label2Counter = 0
 
-# print(Z.shape)
-label0Counter = 0
-label1Counter = 0
-label2Counter = 0
+    print("loading data for subject 1")
+    X = np.load("NirDataset\\croppedDataForSubject1.npy")
+    y = np.load("NirDataset\\croppedLabelsForSubject1.npy")
 
-for i in range(0,len(y)):
-    if y[i] == 0:
-        label0Counter += 1
-    if y[i] == 1:
-        label1Counter += 1
-    if y[i] == 2:
-        label2Counter += 1
-print("INFO : label 0 examples: {}, label 1 examples: {}, label 2 examples: {}".format(label0Counter, label1Counter, label2Counter))
-print("INFO : used {} examples from each label".format(label0Counter))
+    for i in range(0,len(y)):
+        if y[i] == 0:
+            label0Counter += 1
+        if y[i] == 1:
+            label1Counter += 1
+        if y[i] == 2:
+            label2Counter += 1
+    print("INFO : label 0 examples: {}, label 1 examples: {}, label 2 examples: {}".format(label0Counter, label1Counter, label2Counter))
+    print("INFO : used {} examples from each label".format(label0Counter))
 
-print(X.shape)
-#X0 = X[:label0Counter,:,:]
-#X1 = X[label0Counter:label1Counter,:,:]
-#X2 = X[label0Counter+label1Counter:,:,:]
-Xsplitted = np.split(X, [label0Counter, label1Counter, label2Counter])
-ysplitted = np.split(y, [label0Counter, label1Counter, label2Counter])
-X0 = Xsplitted[0]
-X1 = Xsplitted[1]
-X2 = Xsplitted[2]
-y0 = ysplitted[0]
-y1 = ysplitted[1]
-y2 = ysplitted[2]
+    print(X.shape)
+    X0 = X[:label0Counter,:,:]
+    X1 = X[label0Counter:label1Counter,:,:]
+    X2 = X[label0Counter+label1Counter:,:,:]
+    y0 = y[:label0Counter]
+    y1 = y[label0Counter:label1Counter]
+    y2 = y[label0Counter+label1Counter:]
+
+    # X1, y1 = shuffle(X1, y1)
+    # X2, y2 = shuffle(X2, y2)
+
+    # X = np.concatenate((X0, X1[:label0Counter], X2[:label0Counter]), axis=0)
+    # y = np.concatenate((y0, y1[:label0Counter], y2[:label0Counter]), axis=0)
 
 
 
-X1, y1 = shuffle(X1, y1)
-X2, y2 = shuffle(X2, y2)
+    if subjectNum > 1:
+        for i in range(2,subjectNum):
+            if (i == 6) or (i == 14) or (i == 26):
+                continue
+            print("loading data for subject {}".format(i))
+            Xtmp = np.load("NirDataset\\croppedDataForSubject{}.npy".format(i))
+            ytmp = np.load("NirDataset\\croppedLabelsForSubject{}.npy".format(i))
+
+            label0Counter = 0
+            label1Counter = 0
+            label2Counter = 0
+            for i in range(0,len(ytmp)):
+                if ytmp[i] == 0:
+                    label0Counter += 1
+                if ytmp[i] == 1:
+                    label1Counter += 1
+                if ytmp[i] == 2:
+                    label2Counter += 1
+            print("INFO : label 0 examples: {}, label 1 examples: {}, label 2 examples: {}".format(label0Counter, label1Counter, label2Counter))
+            print("INFO : used {} examples from each label".format(label0Counter))
+    
+            Xtmp0 = Xtmp[:label0Counter,:,:]
+            Xtmp1 = Xtmp[label0Counter:label1Counter,:,:]
+            Xtmp2 = Xtmp[label0Counter+label1Counter:,:,:]
+            ytmp0 = ytmp[:label0Counter]
+            ytmp1 = ytmp[label0Counter:label1Counter]
+            ytmp2 = ytmp[label0Counter+label1Counter:]
+            X0 = np.concatenate((X0, Xtmp0), axis=0)
+            X1 = np.concatenate((X1, Xtmp1), axis=0)
+            X2 = np.concatenate((X2, Xtmp2), axis=0)
+            y0 = np.concatenate((y0, ytmp0), axis=0)
+            y1 = np.concatenate((y1, ytmp1), axis=0)
+            y2 = np.concatenate((y2, ytmp2), axis=0)
+            print("X0 shape {}".format(X0.shape))
+
+    print("INFO : SUBJECTS NUM : {} ".format(subjectNum))
+
+    X1, y1 = shuffle(X1, y1)
+    X2, y2 = shuffle(X2, y2)
+
+    X = np.concatenate((X0, X1[:len(X0)], X2[:len(X0)]), axis=0)
+    y = np.concatenate((y0, y1[:len(X0)], y2[:len(X0)]), axis=0)
+
+    print("trying to run with 2.5 sec trials")
+    print(X.shape)
+    X = np.concatenate((X[:,:,:640], X[:,:,640:1280]), axis=0)
+    y = np.concatenate((y, y), axis=0)
+    print(X.shape)
+
+    return X, y
+
+X, y = loadSubjects(5)
+
 
 # Enable logging
 import logging
@@ -60,13 +100,6 @@ import sys
 
 logging.basicConfig(format='%(asctime)s %(levelname)s : %(message)s',
                      level=logging.INFO, stream=sys.stdout)
-
-
-X = np.concatenate((X0, X1[:label0Counter], X2[:label0Counter]), axis=0)
-y = np.concatenate((y0, y1[:label0Counter], y2[:label0Counter]), axis=0)
-
-print("INFO : running with trials 2.5 sec long")
-X = X[:,:,:640]
 
 X = X.astype(np.float32)
 y = y.astype(np.int64)
@@ -117,15 +150,16 @@ import torch.nn.functional as F
 optimizer = AdamW(model.parameters(), lr=1*0.01, weight_decay=0.5*0.001) # these are good values for the deep model
 #optimizer = AdamW(model.parameters(), lr=0.0625 * 0.01, weight_decay=0)
 model.compile(loss=F.nll_loss, optimizer=optimizer, iterator_seed=1,)
-print("INFO : Learning Rate: {}".format(0.0625 * 0.01))
-print("INFO : Epochs: {}".format(50))
-print("INFO : Batch Size: {}".format(8))
+batch_size = 32
+epoches = 500
+print("INFO : Model: {}".format("shallow cropped"))
+print("INFO : Epochs: {}".format(epoches))
+print("INFO : Batch Size: {}".format(batch_size))
 
 # Run the training
 # model.fit(train_set.X, train_set.y, epochs=30, batch_size=64, scheduler='cosine',
-model.fit(train_set.X, train_set.y, epochs=50, batch_size=8, scheduler='cosine',
+model.fit(train_set.X, train_set.y, epochs=epoches, batch_size=batch_size, scheduler='cosine',
          validation_data=(valid_set.X, valid_set.y),)
-
 
 print(model.epochs_df)
 
