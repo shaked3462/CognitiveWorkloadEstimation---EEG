@@ -28,17 +28,9 @@ def loadSubjects(subjectNum):
     y1 = y[label0Counter:label1Counter]
     y2 = y[label0Counter+label1Counter:]
 
-    # X1, y1 = shuffle(X1, y1)
-    # X2, y2 = shuffle(X2, y2)
-
-    # X = np.concatenate((X0, X1[:label0Counter], X2[:label0Counter]), axis=0)
-    # y = np.concatenate((y0, y1[:label0Counter], y2[:label0Counter]), axis=0)
-
-
-
     if subjectNum > 1:
         for i in range(2,subjectNum):
-            if (i == 6) or (i == 14) or (i == 26):
+            if (i == 15) or (i == 24) or (i == 25) or (i == 34) or (i == 40): #subjects that were excluded from experiment.
                 continue
             print("loading data for subject {}".format(i))
             Xtmp = np.load("NirDataset\\croppedDataForSubject{}.npy".format(i))
@@ -55,7 +47,8 @@ def loadSubjects(subjectNum):
                 if ytmp[i] == 2:
                     label2Counter += 1
             print("INFO : label 0 examples: {}, label 1 examples: {}, label 2 examples: {}".format(label0Counter, label1Counter, label2Counter))
-            print("INFO : used {} examples from each label".format(label0Counter))
+            examplesPerSubjecti = np.amax([label0Counter, label1Counter, label2Counter])
+            print("INFO : used {} examples from each label".format(examplesPerSubjecti))
     
             Xtmp0 = Xtmp[:label0Counter,:,:]
             Xtmp1 = Xtmp[label0Counter:label1Counter,:,:]
@@ -76,14 +69,10 @@ def loadSubjects(subjectNum):
     X1, y1 = shuffle(X1, y1)
     X2, y2 = shuffle(X2, y2)
 
-    X = np.concatenate((X0, X1[:len(X0)], X2[:len(X0)]), axis=0)
-    y = np.concatenate((y0, y1[:len(X0)], y2[:len(X0)]), axis=0)
+    X = np.concatenate((X0, X1[:examplesPerSubjecti], X2[:examplesPerSubjecti]), axis=0)
+    y = np.concatenate((y0, y1[:examplesPerSubjecti], y2[:examplesPerSubjecti]), axis=0)
 
     print("trying to run with 2.5 sec trials")
-    print(X.shape)
-    X = np.concatenate((X[:,:,:640], X[:,:,640:1280]), axis=0)
-    y = np.concatenate((y, y), axis=0)
-    print(X.shape)
 
     return X, y
 
@@ -171,9 +160,14 @@ eval = model.evaluate(test_set.X, test_set.y)
 print(eval)
 
 try:
+    print("prediction")
     print(model.predict(test_set.X))
+    print("real labels")
+    print(test_set.y)
 except:
     try:
         print(model.predict_classes(test_set.X))
+        print("real labels")
+        print(test_set.y)
     except:
         print("predict_classes method failed")
