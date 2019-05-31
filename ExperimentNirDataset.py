@@ -79,7 +79,8 @@ def loadSubjects(subjectNum):
 
 X, y = loadSubjects(52)
 batch_size = 32
-epoches = 800
+epoches = 40
+model_type = 'shallow'
 
 # Enable logging
 import logging
@@ -121,33 +122,37 @@ from braindecode.torch_ext.util import set_random_seeds
 cuda = False
 set_random_seeds(seed=20170629, cuda=cuda)
 n_classes = 3
-# n_classes = 36
 in_chans = train_set.X.shape[1]
 print("INFO : in_chans: {}".format(in_chans))
 print("INFO : input_time_length: {}".format(train_set.X.shape[2]))
 
 # final_conv_length = auto ensures we only get a single output in the time dimension
-# model = Deep4Net(in_chans=in_chans, n_classes=n_classes,
-#                         input_time_length=train_set.X.shape[2],
-#                         final_conv_length='auto')
-model = ShallowFBCSPNet(in_chans=in_chans, n_classes=n_classes,
-                       input_time_length=train_set.X.shape[2],
-                       final_conv_length='auto')
+if model_type == 'shallow':
+    model = ShallowFBCSPNet(in_chans=in_chans, n_classes=n_classes,
+                        input_time_length=train_set.X.shape[2],
+                        final_conv_length='auto')
+else:
+    model = Deep4Net(in_chans=in_chans, n_classes=n_classes,
+                        input_time_length=train_set.X.shape[2],
+                        final_conv_length='auto')
+
 if cuda:
     model.cuda()
 
 
 from braindecode.torch_ext.optimizers import AdamW
 import torch.nn.functional as F
-# optimizer = AdamW(model.parameters(), lr=1*0.01, weight_decay=0.5*0.001) # these are good values for the deep model
-optimizer = AdamW(model.parameters(), lr=0.0625 * 0.01, weight_decay=0)
+if model_type == 'shallow':
+    optimizer = AdamW(model.parameters(), lr=0.0625 * 0.01, weight_decay=0)
+else:
+    optimizer = AdamW(model.parameters(), lr=1*0.01, weight_decay=0.5*0.001) # these are good values for the deep model
+
 model.compile(loss=F.nll_loss, optimizer=optimizer, iterator_seed=1,)
 
 print("INFO : Epochs: {}".format(epoches))
 print("INFO : Batch Size: {}".format(batch_size))
 
 # Run the training
-# model.fit(train_set.X, train_set.y, epochs=30, batch_size=64, scheduler='cosine',
 model.fit(train_set.X, train_set.y, epochs=epoches, batch_size=batch_size, scheduler='cosine',
          validation_data=(valid_set.X, valid_set.y),)
 
