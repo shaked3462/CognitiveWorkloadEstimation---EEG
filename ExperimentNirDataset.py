@@ -20,7 +20,7 @@ def loadSubjects(subjectNum):
             label2Counter += 1
     print("INFO : label 0 examples: {}, label 1 examples: {}, label 2 examples: {}".format(label0Counter, label1Counter, label2Counter))
     print("INFO : used {} examples from each label".format(label0Counter))
-
+    examplesPerSubjecti = np.amin([label0Counter, label1Counter, label2Counter])
     print(X.shape)
     X0 = X[:label0Counter,:,:]
     X1 = X[label0Counter:label1Counter,:,:]
@@ -64,14 +64,17 @@ def loadSubjects(subjectNum):
             y1 = np.concatenate((y1, ytmp1), axis=0)
             y2 = np.concatenate((y2, ytmp2), axis=0)
             print("X0 shape {}".format(X0.shape))
+            print("X1 shape {}".format(X1.shape))
+            print("X2 shape {}".format(X2.shape))
 
     print("INFO : SUBJECTS NUM : {} ".format(subjectNum))
 
     X1, y1 = shuffle(X1, y1)
     X2, y2 = shuffle(X2, y2)
-
-    X = np.concatenate((X0, X1[:examplesPerSubjecti], X2[:examplesPerSubjecti]), axis=0)
-    y = np.concatenate((y0, y1[:examplesPerSubjecti], y2[:examplesPerSubjecti]), axis=0)
+    examplesPerAllSubjects = np.amin([len(X0), len(X1), len(X2)])
+    print("num of examples for each label {}".format(examplesPerAllSubjects))
+    X = np.concatenate((X0[:examplesPerAllSubjects], X1[:examplesPerAllSubjects], X2[:examplesPerAllSubjects]), axis=0)
+    y = np.concatenate((y0[:examplesPerAllSubjects], y1[:examplesPerAllSubjects], y2[:examplesPerAllSubjects]), axis=0)
 
     print("trying to run with 2.5 sec trials")
 
@@ -79,7 +82,7 @@ def loadSubjects(subjectNum):
 
 X, y = loadSubjects(52)
 batch_size = 32
-epoches = 40
+epoches = 120
 model_type = 'shallow'
 
 # Enable logging
