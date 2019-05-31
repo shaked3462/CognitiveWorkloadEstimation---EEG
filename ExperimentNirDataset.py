@@ -48,7 +48,7 @@ def loadSubjects(subjectNum):
                 if ytmp[i] == 2:
                     label2Counter += 1
             print("INFO : label 0 examples: {}, label 1 examples: {}, label 2 examples: {}".format(label0Counter, label1Counter, label2Counter))
-            examplesPerSubjecti = np.amax([label0Counter, label1Counter, label2Counter])
+            examplesPerSubjecti = np.amin([label0Counter, label1Counter, label2Counter])
             print("INFO : used {} examples from each label".format(examplesPerSubjecti))
     
             Xtmp0 = Xtmp[:label0Counter,:,:]
@@ -196,4 +196,5 @@ df_cm = pd.DataFrame(array, range(3),
 #plt.figure(figsize = (10,7))
 sn.set(font_scale=1.4)#for label size
 sn.heatmap(df_cm, annot=True,annot_kws={"size": 16})# font size
+pd.set_option('display.float_format', lambda x: '%.3f' % x)
 plt.show()
