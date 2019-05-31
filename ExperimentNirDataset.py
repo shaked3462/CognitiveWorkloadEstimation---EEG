@@ -1,6 +1,7 @@
 import numpy as np
 from sklearn.utils import shuffle
 
+
 def loadSubjects(subjectNum):
     label0Counter = 0
     label1Counter = 0
@@ -29,7 +30,7 @@ def loadSubjects(subjectNum):
     y2 = y[label0Counter+label1Counter:]
 
     if subjectNum > 1:
-        for i in range(2,subjectNum):
+        for i in range(2,subjectNum+1):
             if (i == 15) or (i == 24) or (i == 25) or (i == 34) or (i == 40): #subjects that were excluded from experiment.
                 continue
             print("loading data for subject {}".format(i))
@@ -76,8 +77,9 @@ def loadSubjects(subjectNum):
 
     return X, y
 
-X, y = loadSubjects(44)
-
+X, y = loadSubjects(52)
+batch_size = 32
+epoches = 800
 
 # Enable logging
 import logging
@@ -119,6 +121,7 @@ from braindecode.torch_ext.util import set_random_seeds
 cuda = False
 set_random_seeds(seed=20170629, cuda=cuda)
 n_classes = 3
+# n_classes = 36
 in_chans = train_set.X.shape[1]
 print("INFO : in_chans: {}".format(in_chans))
 print("INFO : input_time_length: {}".format(train_set.X.shape[2]))
@@ -139,9 +142,7 @@ import torch.nn.functional as F
 # optimizer = AdamW(model.parameters(), lr=1*0.01, weight_decay=0.5*0.001) # these are good values for the deep model
 optimizer = AdamW(model.parameters(), lr=0.0625 * 0.01, weight_decay=0)
 model.compile(loss=F.nll_loss, optimizer=optimizer, iterator_seed=1,)
-batch_size = 32
-epoches = 500
-print("INFO : Model: {}".format("shallow trialwise"))
+
 print("INFO : Epochs: {}".format(epoches))
 print("INFO : Batch Size: {}".format(batch_size))
 
@@ -158,18 +159,36 @@ test_set = SignalAndTarget(X[(trainingSampleSize + valudationSampleSize):], y=y[
 eval = model.evaluate(test_set.X, test_set.y)
 print(eval)
 
+from sklearn.metrics import confusion_matrix
+
 try:
     print("prediction")
-    print(model.predict(test_set.X))
+    y_pred = model.predict(test_set.X)
+    print(y_pred)
     print("real labels")
     print(test_set.y)
+    confusion_matrix = confusion_matrix(test_set.y, y_pred)
+    print(confusion_matrix)
 except:
     try:
-        print(model.predict_classes(test_set.X))
+        y_pred = model.predict_classes(test_set.X)
+        print(y_pred)
         print("real labels")
         print(test_set.y)
+        confusion_matrix = confusion_matrix(test_set.y, y_pred)
+        print(confusion_matrix)
     except:
         print("predict_classes method failed")
 
 
+import seaborn as sn
+import pandas as pd
+import matplotlib.pyplot as plt
 
+array = confusion_matrix       
+df_cm = pd.DataFrame(array, range(3),
+                  range(3))
+#plt.figure(figsize = (10,7))
+sn.set(font_scale=1.4)#for label size
+sn.heatmap(df_cm, annot=True,annot_kws={"size": 16})# font size
+plt.show()

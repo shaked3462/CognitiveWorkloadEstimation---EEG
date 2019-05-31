@@ -29,7 +29,7 @@ def loadSubjects(subjectNum):
     y2 = y[label0Counter+label1Counter:]
 
     if subjectNum > 1:
-        for i in range(2,subjectNum):
+        for i in range(2,subjectNum+1):
             if (i == 15) or (i == 24) or (i == 25) or (i == 34) or (i == 40): #subjects that were excluded from experiment.
                 continue
             print("loading data for subject {}".format(i))
@@ -93,7 +93,6 @@ X = X.astype(np.float32)
 y = y.astype(np.int64)
 
 X, y = shuffle(X, y)
-print(y)
 from braindecode.datautil.signal_target import SignalAndTarget
 trainingSampleSize = int(len(X)*0.5)
 valudationSampleSize = int(len(X)*0.2)
@@ -139,7 +138,6 @@ optimizer = AdamW(model.parameters(), lr=0.0625 * 0.01, weight_decay=0)
 model.compile(loss=F.nll_loss, optimizer=optimizer, iterator_seed=1, cropped=True)
 batch_size = 32
 epoches = 500
-print("INFO : Model: {}".format("shallow cropped"))
 print("INFO : Epochs: {}".format(epoches))
 print("INFO : Batch Size: {}".format(batch_size))
 
@@ -159,15 +157,36 @@ test_set = SignalAndTarget(X[(trainingSampleSize + valudationSampleSize):], y=y[
 eval = model.evaluate(test_set.X, test_set.y)
 print(eval)
 
+from sklearn.metrics import confusion_matrix
+
 try:
     print("prediction")
-    print(model.predict(test_set.X))
+    y_pred = model.predict(test_set.X)
+    print(y_pred)
     print("real labels")
     print(test_set.y)
+    confusion_matrix = confusion_matrix(test_set.y, y_pred)
+    print(confusion_matrix)
 except:
     try:
-        print(model.predict_classes(test_set.X))
+        y_pred = model.predict_classes(test_set.X)
+        print(y_pred)
         print("real labels")
         print(test_set.y)
+        confusion_matrix = confusion_matrix(test_set.y, y_pred)
+        print(confusion_matrix)
     except:
         print("predict_classes method failed")
+
+
+import seaborn as sn
+import pandas as pd
+import matplotlib.pyplot as plt
+
+array = confusion_matrix       
+df_cm = pd.DataFrame(array, range(3),
+                  range(3))
+#plt.figure(figsize = (10,7))
+sn.set(font_scale=1.4)#for label size
+sn.heatmap(df_cm, annot=True,annot_kws={"size": 16})# font size
+plt.show()
