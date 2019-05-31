@@ -69,6 +69,7 @@ def loadSubjects(subjectNum):
 
     print("INFO : SUBJECTS NUM : {} ".format(subjectNum))
 
+    X0, y0 = shuffle(X0, y0)
     X1, y1 = shuffle(X1, y1)
     X2, y2 = shuffle(X2, y2)
     examplesPerAllSubjects = np.amin([len(X0), len(X1), len(X2)])
@@ -80,9 +81,9 @@ def loadSubjects(subjectNum):
 
     return X, y
 
-X, y = loadSubjects(52)
-batch_size = 32
-epoches = 120
+X, y = loadSubjects(44)
+batch_size = 8
+epoches = 100
 model_type = 'shallow'
 
 # Enable logging
@@ -99,13 +100,13 @@ logging.basicConfig(format='%(asctime)s %(levelname)s : %(message)s',
 X = X.astype(np.float32)
 y = y.astype(np.int64)
 
-
 X, y = shuffle(X, y)
-
+print("y")
+print(y)
 from braindecode.datautil.signal_target import SignalAndTarget
-trainingSampleSize = int(len(X)*0.5)
-valudationSampleSize = int(len(X)*0.2)
-testSampleSize = int(len(X)*0.3)
+trainingSampleSize = int(len(X)*0.7)
+valudationSampleSize = int(len(X)*0.1)
+testSampleSize = int(len(X)*0.2)
 print("INFO : Training sample size: {}".format(trainingSampleSize))
 print("INFO : Validation sample size: {}".format(valudationSampleSize))
 print("INFO : Test sample size: {}".format(testSampleSize))

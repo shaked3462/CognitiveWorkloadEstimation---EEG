@@ -1,6 +1,6 @@
 import scipy.io as sio
 import numpy as np
-for subject_id in range(1,53):
+for subject_id in range(52,53):
     if (subject_id == 15) or (subject_id == 24) or (subject_id == 25) or (subject_id == 34) or (subject_id == 40): #subjects that were excluded from experiment.
         continue
     # try:
@@ -14,12 +14,15 @@ for subject_id in range(1,53):
         answer_vec_content = sio.loadmat("NirDataset\subject{}\\answer_vec.mat".format(subject_id))
         respMat_content = sio.loadmat("NirDataset\subject{}\\respMat_Subject_0{}".format(subject_id, subject_id))
     print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
-
+    print(mat_contents)
+    print(answer_vec_content)
+    print(respMat_content)
     respMat = respMat_content.get('respMat')
     if subject_id > 44:
         answer_vec = answer_vec_content.get('curr_ans_vec')
     else:
         answer_vec = answer_vec_content.get('answer_vec')
+
     segments = mat_contents.get('segments')
     cropped_trial_length = 640 # 2.5 sec at 256Hz sampling rate
     # short_cropped_trial_length = 640 # 2.5 sec at 256Hz sampling rate
@@ -48,9 +51,9 @@ for subject_id in range(1,53):
                     currCrop[0,j,cropped_trial_length] = timeToAnswerQuestion
                 last_crop_start += cropped_trial_length
                 data = np.concatenate((data, currCrop), axis=0)
-                labels = np.concatenate((labels, np.array([i])), axis=0)
-                # labels = np.concatenate((labels, np.array([i/12])), axis=0)
-                # print("Q{}: crop should receive label {} - received label {}".format(i, int(i/12), labels[-1]))
+                # labels = np.concatenate((labels, np.array([i])), axis=0)
+                labels = np.concatenate((labels, np.array([int((i-1)/12)])), axis=0)
+                # print("Q{}: crop should receive label {} - received label {}".format(i, int((i-1)/12), labels[-1]))
             print("Q{}: number of crops {}".format(i, numOfCropsForCurrQuestion))
         except:
             
