@@ -22,14 +22,14 @@ def loadSubjects(subjectNum):
         if y[i] == 2:
             label2Counter += 1
     print("INFO : label 0 examples: {}, label 1 examples: {}, label 2 examples: {}".format(label0Counter, label1Counter, label2Counter))
-    print("INFO : used {} examples from each label".format(label0Counter))
     examplesPerSubjecti = np.amin([label0Counter, label1Counter, label2Counter])
+    print("INFO : used {} examples from each label".format(examplesPerSubjecti))
     print(X.shape)
     X0 = X[:label0Counter,:,:]
-    X1 = X[label0Counter:label1Counter,:,:]
+    X1 = X[label0Counter:label0Counter+label1Counter,:,:]
     X2 = X[label0Counter+label1Counter:,:,:]
     y0 = y[:label0Counter]
-    y1 = y[label0Counter:label1Counter]
+    y1 = y[label0Counter:label0Counter+label1Counter]
     y2 = y[label0Counter+label1Counter:]
 
     if subjectNum > 1:
@@ -55,10 +55,10 @@ def loadSubjects(subjectNum):
             print("INFO : used {} examples from each label".format(examplesPerSubjecti))
     
             Xtmp0 = Xtmp[:label0Counter,:,:]
-            Xtmp1 = Xtmp[label0Counter:label1Counter,:,:]
+            Xtmp1 = Xtmp[label0Counter:label0Counter+label1Counter,:,:]
             Xtmp2 = Xtmp[label0Counter+label1Counter:,:,:]
             ytmp0 = ytmp[:label0Counter]
-            ytmp1 = ytmp[label0Counter:label1Counter]
+            ytmp1 = ytmp[label0Counter:label0Counter+label1Counter]
             ytmp2 = ytmp[label0Counter+label1Counter:]
             X0 = np.concatenate((X0, Xtmp0), axis=0)
             X1 = np.concatenate((X1, Xtmp1), axis=0)
@@ -132,8 +132,8 @@ def run_exp(epoches, batch_size, subject_num, model, cuda):
 
     print("y")
     print(y)
-    trainingSampleSize = int(len(X)*0.7)
-    valudationSampleSize = int(len(X)*0.1)
+    trainingSampleSize = int(len(X)*0.6)
+    valudationSampleSize = int(len(X)*0.2)
     testSampleSize = int(len(X)*0.2)
     print("INFO : Training sample size: {}".format(trainingSampleSize))
     print("INFO : Validation sample size: {}".format(valudationSampleSize))
