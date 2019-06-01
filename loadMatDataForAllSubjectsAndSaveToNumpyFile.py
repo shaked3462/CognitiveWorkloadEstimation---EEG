@@ -1,6 +1,6 @@
 import scipy.io as sio
 import numpy as np
-for subject_id in range(52,53):
+for subject_id in range(1,52 + 1):
     if (subject_id == 15) or (subject_id == 24) or (subject_id == 25) or (subject_id == 34) or (subject_id == 40): #subjects that were excluded from experiment.
         continue
     # try:
@@ -14,9 +14,7 @@ for subject_id in range(52,53):
         answer_vec_content = sio.loadmat("NirDataset\subject{}\\answer_vec.mat".format(subject_id))
         respMat_content = sio.loadmat("NirDataset\subject{}\\respMat_Subject_0{}".format(subject_id, subject_id))
     print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
-    print(mat_contents)
-    print(answer_vec_content)
-    print(respMat_content)
+
     respMat = respMat_content.get('respMat')
     if subject_id > 44:
         answer_vec = answer_vec_content.get('curr_ans_vec')
@@ -25,8 +23,7 @@ for subject_id in range(52,53):
 
     segments = mat_contents.get('segments')
     cropped_trial_length = 640 # 2.5 sec at 256Hz sampling rate
-    # short_cropped_trial_length = 640 # 2.5 sec at 256Hz sampling rate
-    # cropped_trial_overlap = 1280 # 5 seconds of overlap between crops
+    # cropped_trial_length = 1280 # 5 sec at 256Hz sampling rate
         
     np.set_printoptions(suppress=True)
     data = np.zeros((1,62,cropped_trial_length + 1)) # XXXXXXXXXXXXXXXXX NEED TO ADD DURATION OF TRIAL AS ANOTHER PARAM
@@ -38,25 +35,28 @@ for subject_id in range(52,53):
                 continue 
             timeToAnswerQuestion = respMat[i][3][0][0]
             currQuestionDuration = len(segments[i][0][0]) # number of timestamps in original recording
+            # print("curr questions duration {}".format(currQuestionDuration))
             last_crop_start = 0
-            numOfCropsForCurrQuestion = 0
-            for k in range(0,cropped_trial_length):
-                if last_crop_start + cropped_trial_length >= currQuestionDuration:
-                    print("Q{}: last crop start {}, cropped trial length {}, curr question duration {}. breaking".format(i, last_crop_start, cropped_trial_length, currQuestionDuration))
-                    break
-                numOfCropsForCurrQuestion += 1
-                for j in range(0,62):
-                    currCrop = np.zeros((1,62,cropped_trial_length + 1))
-                    currCrop[0,j,k] = segments[i][0][j,(last_crop_start + k)]
-                    currCrop[0,j,cropped_trial_length] = timeToAnswerQuestion
+            numOfCropsForCurrQuestion = int(currQuestionDuration/cropped_trial_length)
+            for b in range(0,numOfCropsForCurrQuestion):
+                currCrop = np.zeros((1,62,cropped_trial_length + 1))
+                for k in range(0,cropped_trial_length):
+                    if last_crop_start + cropped_trial_length >= currQuestionDuration:
+                        print("Q{}: last crop start {}, cropped trial length {}, curr question duration {}. breaking".format(i, last_crop_start, cropped_trial_length, currQuestionDuration))
+                        break
+                    # numOfCropsForCurrQuestion += 1
+                    for j in range(0,62):
+                        currCrop[0,j,k] = segments[i][0][j,(last_crop_start + k)]
+                        currCrop[0,j,cropped_trial_length] = timeToAnswerQuestion
                 last_crop_start += cropped_trial_length
                 data = np.concatenate((data, currCrop), axis=0)
+                # print(data.shape)
                 # labels = np.concatenate((labels, np.array([i])), axis=0)
                 labels = np.concatenate((labels, np.array([int((i-1)/12)])), axis=0)
-                # print("Q{}: crop should receive label {} - received label {}".format(i, int((i-1)/12), labels[-1]))
+                    # print("Q{}: crop should receive label {} - received label {}".format(i, int((i-1)/12), labels[-1]))
             print("Q{}: number of crops {}".format(i, numOfCropsForCurrQuestion))
+            print(data.shape)
         except:
-            
             continue
 
     labels = labels.astype(np.int64)

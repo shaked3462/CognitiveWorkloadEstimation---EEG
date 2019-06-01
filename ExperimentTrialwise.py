@@ -184,12 +184,13 @@ def run_exp(epoches, batch_size, subject_num, model, cuda):
     return exp
 
 if __name__ == '__main__':
+    np.set_printoptions(threshold=sys.maxsize, suppress=True)
     logging.basicConfig(format='%(asctime)s %(levelname)s : %(message)s',
                             level=logging.DEBUG, stream=sys.stdout)
     model = 'shallow' #'shallow' or 'deep'
-    max_epochs = 500
+    max_epochs = 100
     batch_size = 8
-    subject_num = 1
+    subject_num = 10
     print("INFO : {} Model, {} Epoches, {} Batch Size, {} Subjects".format(model, max_epochs, batch_size, subject_num))
     cuda = False
     exp = run_exp(max_epochs, batch_size, subject_num, model, cuda)
@@ -200,8 +201,9 @@ if __name__ == '__main__':
     # np.save("{}_model-{}_epoches-{}_batch-{}_subjects".format(model, max_epochs, batch_size, subject_num), exp.epochs_df.iloc[:])
         
     try:
-        plt.plot(exp.epochs_df.iloc[:,3], 'go-', label='Train misclass')
-        plt.plot(exp.epochs_df.iloc[:,4], 'b*--', label='Validation misclass')
+        plt.plot(exp.epochs_df.iloc[:,3], 'g.--', label='Train misclass')
+        plt.plot(exp.epochs_df.iloc[:,4], 'b.--', label='Validation misclass')
+        plt.plot(exp.epochs_df.iloc[:,5], 'r.--', label='Test misclass')
         plt.title('misclass rate / epoches')
         plt.xlabel('Epoches')
         plt.ylabel('Misclass')
