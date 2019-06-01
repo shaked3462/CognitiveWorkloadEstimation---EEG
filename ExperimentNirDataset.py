@@ -199,6 +199,6 @@ df_cm = pd.DataFrame(array, range(3),
                   range(3))
 #plt.figure(figsize = (10,7))
 sn.set(font_scale=1.4)#for label size
-sn.heatmap(df_cm, annot=True,annot_kws={"size": 16})# font size
+sn.heatmap(df_cm, annot=True, cmap='Blues', annot_kws={"size": 16}, fmt='d')# font size
 pd.set_option('display.float_format', lambda x: '%.3f' % x)
 plt.show()
