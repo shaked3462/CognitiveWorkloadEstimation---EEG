@@ -99,14 +99,13 @@ import torch.nn.functional as F
 from torch import optim
 
 from braindecode.models.deep4 import Deep4Net
-from braindecode.models.eegnet import EEGNetv4
-from braindecode.models.eegnet import EEGNet
+from braindecode.models.util import to_dense_prediction_model
 from braindecode.datasets.bcic_iv_2a import BCICompetition4Set2A
 from braindecode.experiments.experiment import Experiment
 from braindecode.experiments.monitors import LossMonitor, MisclassMonitor, \
-    RuntimeMonitor
+    RuntimeMonitor, CroppedTrialMisclassMonitor
 from braindecode.experiments.stopcriteria import MaxEpochs, NoDecrease, Or
-from braindecode.datautil.iterators import BalancedBatchSizeIterator
+from braindecode.datautil.iterators import CropsFromTrialsIterator
 from braindecode.models.shallow_fbcsp import ShallowFBCSPNet
 from braindecode.datautil.splitters import split_into_two_sets
 from braindecode.torch_ext.constraints import MaxNormDefaultConstraint
@@ -148,33 +147,41 @@ def run_exp(epoches, batch_size, subject_num, model, cuda):
 
     n_classes = 3
     n_chans = int(train_set.X.shape[1])
-    input_time_length = train_set.X.shape[2]
+    
     if model == 'shallow':
         model = ShallowFBCSPNet(n_chans, n_classes, input_time_length=input_time_length,
-                            final_conv_length='auto').create_network()
+                            final_conv_length=30).create_network()
     elif model == 'deep':
         model = Deep4Net(n_chans, n_classes, input_time_length=input_time_length,
-                            final_conv_length='auto').create_network()
-    elif model == 'eegnet':
-        model = EEGNetv4(n_chans, n_classes, input_time_length=input_time_length,
-                            final_conv_length='auto').create_network()
+                            final_conv_length=1).create_network()
+    
+    to_dense_prediction_model(model)
     if cuda:
         model.cuda()
     log.info("Model: \n{:s}".format(str(model)))
+    dummy_input = np_to_var(train_set.X[:1, :, :, None])
+    out = model(dummy_input)
+    n_preds_per_input = out.cpu().data.numpy().shape[2]
 
     optimizer = optim.Adam(model.parameters())
 
-    iterator = BalancedBatchSizeIterator(batch_size=batch_size)
+    iterator = CropsFromTrialsIterator(batch_size=batch_size,
+                                       input_time_length=input_time_length,
+                                       n_preds_per_input=n_preds_per_input)
 
     stop_criterion = Or([MaxEpochs(max_epochs),
                          NoDecrease('valid_misclass', max_increase_epochs)])
 
-    monitors = [LossMonitor(), MisclassMonitor(), RuntimeMonitor()]
+    monitors = [LossMonitor(), MisclassMonitor(col_suffix='sample_misclass'),
+                CroppedTrialMisclassMonitor(
+                    input_time_length=input_time_length), RuntimeMonitor()]
 
     model_constraint = MaxNormDefaultConstraint()
 
+    loss_function = lambda preds, targets: F.nll_loss(th.mean(preds, dim=2, keepdim=False), targets)
+
     exp = Experiment(model, train_set, valid_set, test_set, iterator=iterator,
-                     loss_function=F.nll_loss, optimizer=optimizer,
+                     loss_function=loss_function, optimizer=optimizer,
                      model_constraint=model_constraint,
                      monitors=monitors,
                      stop_criterion=stop_criterion,
@@ -187,10 +194,10 @@ if __name__ == '__main__':
     np.set_printoptions(threshold=sys.maxsize, suppress=True)
     logging.basicConfig(format='%(asctime)s %(levelname)s : %(message)s',
                             level=logging.DEBUG, stream=sys.stdout)
-    model = 'deep' #'shallow' or 'deep'
+    model = 'shallow' #'shallow' or 'deep'
     max_epochs = 100
     batch_size = 8
-    subject_num = 1
+    subject_num = 10
     print("INFO : {} Model, {} Epoches, {} Batch Size, {} Subjects".format(model, max_epochs, batch_size, subject_num))
     cuda = False
     exp = run_exp(max_epochs, batch_size, subject_num, model, cuda)
