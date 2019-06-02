@@ -187,7 +187,7 @@ if __name__ == '__main__':
     np.set_printoptions(threshold=sys.maxsize, suppress=True)
     logging.basicConfig(format='%(asctime)s %(levelname)s : %(message)s',
                             level=logging.DEBUG, stream=sys.stdout)
-    model = 'shallow' #'shallow' or 'deep'
+    model = 'deep' #'shallow' or 'deep'
     max_epochs = 100
     batch_size = 8
     subject_num = 10
