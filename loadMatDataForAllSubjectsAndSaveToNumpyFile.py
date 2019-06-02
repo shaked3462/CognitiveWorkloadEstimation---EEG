@@ -1,6 +1,11 @@
 import scipy.io as sio
 import numpy as np
-for subject_id in range(1,52 + 1):
+
+subject_num = 10
+# cropped_trial_length = 640 # 2.5 sec at 256Hz sampling rate
+cropped_trial_length = 1280 # 5 sec at 256Hz sampling rate
+
+for subject_id in range(1,subject_num + 1):
     if (subject_id == 15) or (subject_id == 24) or (subject_id == 25) or (subject_id == 34) or (subject_id == 40): #subjects that were excluded from experiment.
         continue
     # try:
@@ -22,9 +27,7 @@ for subject_id in range(1,52 + 1):
         answer_vec = answer_vec_content.get('answer_vec')
 
     segments = mat_contents.get('segments')
-    cropped_trial_length = 640 # 2.5 sec at 256Hz sampling rate
-    # cropped_trial_length = 1280 # 5 sec at 256Hz sampling rate
-        
+
     np.set_printoptions(suppress=True)
     data = np.zeros((1,62,cropped_trial_length + 1)) # XXXXXXXXXXXXXXXXX NEED TO ADD DURATION OF TRIAL AS ANOTHER PARAM
     labels = np.zeros((1))
