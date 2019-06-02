@@ -115,6 +115,7 @@ from braindecode.datautil.signalproc import (bandpass_cnt,
                                              exponential_running_standardize)
 from braindecode.datautil.trial_segment import create_signal_target_from_raw_mne
 from braindecode.datautil.signal_target import SignalAndTarget
+import torch as th
 
 log = logging.getLogger(__name__)
 
@@ -122,6 +123,7 @@ log = logging.getLogger(__name__)
 def run_exp(epoches, batch_size, subject_num, model, cuda):
     # ival = [-500, 4000]
     max_increase_epochs = 160
+    input_time_length = 540
 
     # Preprocessing
     X, y = loadSubjects(subject_num)
@@ -194,7 +196,7 @@ if __name__ == '__main__':
     np.set_printoptions(threshold=sys.maxsize, suppress=True)
     logging.basicConfig(format='%(asctime)s %(levelname)s : %(message)s',
                             level=logging.DEBUG, stream=sys.stdout)
-    model = 'shallow' #'shallow' or 'deep'
+    model = 'deep' #'shallow' or 'deep'
     max_epochs = 100
     batch_size = 8
     subject_num = 10

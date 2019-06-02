@@ -190,7 +190,7 @@ if __name__ == '__main__':
     model = 'deep' #'shallow' or 'deep'
     max_epochs = 100
     batch_size = 8
-    subject_num = 1
+    subject_num = 10
     print("INFO : {} Model, {} Epoches, {} Batch Size, {} Subjects".format(model, max_epochs, batch_size, subject_num))
     cuda = False
     exp = run_exp(max_epochs, batch_size, subject_num, model, cuda)

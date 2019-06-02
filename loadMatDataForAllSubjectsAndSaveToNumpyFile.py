@@ -1,7 +1,7 @@
 import scipy.io as sio
 import numpy as np
 
-subject_num = 10
+subject_num = 52
 # cropped_trial_length = 640 # 2.5 sec at 256Hz sampling rate
 cropped_trial_length = 1280 # 5 sec at 256Hz sampling rate
 
