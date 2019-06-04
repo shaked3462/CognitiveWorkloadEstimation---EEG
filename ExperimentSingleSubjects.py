@@ -188,7 +188,7 @@ def run_exp(epoches, batch_size, subject_num, model_type, cuda, single_subject, 
                      remember_best_column='valid_misclass',
                      run_after_early_stop=True, cuda=cuda)
     exp.run()
-    th.save(model, "models\{}-trialwise-{}subjects-{}sec-{}epoches-torch_model".format(model_type, subject_num, ((trial_length - 1) / 256), epoches))
+    # th.save(model, "models\{}-trialwise-singleSubjectNum{}-{}sec-{}epoches-torch_model".format(model_type, single_subject_num, ((trial_length - 1) / 256), epoches))
     return exp
 
 if __name__ == '__main__':
@@ -196,14 +196,12 @@ if __name__ == '__main__':
     logging.basicConfig(format='%(asctime)s %(levelname)s : %(message)s',
                             level=logging.DEBUG, stream=sys.stdout)
     model = 'shallow' #'shallow' or 'deep'
-    max_epochs = 1
+    max_epochs = 200
     batch_size = 8
     subject_num = 1
-    single_subject = False
-    if single_subject == True:
-        single_subject_num = sys.argv[1]
-    else:
-        single_subject_num = 0
+    single_subject = True
+    single_subject_num = sys.argv[1]
+    print("single subject num " + single_subject_num)
     trial_length = 2.5
     print("INFO : {} Model, {} Epoches, {} Batch Size, {} Subjects".format(model, max_epochs, batch_size, subject_num))
     if single_subject == True:
