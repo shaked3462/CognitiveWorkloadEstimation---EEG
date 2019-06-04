@@ -4,7 +4,6 @@ from sklearn.metrics import confusion_matrix
 import seaborn as sn
 import pandas as pd
 import matplotlib.pyplot as plt
-import torch as th
 
 def loadSubjects(subjectNum):
     label0Counter = 0
@@ -80,8 +79,8 @@ def loadSubjects(subjectNum):
     y = np.concatenate((y0[:examplesPerAllSubjects], y1[:examplesPerAllSubjects], y2[:examplesPerAllSubjects]), axis=0)
 
     print("trying to run with 2.5 sec trials")
-    return X, y
 
+    return X, y
 def plotConfusionMatrix(confusion_matrix):
     print(confusion_matrix)
     df_cm = pd.DataFrame(confusion_matrix, range(3), range(3))
@@ -121,7 +120,7 @@ from braindecode.datautil.signal_target import SignalAndTarget
 log = logging.getLogger(__name__)
 
 
-def run_exp(epoches, batch_size, subject_num, model_type, cuda):
+def run_exp(epoches, batch_size, subject_num, model, cuda):
     # ival = [-500, 4000]
     max_increase_epochs = 160
 
@@ -150,13 +149,13 @@ def run_exp(epoches, batch_size, subject_num, model_type, cuda):
     n_classes = 3
     n_chans = int(train_set.X.shape[1])
     input_time_length = train_set.X.shape[2]
-    if model_type == 'shallow':
+    if model == 'shallow':
         model = ShallowFBCSPNet(n_chans, n_classes, input_time_length=input_time_length,
                             final_conv_length='auto').create_network()
-    elif model_type == 'deep':
+    elif model == 'deep':
         model = Deep4Net(n_chans, n_classes, input_time_length=input_time_length,
                             final_conv_length='auto').create_network()
-    elif model_type == 'eegnet':
+    elif model == 'eegnet':
         model = EEGNetv4(n_chans, n_classes, input_time_length=input_time_length,
                             final_conv_length='auto').create_network()
     if cuda:
@@ -190,9 +189,9 @@ if __name__ == '__main__':
     logging.basicConfig(format='%(asctime)s %(levelname)s : %(message)s',
                             level=logging.DEBUG, stream=sys.stdout)
     model = 'shallow' #'shallow' or 'deep'
-    max_epochs = 1
+    max_epochs = 800
     batch_size = 8
-    subject_num = 1
+    subject_num = 52
     print("INFO : {} Model, {} Epoches, {} Batch Size, {} Subjects".format(model, max_epochs, batch_size, subject_num))
     cuda = False
     exp = run_exp(max_epochs, batch_size, subject_num, model, cuda)
