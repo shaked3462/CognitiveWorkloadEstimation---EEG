@@ -5,14 +5,19 @@ import seaborn as sn
 import pandas as pd
 import matplotlib.pyplot as plt
 
-def loadSubjects(subjectNum):
+def loadSubjects(subjectNum, single_subject, single_subject_num):
     label0Counter = 0
     label1Counter = 0
     label2Counter = 0
 
-    print("loading data for subject 1")
-    X = np.load("NirDataset\\croppedDataForSubject1.npy")
-    y = np.load("NirDataset\\croppedLabelsForSubject1.npy")
+    if single_subject == True:
+        print("loading data for subject {}".format(single_subject_num))
+        X = np.load("NirDataset\\croppedDataForSubject{}.npy".format(single_subject_num))
+        y = np.load("NirDataset\\croppedLabelsForSubject{}.npy".format(single_subject_num))
+    else:        
+        print("loading data for subject 1")
+        X = np.load("NirDataset\\croppedDataForSubject1.npy")
+        y = np.load("NirDataset\\croppedLabelsForSubject1.npy")
 
     for i in range(0,len(y)):
         if y[i] == 0:
@@ -78,8 +83,6 @@ def loadSubjects(subjectNum):
     X = np.concatenate((X0[:examplesPerAllSubjects], X1[:examplesPerAllSubjects], X2[:examplesPerAllSubjects]), axis=0)
     y = np.concatenate((y0[:examplesPerAllSubjects], y1[:examplesPerAllSubjects], y2[:examplesPerAllSubjects]), axis=0)
 
-    print("trying to run with 2.5 sec trials")
-
     return X, y
 def plotConfusionMatrix(confusion_matrix):
     print(confusion_matrix)
@@ -97,7 +100,7 @@ import sys
 
 import torch.nn.functional as F
 from torch import optim
-
+import torch as th
 from braindecode.models.deep4 import Deep4Net
 from braindecode.models.eegnet import EEGNetv4
 from braindecode.models.eegnet import EEGNet
@@ -120,16 +123,20 @@ from braindecode.datautil.signal_target import SignalAndTarget
 log = logging.getLogger(__name__)
 
 
-def run_exp(epoches, batch_size, subject_num, model, cuda):
+def run_exp(epoches, batch_size, subject_num, model_type, cuda, single_subject, single_subject_num):
     # ival = [-500, 4000]
     max_increase_epochs = 160
+     
 
     # Preprocessing
-    X, y = loadSubjects(subject_num)
+    X, y = loadSubjects(subject_num, single_subject, single_subject_num)
     X = X.astype(np.float32)
     y = y.astype(np.int64)
     X, y = shuffle(X, y)
-
+    
+    trial_length = X.shape[2]
+    print("trial_length " + str(trial_length))
+    print("trying to run with {} sec trials " + str((trial_length - 1) / 256))
     print("y")
     print(y)
     trainingSampleSize = int(len(X)*0.6)
@@ -149,13 +156,13 @@ def run_exp(epoches, batch_size, subject_num, model, cuda):
     n_classes = 3
     n_chans = int(train_set.X.shape[1])
     input_time_length = train_set.X.shape[2]
-    if model == 'shallow':
+    if model_type == 'shallow':
         model = ShallowFBCSPNet(n_chans, n_classes, input_time_length=input_time_length,
                             final_conv_length='auto').create_network()
-    elif model == 'deep':
+    elif model_type == 'deep':
         model = Deep4Net(n_chans, n_classes, input_time_length=input_time_length,
                             final_conv_length='auto').create_network()
-    elif model == 'eegnet':
+    elif model_type == 'eegnet':
         model = EEGNetv4(n_chans, n_classes, input_time_length=input_time_length,
                             final_conv_length='auto').create_network()
     if cuda:
@@ -181,7 +188,7 @@ def run_exp(epoches, batch_size, subject_num, model, cuda):
                      remember_best_column='valid_misclass',
                      run_after_early_stop=True, cuda=cuda)
     exp.run()
-    th.save(model, "models\{}-trialwise-{}subjects-5sec-{}epoches-torch_model".format(model_type, subject_num, epoches))
+    th.save(model, "models\{}-trialwise-{}subjects-{}sec-{}epoches-torch_model".format(model_type, subject_num, ((trial_length - 1) / 256), epoches))
     return exp
 
 if __name__ == '__main__':
@@ -189,14 +196,18 @@ if __name__ == '__main__':
     logging.basicConfig(format='%(asctime)s %(levelname)s : %(message)s',
                             level=logging.DEBUG, stream=sys.stdout)
     model = 'shallow' #'shallow' or 'deep'
-    max_epochs = 800
+    max_epochs = 100
     batch_size = 8
-    subject_num = 52
+    subject_num = 1
+    single_subject = True
+    single_subject_num = 4
     print("INFO : {} Model, {} Epoches, {} Batch Size, {} Subjects".format(model, max_epochs, batch_size, subject_num))
+    if single_subject == True:
+        print("INFO : Single subject num {}".format(single_subject_num))
     cuda = False
-    exp = run_exp(max_epochs, batch_size, subject_num, model, cuda)
-    log.info("Last 10 epochs")
-    log.info("\n" + str(exp.epochs_df.iloc[-10:]))
+    exp = run_exp(max_epochs, batch_size, subject_num, model, cuda, single_subject, single_subject_num)
+    log.info("epochs")
+    log.info("\n" + str(exp.epochs_df.iloc[:]))
     log.info("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
     print(exp.epochs_df.iloc[:].shape)
     # np.save("{}_model-{}_epoches-{}_batch-{}_subjects".format(model, max_epochs, batch_size, subject_num), exp.epochs_df.iloc[:])

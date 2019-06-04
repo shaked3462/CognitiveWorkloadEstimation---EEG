@@ -144,10 +144,10 @@ print("INFO : Batch Size: {}".format(batch_size))
 # Run the training
 # model.fit(train_set.X, train_set.y, epochs=30, batch_size=64, scheduler='cosine',
 input_time_length = 450
+
 model.fit(train_set.X, train_set.y, epochs=epoches, batch_size=batch_size, scheduler='cosine',
          input_time_length = input_time_length,
          validation_data=(valid_set.X, valid_set.y),)
-
 
 print(model.epochs_df)
 
