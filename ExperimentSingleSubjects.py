@@ -225,9 +225,9 @@ if __name__ == '__main__':
     # plt.show()
     if single_subject == True:
         plt.savefig("single_subjects\{}-trialwise-subject{}-{}sec.png".format(model, single_subject_num, trial_length), bbox_inches='tight')
-        plt.savefig("single_subjects\{}-trialwise-subject{}-{}sec.pdf".format(model, single_subject_num, trial_length), bbox_inches='tight')
+        #plt.savefig("single_subjects\{}-trialwise-subject{}-{}sec.pdf".format(model, single_subject_num, trial_length), bbox_inches='tight')
     else:    
         plt.savefig("single_subjects\{}-trialwise-{}subjects-{}sec.png".format(model, subject_num, trial_length), bbox_inches='tight')
-        plt.savefig("single_subjects\{}-trialwise-{}subjects-{}sec.pdf".format(model, subject_num, trial_length), bbox_inches='tight')
+        #plt.savefig("single_subjects\{}-trialwise-{}subjects-{}sec.pdf".format(model, subject_num, trial_length), bbox_inches='tight')
     # except:
     #     print("plot failed")
