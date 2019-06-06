@@ -4,6 +4,33 @@ from sklearn.metrics import confusion_matrix
 import seaborn as sn
 import pandas as pd
 import matplotlib.pyplot as plt
+import logging
+import os.path
+import time
+from collections import OrderedDict
+import sys
+import torch.nn.functional as F
+from torch import optim
+import torch as th
+from braindecode.models.deep4 import Deep4Net
+from braindecode.models.eegnet import EEGNetv4
+from braindecode.models.eegnet import EEGNet
+from braindecode.datasets.bcic_iv_2a import BCICompetition4Set2A
+from braindecode.experiments.experiment import Experiment
+from braindecode.experiments.monitors import LossMonitor, MisclassMonitor, \
+    RuntimeMonitor
+from braindecode.experiments.stopcriteria import MaxEpochs, NoDecrease, Or
+from braindecode.datautil.iterators import BalancedBatchSizeIterator
+from braindecode.models.shallow_fbcsp import ShallowFBCSPNet
+from braindecode.datautil.splitters import split_into_two_sets
+from braindecode.torch_ext.constraints import MaxNormDefaultConstraint
+from braindecode.torch_ext.util import set_random_seeds, np_to_var
+from braindecode.mne_ext.signalproc import mne_apply
+from braindecode.datautil.signalproc import (bandpass_cnt,
+                                             exponential_running_standardize)
+from braindecode.datautil.trial_segment import create_signal_target_from_raw_mne
+from braindecode.datautil.signal_target import SignalAndTarget
+
 
 def loadSubjects(subjectNum, single_subject, single_subject_num):
     label0Counter = 0
@@ -92,34 +119,6 @@ def plotConfusionMatrix(confusion_matrix):
     sn.heatmap(df_cm, annot=True, cmap='Blues', annot_kws={"size": 16}, fmt='d')# font size
     plt.show()
 
-import logging
-import os.path
-import time
-from collections import OrderedDict
-import sys
-
-import torch.nn.functional as F
-from torch import optim
-import torch as th
-from braindecode.models.deep4 import Deep4Net
-from braindecode.models.eegnet import EEGNetv4
-from braindecode.models.eegnet import EEGNet
-from braindecode.datasets.bcic_iv_2a import BCICompetition4Set2A
-from braindecode.experiments.experiment import Experiment
-from braindecode.experiments.monitors import LossMonitor, MisclassMonitor, \
-    RuntimeMonitor
-from braindecode.experiments.stopcriteria import MaxEpochs, NoDecrease, Or
-from braindecode.datautil.iterators import BalancedBatchSizeIterator
-from braindecode.models.shallow_fbcsp import ShallowFBCSPNet
-from braindecode.datautil.splitters import split_into_two_sets
-from braindecode.torch_ext.constraints import MaxNormDefaultConstraint
-from braindecode.torch_ext.util import set_random_seeds, np_to_var
-from braindecode.mne_ext.signalproc import mne_apply
-from braindecode.datautil.signalproc import (bandpass_cnt,
-                                             exponential_running_standardize)
-from braindecode.datautil.trial_segment import create_signal_target_from_raw_mne
-from braindecode.datautil.signal_target import SignalAndTarget
-
 log = logging.getLogger(__name__)
 
 
@@ -196,9 +195,9 @@ if __name__ == '__main__':
     logging.basicConfig(format='%(asctime)s %(levelname)s : %(message)s',
                             level=logging.DEBUG, stream=sys.stdout)
     model = 'shallow' #'shallow' or 'deep'
-    max_epochs = 1
-    batch_size = 8
-    subject_num = 1
+    max_epochs = 800
+    batch_size = 16
+    subject_num = 52
     single_subject = False
     if single_subject == True:
         single_subject_num = sys.argv[1]
@@ -208,13 +207,13 @@ if __name__ == '__main__':
     print("INFO : {} Model, {} Epoches, {} Batch Size, {} Subjects".format(model, max_epochs, batch_size, subject_num))
     if single_subject == True:
         print("INFO : Single subject num {}".format(single_subject_num))
-    cuda = False
+    cuda = True
     exp = run_exp(max_epochs, batch_size, subject_num, model, cuda, single_subject, single_subject_num)
     log.info("epochs")
     log.info("\n" + str(exp.epochs_df.iloc[:]))
     log.info("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
     print(exp.epochs_df.iloc[:].shape)
-    # np.save("{}_model-{}_epoches-{}_batch-{}_subjects".format(model, max_epochs, batch_size, subject_num), exp.epochs_df.iloc[:])
+    np.save("{}-trialwise-{}subjects-2.5sec-{}epoches".format(model, subject_num, max_epochs), exp.epochs_df.iloc[:])
         
     # try:
     plt.plot(exp.epochs_df.iloc[:,3], 'g.-', label='Train misclass')
@@ -227,9 +226,5 @@ if __name__ == '__main__':
     # plt.show()
     if single_subject == True:
         plt.savefig("single_subjects\{}-trialwise-subject{}-{}sec.png".format(model, single_subject_num, trial_length), bbox_inches='tight')
-        plt.savefig("single_subjects\{}-trialwise-subject{}-{}sec.pdf".format(model, single_subject_num, trial_length), bbox_inches='tight')
     else:    
         plt.savefig("single_subjects\{}-trialwise-{}subjects-{}sec.png".format(model, subject_num, trial_length), bbox_inches='tight')
-        plt.savefig("single_subjects\{}-trialwise-{}subjects-{}sec.pdf".format(model, subject_num, trial_length), bbox_inches='tight')
-    # except:
-    #     print("plot failed")

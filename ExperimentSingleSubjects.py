@@ -196,8 +196,8 @@ if __name__ == '__main__':
     logging.basicConfig(format='%(asctime)s %(levelname)s : %(message)s',
                             level=logging.DEBUG, stream=sys.stdout)
     model = 'shallow' #'shallow' or 'deep'
-    max_epochs = 200
-    batch_size = 8
+    max_epochs = 800
+    batch_size = 16
     subject_num = 1
     single_subject = True
     single_subject_num = sys.argv[1]
@@ -206,13 +206,13 @@ if __name__ == '__main__':
     print("INFO : {} Model, {} Epoches, {} Batch Size, {} Subjects".format(model, max_epochs, batch_size, subject_num))
     if single_subject == True:
         print("INFO : Single subject num {}".format(single_subject_num))
-    cuda = False
+    cuda = True
     exp = run_exp(max_epochs, batch_size, subject_num, model, cuda, single_subject, single_subject_num)
     log.info("epochs")
     log.info("\n" + str(exp.epochs_df.iloc[:]))
     log.info("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
     print(exp.epochs_df.iloc[:].shape)
-    # np.save("{}_model-{}_epoches-{}_batch-{}_subjects".format(model, max_epochs, batch_size, subject_num), exp.epochs_df.iloc[:])
+    np.save("single_subjects\{}-trialwise-singleSubjectNum{}-2.5sec-{}epoches".format(model, single_subject_num, max_epochs), exp.epochs_df.iloc[:])
         
     # try:
     plt.plot(exp.epochs_df.iloc[:,3], 'g.-', label='Train misclass')
