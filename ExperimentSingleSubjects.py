@@ -188,7 +188,7 @@ def run_exp(epoches, batch_size, subject_num, model_type, cuda, single_subject, 
                      remember_best_column='valid_misclass',
                      run_after_early_stop=True, cuda=cuda)
     exp.run()
-    # th.save(model, "models\{}-trialwise-singleSubjectNum{}-{}sec-{}epoches-torch_model".format(model_type, single_subject_num, ((trial_length - 1) / 256), epoches))
+    # th.save(model, "models\{}-cropped-singleSubjectNum{}-{}sec-{}epoches-torch_model".format(model_type, single_subject_num, ((trial_length - 1) / 256), epoches))
     return exp
 
 if __name__ == '__main__':
@@ -212,7 +212,7 @@ if __name__ == '__main__':
     log.info("\n" + str(exp.epochs_df.iloc[:]))
     log.info("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
     print(exp.epochs_df.iloc[:].shape)
-    np.save("single_subjects\{}-trialwise-singleSubjectNum{}-2.5sec-{}epoches".format(model, single_subject_num, max_epochs), exp.epochs_df.iloc[:])
+    np.save("single_subjects\{}-cropped-singleSubjectNum{}-2.5sec-{}epoches".format(model, single_subject_num, max_epochs), exp.epochs_df.iloc[:])
         
     # try:
     plt.plot(exp.epochs_df.iloc[:,3], 'g.-', label='Train misclass')
@@ -224,10 +224,10 @@ if __name__ == '__main__':
     plt.legend(loc='best')
     # plt.show()
     if single_subject == True:
-        plt.savefig("single_subjects\{}-trialwise-subject{}-{}sec.png".format(model, single_subject_num, trial_length), bbox_inches='tight')
-        #plt.savefig("single_subjects\{}-trialwise-subject{}-{}sec.pdf".format(model, single_subject_num, trial_length), bbox_inches='tight')
+        plt.savefig("single_subjects\{}-cropped-subject{}-{}sec-{}epoches.png".format(model, single_subject_num, trial_length, max_epochs), bbox_inches='tight')
+        #plt.savefig("single_subjects\{}-cropped-subject{}-{}sec.pdf".format(model, single_subject_num, trial_length), bbox_inches='tight')
     else:    
-        plt.savefig("single_subjects\{}-trialwise-{}subjects-{}sec.png".format(model, subject_num, trial_length), bbox_inches='tight')
-        #plt.savefig("single_subjects\{}-trialwise-{}subjects-{}sec.pdf".format(model, subject_num, trial_length), bbox_inches='tight')
+        plt.savefig("single_subjects\{}-cropped-{}subjects-{}sec-{}epoches.png".format(model, subject_num, trial_length, max_epochs), bbox_inches='tight')
+        #plt.savefig("single_subjects\{}-cropped-{}subjects-{}sec.pdf".format(model, subject_num, trial_length), bbox_inches='tight')
     # except:
     #     print("plot failed")

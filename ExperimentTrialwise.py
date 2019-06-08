@@ -187,11 +187,11 @@ def run_exp(epoches, batch_size, subject_num, model_type, cuda, single_subject, 
                      remember_best_column='valid_misclass',
                      run_after_early_stop=True, cuda=cuda)
     exp.run()
-    th.save(model, "models\{}-trialwise-{}subjects-{}sec-{}epoches-torch_model".format(model_type, subject_num, ((trial_length - 1) / 256), epoches))
+    th.save(model, "models\{}-cropped-{}subjects-{}sec-{}epoches-torch_model".format(model_type, subject_num, ((trial_length - 1) / 256), epoches))
     return exp
 
 if __name__ == '__main__':
-    np.set_printoptions(threshold=sys.maxsize, suppress=True)
+    np.set_printoptions(threshold=sys.maxsize, suppress=True, threshold=np.inf)
     logging.basicConfig(format='%(asctime)s %(levelname)s : %(message)s',
                             level=logging.DEBUG, stream=sys.stdout)
     model = 'shallow' #'shallow' or 'deep'
@@ -213,7 +213,7 @@ if __name__ == '__main__':
     log.info("\n" + str(exp.epochs_df.iloc[:]))
     log.info("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
     print(exp.epochs_df.iloc[:].shape)
-    np.save("{}-trialwise-{}subjects-2.5sec-{}epoches".format(model, subject_num, max_epochs), exp.epochs_df.iloc[:])
+    np.save("{}-cropped-{}subjects-2.5sec-{}epoches".format(model, subject_num, max_epochs), exp.epochs_df.iloc[:])
         
     # try:
     plt.plot(exp.epochs_df.iloc[:,3], 'g.-', label='Train misclass')
@@ -225,6 +225,6 @@ if __name__ == '__main__':
     plt.legend(loc='best')
     # plt.show()
     if single_subject == True:
-        plt.savefig("single_subjects\{}-trialwise-subject{}-{}sec.png".format(model, single_subject_num, trial_length), bbox_inches='tight')
+        plt.savefig("single_subjects\{}-cropped-subject{}-{}sec.png".format(model, single_subject_num, trial_length), bbox_inches='tight')
     else:    
-        plt.savefig("single_subjects\{}-trialwise-{}subjects-{}sec.png".format(model, subject_num, trial_length), bbox_inches='tight')
+        plt.savefig("logs\{}-cropped-{}subjects-{}sec.png".format(model, subject_num, trial_length), bbox_inches='tight')

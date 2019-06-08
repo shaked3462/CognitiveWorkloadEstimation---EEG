@@ -183,6 +183,7 @@ def run_exp(epoches, batch_size, subject_num, model_type, cuda, single_subject, 
 
     model_constraint = MaxNormDefaultConstraint()
     
+    print("Loading trained model")
     model = th.load("models\{}-trialwise-52subjects-2.5sec-800epoches-torch_model".format(model_type))
 
     exp = Experiment(model, train_set, valid_set, test_set, iterator=iterator,
