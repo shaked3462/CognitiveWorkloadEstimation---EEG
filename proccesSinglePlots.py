@@ -9,7 +9,7 @@ np.set_printoptions(precision=4, threshold=np.inf)
 
 
 plotTypes = ['accuracy', 'misclass']
-models = ['deep', 'shallow']
+models = ['deep']
 withTest = False
 
 for p in plotTypes:
@@ -25,7 +25,7 @@ for p in plotTypes:
             if subject == 44 or subject == 45:
                 continue
             try:
-                subjectData = np.load("single_subjects\{}-cropped-singleSubjectNum{}-2.5sec-800epoches.npy".format(model, subject))
+                subjectData = np.load("single_subjects\{}-trialwise-singleSubjectNum{}-2.5sec-800epoches.npy".format(model, subject))
                 print(subjectData.shape)
                 if subject ==1 :        
                     if plotType == 'accuracy':
@@ -84,9 +84,9 @@ for p in plotTypes:
         if withTest == True:
             plt.plot(meanTest[0]/meanTest[1], color=colors['darkgreen'], linestyle='solid', linewidth=1.5, label='Mean test accuracy')
         plt.legend(loc='best')
-        plt.show()
+        # plt.show()
         if withTest == True:
             plt.savefig("mean-{}-plot-WITH_TEST-{}-cropped-finetune-2.5sec-800epoches.png".format(plotType, model), bbox_inches='tight')
         else:
-            plt.savefig("mean-{}-plot-{}-cropped-finetune-2.5sec-800epoches.png".format(plotType, model), bbox_inches='tight')
+            plt.savefig("mean-{}-plot-{}-trialwise-finetune-2.5sec-800epoches.png".format(plotType, model), bbox_inches='tight')
         plt.close()
