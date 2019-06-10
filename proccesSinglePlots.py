@@ -25,7 +25,7 @@ for p in plotTypes:
             if subject == 44 or subject == 45:
                 continue
             try:
-                subjectData = np.load("single_subjects\{}-trialwise-singleSubjectNum{}-2.5sec-800epoches.npy".format(model, subject))
+                subjectData = np.load("finetuning\{}-trialwise-singleSubjectNum{}-2.5sec-800epoches.npy".format(model, subject))
                 print(subjectData.shape)
                 if subject ==1 :        
                     if plotType == 'accuracy':
