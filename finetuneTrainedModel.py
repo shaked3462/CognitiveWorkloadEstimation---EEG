@@ -2,20 +2,22 @@ import numpy as np
 from sklearn.utils import shuffle
 import sys
 import torch as th
-import torch
-import torch.nn as nn
-import torch.optim as optim
-import numpy as np
+from torch import optim, nn
 import torchvision
 from torchvision import datasets, models, transforms
 import matplotlib.pyplot as plt
 import time
 import os
 import copy
-import utils
+from utils import loadSubjects, plotConfusionMatrix
+from braindecode.datautil.signal_target import SignalAndTarget
+import seaborn as sn
+import pandas as pd
+
+
 
 single_subject_num = sys.argv[1]
-X, y = utils.loadSubjects(1, True, single_subject_num)
+X, y = loadSubjects(1, True, single_subject_num)
 batch_size = 64
 epoches = 800
 model_type = 'shallow'
@@ -38,7 +40,7 @@ y = y.astype(np.int64)
 X, y = shuffle(X, y)
 print("y")
 print(y)
-from braindecode.datautil.signal_target import SignalAndTarget
+
 trainingSampleSize = int(len(X)*0.7)
 valudationSampleSize = int(len(X)*0.1)
 testSampleSize = int(len(X)*0.2)
@@ -53,7 +55,6 @@ valid_set = SignalAndTarget(X[trainingSampleSize:(trainingSampleSize + valudatio
 # Create the model
 from braindecode.models.shallow_fbcsp import ShallowFBCSPNet
 from braindecode.models.deep4 import Deep4Net
-from torch import nn
 from braindecode.torch_ext.util import set_random_seeds
 
 # Set if you want to use GPU
@@ -74,7 +75,7 @@ else:
     model = Deep4Net(in_chans=in_chans, n_classes=n_classes,
                         input_time_length=train_set.X.shape[2],
                         final_conv_length='auto')
-path_to_classifier = "models\{}-{}-52subjects-2.5sec-800epoches-torch_model".format(model_type, train_type)
+path_to_classifier = "torchModelsCrossSubjects\{}-{}-52subjects-2.5sec-800epoches-torch_model".format(model_type, train_type)
 
 
 if cuda:
@@ -89,23 +90,15 @@ if model_type == 'shallow':
 else:
     optimizer = AdamW(model.parameters(), lr=1*0.01, weight_decay=0.5*0.001) # these are good values for the deep model
 
-if torch.cuda.is_available():
+if th.cuda.is_available():
     print('Cuda is available.')
-    checkpoint = torch.load(path_to_classifier).state_dict()
+    checkpoint = th.load(path_to_classifier).state_dict()
 else:
     print('Cuda is not available.')
-    checkpoint = torch.load(path_to_classifier, map_location='cpu')
+    checkpoint = th.load(path_to_classifier, map_location='cpu')
 np.set_printoptions(suppress=True, threshold=np.inf)
 
-# print("checkpoint")
-# print(checkpoint)
-
-
-# print("checkpoint.state_dict()")
-# print(checkpoint.state_dict())
-
 model.network.load_state_dict(checkpoint)
-# optimizer.load_state_dict(checkpoint.optimizer.state_dict())
 
 # Compile model exactly the same way as when you trained it
 model.compile(loss=F.nll_loss, optimizer=optimizer, iterator_seed=1)
@@ -121,7 +114,7 @@ print(model.fit(train_set.X, train_set.y, epochs=epoches, batch_size=batch_size,
 print('Loaded saved torch model from "{}".'.format(path_to_classifier))
 
 print(model.epochs_df)
-np.save("finetuning\{}-{}-singleSubjectNum{}-2.5sec-{}epoches".format(model_type, train_type, single_subject_num, epoches), model.epochs_df.iloc[:])
+np.save("finetuneCrossSubjects\{}-{}-singleSubjectNum{}-2.5sec-{}epoches".format(model_type, train_type, single_subject_num, epoches), model.epochs_df.iloc[:])
 
 # Evaluation
 test_set = SignalAndTarget(X[(trainingSampleSize + valudationSampleSize):], y=y[(trainingSampleSize + valudationSampleSize):])
@@ -129,63 +122,57 @@ test_set = SignalAndTarget(X[(trainingSampleSize + valudationSampleSize):], y=y[
 eval = model.evaluate(test_set.X, test_set.y)
 print(eval)
 print(eval['misclass'])
-np.save("finetuning\{}-{}-singleSubjectNum{}-2.5sec-{}epoches-testSetMisclass".format(model_type, train_type, single_subject_num, epoches), eval['misclass'])
+np.save("finetuneCrossSubjects\{}-{}-singleSubjectNum{}-2.5sec-{}epoches-testSetMisclass".format(model_type, train_type, single_subject_num, epoches), eval['misclass'])
 
 from sklearn.metrics import confusion_matrix
 
 try:
     print("prediction")
-    y_pred = model.predict(test_set.X)
+    y_pred = model.predict_classes(test_set.X)
     print(y_pred)
     print("real labels")
     print(test_set.y)
     confusion_matrix = confusion_matrix(test_set.y, y_pred)
     print(confusion_matrix)
 except:
-    try:
-        y_pred = model.predict_classes(test_set.X)
-        print(y_pred)
-        print("real labels")
-        print(test_set.y)
-        confusion_matrix = confusion_matrix(test_set.y, y_pred)
-        print(confusion_matrix)
-    except:
-        print("predict_classes method failed")
+    print("predict_classes method failed")
 
+plotMisclass()
+plotAccuracy()
+plotConfusionMatrixFinetune(confusion_matrix)
 
-import seaborn as sn
-import pandas as pd
-import matplotlib.pyplot as plt
+def plotMisclass():
+    plt.plot(model.epochs_df.iloc[:,2], 'g-', label='Train misclass')
+    plt.plot(model.epochs_df.iloc[:,3], 'b-', label='Validation misclass')
+    model# plt.plot(exp.epochs_df.iloc[:,5], 'r.-', label='Test misclass')
+    plt.title('misclass rate / epoches')
+    plt.xlabel('Epoches')
+    plt.ylabel('Misclass')
+    plt.legend(loc='best')
+    # plt.show()
+    plt.savefig("finetuneCrossSubjects\{}-{}-singleSubjectNum{}-2.5sec-{}epoches-plot-misclass.png".format(model_type, train_type, single_subject_num, epoches), bbox_inches='tight')
+    plt.close()
 
-array = confusion_matrix       
-df_cm = pd.DataFrame(array, range(3),
-                  range(3))
-#plt.figure(figsize = (10,7))
-sn.set(font_scale=1.4)#for label size
-sn.heatmap(df_cm, annot=True, cmap='Blues', annot_kws={"size": 16}, fmt='d')# font size
-pd.set_option('display.float_format', lambda x: '%.3f' % x)
-# plt.show()
-plt.savefig("finetuning\{}-{}-singleSubjectNum{}-2.5sec-{}epoches-confusion_matrix.png".format(model_type, train_type, single_subject_num, epoches), bbox_inches='tight')
-plt.close()
+def plotAccuracy():
+    plt.plot(1-model.epochs_df.iloc[:,2], 'g-', label='Train accuracy')
+    plt.plot(1-model.epochs_df.iloc[:,3], 'b-', label='Validation accuracy')
+    model# plt.plot(exp.epochs_df.iloc[:,5], 'r.-', label='Test misclass')
+    plt.title('accuracy rate / epoches')
+    plt.xlabel('Epoches')
+    plt.ylabel('Accuracy')
+    plt.legend(loc='best')
+    # plt.show()
+    plt.savefig("finetuneCrossSubjects\{}-{}-singleSubjectNum{}-2.5sec-{}epoches-plot-accuracy.png".format(model_type, train_type, single_subject_num, epoches), bbox_inches='tight')
+    plt.close()
 
-plt.plot(model.epochs_df.iloc[:,2], 'g-', label='Train misclass')
-plt.plot(model.epochs_df.iloc[:,3], 'b-', label='Validation misclass')
-model# plt.plot(exp.epochs_df.iloc[:,5], 'r.-', label='Test misclass')
-plt.title('misclass rate / epoches')
-plt.xlabel('Epoches')
-plt.ylabel('Misclass')
-plt.legend(loc='best')
-# plt.show()
-plt.savefig("finetuning\{}-{}-singleSubjectNum{}-2.5sec-{}epoches-plot-misclass.png".format(model_type, train_type, single_subject_num, epoches), bbox_inches='tight')
-plt.close()
-
-plt.plot(1-model.epochs_df.iloc[:,2], 'g-', label='Train accuracy')
-plt.plot(1-model.epochs_df.iloc[:,3], 'b-', label='Validation accuracy')
-model# plt.plot(exp.epochs_df.iloc[:,5], 'r.-', label='Test misclass')
-plt.title('accuracy rate / epoches')
-plt.xlabel('Epoches')
-plt.ylabel('Accuracy')
-plt.legend(loc='best')
-# plt.show()
-plt.savefig("finetuning\{}-{}-singleSubjectNum{}-2.5sec-{}epoches-plot-accuracy.png".format(model_type, train_type, single_subject_num, epoches), bbox_inches='tight')
-plt.close()
+def plotConfusionMatrixFinetune(confusion_matrix):
+    array = confusion_matrix       
+    df_cm = pd.DataFrame(array, range(3),
+                    range(3))
+    #plt.figure(figsize = (10,7))
+    sn.set(font_scale=1.4)#for label size
+    sn.heatmap(df_cm, annot=True, cmap='Blues', annot_kws={"size": 16}, fmt='d')# font size
+    pd.set_option('display.float_format', lambda x: '%.3f' % x)
+    # plt.show()
+    plt.savefig("finetuneCrossSubjects\{}-{}-singleSubjectNum{}-2.5sec-{}epoches-confusion_matrix.png".format(model_type, train_type, single_subject_num, epoches), bbox_inches='tight')
+    plt.close()

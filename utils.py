@@ -1,6 +1,8 @@
 import numpy as np
 from sklearn.utils import shuffle
 import matplotlib.pyplot as plt
+import seaborn as sn
+import pandas as pd
 
 def loadSubjects(subjectNum, single_subject, single_subject_num):
     label0Counter = 0
