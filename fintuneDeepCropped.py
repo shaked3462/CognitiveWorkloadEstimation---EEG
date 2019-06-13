@@ -74,7 +74,7 @@ else:
     model = Deep4Net(in_chans=in_chans, n_classes=n_classes,
                         input_time_length=train_set.X.shape[2],
                         final_conv_length='auto')
-path_to_classifier = "models\{}-{}-52subjects-2.5sec-800epoches-torch_model".format(model_type, train_type)
+path_to_classifier = "torchModelsCrossSubjects\{}-{}-52subjects-2.5sec-800epoches-torch_model".format(model_type, train_type)
 
 
 if cuda:
@@ -121,7 +121,7 @@ print(model.fit(train_set.X, train_set.y, epochs=epoches, batch_size=batch_size,
 print('Loaded saved torch model from "{}".'.format(path_to_classifier))
 
 print(model.epochs_df)
-np.save("finetuning\{}-{}-singleSubjectNum{}-2.5sec-{}epoches".format(model_type, train_type, single_subject_num, epoches), model.epochs_df.iloc[:])
+np.save("finetuneCrossSubjects\{}-{}-singleSubjectNum{}-2.5sec-{}epoches".format(model_type, train_type, single_subject_num, epoches), model.epochs_df.iloc[:])
 
 # Evaluation
 test_set = SignalAndTarget(X[(trainingSampleSize + valudationSampleSize):], y=y[(trainingSampleSize + valudationSampleSize):])
@@ -129,7 +129,7 @@ test_set = SignalAndTarget(X[(trainingSampleSize + valudationSampleSize):], y=y[
 eval = model.evaluate(test_set.X, test_set.y)
 print(eval)
 print(eval['misclass'])
-np.save("finetuning\{}-{}-singleSubjectNum{}-2.5sec-{}epoches-testSetMisclass".format(model_type, train_type, single_subject_num, epoches), eval['misclass'])
+np.save("finetuneCrossSubjects\{}-{}-singleSubjectNum{}-2.5sec-{}epoches-testSetMisclass".format(model_type, train_type, single_subject_num, epoches), eval['misclass'])
 
 from sklearn.metrics import confusion_matrix
 
@@ -165,7 +165,7 @@ sn.set(font_scale=1.4)#for label size
 sn.heatmap(df_cm, annot=True, cmap='Blues', annot_kws={"size": 16}, fmt='d')# font size
 pd.set_option('display.float_format', lambda x: '%.3f' % x)
 # plt.show()
-plt.savefig("finetuning\{}-{}-singleSubjectNum{}-2.5sec-{}epoches-confusion_matrix.png".format(model_type, train_type, single_subject_num, epoches), bbox_inches='tight')
+plt.savefig("finetuneCrossSubjects\{}-{}-singleSubjectNum{}-2.5sec-{}epoches-confusion_matrix.png".format(model_type, train_type, single_subject_num, epoches), bbox_inches='tight')
 plt.close()
 
 plt.plot(model.epochs_df.iloc[:,2], 'g-', label='Train misclass')
@@ -176,7 +176,7 @@ plt.xlabel('Epoches')
 plt.ylabel('Misclass')
 plt.legend(loc='best')
 # plt.show()
-plt.savefig("finetuning\{}-{}-singleSubjectNum{}-2.5sec-{}epoches-plot-misclass.png".format(model_type, train_type, single_subject_num, epoches), bbox_inches='tight')
+plt.savefig("finetuneCrossSubjects\{}-{}-singleSubjectNum{}-2.5sec-{}epoches-plot-misclass.png".format(model_type, train_type, single_subject_num, epoches), bbox_inches='tight')
 plt.close()
 
 plt.plot(1-model.epochs_df.iloc[:,2], 'g-', label='Train accuracy')
@@ -187,5 +187,5 @@ plt.xlabel('Epoches')
 plt.ylabel('Accuracy')
 plt.legend(loc='best')
 # plt.show()
-plt.savefig("finetuning\{}-{}-singleSubjectNum{}-2.5sec-{}epoches-plot-accuracy.png".format(model_type, train_type, single_subject_num, epoches), bbox_inches='tight')
+plt.savefig("finetuneCrossSubjects\{}-{}-singleSubjectNum{}-2.5sec-{}epoches-plot-accuracy.png".format(model_type, train_type, single_subject_num, epoches), bbox_inches='tight')
 plt.close()

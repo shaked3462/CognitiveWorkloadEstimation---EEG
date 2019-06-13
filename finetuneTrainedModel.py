@@ -114,7 +114,7 @@ print(model.fit(train_set.X, train_set.y, epochs=epoches, batch_size=batch_size,
 print('Loaded saved torch model from "{}".'.format(path_to_classifier))
 
 print(model.epochs_df)
-np.save("finetuneCrossSubjects\{}-{}-singleSubjectNum{}-2.5sec-{}epoches".format(model_type, train_type, single_subject_num, epoches), model.epochs_df.iloc[:])
+# np.save("finetuneCrossSubjects\{}-{}-singleSubjectNum{}-2.5sec-{}epoches".format(model_type, train_type, single_subject_num, epoches), model.epochs_df.iloc[:])
 
 # Evaluation
 test_set = SignalAndTarget(X[(trainingSampleSize + valudationSampleSize):], y=y[(trainingSampleSize + valudationSampleSize):])
@@ -122,7 +122,7 @@ test_set = SignalAndTarget(X[(trainingSampleSize + valudationSampleSize):], y=y[
 eval = model.evaluate(test_set.X, test_set.y)
 print(eval)
 print(eval['misclass'])
-np.save("finetuneCrossSubjects\{}-{}-singleSubjectNum{}-2.5sec-{}epoches-testSetMisclass".format(model_type, train_type, single_subject_num, epoches), eval['misclass'])
+# np.save("finetuneCrossSubjects\{}-{}-singleSubjectNum{}-2.5sec-{}epoches-testSetMisclass".format(model_type, train_type, single_subject_num, epoches), eval['misclass'])
 
 from sklearn.metrics import confusion_matrix
 
@@ -149,8 +149,8 @@ def plotMisclass():
     plt.xlabel('Epoches')
     plt.ylabel('Misclass')
     plt.legend(loc='best')
-    # plt.show()
-    plt.savefig("finetuneCrossSubjects\{}-{}-singleSubjectNum{}-2.5sec-{}epoches-plot-misclass.png".format(model_type, train_type, single_subject_num, epoches), bbox_inches='tight')
+    plt.show()
+    # plt.savefig("finetuneCrossSubjects\{}-{}-singleSubjectNum{}-2.5sec-{}epoches-plot-misclass.png".format(model_type, train_type, single_subject_num, epoches), bbox_inches='tight')
     plt.close()
 
 def plotAccuracy():
@@ -161,8 +161,8 @@ def plotAccuracy():
     plt.xlabel('Epoches')
     plt.ylabel('Accuracy')
     plt.legend(loc='best')
-    # plt.show()
-    plt.savefig("finetuneCrossSubjects\{}-{}-singleSubjectNum{}-2.5sec-{}epoches-plot-accuracy.png".format(model_type, train_type, single_subject_num, epoches), bbox_inches='tight')
+    plt.show()
+    # plt.savefig("finetuneCrossSubjects\{}-{}-singleSubjectNum{}-2.5sec-{}epoches-plot-accuracy.png".format(model_type, train_type, single_subject_num, epoches), bbox_inches='tight')
     plt.close()
 
 def plotConfusionMatrixFinetune(confusion_matrix):
@@ -173,6 +173,6 @@ def plotConfusionMatrixFinetune(confusion_matrix):
     sn.set(font_scale=1.4)#for label size
     sn.heatmap(df_cm, annot=True, cmap='Blues', annot_kws={"size": 16}, fmt='d')# font size
     pd.set_option('display.float_format', lambda x: '%.3f' % x)
-    # plt.show()
-    plt.savefig("finetuneCrossSubjects\{}-{}-singleSubjectNum{}-2.5sec-{}epoches-confusion_matrix.png".format(model_type, train_type, single_subject_num, epoches), bbox_inches='tight')
+    plt.show()
+    # plt.savefig("finetuneCrossSubjects\{}-{}-singleSubjectNum{}-2.5sec-{}epoches-confusion_matrix.png".format(model_type, train_type, single_subject_num, epoches), bbox_inches='tight')
     plt.close()
