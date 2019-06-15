@@ -172,10 +172,11 @@ def processSingleScatterPlots(xAxis, yAxis):
 
 # processSinglePlots('finetune', ['cropped', 'trialwise'], ['accuracy'], ['deep', 'shallow'])
 
-for yAxis in [['deep', 'cropped', 'single'], ['deep', 'trialwise', 'single']]:
-    for xAxis in [['shallow', 'cropped', 'single'], ['shallow', 'trialwise', 'single']]:
-        # print('xAxis')
-        # print(xAxis)
-        # print('yAxis')
-        # print(yAxis)
-        processSingleScatterPlots(xAxis, yAxis)
+# for yAxis in [['deep', 'cropped', 'single'], ['deep', 'trialwise', 'single']]:
+#     for xAxis in [['shallow', 'cropped', 'single'], ['shallow', 'trialwise', 'single']]:
+#         # print('xAxis')
+#         # print(xAxis)
+#         # print('yAxis')
+#         # print(yAxis)
+#         processSingleScatterPlots(xAxis, yAxis)
+processSingleScatterPlots(['deep', 'cropped', 'single'], ['deep', 'trialwise', 'cross'])
