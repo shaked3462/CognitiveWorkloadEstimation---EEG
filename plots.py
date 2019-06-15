@@ -120,18 +120,21 @@ def processSingleScatterPlots(xAxis, yAxis):
             if xAxis[2] == 'single':
                 for i in range(0, len(subjectDataX)):
                     if subjectDataX[i, 4] >= bestX:
+                        # print(subjectDataX[i, 4])
                         bestX = subjectDataX[i, 4]
                         accTestX[j] = subjectDataX[i, 5]
             if yAxis[2] == 'single':
                 for i in range(0, len(subjectDataY)): 
-                    if subjectDataY[i, 4] >= accTestY:
-                        accTestY = subjectDataY[i, 4]
+                    # print(subjectDataY[i, 4])
+                    if subjectDataY[i, 4] >= bestY:
+                        bestY = subjectDataY[i, 4]
                         accTestY[j] = subjectDataY[i, 5]
 
             j += 1
         except:
             continue
-
+    # print(accTestX*100)
+    # print(accTestY*100)
     testMeanX = np.mean(np.trim_zeros(accTestX))*100
     testMeanY = np.mean(np.trim_zeros(accTestY))*100
     plt.title('Accuracy rate / epoches')
@@ -139,6 +142,8 @@ def processSingleScatterPlots(xAxis, yAxis):
     plt.xlabel('Accuracy [%]')
 
     plt.plot(range(0, 101), color=colors['black'], linestyle='solid', linewidth=1)
+    # print(np.trim_zeros(accTestX).shape)
+    # print(np.trim_zeros(accTestY).shape)
     plt.scatter(np.trim_zeros(accTestX)*100, np.trim_zeros(accTestY)*100, marker='+', color=colors['red'], label='Single subjects accuracy', linestyle='solid', alpha=0.5, linewidth=1.5)
     plt.scatter(testMeanX, testMeanY, marker='o', color=colors['blue'], linestyle='solid', label='Mean accuracy', linewidth=1.5)
 
@@ -161,14 +166,14 @@ def processSingleScatterPlots(xAxis, yAxis):
     print("Y: {}".format(yAxis))
     print("Mean accuracies: X = {}, Y = {}".format(testMeanX, testMeanY))
     plt.legend(loc='best')
-    plt.show()
-    # plt.savefig("Plots\scatterPlot-X-{}-Y-{}.png".format(xAxis, yAxis), bbox_inches='tight')
+    # plt.show()
+    plt.savefig("Plots\scatterPlot-X-{}-Y-{}.png".format(xAxis, yAxis), bbox_inches='tight')
     plt.close()
 
 # processSinglePlots('finetune', ['cropped', 'trialwise'], ['accuracy'], ['deep', 'shallow'])
 
-for yAxis in [['deep', 'cropped', 'cross'], ['deep', 'trialwise', 'cross']]:
-    for xAxis in [['shallow', 'cropped', 'cross'], ['shallow', 'trialwise', 'cross']]:
+for yAxis in [['deep', 'cropped', 'single'], ['deep', 'trialwise', 'single']]:
+    for xAxis in [['shallow', 'cropped', 'single'], ['shallow', 'trialwise', 'single']]:
         # print('xAxis')
         # print(xAxis)
         # print('yAxis')
