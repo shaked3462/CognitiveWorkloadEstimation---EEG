@@ -3,6 +3,9 @@ from sklearn.utils import shuffle
 import matplotlib.pyplot as plt
 import seaborn as sn
 import pandas as pd
+import matplotlib.pyplot as plt
+from matplotlib import colors as mcolors
+from sklearn.metrics import confusion_matrix
 
 def loadSubjects(subjectNum, single_subject, single_subject_num):
     label0Counter = 0

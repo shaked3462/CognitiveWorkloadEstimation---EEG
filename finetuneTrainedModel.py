@@ -59,7 +59,7 @@ from braindecode.torch_ext.util import set_random_seeds
 
 # Set if you want to use GPU
 # You can also use torch.cuda.is_available() to determine if cuda is available on your machine.
-cuda = True
+cuda = False
 set_random_seeds(seed=20170629, cuda=cuda)
 n_classes = 3
 in_chans = train_set.X.shape[1]
@@ -95,7 +95,7 @@ if th.cuda.is_available():
     checkpoint = th.load(path_to_classifier).state_dict()
 else:
     print('Cuda is not available.')
-    checkpoint = th.load(path_to_classifier, map_location='cpu')
+    checkpoint = th.load(path_to_classifier, map_location='cpu').state_dict()
 np.set_printoptions(suppress=True, threshold=np.inf)
 
 model.network.load_state_dict(checkpoint)
