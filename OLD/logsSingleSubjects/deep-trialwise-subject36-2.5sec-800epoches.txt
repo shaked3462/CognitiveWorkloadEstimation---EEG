@@ -1,0 +1,2416 @@
+single subject num 36
+INFO : deep Model, 800 Epoches, 16 Batch Size, 1 Subjects
+INFO : Single subject num 36
+loading data for subject 36
+INFO : label 0 examples: 54, label 1 examples: 33, label 2 examples: 46
+INFO : used 33 examples from each label
+(133, 62, 641)
+num of examples for each label 33
+trial_length 641
+trying to run with 2.5 sec trials 
+y
+[1 1 0 1 0 1 2 2 2 1 2 2 1 1 2 0 2 0 1 1 0 0 2 1 0 0 2 0 2 0 2 0 2 0 1 0 2
+ 2 2 0 2 0 2 0 2 0 1 1 2 2 2 2 0 1 1 1 0 1 0 2 1 0 0 2 0 2 1 2 1 1 0 1 0 2
+ 2 1 0 1 0 0 1 1 1 0 1 2 1 2 1 2 1 2 0 0 0 1 2 0 1]
+INFO : Training sample size: 59
+INFO : Validation sample size: 19
+INFO : Test sample size: 19
+2019-06-07 01:03:47,262 INFO : Model: 
+Sequential(
+  (dimshuffle): Expression(expression=_transpose_time_to_spat)
+  (conv_time): Conv2d(1, 25, kernel_size=(10, 1), stride=(1, 1))
+  (conv_spat): Conv2d(25, 25, kernel_size=(1, 62), stride=(1, 1), bias=False)
+  (bnorm): BatchNorm2d(25, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (conv_nonlin): Expression(expression=elu)
+  (pool): MaxPool2d(kernel_size=(3, 1), stride=(3, 1), padding=0, dilation=1, ceil_mode=False)
+  (pool_nonlin): Expression(expression=identity)
+  (drop_2): Dropout(p=0.5)
+  (conv_2): Conv2d(25, 50, kernel_size=(10, 1), stride=(1, 1), bias=False)
+  (bnorm_2): BatchNorm2d(50, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (nonlin_2): Expression(expression=elu)
+  (pool_2): MaxPool2d(kernel_size=(3, 1), stride=(3, 1), padding=0, dilation=1, ceil_mode=False)
+  (pool_nonlin_2): Expression(expression=identity)
+  (drop_3): Dropout(p=0.5)
+  (conv_3): Conv2d(50, 100, kernel_size=(10, 1), stride=(1, 1), bias=False)
+  (bnorm_3): BatchNorm2d(100, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (nonlin_3): Expression(expression=elu)
+  (pool_3): MaxPool2d(kernel_size=(3, 1), stride=(3, 1), padding=0, dilation=1, ceil_mode=False)
+  (pool_nonlin_3): Expression(expression=identity)
+  (drop_4): Dropout(p=0.5)
+  (conv_4): Conv2d(100, 200, kernel_size=(10, 1), stride=(1, 1), bias=False)
+  (bnorm_4): BatchNorm2d(200, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (nonlin_4): Expression(expression=elu)
+  (pool_4): MaxPool2d(kernel_size=(3, 1), stride=(3, 1), padding=0, dilation=1, ceil_mode=False)
+  (pool_nonlin_4): Expression(expression=identity)
+  (conv_classifier): Conv2d(200, 3, kernel_size=(3, 1), stride=(1, 1))
+  (softmax): LogSoftmax()
+  (squeeze): Expression(expression=_squeeze_final_output)
+)
+2019-06-07 01:03:47,262 INFO : Run until first stop...
+2019-06-07 01:03:48,043 INFO : Epoch 0
+2019-06-07 01:03:48,043 INFO : train_loss                2.09895
+2019-06-07 01:03:48,043 INFO : valid_loss                3.28109
+2019-06-07 01:03:48,043 INFO : test_loss                 3.32671
+2019-06-07 01:03:48,043 INFO : train_misclass            0.59322
+2019-06-07 01:03:48,043 INFO : valid_misclass            0.94737
+2019-06-07 01:03:48,043 INFO : test_misclass             0.85714
+2019-06-07 01:03:48,043 INFO : runtime                   0.00000
+2019-06-07 01:03:48,043 INFO : 
+2019-06-07 01:03:48,043 INFO : New best valid_misclass: 0.947368
+2019-06-07 01:03:48,043 INFO : 
+2019-06-07 01:03:48,200 INFO : Time only for training updates: 0.16s
+2019-06-07 01:03:48,262 INFO : Epoch 1
+2019-06-07 01:03:48,262 INFO : train_loss                1.06766
+2019-06-07 01:03:48,262 INFO : valid_loss                1.25131
+2019-06-07 01:03:48,262 INFO : test_loss                 1.20721
+2019-06-07 01:03:48,262 INFO : train_misclass            0.59322
+2019-06-07 01:03:48,262 INFO : valid_misclass            0.63158
+2019-06-07 01:03:48,262 INFO : test_misclass             0.71429
+2019-06-07 01:03:48,262 INFO : runtime                   0.93750
+2019-06-07 01:03:48,262 INFO : 
+2019-06-07 01:03:48,278 INFO : New best valid_misclass: 0.631579
+2019-06-07 01:03:48,278 INFO : 
+2019-06-07 01:03:48,403 INFO : Time only for training updates: 0.12s
+2019-06-07 01:03:48,465 INFO : Epoch 2
+2019-06-07 01:03:48,465 INFO : train_loss                1.00118
+2019-06-07 01:03:48,465 INFO : valid_loss                1.17828
+2019-06-07 01:03:48,465 INFO : test_loss                 1.11998
+2019-06-07 01:03:48,465 INFO : train_misclass            0.49153
+2019-06-07 01:03:48,465 INFO : valid_misclass            0.68421
+2019-06-07 01:03:48,465 INFO : test_misclass             0.57143
+2019-06-07 01:03:48,465 INFO : runtime                   0.20313
+2019-06-07 01:03:48,465 INFO : 
+2019-06-07 01:03:48,590 INFO : Time only for training updates: 0.11s
+2019-06-07 01:03:48,653 INFO : Epoch 3
+2019-06-07 01:03:48,653 INFO : train_loss                1.00329
+2019-06-07 01:03:48,653 INFO : valid_loss                1.25075
+2019-06-07 01:03:48,653 INFO : test_loss                 1.24791
+2019-06-07 01:03:48,653 INFO : train_misclass            0.52542
+2019-06-07 01:03:48,653 INFO : valid_misclass            0.68421
+2019-06-07 01:03:48,653 INFO : test_misclass             0.57143
+2019-06-07 01:03:48,653 INFO : runtime                   0.18750
+2019-06-07 01:03:48,653 INFO : 
+2019-06-07 01:03:48,762 INFO : Time only for training updates: 0.11s
+2019-06-07 01:03:48,825 INFO : Epoch 4
+2019-06-07 01:03:48,825 INFO : train_loss                0.94153
+2019-06-07 01:03:48,825 INFO : valid_loss                1.24104
+2019-06-07 01:03:48,825 INFO : test_loss                 1.35043
+2019-06-07 01:03:48,825 INFO : train_misclass            0.47458
+2019-06-07 01:03:48,825 INFO : valid_misclass            0.68421
+2019-06-07 01:03:48,825 INFO : test_misclass             0.66667
+2019-06-07 01:03:48,825 INFO : runtime                   0.17188
+2019-06-07 01:03:48,825 INFO : 
+2019-06-07 01:03:48,934 INFO : Time only for training updates: 0.11s
+2019-06-07 01:03:48,981 INFO : Epoch 5
+2019-06-07 01:03:48,981 INFO : train_loss                0.88895
+2019-06-07 01:03:48,981 INFO : valid_loss                1.19208
+2019-06-07 01:03:48,981 INFO : test_loss                 1.43124
+2019-06-07 01:03:48,981 INFO : train_misclass            0.42373
+2019-06-07 01:03:48,981 INFO : valid_misclass            0.68421
+2019-06-07 01:03:48,981 INFO : test_misclass             0.66667
+2019-06-07 01:03:48,981 INFO : runtime                   0.17188
+2019-06-07 01:03:48,981 INFO : 
+2019-06-07 01:03:49,090 INFO : Time only for training updates: 0.11s
+2019-06-07 01:03:49,137 INFO : Epoch 6
+2019-06-07 01:03:49,137 INFO : train_loss                0.87254
+2019-06-07 01:03:49,137 INFO : valid_loss                1.12509
+2019-06-07 01:03:49,137 INFO : test_loss                 1.46410
+2019-06-07 01:03:49,137 INFO : train_misclass            0.42373
+2019-06-07 01:03:49,137 INFO : valid_misclass            0.47368
+2019-06-07 01:03:49,137 INFO : test_misclass             0.66667
+2019-06-07 01:03:49,137 INFO : runtime                   0.15625
+2019-06-07 01:03:49,137 INFO : 
+2019-06-07 01:03:49,153 INFO : New best valid_misclass: 0.473684
+2019-06-07 01:03:49,153 INFO : 
+2019-06-07 01:03:49,246 INFO : Time only for training updates: 0.09s
+2019-06-07 01:03:49,293 INFO : Epoch 7
+2019-06-07 01:03:49,293 INFO : train_loss                0.86323
+2019-06-07 01:03:49,293 INFO : valid_loss                1.13660
+2019-06-07 01:03:49,293 INFO : test_loss                 1.51801
+2019-06-07 01:03:49,293 INFO : train_misclass            0.33898
+2019-06-07 01:03:49,293 INFO : valid_misclass            0.52632
+2019-06-07 01:03:49,293 INFO : test_misclass             0.66667
+2019-06-07 01:03:49,293 INFO : runtime                   0.15625
+2019-06-07 01:03:49,293 INFO : 
+2019-06-07 01:03:49,387 INFO : Time only for training updates: 0.08s
+2019-06-07 01:03:49,450 INFO : Epoch 8
+2019-06-07 01:03:49,450 INFO : train_loss                0.84833
+2019-06-07 01:03:49,450 INFO : valid_loss                1.16921
+2019-06-07 01:03:49,450 INFO : test_loss                 1.54453
+2019-06-07 01:03:49,450 INFO : train_misclass            0.40678
+2019-06-07 01:03:49,450 INFO : valid_misclass            0.52632
+2019-06-07 01:03:49,450 INFO : test_misclass             0.71429
+2019-06-07 01:03:49,450 INFO : runtime                   0.14063
+2019-06-07 01:03:49,450 INFO : 
+2019-06-07 01:03:49,543 INFO : Time only for training updates: 0.09s
+2019-06-07 01:03:49,590 INFO : Epoch 9
+2019-06-07 01:03:49,590 INFO : train_loss                0.82094
+2019-06-07 01:03:49,590 INFO : valid_loss                1.29255
+2019-06-07 01:03:49,590 INFO : test_loss                 1.67807
+2019-06-07 01:03:49,590 INFO : train_misclass            0.40678
+2019-06-07 01:03:49,590 INFO : valid_misclass            0.57895
+2019-06-07 01:03:49,590 INFO : test_misclass             0.71429
+2019-06-07 01:03:49,590 INFO : runtime                   0.15625
+2019-06-07 01:03:49,590 INFO : 
+2019-06-07 01:03:49,684 INFO : Time only for training updates: 0.08s
+2019-06-07 01:03:49,746 INFO : Epoch 10
+2019-06-07 01:03:49,746 INFO : train_loss                0.82636
+2019-06-07 01:03:49,746 INFO : valid_loss                1.37985
+2019-06-07 01:03:49,746 INFO : test_loss                 1.63994
+2019-06-07 01:03:49,746 INFO : train_misclass            0.38983
+2019-06-07 01:03:49,746 INFO : valid_misclass            0.57895
+2019-06-07 01:03:49,746 INFO : test_misclass             0.66667
+2019-06-07 01:03:49,746 INFO : runtime                   0.14063
+2019-06-07 01:03:49,746 INFO : 
+2019-06-07 01:03:49,840 INFO : Time only for training updates: 0.09s
+2019-06-07 01:03:49,887 INFO : Epoch 11
+2019-06-07 01:03:49,887 INFO : train_loss                0.80192
+2019-06-07 01:03:49,887 INFO : valid_loss                1.39465
+2019-06-07 01:03:49,887 INFO : test_loss                 1.65138
+2019-06-07 01:03:49,887 INFO : train_misclass            0.35593
+2019-06-07 01:03:49,887 INFO : valid_misclass            0.63158
+2019-06-07 01:03:49,887 INFO : test_misclass             0.71429
+2019-06-07 01:03:49,887 INFO : runtime                   0.15625
+2019-06-07 01:03:49,887 INFO : 
+2019-06-07 01:03:49,981 INFO : Time only for training updates: 0.09s
+2019-06-07 01:03:50,028 INFO : Epoch 12
+2019-06-07 01:03:50,028 INFO : train_loss                0.76674
+2019-06-07 01:03:50,028 INFO : valid_loss                1.42965
+2019-06-07 01:03:50,028 INFO : test_loss                 1.67953
+2019-06-07 01:03:50,028 INFO : train_misclass            0.33898
+2019-06-07 01:03:50,028 INFO : valid_misclass            0.57895
+2019-06-07 01:03:50,028 INFO : test_misclass             0.76190
+2019-06-07 01:03:50,028 INFO : runtime                   0.14062
+2019-06-07 01:03:50,028 INFO : 
+2019-06-07 01:03:50,121 INFO : Time only for training updates: 0.09s
+2019-06-07 01:03:50,184 INFO : Epoch 13
+2019-06-07 01:03:50,184 INFO : train_loss                0.71528
+2019-06-07 01:03:50,184 INFO : valid_loss                1.47622
+2019-06-07 01:03:50,184 INFO : test_loss                 1.80772
+2019-06-07 01:03:50,184 INFO : train_misclass            0.32203
+2019-06-07 01:03:50,184 INFO : valid_misclass            0.57895
+2019-06-07 01:03:50,184 INFO : test_misclass             0.80952
+2019-06-07 01:03:50,184 INFO : runtime                   0.14063
+2019-06-07 01:03:50,184 INFO : 
+2019-06-07 01:03:50,278 INFO : Time only for training updates: 0.09s
+2019-06-07 01:03:50,325 INFO : Epoch 14
+2019-06-07 01:03:50,325 INFO : train_loss                0.71169
+2019-06-07 01:03:50,325 INFO : valid_loss                1.55113
+2019-06-07 01:03:50,325 INFO : test_loss                 1.98003
+2019-06-07 01:03:50,325 INFO : train_misclass            0.35593
+2019-06-07 01:03:50,325 INFO : valid_misclass            0.52632
+2019-06-07 01:03:50,325 INFO : test_misclass             0.76190
+2019-06-07 01:03:50,325 INFO : runtime                   0.15625
+2019-06-07 01:03:50,325 INFO : 
+2019-06-07 01:03:50,418 INFO : Time only for training updates: 0.09s
+2019-06-07 01:03:50,465 INFO : Epoch 15
+2019-06-07 01:03:50,465 INFO : train_loss                0.69420
+2019-06-07 01:03:50,465 INFO : valid_loss                1.52773
+2019-06-07 01:03:50,465 INFO : test_loss                 2.07748
+2019-06-07 01:03:50,465 INFO : train_misclass            0.33898
+2019-06-07 01:03:50,465 INFO : valid_misclass            0.47368
+2019-06-07 01:03:50,465 INFO : test_misclass             0.76190
+2019-06-07 01:03:50,465 INFO : runtime                   0.14063
+2019-06-07 01:03:50,465 INFO : 
+2019-06-07 01:03:50,481 INFO : New best valid_misclass: 0.473684
+2019-06-07 01:03:50,481 INFO : 
+2019-06-07 01:03:50,559 INFO : Time only for training updates: 0.08s
+2019-06-07 01:03:50,637 INFO : Epoch 16
+2019-06-07 01:03:50,637 INFO : train_loss                0.66227
+2019-06-07 01:03:50,637 INFO : valid_loss                1.54995
+2019-06-07 01:03:50,637 INFO : test_loss                 2.18652
+2019-06-07 01:03:50,637 INFO : train_misclass            0.32203
+2019-06-07 01:03:50,637 INFO : valid_misclass            0.47368
+2019-06-07 01:03:50,637 INFO : test_misclass             0.80952
+2019-06-07 01:03:50,637 INFO : runtime                   0.14063
+2019-06-07 01:03:50,637 INFO : 
+2019-06-07 01:03:50,637 INFO : New best valid_misclass: 0.473684
+2019-06-07 01:03:50,637 INFO : 
+2019-06-07 01:03:50,731 INFO : Time only for training updates: 0.09s
+2019-06-07 01:03:50,778 INFO : Epoch 17
+2019-06-07 01:03:50,778 INFO : train_loss                0.63069
+2019-06-07 01:03:50,778 INFO : valid_loss                1.52267
+2019-06-07 01:03:50,778 INFO : test_loss                 2.23226
+2019-06-07 01:03:50,778 INFO : train_misclass            0.30508
+2019-06-07 01:03:50,778 INFO : valid_misclass            0.42105
+2019-06-07 01:03:50,778 INFO : test_misclass             0.76190
+2019-06-07 01:03:50,793 INFO : runtime                   0.17188
+2019-06-07 01:03:50,793 INFO : 
+2019-06-07 01:03:50,793 INFO : New best valid_misclass: 0.421053
+2019-06-07 01:03:50,793 INFO : 
+2019-06-07 01:03:50,887 INFO : Time only for training updates: 0.09s
+2019-06-07 01:03:50,934 INFO : Epoch 18
+2019-06-07 01:03:50,934 INFO : train_loss                0.64552
+2019-06-07 01:03:50,934 INFO : valid_loss                1.53367
+2019-06-07 01:03:50,934 INFO : test_loss                 2.23842
+2019-06-07 01:03:50,934 INFO : train_misclass            0.30508
+2019-06-07 01:03:50,934 INFO : valid_misclass            0.47368
+2019-06-07 01:03:50,934 INFO : test_misclass             0.76190
+2019-06-07 01:03:50,934 INFO : runtime                   0.15625
+2019-06-07 01:03:50,934 INFO : 
+2019-06-07 01:03:51,028 INFO : Time only for training updates: 0.09s
+2019-06-07 01:03:51,075 INFO : Epoch 19
+2019-06-07 01:03:51,075 INFO : train_loss                0.62458
+2019-06-07 01:03:51,090 INFO : valid_loss                1.53678
+2019-06-07 01:03:51,090 INFO : test_loss                 2.25763
+2019-06-07 01:03:51,090 INFO : train_misclass            0.27119
+2019-06-07 01:03:51,090 INFO : valid_misclass            0.47368
+2019-06-07 01:03:51,090 INFO : test_misclass             0.80952
+2019-06-07 01:03:51,090 INFO : runtime                   0.14063
+2019-06-07 01:03:51,090 INFO : 
+2019-06-07 01:03:51,168 INFO : Time only for training updates: 0.08s
+2019-06-07 01:03:51,231 INFO : Epoch 20
+2019-06-07 01:03:51,231 INFO : train_loss                0.59416
+2019-06-07 01:03:51,231 INFO : valid_loss                1.51430
+2019-06-07 01:03:51,231 INFO : test_loss                 2.30086
+2019-06-07 01:03:51,231 INFO : train_misclass            0.25424
+2019-06-07 01:03:51,231 INFO : valid_misclass            0.57895
+2019-06-07 01:03:51,231 INFO : test_misclass             0.80952
+2019-06-07 01:03:51,231 INFO : runtime                   0.14062
+2019-06-07 01:03:51,231 INFO : 
+2019-06-07 01:03:51,325 INFO : Time only for training updates: 0.09s
+2019-06-07 01:03:51,371 INFO : Epoch 21
+2019-06-07 01:03:51,371 INFO : train_loss                0.53907
+2019-06-07 01:03:51,371 INFO : valid_loss                1.58737
+2019-06-07 01:03:51,371 INFO : test_loss                 2.46960
+2019-06-07 01:03:51,371 INFO : train_misclass            0.20339
+2019-06-07 01:03:51,371 INFO : valid_misclass            0.52632
+2019-06-07 01:03:51,371 INFO : test_misclass             0.76190
+2019-06-07 01:03:51,371 INFO : runtime                   0.15625
+2019-06-07 01:03:51,371 INFO : 
+2019-06-07 01:03:51,465 INFO : Time only for training updates: 0.09s
+2019-06-07 01:03:51,512 INFO : Epoch 22
+2019-06-07 01:03:51,512 INFO : train_loss                0.48961
+2019-06-07 01:03:51,512 INFO : valid_loss                1.51737
+2019-06-07 01:03:51,512 INFO : test_loss                 2.56447
+2019-06-07 01:03:51,512 INFO : train_misclass            0.15254
+2019-06-07 01:03:51,512 INFO : valid_misclass            0.52632
+2019-06-07 01:03:51,512 INFO : test_misclass             0.80952
+2019-06-07 01:03:51,512 INFO : runtime                   0.14063
+2019-06-07 01:03:51,512 INFO : 
+2019-06-07 01:03:51,606 INFO : Time only for training updates: 0.09s
+2019-06-07 01:03:51,668 INFO : Epoch 23
+2019-06-07 01:03:51,668 INFO : train_loss                0.45388
+2019-06-07 01:03:51,668 INFO : valid_loss                1.56580
+2019-06-07 01:03:51,668 INFO : test_loss                 2.64249
+2019-06-07 01:03:51,668 INFO : train_misclass            0.11864
+2019-06-07 01:03:51,668 INFO : valid_misclass            0.57895
+2019-06-07 01:03:51,668 INFO : test_misclass             0.85714
+2019-06-07 01:03:51,668 INFO : runtime                   0.14063
+2019-06-07 01:03:51,668 INFO : 
+2019-06-07 01:03:51,746 INFO : Time only for training updates: 0.08s
+2019-06-07 01:03:51,825 INFO : Epoch 24
+2019-06-07 01:03:51,825 INFO : train_loss                0.43582
+2019-06-07 01:03:51,825 INFO : valid_loss                1.44435
+2019-06-07 01:03:51,825 INFO : test_loss                 2.57070
+2019-06-07 01:03:51,825 INFO : train_misclass            0.11864
+2019-06-07 01:03:51,825 INFO : valid_misclass            0.63158
+2019-06-07 01:03:51,825 INFO : test_misclass             0.85714
+2019-06-07 01:03:51,825 INFO : runtime                   0.14063
+2019-06-07 01:03:51,825 INFO : 
+2019-06-07 01:03:51,903 INFO : Time only for training updates: 0.08s
+2019-06-07 01:03:51,965 INFO : Epoch 25
+2019-06-07 01:03:51,965 INFO : train_loss                0.46358
+2019-06-07 01:03:51,965 INFO : valid_loss                1.51986
+2019-06-07 01:03:51,965 INFO : test_loss                 2.59640
+2019-06-07 01:03:51,965 INFO : train_misclass            0.15254
+2019-06-07 01:03:51,965 INFO : valid_misclass            0.63158
+2019-06-07 01:03:51,965 INFO : test_misclass             0.85714
+2019-06-07 01:03:51,965 INFO : runtime                   0.15625
+2019-06-07 01:03:51,965 INFO : 
+2019-06-07 01:03:52,059 INFO : Time only for training updates: 0.09s
+2019-06-07 01:03:52,106 INFO : Epoch 26
+2019-06-07 01:03:52,106 INFO : train_loss                0.50413
+2019-06-07 01:03:52,106 INFO : valid_loss                1.64362
+2019-06-07 01:03:52,106 INFO : test_loss                 2.80695
+2019-06-07 01:03:52,106 INFO : train_misclass            0.15254
+2019-06-07 01:03:52,106 INFO : valid_misclass            0.68421
+2019-06-07 01:03:52,106 INFO : test_misclass             0.85714
+2019-06-07 01:03:52,106 INFO : runtime                   0.15625
+2019-06-07 01:03:52,106 INFO : 
+2019-06-07 01:03:52,200 INFO : Time only for training updates: 0.09s
+2019-06-07 01:03:52,247 INFO : Epoch 27
+2019-06-07 01:03:52,247 INFO : train_loss                0.39725
+2019-06-07 01:03:52,247 INFO : valid_loss                1.60860
+2019-06-07 01:03:52,247 INFO : test_loss                 2.76813
+2019-06-07 01:03:52,247 INFO : train_misclass            0.11864
+2019-06-07 01:03:52,247 INFO : valid_misclass            0.68421
+2019-06-07 01:03:52,247 INFO : test_misclass             0.76190
+2019-06-07 01:03:52,247 INFO : runtime                   0.14062
+2019-06-07 01:03:52,247 INFO : 
+2019-06-07 01:03:52,340 INFO : Time only for training updates: 0.08s
+2019-06-07 01:03:52,403 INFO : Epoch 28
+2019-06-07 01:03:52,403 INFO : train_loss                0.40731
+2019-06-07 01:03:52,403 INFO : valid_loss                1.48230
+2019-06-07 01:03:52,403 INFO : test_loss                 2.70825
+2019-06-07 01:03:52,403 INFO : train_misclass            0.16949
+2019-06-07 01:03:52,403 INFO : valid_misclass            0.57895
+2019-06-07 01:03:52,403 INFO : test_misclass             0.80952
+2019-06-07 01:03:52,403 INFO : runtime                   0.14063
+2019-06-07 01:03:52,403 INFO : 
+2019-06-07 01:03:52,497 INFO : Time only for training updates: 0.09s
+2019-06-07 01:03:52,543 INFO : Epoch 29
+2019-06-07 01:03:52,543 INFO : train_loss                0.39577
+2019-06-07 01:03:52,543 INFO : valid_loss                1.61767
+2019-06-07 01:03:52,543 INFO : test_loss                 2.78618
+2019-06-07 01:03:52,543 INFO : train_misclass            0.06780
+2019-06-07 01:03:52,543 INFO : valid_misclass            0.68421
+2019-06-07 01:03:52,543 INFO : test_misclass             0.85714
+2019-06-07 01:03:52,543 INFO : runtime                   0.15625
+2019-06-07 01:03:52,543 INFO : 
+2019-06-07 01:03:52,637 INFO : Time only for training updates: 0.09s
+2019-06-07 01:03:52,684 INFO : Epoch 30
+2019-06-07 01:03:52,684 INFO : train_loss                0.38113
+2019-06-07 01:03:52,684 INFO : valid_loss                1.78997
+2019-06-07 01:03:52,684 INFO : test_loss                 2.85138
+2019-06-07 01:03:52,684 INFO : train_misclass            0.08475
+2019-06-07 01:03:52,684 INFO : valid_misclass            0.57895
+2019-06-07 01:03:52,684 INFO : test_misclass             0.85714
+2019-06-07 01:03:52,684 INFO : runtime                   0.14063
+2019-06-07 01:03:52,684 INFO : 
+2019-06-07 01:03:52,778 INFO : Time only for training updates: 0.08s
+2019-06-07 01:03:52,840 INFO : Epoch 31
+2019-06-07 01:03:52,840 INFO : train_loss                0.43422
+2019-06-07 01:03:52,840 INFO : valid_loss                2.01857
+2019-06-07 01:03:52,840 INFO : test_loss                 3.11177
+2019-06-07 01:03:52,840 INFO : train_misclass            0.16949
+2019-06-07 01:03:52,840 INFO : valid_misclass            0.57895
+2019-06-07 01:03:52,840 INFO : test_misclass             0.85714
+2019-06-07 01:03:52,840 INFO : runtime                   0.14063
+2019-06-07 01:03:52,840 INFO : 
+2019-06-07 01:03:52,934 INFO : Time only for training updates: 0.09s
+2019-06-07 01:03:52,997 INFO : Epoch 32
+2019-06-07 01:03:52,997 INFO : train_loss                0.42395
+2019-06-07 01:03:52,997 INFO : valid_loss                1.91482
+2019-06-07 01:03:52,997 INFO : test_loss                 3.04250
+2019-06-07 01:03:52,997 INFO : train_misclass            0.15254
+2019-06-07 01:03:52,997 INFO : valid_misclass            0.57895
+2019-06-07 01:03:52,997 INFO : test_misclass             0.76190
+2019-06-07 01:03:52,997 INFO : runtime                   0.15625
+2019-06-07 01:03:52,997 INFO : 
+2019-06-07 01:03:53,090 INFO : Time only for training updates: 0.09s
+2019-06-07 01:03:53,137 INFO : Epoch 33
+2019-06-07 01:03:53,137 INFO : train_loss                0.37958
+2019-06-07 01:03:53,137 INFO : valid_loss                1.72761
+2019-06-07 01:03:53,137 INFO : test_loss                 2.88609
+2019-06-07 01:03:53,137 INFO : train_misclass            0.10169
+2019-06-07 01:03:53,137 INFO : valid_misclass            0.52632
+2019-06-07 01:03:53,137 INFO : test_misclass             0.76190
+2019-06-07 01:03:53,137 INFO : runtime                   0.15625
+2019-06-07 01:03:53,137 INFO : 
+2019-06-07 01:03:53,231 INFO : Time only for training updates: 0.09s
+2019-06-07 01:03:53,278 INFO : Epoch 34
+2019-06-07 01:03:53,278 INFO : train_loss                0.30772
+2019-06-07 01:03:53,278 INFO : valid_loss                1.73401
+2019-06-07 01:03:53,278 INFO : test_loss                 2.94308
+2019-06-07 01:03:53,278 INFO : train_misclass            0.11864
+2019-06-07 01:03:53,278 INFO : valid_misclass            0.63158
+2019-06-07 01:03:53,278 INFO : test_misclass             0.80952
+2019-06-07 01:03:53,278 INFO : runtime                   0.14063
+2019-06-07 01:03:53,278 INFO : 
+2019-06-07 01:03:53,372 INFO : Time only for training updates: 0.09s
+2019-06-07 01:03:53,434 INFO : Epoch 35
+2019-06-07 01:03:53,434 INFO : train_loss                0.28522
+2019-06-07 01:03:53,434 INFO : valid_loss                1.61121
+2019-06-07 01:03:53,434 INFO : test_loss                 2.85261
+2019-06-07 01:03:53,434 INFO : train_misclass            0.08475
+2019-06-07 01:03:53,434 INFO : valid_misclass            0.57895
+2019-06-07 01:03:53,434 INFO : test_misclass             0.76190
+2019-06-07 01:03:53,434 INFO : runtime                   0.14063
+2019-06-07 01:03:53,434 INFO : 
+2019-06-07 01:03:53,528 INFO : Time only for training updates: 0.09s
+2019-06-07 01:03:53,575 INFO : Epoch 36
+2019-06-07 01:03:53,575 INFO : train_loss                0.49672
+2019-06-07 01:03:53,575 INFO : valid_loss                1.73628
+2019-06-07 01:03:53,575 INFO : test_loss                 3.02758
+2019-06-07 01:03:53,575 INFO : train_misclass            0.18644
+2019-06-07 01:03:53,575 INFO : valid_misclass            0.57895
+2019-06-07 01:03:53,575 INFO : test_misclass             0.80952
+2019-06-07 01:03:53,575 INFO : runtime                   0.15625
+2019-06-07 01:03:53,575 INFO : 
+2019-06-07 01:03:53,668 INFO : Time only for training updates: 0.09s
+2019-06-07 01:03:53,715 INFO : Epoch 37
+2019-06-07 01:03:53,715 INFO : train_loss                0.33010
+2019-06-07 01:03:53,715 INFO : valid_loss                1.61087
+2019-06-07 01:03:53,715 INFO : test_loss                 2.99748
+2019-06-07 01:03:53,715 INFO : train_misclass            0.11864
+2019-06-07 01:03:53,715 INFO : valid_misclass            0.63158
+2019-06-07 01:03:53,715 INFO : test_misclass             0.85714
+2019-06-07 01:03:53,715 INFO : runtime                   0.14063
+2019-06-07 01:03:53,715 INFO : 
+2019-06-07 01:03:53,809 INFO : Time only for training updates: 0.09s
+2019-06-07 01:03:53,872 INFO : Epoch 38
+2019-06-07 01:03:53,872 INFO : train_loss                0.32228
+2019-06-07 01:03:53,872 INFO : valid_loss                1.91114
+2019-06-07 01:03:53,872 INFO : test_loss                 3.26212
+2019-06-07 01:03:53,872 INFO : train_misclass            0.10169
+2019-06-07 01:03:53,872 INFO : valid_misclass            0.73684
+2019-06-07 01:03:53,872 INFO : test_misclass             0.85714
+2019-06-07 01:03:53,872 INFO : runtime                   0.14063
+2019-06-07 01:03:53,872 INFO : 
+2019-06-07 01:03:53,965 INFO : Time only for training updates: 0.09s
+2019-06-07 01:03:54,012 INFO : Epoch 39
+2019-06-07 01:03:54,012 INFO : train_loss                0.35030
+2019-06-07 01:03:54,012 INFO : valid_loss                2.07800
+2019-06-07 01:03:54,012 INFO : test_loss                 3.30319
+2019-06-07 01:03:54,012 INFO : train_misclass            0.08475
+2019-06-07 01:03:54,012 INFO : valid_misclass            0.73684
+2019-06-07 01:03:54,012 INFO : test_misclass             0.85714
+2019-06-07 01:03:54,012 INFO : runtime                   0.15625
+2019-06-07 01:03:54,012 INFO : 
+2019-06-07 01:03:54,106 INFO : Time only for training updates: 0.09s
+2019-06-07 01:03:54,153 INFO : Epoch 40
+2019-06-07 01:03:54,153 INFO : train_loss                0.31424
+2019-06-07 01:03:54,153 INFO : valid_loss                1.61992
+2019-06-07 01:03:54,168 INFO : test_loss                 2.96872
+2019-06-07 01:03:54,168 INFO : train_misclass            0.11864
+2019-06-07 01:03:54,168 INFO : valid_misclass            0.68421
+2019-06-07 01:03:54,168 INFO : test_misclass             0.85714
+2019-06-07 01:03:54,168 INFO : runtime                   0.14063
+2019-06-07 01:03:54,168 INFO : 
+2019-06-07 01:03:54,247 INFO : Time only for training updates: 0.08s
+2019-06-07 01:03:54,309 INFO : Epoch 41
+2019-06-07 01:03:54,309 INFO : train_loss                0.28205
+2019-06-07 01:03:54,309 INFO : valid_loss                1.78401
+2019-06-07 01:03:54,309 INFO : test_loss                 3.04175
+2019-06-07 01:03:54,309 INFO : train_misclass            0.06780
+2019-06-07 01:03:54,309 INFO : valid_misclass            0.63158
+2019-06-07 01:03:54,309 INFO : test_misclass             0.85714
+2019-06-07 01:03:54,309 INFO : runtime                   0.14063
+2019-06-07 01:03:54,309 INFO : 
+2019-06-07 01:03:54,403 INFO : Time only for training updates: 0.09s
+2019-06-07 01:03:54,450 INFO : Epoch 42
+2019-06-07 01:03:54,450 INFO : train_loss                0.29894
+2019-06-07 01:03:54,450 INFO : valid_loss                1.78662
+2019-06-07 01:03:54,450 INFO : test_loss                 3.06329
+2019-06-07 01:03:54,450 INFO : train_misclass            0.10169
+2019-06-07 01:03:54,450 INFO : valid_misclass            0.63158
+2019-06-07 01:03:54,450 INFO : test_misclass             0.85714
+2019-06-07 01:03:54,450 INFO : runtime                   0.15625
+2019-06-07 01:03:54,450 INFO : 
+2019-06-07 01:03:54,543 INFO : Time only for training updates: 0.09s
+2019-06-07 01:03:54,590 INFO : Epoch 43
+2019-06-07 01:03:54,606 INFO : train_loss                0.28270
+2019-06-07 01:03:54,606 INFO : valid_loss                1.65555
+2019-06-07 01:03:54,606 INFO : test_loss                 2.89423
+2019-06-07 01:03:54,606 INFO : train_misclass            0.08475
+2019-06-07 01:03:54,606 INFO : valid_misclass            0.57895
+2019-06-07 01:03:54,606 INFO : test_misclass             0.80952
+2019-06-07 01:03:54,606 INFO : runtime                   0.14063
+2019-06-07 01:03:54,606 INFO : 
+2019-06-07 01:03:54,684 INFO : Time only for training updates: 0.08s
+2019-06-07 01:03:54,762 INFO : Epoch 44
+2019-06-07 01:03:54,762 INFO : train_loss                0.37947
+2019-06-07 01:03:54,762 INFO : valid_loss                2.22176
+2019-06-07 01:03:54,762 INFO : test_loss                 3.31510
+2019-06-07 01:03:54,762 INFO : train_misclass            0.13559
+2019-06-07 01:03:54,762 INFO : valid_misclass            0.63158
+2019-06-07 01:03:54,762 INFO : test_misclass             0.85714
+2019-06-07 01:03:54,762 INFO : runtime                   0.14063
+2019-06-07 01:03:54,762 INFO : 
+2019-06-07 01:03:54,856 INFO : Time only for training updates: 0.09s
+2019-06-07 01:03:54,903 INFO : Epoch 45
+2019-06-07 01:03:54,903 INFO : train_loss                0.37704
+2019-06-07 01:03:54,903 INFO : valid_loss                2.24656
+2019-06-07 01:03:54,903 INFO : test_loss                 3.07336
+2019-06-07 01:03:54,903 INFO : train_misclass            0.11864
+2019-06-07 01:03:54,903 INFO : valid_misclass            0.63158
+2019-06-07 01:03:54,903 INFO : test_misclass             0.80952
+2019-06-07 01:03:54,903 INFO : runtime                   0.17188
+2019-06-07 01:03:54,903 INFO : 
+2019-06-07 01:03:54,997 INFO : Time only for training updates: 0.09s
+2019-06-07 01:03:55,059 INFO : Epoch 46
+2019-06-07 01:03:55,059 INFO : train_loss                0.33218
+2019-06-07 01:03:55,059 INFO : valid_loss                2.00524
+2019-06-07 01:03:55,059 INFO : test_loss                 2.79741
+2019-06-07 01:03:55,059 INFO : train_misclass            0.11864
+2019-06-07 01:03:55,059 INFO : valid_misclass            0.68421
+2019-06-07 01:03:55,059 INFO : test_misclass             0.80952
+2019-06-07 01:03:55,059 INFO : runtime                   0.14063
+2019-06-07 01:03:55,059 INFO : 
+2019-06-07 01:03:55,137 INFO : Time only for training updates: 0.08s
+2019-06-07 01:03:55,200 INFO : Epoch 47
+2019-06-07 01:03:55,200 INFO : train_loss                0.30919
+2019-06-07 01:03:55,200 INFO : valid_loss                2.13221
+2019-06-07 01:03:55,200 INFO : test_loss                 3.07341
+2019-06-07 01:03:55,200 INFO : train_misclass            0.15254
+2019-06-07 01:03:55,200 INFO : valid_misclass            0.68421
+2019-06-07 01:03:55,200 INFO : test_misclass             0.80952
+2019-06-07 01:03:55,200 INFO : runtime                   0.14063
+2019-06-07 01:03:55,200 INFO : 
+2019-06-07 01:03:55,293 INFO : Time only for training updates: 0.09s
+2019-06-07 01:03:55,340 INFO : Epoch 48
+2019-06-07 01:03:55,340 INFO : train_loss                0.36459
+2019-06-07 01:03:55,340 INFO : valid_loss                2.08026
+2019-06-07 01:03:55,340 INFO : test_loss                 3.09408
+2019-06-07 01:03:55,340 INFO : train_misclass            0.13559
+2019-06-07 01:03:55,340 INFO : valid_misclass            0.68421
+2019-06-07 01:03:55,340 INFO : test_misclass             0.80952
+2019-06-07 01:03:55,340 INFO : runtime                   0.15625
+2019-06-07 01:03:55,340 INFO : 
+2019-06-07 01:03:55,434 INFO : Time only for training updates: 0.09s
+2019-06-07 01:03:55,497 INFO : Epoch 49
+2019-06-07 01:03:55,497 INFO : train_loss                0.39436
+2019-06-07 01:03:55,497 INFO : valid_loss                2.03678
+2019-06-07 01:03:55,497 INFO : test_loss                 2.99351
+2019-06-07 01:03:55,497 INFO : train_misclass            0.20339
+2019-06-07 01:03:55,497 INFO : valid_misclass            0.63158
+2019-06-07 01:03:55,497 INFO : test_misclass             0.76190
+2019-06-07 01:03:55,497 INFO : runtime                   0.14062
+2019-06-07 01:03:55,497 INFO : 
+2019-06-07 01:03:55,575 INFO : Time only for training updates: 0.08s
+2019-06-07 01:03:55,637 INFO : Epoch 50
+2019-06-07 01:03:55,637 INFO : train_loss                0.41184
+2019-06-07 01:03:55,637 INFO : valid_loss                2.02711
+2019-06-07 01:03:55,637 INFO : test_loss                 2.91089
+2019-06-07 01:03:55,637 INFO : train_misclass            0.15254
+2019-06-07 01:03:55,637 INFO : valid_misclass            0.63158
+2019-06-07 01:03:55,637 INFO : test_misclass             0.76190
+2019-06-07 01:03:55,637 INFO : runtime                   0.14063
+2019-06-07 01:03:55,637 INFO : 
+2019-06-07 01:03:55,731 INFO : Time only for training updates: 0.09s
+2019-06-07 01:03:55,793 INFO : Epoch 51
+2019-06-07 01:03:55,793 INFO : train_loss                0.30326
+2019-06-07 01:03:55,793 INFO : valid_loss                1.86986
+2019-06-07 01:03:55,793 INFO : test_loss                 2.89155
+2019-06-07 01:03:55,793 INFO : train_misclass            0.10169
+2019-06-07 01:03:55,793 INFO : valid_misclass            0.68421
+2019-06-07 01:03:55,793 INFO : test_misclass             0.66667
+2019-06-07 01:03:55,793 INFO : runtime                   0.15625
+2019-06-07 01:03:55,793 INFO : 
+2019-06-07 01:03:55,872 INFO : Time only for training updates: 0.08s
+2019-06-07 01:03:55,934 INFO : Epoch 52
+2019-06-07 01:03:55,934 INFO : train_loss                0.21701
+2019-06-07 01:03:55,934 INFO : valid_loss                1.97184
+2019-06-07 01:03:55,934 INFO : test_loss                 3.00076
+2019-06-07 01:03:55,934 INFO : train_misclass            0.03390
+2019-06-07 01:03:55,934 INFO : valid_misclass            0.63158
+2019-06-07 01:03:55,934 INFO : test_misclass             0.76190
+2019-06-07 01:03:55,934 INFO : runtime                   0.14063
+2019-06-07 01:03:55,934 INFO : 
+2019-06-07 01:03:56,028 INFO : Time only for training updates: 0.09s
+2019-06-07 01:03:56,075 INFO : Epoch 53
+2019-06-07 01:03:56,075 INFO : train_loss                0.24813
+2019-06-07 01:03:56,075 INFO : valid_loss                1.85945
+2019-06-07 01:03:56,075 INFO : test_loss                 2.83856
+2019-06-07 01:03:56,075 INFO : train_misclass            0.08475
+2019-06-07 01:03:56,075 INFO : valid_misclass            0.57895
+2019-06-07 01:03:56,075 INFO : test_misclass             0.71429
+2019-06-07 01:03:56,075 INFO : runtime                   0.15625
+2019-06-07 01:03:56,075 INFO : 
+2019-06-07 01:03:56,168 INFO : Time only for training updates: 0.09s
+2019-06-07 01:03:56,247 INFO : Epoch 54
+2019-06-07 01:03:56,247 INFO : train_loss                0.27168
+2019-06-07 01:03:56,247 INFO : valid_loss                2.06181
+2019-06-07 01:03:56,247 INFO : test_loss                 3.06829
+2019-06-07 01:03:56,247 INFO : train_misclass            0.11864
+2019-06-07 01:03:56,247 INFO : valid_misclass            0.63158
+2019-06-07 01:03:56,247 INFO : test_misclass             0.76190
+2019-06-07 01:03:56,247 INFO : runtime                   0.14063
+2019-06-07 01:03:56,247 INFO : 
+2019-06-07 01:03:56,340 INFO : Time only for training updates: 0.09s
+2019-06-07 01:03:56,387 INFO : Epoch 55
+2019-06-07 01:03:56,387 INFO : train_loss                0.22863
+2019-06-07 01:03:56,387 INFO : valid_loss                2.02056
+2019-06-07 01:03:56,387 INFO : test_loss                 3.13614
+2019-06-07 01:03:56,387 INFO : train_misclass            0.06780
+2019-06-07 01:03:56,387 INFO : valid_misclass            0.63158
+2019-06-07 01:03:56,387 INFO : test_misclass             0.71429
+2019-06-07 01:03:56,387 INFO : runtime                   0.17188
+2019-06-07 01:03:56,387 INFO : 
+2019-06-07 01:03:56,481 INFO : Time only for training updates: 0.09s
+2019-06-07 01:03:56,528 INFO : Epoch 56
+2019-06-07 01:03:56,528 INFO : train_loss                0.35390
+2019-06-07 01:03:56,528 INFO : valid_loss                2.06324
+2019-06-07 01:03:56,528 INFO : test_loss                 3.08867
+2019-06-07 01:03:56,528 INFO : train_misclass            0.18644
+2019-06-07 01:03:56,528 INFO : valid_misclass            0.63158
+2019-06-07 01:03:56,528 INFO : test_misclass             0.80952
+2019-06-07 01:03:56,528 INFO : runtime                   0.14063
+2019-06-07 01:03:56,528 INFO : 
+2019-06-07 01:03:56,622 INFO : Time only for training updates: 0.09s
+2019-06-07 01:03:56,684 INFO : Epoch 57
+2019-06-07 01:03:56,684 INFO : train_loss                0.21746
+2019-06-07 01:03:56,684 INFO : valid_loss                2.16252
+2019-06-07 01:03:56,684 INFO : test_loss                 3.12693
+2019-06-07 01:03:56,684 INFO : train_misclass            0.08475
+2019-06-07 01:03:56,684 INFO : valid_misclass            0.63158
+2019-06-07 01:03:56,684 INFO : test_misclass             0.76190
+2019-06-07 01:03:56,684 INFO : runtime                   0.14063
+2019-06-07 01:03:56,684 INFO : 
+2019-06-07 01:03:56,778 INFO : Time only for training updates: 0.09s
+2019-06-07 01:03:56,825 INFO : Epoch 58
+2019-06-07 01:03:56,825 INFO : train_loss                0.31334
+2019-06-07 01:03:56,825 INFO : valid_loss                2.30720
+2019-06-07 01:03:56,825 INFO : test_loss                 3.21660
+2019-06-07 01:03:56,825 INFO : train_misclass            0.11864
+2019-06-07 01:03:56,825 INFO : valid_misclass            0.68421
+2019-06-07 01:03:56,825 INFO : test_misclass             0.71429
+2019-06-07 01:03:56,825 INFO : runtime                   0.15625
+2019-06-07 01:03:56,825 INFO : 
+2019-06-07 01:03:56,918 INFO : Time only for training updates: 0.09s
+2019-06-07 01:03:56,965 INFO : Epoch 59
+2019-06-07 01:03:56,965 INFO : train_loss                0.30821
+2019-06-07 01:03:56,965 INFO : valid_loss                2.28810
+2019-06-07 01:03:56,965 INFO : test_loss                 3.18527
+2019-06-07 01:03:56,965 INFO : train_misclass            0.16949
+2019-06-07 01:03:56,965 INFO : valid_misclass            0.68421
+2019-06-07 01:03:56,965 INFO : test_misclass             0.66667
+2019-06-07 01:03:56,965 INFO : runtime                   0.14063
+2019-06-07 01:03:56,965 INFO : 
+2019-06-07 01:03:57,059 INFO : Time only for training updates: 0.09s
+2019-06-07 01:03:57,122 INFO : Epoch 60
+2019-06-07 01:03:57,122 INFO : train_loss                0.28014
+2019-06-07 01:03:57,122 INFO : valid_loss                2.27087
+2019-06-07 01:03:57,122 INFO : test_loss                 3.21037
+2019-06-07 01:03:57,122 INFO : train_misclass            0.15254
+2019-06-07 01:03:57,122 INFO : valid_misclass            0.57895
+2019-06-07 01:03:57,122 INFO : test_misclass             0.66667
+2019-06-07 01:03:57,122 INFO : runtime                   0.14063
+2019-06-07 01:03:57,122 INFO : 
+2019-06-07 01:03:57,200 INFO : Time only for training updates: 0.08s
+2019-06-07 01:03:57,262 INFO : Epoch 61
+2019-06-07 01:03:57,262 INFO : train_loss                0.28349
+2019-06-07 01:03:57,262 INFO : valid_loss                2.32341
+2019-06-07 01:03:57,262 INFO : test_loss                 3.48631
+2019-06-07 01:03:57,262 INFO : train_misclass            0.13559
+2019-06-07 01:03:57,262 INFO : valid_misclass            0.57895
+2019-06-07 01:03:57,262 INFO : test_misclass             0.66667
+2019-06-07 01:03:57,262 INFO : runtime                   0.14063
+2019-06-07 01:03:57,262 INFO : 
+2019-06-07 01:03:57,356 INFO : Time only for training updates: 0.09s
+2019-06-07 01:03:57,403 INFO : Epoch 62
+2019-06-07 01:03:57,403 INFO : train_loss                0.25602
+2019-06-07 01:03:57,403 INFO : valid_loss                2.21078
+2019-06-07 01:03:57,403 INFO : test_loss                 3.50672
+2019-06-07 01:03:57,403 INFO : train_misclass            0.08475
+2019-06-07 01:03:57,403 INFO : valid_misclass            0.57895
+2019-06-07 01:03:57,403 INFO : test_misclass             0.66667
+2019-06-07 01:03:57,403 INFO : runtime                   0.15625
+2019-06-07 01:03:57,403 INFO : 
+2019-06-07 01:03:57,497 INFO : Time only for training updates: 0.09s
+2019-06-07 01:03:57,559 INFO : Epoch 63
+2019-06-07 01:03:57,559 INFO : train_loss                0.22924
+2019-06-07 01:03:57,559 INFO : valid_loss                2.39654
+2019-06-07 01:03:57,559 INFO : test_loss                 3.38163
+2019-06-07 01:03:57,559 INFO : train_misclass            0.05085
+2019-06-07 01:03:57,559 INFO : valid_misclass            0.63158
+2019-06-07 01:03:57,559 INFO : test_misclass             0.80952
+2019-06-07 01:03:57,559 INFO : runtime                   0.14063
+2019-06-07 01:03:57,559 INFO : 
+2019-06-07 01:03:57,637 INFO : Time only for training updates: 0.08s
+2019-06-07 01:03:57,700 INFO : Epoch 64
+2019-06-07 01:03:57,700 INFO : train_loss                0.18424
+2019-06-07 01:03:57,700 INFO : valid_loss                2.22522
+2019-06-07 01:03:57,700 INFO : test_loss                 3.14606
+2019-06-07 01:03:57,700 INFO : train_misclass            0.05085
+2019-06-07 01:03:57,700 INFO : valid_misclass            0.68421
+2019-06-07 01:03:57,700 INFO : test_misclass             0.76190
+2019-06-07 01:03:57,700 INFO : runtime                   0.14063
+2019-06-07 01:03:57,700 INFO : 
+2019-06-07 01:03:57,793 INFO : Time only for training updates: 0.09s
+2019-06-07 01:03:57,856 INFO : Epoch 65
+2019-06-07 01:03:57,856 INFO : train_loss                0.18694
+2019-06-07 01:03:57,856 INFO : valid_loss                2.11186
+2019-06-07 01:03:57,856 INFO : test_loss                 3.14230
+2019-06-07 01:03:57,856 INFO : train_misclass            0.03390
+2019-06-07 01:03:57,856 INFO : valid_misclass            0.68421
+2019-06-07 01:03:57,856 INFO : test_misclass             0.71429
+2019-06-07 01:03:57,856 INFO : runtime                   0.15625
+2019-06-07 01:03:57,856 INFO : 
+2019-06-07 01:03:57,950 INFO : Time only for training updates: 0.09s
+2019-06-07 01:03:57,997 INFO : Epoch 66
+2019-06-07 01:03:57,997 INFO : train_loss                0.21331
+2019-06-07 01:03:57,997 INFO : valid_loss                2.15234
+2019-06-07 01:03:57,997 INFO : test_loss                 3.19716
+2019-06-07 01:03:57,997 INFO : train_misclass            0.05085
+2019-06-07 01:03:57,997 INFO : valid_misclass            0.63158
+2019-06-07 01:03:57,997 INFO : test_misclass             0.71429
+2019-06-07 01:03:57,997 INFO : runtime                   0.15625
+2019-06-07 01:03:57,997 INFO : 
+2019-06-07 01:03:58,090 INFO : Time only for training updates: 0.09s
+2019-06-07 01:03:58,153 INFO : Epoch 67
+2019-06-07 01:03:58,153 INFO : train_loss                0.26065
+2019-06-07 01:03:58,153 INFO : valid_loss                2.09597
+2019-06-07 01:03:58,153 INFO : test_loss                 3.31979
+2019-06-07 01:03:58,153 INFO : train_misclass            0.08475
+2019-06-07 01:03:58,153 INFO : valid_misclass            0.57895
+2019-06-07 01:03:58,153 INFO : test_misclass             0.71429
+2019-06-07 01:03:58,153 INFO : runtime                   0.14063
+2019-06-07 01:03:58,153 INFO : 
+2019-06-07 01:03:58,231 INFO : Time only for training updates: 0.08s
+2019-06-07 01:03:58,293 INFO : Epoch 68
+2019-06-07 01:03:58,293 INFO : train_loss                0.28043
+2019-06-07 01:03:58,293 INFO : valid_loss                2.29191
+2019-06-07 01:03:58,293 INFO : test_loss                 3.75660
+2019-06-07 01:03:58,293 INFO : train_misclass            0.10169
+2019-06-07 01:03:58,293 INFO : valid_misclass            0.63158
+2019-06-07 01:03:58,293 INFO : test_misclass             0.71429
+2019-06-07 01:03:58,293 INFO : runtime                   0.14063
+2019-06-07 01:03:58,293 INFO : 
+2019-06-07 01:03:58,387 INFO : Time only for training updates: 0.09s
+2019-06-07 01:03:58,434 INFO : Epoch 69
+2019-06-07 01:03:58,434 INFO : train_loss                0.26646
+2019-06-07 01:03:58,434 INFO : valid_loss                2.33256
+2019-06-07 01:03:58,434 INFO : test_loss                 3.85915
+2019-06-07 01:03:58,434 INFO : train_misclass            0.11864
+2019-06-07 01:03:58,434 INFO : valid_misclass            0.57895
+2019-06-07 01:03:58,434 INFO : test_misclass             0.76190
+2019-06-07 01:03:58,434 INFO : runtime                   0.15625
+2019-06-07 01:03:58,434 INFO : 
+2019-06-07 01:03:58,528 INFO : Time only for training updates: 0.09s
+2019-06-07 01:03:58,590 INFO : Epoch 70
+2019-06-07 01:03:58,590 INFO : train_loss                0.29961
+2019-06-07 01:03:58,590 INFO : valid_loss                2.73204
+2019-06-07 01:03:58,590 INFO : test_loss                 4.03355
+2019-06-07 01:03:58,590 INFO : train_misclass            0.13559
+2019-06-07 01:03:58,590 INFO : valid_misclass            0.63158
+2019-06-07 01:03:58,590 INFO : test_misclass             0.85714
+2019-06-07 01:03:58,590 INFO : runtime                   0.14063
+2019-06-07 01:03:58,590 INFO : 
+2019-06-07 01:03:58,668 INFO : Time only for training updates: 0.08s
+2019-06-07 01:03:58,747 INFO : Epoch 71
+2019-06-07 01:03:58,747 INFO : train_loss                0.23050
+2019-06-07 01:03:58,747 INFO : valid_loss                2.48747
+2019-06-07 01:03:58,747 INFO : test_loss                 3.86865
+2019-06-07 01:03:58,747 INFO : train_misclass            0.06780
+2019-06-07 01:03:58,747 INFO : valid_misclass            0.63158
+2019-06-07 01:03:58,747 INFO : test_misclass             0.76190
+2019-06-07 01:03:58,747 INFO : runtime                   0.14063
+2019-06-07 01:03:58,747 INFO : 
+2019-06-07 01:03:58,825 INFO : Time only for training updates: 0.08s
+2019-06-07 01:03:58,887 INFO : Epoch 72
+2019-06-07 01:03:58,887 INFO : train_loss                0.21117
+2019-06-07 01:03:58,887 INFO : valid_loss                2.27654
+2019-06-07 01:03:58,887 INFO : test_loss                 3.54769
+2019-06-07 01:03:58,887 INFO : train_misclass            0.08475
+2019-06-07 01:03:58,887 INFO : valid_misclass            0.68421
+2019-06-07 01:03:58,887 INFO : test_misclass             0.76190
+2019-06-07 01:03:58,887 INFO : runtime                   0.15625
+2019-06-07 01:03:58,887 INFO : 
+2019-06-07 01:03:58,981 INFO : Time only for training updates: 0.09s
+2019-06-07 01:03:59,059 INFO : Epoch 73
+2019-06-07 01:03:59,059 INFO : train_loss                0.22124
+2019-06-07 01:03:59,059 INFO : valid_loss                2.42452
+2019-06-07 01:03:59,059 INFO : test_loss                 3.72110
+2019-06-07 01:03:59,059 INFO : train_misclass            0.08475
+2019-06-07 01:03:59,059 INFO : valid_misclass            0.63158
+2019-06-07 01:03:59,059 INFO : test_misclass             0.71429
+2019-06-07 01:03:59,059 INFO : runtime                   0.15625
+2019-06-07 01:03:59,059 INFO : 
+2019-06-07 01:03:59,153 INFO : Time only for training updates: 0.09s
+2019-06-07 01:03:59,200 INFO : Epoch 74
+2019-06-07 01:03:59,200 INFO : train_loss                0.22979
+2019-06-07 01:03:59,200 INFO : valid_loss                2.44730
+2019-06-07 01:03:59,200 INFO : test_loss                 3.73919
+2019-06-07 01:03:59,200 INFO : train_misclass            0.06780
+2019-06-07 01:03:59,200 INFO : valid_misclass            0.68421
+2019-06-07 01:03:59,200 INFO : test_misclass             0.71429
+2019-06-07 01:03:59,200 INFO : runtime                   0.17188
+2019-06-07 01:03:59,200 INFO : 
+2019-06-07 01:03:59,293 INFO : Time only for training updates: 0.09s
+2019-06-07 01:03:59,356 INFO : Epoch 75
+2019-06-07 01:03:59,356 INFO : train_loss                0.26094
+2019-06-07 01:03:59,356 INFO : valid_loss                2.23120
+2019-06-07 01:03:59,356 INFO : test_loss                 3.45360
+2019-06-07 01:03:59,356 INFO : train_misclass            0.10169
+2019-06-07 01:03:59,356 INFO : valid_misclass            0.63158
+2019-06-07 01:03:59,356 INFO : test_misclass             0.66667
+2019-06-07 01:03:59,356 INFO : runtime                   0.14063
+2019-06-07 01:03:59,356 INFO : 
+2019-06-07 01:03:59,434 INFO : Time only for training updates: 0.08s
+2019-06-07 01:03:59,497 INFO : Epoch 76
+2019-06-07 01:03:59,497 INFO : train_loss                0.20764
+2019-06-07 01:03:59,497 INFO : valid_loss                2.65150
+2019-06-07 01:03:59,497 INFO : test_loss                 3.84814
+2019-06-07 01:03:59,497 INFO : train_misclass            0.08475
+2019-06-07 01:03:59,497 INFO : valid_misclass            0.68421
+2019-06-07 01:03:59,497 INFO : test_misclass             0.80952
+2019-06-07 01:03:59,497 INFO : runtime                   0.14063
+2019-06-07 01:03:59,497 INFO : 
+2019-06-07 01:03:59,590 INFO : Time only for training updates: 0.09s
+2019-06-07 01:03:59,637 INFO : Epoch 77
+2019-06-07 01:03:59,637 INFO : train_loss                0.23351
+2019-06-07 01:03:59,637 INFO : valid_loss                2.57452
+2019-06-07 01:03:59,637 INFO : test_loss                 3.95741
+2019-06-07 01:03:59,637 INFO : train_misclass            0.10169
+2019-06-07 01:03:59,637 INFO : valid_misclass            0.68421
+2019-06-07 01:03:59,637 INFO : test_misclass             0.80952
+2019-06-07 01:03:59,637 INFO : runtime                   0.15625
+2019-06-07 01:03:59,637 INFO : 
+2019-06-07 01:03:59,731 INFO : Time only for training updates: 0.09s
+2019-06-07 01:03:59,793 INFO : Epoch 78
+2019-06-07 01:03:59,793 INFO : train_loss                0.15146
+2019-06-07 01:03:59,793 INFO : valid_loss                2.08346
+2019-06-07 01:03:59,793 INFO : test_loss                 3.47230
+2019-06-07 01:03:59,793 INFO : train_misclass            0.03390
+2019-06-07 01:03:59,793 INFO : valid_misclass            0.63158
+2019-06-07 01:03:59,793 INFO : test_misclass             0.71429
+2019-06-07 01:03:59,793 INFO : runtime                   0.14063
+2019-06-07 01:03:59,793 INFO : 
+2019-06-07 01:03:59,887 INFO : Time only for training updates: 0.09s
+2019-06-07 01:03:59,934 INFO : Epoch 79
+2019-06-07 01:03:59,934 INFO : train_loss                0.17248
+2019-06-07 01:03:59,934 INFO : valid_loss                2.07713
+2019-06-07 01:03:59,934 INFO : test_loss                 3.34754
+2019-06-07 01:03:59,934 INFO : train_misclass            0.05085
+2019-06-07 01:03:59,934 INFO : valid_misclass            0.63158
+2019-06-07 01:03:59,934 INFO : test_misclass             0.66667
+2019-06-07 01:03:59,934 INFO : runtime                   0.15625
+2019-06-07 01:03:59,934 INFO : 
+2019-06-07 01:04:00,028 INFO : Time only for training updates: 0.09s
+2019-06-07 01:04:00,090 INFO : Epoch 80
+2019-06-07 01:04:00,090 INFO : train_loss                0.18257
+2019-06-07 01:04:00,090 INFO : valid_loss                2.20583
+2019-06-07 01:04:00,090 INFO : test_loss                 3.29078
+2019-06-07 01:04:00,090 INFO : train_misclass            0.03390
+2019-06-07 01:04:00,090 INFO : valid_misclass            0.63158
+2019-06-07 01:04:00,090 INFO : test_misclass             0.71429
+2019-06-07 01:04:00,090 INFO : runtime                   0.14063
+2019-06-07 01:04:00,090 INFO : 
+2019-06-07 01:04:00,168 INFO : Time only for training updates: 0.08s
+2019-06-07 01:04:00,247 INFO : Epoch 81
+2019-06-07 01:04:00,247 INFO : train_loss                0.18242
+2019-06-07 01:04:00,247 INFO : valid_loss                2.18890
+2019-06-07 01:04:00,247 INFO : test_loss                 3.56023
+2019-06-07 01:04:00,247 INFO : train_misclass            0.06780
+2019-06-07 01:04:00,247 INFO : valid_misclass            0.57895
+2019-06-07 01:04:00,247 INFO : test_misclass             0.76190
+2019-06-07 01:04:00,247 INFO : runtime                   0.14062
+2019-06-07 01:04:00,247 INFO : 
+2019-06-07 01:04:00,340 INFO : Time only for training updates: 0.09s
+2019-06-07 01:04:00,387 INFO : Epoch 82
+2019-06-07 01:04:00,387 INFO : train_loss                0.20767
+2019-06-07 01:04:00,387 INFO : valid_loss                2.20759
+2019-06-07 01:04:00,387 INFO : test_loss                 3.81843
+2019-06-07 01:04:00,387 INFO : train_misclass            0.08475
+2019-06-07 01:04:00,387 INFO : valid_misclass            0.57895
+2019-06-07 01:04:00,387 INFO : test_misclass             0.71429
+2019-06-07 01:04:00,387 INFO : runtime                   0.17188
+2019-06-07 01:04:00,387 INFO : 
+2019-06-07 01:04:00,481 INFO : Time only for training updates: 0.09s
+2019-06-07 01:04:00,543 INFO : Epoch 83
+2019-06-07 01:04:00,543 INFO : train_loss                0.15855
+2019-06-07 01:04:00,543 INFO : valid_loss                2.13956
+2019-06-07 01:04:00,543 INFO : test_loss                 3.68533
+2019-06-07 01:04:00,543 INFO : train_misclass            0.06780
+2019-06-07 01:04:00,543 INFO : valid_misclass            0.52632
+2019-06-07 01:04:00,543 INFO : test_misclass             0.71429
+2019-06-07 01:04:00,543 INFO : runtime                   0.14063
+2019-06-07 01:04:00,543 INFO : 
+2019-06-07 01:04:00,637 INFO : Time only for training updates: 0.09s
+2019-06-07 01:04:00,700 INFO : Epoch 84
+2019-06-07 01:04:00,700 INFO : train_loss                0.16227
+2019-06-07 01:04:00,700 INFO : valid_loss                2.05664
+2019-06-07 01:04:00,700 INFO : test_loss                 3.50416
+2019-06-07 01:04:00,700 INFO : train_misclass            0.06780
+2019-06-07 01:04:00,700 INFO : valid_misclass            0.57895
+2019-06-07 01:04:00,700 INFO : test_misclass             0.71429
+2019-06-07 01:04:00,700 INFO : runtime                   0.15625
+2019-06-07 01:04:00,700 INFO : 
+2019-06-07 01:04:00,778 INFO : Time only for training updates: 0.08s
+2019-06-07 01:04:00,840 INFO : Epoch 85
+2019-06-07 01:04:00,840 INFO : train_loss                0.15503
+2019-06-07 01:04:00,840 INFO : valid_loss                2.21706
+2019-06-07 01:04:00,840 INFO : test_loss                 3.66985
+2019-06-07 01:04:00,840 INFO : train_misclass            0.05085
+2019-06-07 01:04:00,840 INFO : valid_misclass            0.52632
+2019-06-07 01:04:00,840 INFO : test_misclass             0.71429
+2019-06-07 01:04:00,840 INFO : runtime                   0.15625
+2019-06-07 01:04:00,840 INFO : 
+2019-06-07 01:04:00,934 INFO : Time only for training updates: 0.09s
+2019-06-07 01:04:00,981 INFO : Epoch 86
+2019-06-07 01:04:00,981 INFO : train_loss                0.16459
+2019-06-07 01:04:00,981 INFO : valid_loss                2.48051
+2019-06-07 01:04:00,981 INFO : test_loss                 3.90889
+2019-06-07 01:04:00,981 INFO : train_misclass            0.06780
+2019-06-07 01:04:00,981 INFO : valid_misclass            0.63158
+2019-06-07 01:04:00,981 INFO : test_misclass             0.76190
+2019-06-07 01:04:00,981 INFO : runtime                   0.14063
+2019-06-07 01:04:00,981 INFO : 
+2019-06-07 01:04:01,075 INFO : Time only for training updates: 0.09s
+2019-06-07 01:04:01,153 INFO : Epoch 87
+2019-06-07 01:04:01,153 INFO : train_loss                0.19615
+2019-06-07 01:04:01,153 INFO : valid_loss                2.51050
+2019-06-07 01:04:01,153 INFO : test_loss                 3.89912
+2019-06-07 01:04:01,153 INFO : train_misclass            0.08475
+2019-06-07 01:04:01,153 INFO : valid_misclass            0.57895
+2019-06-07 01:04:01,153 INFO : test_misclass             0.76190
+2019-06-07 01:04:01,153 INFO : runtime                   0.14063
+2019-06-07 01:04:01,153 INFO : 
+2019-06-07 01:04:01,231 INFO : Time only for training updates: 0.08s
+2019-06-07 01:04:01,293 INFO : Epoch 88
+2019-06-07 01:04:01,309 INFO : train_loss                0.24237
+2019-06-07 01:04:01,309 INFO : valid_loss                2.38595
+2019-06-07 01:04:01,309 INFO : test_loss                 3.64597
+2019-06-07 01:04:01,309 INFO : train_misclass            0.06780
+2019-06-07 01:04:01,309 INFO : valid_misclass            0.52632
+2019-06-07 01:04:01,309 INFO : test_misclass             0.71429
+2019-06-07 01:04:01,309 INFO : runtime                   0.15625
+2019-06-07 01:04:01,309 INFO : 
+2019-06-07 01:04:01,387 INFO : Time only for training updates: 0.08s
+2019-06-07 01:04:01,450 INFO : Epoch 89
+2019-06-07 01:04:01,450 INFO : train_loss                0.29095
+2019-06-07 01:04:01,450 INFO : valid_loss                2.57383
+2019-06-07 01:04:01,450 INFO : test_loss                 3.52343
+2019-06-07 01:04:01,450 INFO : train_misclass            0.13559
+2019-06-07 01:04:01,450 INFO : valid_misclass            0.57895
+2019-06-07 01:04:01,450 INFO : test_misclass             0.71429
+2019-06-07 01:04:01,450 INFO : runtime                   0.15625
+2019-06-07 01:04:01,450 INFO : 
+2019-06-07 01:04:01,543 INFO : Time only for training updates: 0.09s
+2019-06-07 01:04:01,590 INFO : Epoch 90
+2019-06-07 01:04:01,590 INFO : train_loss                0.17375
+2019-06-07 01:04:01,590 INFO : valid_loss                2.58642
+2019-06-07 01:04:01,590 INFO : test_loss                 3.61141
+2019-06-07 01:04:01,590 INFO : train_misclass            0.06780
+2019-06-07 01:04:01,590 INFO : valid_misclass            0.57895
+2019-06-07 01:04:01,590 INFO : test_misclass             0.76190
+2019-06-07 01:04:01,590 INFO : runtime                   0.15625
+2019-06-07 01:04:01,590 INFO : 
+2019-06-07 01:04:01,684 INFO : Time only for training updates: 0.09s
+2019-06-07 01:04:01,731 INFO : Epoch 91
+2019-06-07 01:04:01,731 INFO : train_loss                0.21542
+2019-06-07 01:04:01,731 INFO : valid_loss                2.44731
+2019-06-07 01:04:01,731 INFO : test_loss                 3.89542
+2019-06-07 01:04:01,731 INFO : train_misclass            0.05085
+2019-06-07 01:04:01,731 INFO : valid_misclass            0.63158
+2019-06-07 01:04:01,731 INFO : test_misclass             0.71429
+2019-06-07 01:04:01,731 INFO : runtime                   0.14063
+2019-06-07 01:04:01,731 INFO : 
+2019-06-07 01:04:01,825 INFO : Time only for training updates: 0.09s
+2019-06-07 01:04:01,887 INFO : Epoch 92
+2019-06-07 01:04:01,887 INFO : train_loss                0.20026
+2019-06-07 01:04:01,887 INFO : valid_loss                2.29734
+2019-06-07 01:04:01,887 INFO : test_loss                 3.65937
+2019-06-07 01:04:01,887 INFO : train_misclass            0.05085
+2019-06-07 01:04:01,887 INFO : valid_misclass            0.63158
+2019-06-07 01:04:01,887 INFO : test_misclass             0.71429
+2019-06-07 01:04:01,887 INFO : runtime                   0.14063
+2019-06-07 01:04:01,887 INFO : 
+2019-06-07 01:04:01,981 INFO : Time only for training updates: 0.09s
+2019-06-07 01:04:02,028 INFO : Epoch 93
+2019-06-07 01:04:02,028 INFO : train_loss                0.14327
+2019-06-07 01:04:02,028 INFO : valid_loss                2.51771
+2019-06-07 01:04:02,028 INFO : test_loss                 3.68666
+2019-06-07 01:04:02,028 INFO : train_misclass            0.08475
+2019-06-07 01:04:02,028 INFO : valid_misclass            0.68421
+2019-06-07 01:04:02,028 INFO : test_misclass             0.80952
+2019-06-07 01:04:02,028 INFO : runtime                   0.15625
+2019-06-07 01:04:02,028 INFO : 
+2019-06-07 01:04:02,122 INFO : Time only for training updates: 0.09s
+2019-06-07 01:04:02,168 INFO : Epoch 94
+2019-06-07 01:04:02,168 INFO : train_loss                0.17570
+2019-06-07 01:04:02,168 INFO : valid_loss                2.61403
+2019-06-07 01:04:02,168 INFO : test_loss                 3.77963
+2019-06-07 01:04:02,168 INFO : train_misclass            0.06780
+2019-06-07 01:04:02,168 INFO : valid_misclass            0.68421
+2019-06-07 01:04:02,168 INFO : test_misclass             0.76190
+2019-06-07 01:04:02,168 INFO : runtime                   0.14062
+2019-06-07 01:04:02,168 INFO : 
+2019-06-07 01:04:02,262 INFO : Time only for training updates: 0.09s
+2019-06-07 01:04:02,325 INFO : Epoch 95
+2019-06-07 01:04:02,325 INFO : train_loss                0.22357
+2019-06-07 01:04:02,325 INFO : valid_loss                2.46100
+2019-06-07 01:04:02,325 INFO : test_loss                 3.92251
+2019-06-07 01:04:02,325 INFO : train_misclass            0.06780
+2019-06-07 01:04:02,325 INFO : valid_misclass            0.57895
+2019-06-07 01:04:02,325 INFO : test_misclass             0.66667
+2019-06-07 01:04:02,325 INFO : runtime                   0.14063
+2019-06-07 01:04:02,325 INFO : 
+2019-06-07 01:04:02,418 INFO : Time only for training updates: 0.09s
+2019-06-07 01:04:02,481 INFO : Epoch 96
+2019-06-07 01:04:02,481 INFO : train_loss                0.20326
+2019-06-07 01:04:02,481 INFO : valid_loss                2.56651
+2019-06-07 01:04:02,481 INFO : test_loss                 4.07808
+2019-06-07 01:04:02,481 INFO : train_misclass            0.06780
+2019-06-07 01:04:02,481 INFO : valid_misclass            0.63158
+2019-06-07 01:04:02,481 INFO : test_misclass             0.66667
+2019-06-07 01:04:02,481 INFO : runtime                   0.15625
+2019-06-07 01:04:02,481 INFO : 
+2019-06-07 01:04:02,559 INFO : Time only for training updates: 0.08s
+2019-06-07 01:04:02,622 INFO : Epoch 97
+2019-06-07 01:04:02,622 INFO : train_loss                0.12732
+2019-06-07 01:04:02,622 INFO : valid_loss                2.60761
+2019-06-07 01:04:02,622 INFO : test_loss                 3.92167
+2019-06-07 01:04:02,622 INFO : train_misclass            0.03390
+2019-06-07 01:04:02,622 INFO : valid_misclass            0.68421
+2019-06-07 01:04:02,622 INFO : test_misclass             0.71429
+2019-06-07 01:04:02,622 INFO : runtime                   0.14063
+2019-06-07 01:04:02,622 INFO : 
+2019-06-07 01:04:02,715 INFO : Time only for training updates: 0.09s
+2019-06-07 01:04:02,762 INFO : Epoch 98
+2019-06-07 01:04:02,762 INFO : train_loss                0.10096
+2019-06-07 01:04:02,762 INFO : valid_loss                2.43635
+2019-06-07 01:04:02,762 INFO : test_loss                 3.82104
+2019-06-07 01:04:02,762 INFO : train_misclass            0.00000
+2019-06-07 01:04:02,762 INFO : valid_misclass            0.68421
+2019-06-07 01:04:02,762 INFO : test_misclass             0.71429
+2019-06-07 01:04:02,762 INFO : runtime                   0.15625
+2019-06-07 01:04:02,762 INFO : 
+2019-06-07 01:04:02,856 INFO : Time only for training updates: 0.09s
+2019-06-07 01:04:02,903 INFO : Epoch 99
+2019-06-07 01:04:02,903 INFO : train_loss                0.13508
+2019-06-07 01:04:02,903 INFO : valid_loss                2.40252
+2019-06-07 01:04:02,903 INFO : test_loss                 3.85323
+2019-06-07 01:04:02,903 INFO : train_misclass            0.01695
+2019-06-07 01:04:02,903 INFO : valid_misclass            0.57895
+2019-06-07 01:04:02,903 INFO : test_misclass             0.66667
+2019-06-07 01:04:02,903 INFO : runtime                   0.14063
+2019-06-07 01:04:02,903 INFO : 
+2019-06-07 01:04:03,012 INFO : Time only for training updates: 0.11s
+2019-06-07 01:04:03,059 INFO : Epoch 100
+2019-06-07 01:04:03,075 INFO : train_loss                0.15091
+2019-06-07 01:04:03,075 INFO : valid_loss                2.39560
+2019-06-07 01:04:03,075 INFO : test_loss                 3.97796
+2019-06-07 01:04:03,075 INFO : train_misclass            0.03390
+2019-06-07 01:04:03,075 INFO : valid_misclass            0.57895
+2019-06-07 01:04:03,075 INFO : test_misclass             0.61905
+2019-06-07 01:04:03,075 INFO : runtime                   0.15625
+2019-06-07 01:04:03,075 INFO : 
+2019-06-07 01:04:03,153 INFO : Time only for training updates: 0.08s
+2019-06-07 01:04:03,215 INFO : Epoch 101
+2019-06-07 01:04:03,215 INFO : train_loss                0.17277
+2019-06-07 01:04:03,215 INFO : valid_loss                2.40640
+2019-06-07 01:04:03,215 INFO : test_loss                 3.86858
+2019-06-07 01:04:03,215 INFO : train_misclass            0.08475
+2019-06-07 01:04:03,215 INFO : valid_misclass            0.57895
+2019-06-07 01:04:03,215 INFO : test_misclass             0.66667
+2019-06-07 01:04:03,215 INFO : runtime                   0.14063
+2019-06-07 01:04:03,215 INFO : 
+2019-06-07 01:04:03,309 INFO : Time only for training updates: 0.09s
+2019-06-07 01:04:03,356 INFO : Epoch 102
+2019-06-07 01:04:03,356 INFO : train_loss                0.15235
+2019-06-07 01:04:03,356 INFO : valid_loss                2.58403
+2019-06-07 01:04:03,356 INFO : test_loss                 3.89437
+2019-06-07 01:04:03,356 INFO : train_misclass            0.08475
+2019-06-07 01:04:03,356 INFO : valid_misclass            0.63158
+2019-06-07 01:04:03,356 INFO : test_misclass             0.71429
+2019-06-07 01:04:03,356 INFO : runtime                   0.15625
+2019-06-07 01:04:03,356 INFO : 
+2019-06-07 01:04:03,450 INFO : Time only for training updates: 0.09s
+2019-06-07 01:04:03,497 INFO : Epoch 103
+2019-06-07 01:04:03,497 INFO : train_loss                0.13826
+2019-06-07 01:04:03,497 INFO : valid_loss                2.60831
+2019-06-07 01:04:03,497 INFO : test_loss                 3.93241
+2019-06-07 01:04:03,497 INFO : train_misclass            0.05085
+2019-06-07 01:04:03,497 INFO : valid_misclass            0.63158
+2019-06-07 01:04:03,497 INFO : test_misclass             0.71429
+2019-06-07 01:04:03,497 INFO : runtime                   0.14063
+2019-06-07 01:04:03,497 INFO : 
+2019-06-07 01:04:03,622 INFO : Time only for training updates: 0.12s
+2019-06-07 01:04:03,668 INFO : Epoch 104
+2019-06-07 01:04:03,668 INFO : train_loss                0.13704
+2019-06-07 01:04:03,684 INFO : valid_loss                2.40280
+2019-06-07 01:04:03,684 INFO : test_loss                 3.82322
+2019-06-07 01:04:03,684 INFO : train_misclass            0.01695
+2019-06-07 01:04:03,684 INFO : valid_misclass            0.57895
+2019-06-07 01:04:03,684 INFO : test_misclass             0.66667
+2019-06-07 01:04:03,684 INFO : runtime                   0.17188
+2019-06-07 01:04:03,684 INFO : 
+2019-06-07 01:04:03,762 INFO : Time only for training updates: 0.08s
+2019-06-07 01:04:03,825 INFO : Epoch 105
+2019-06-07 01:04:03,825 INFO : train_loss                0.16829
+2019-06-07 01:04:03,825 INFO : valid_loss                2.28645
+2019-06-07 01:04:03,825 INFO : test_loss                 3.74387
+2019-06-07 01:04:03,825 INFO : train_misclass            0.05085
+2019-06-07 01:04:03,825 INFO : valid_misclass            0.63158
+2019-06-07 01:04:03,825 INFO : test_misclass             0.71429
+2019-06-07 01:04:03,825 INFO : runtime                   0.14063
+2019-06-07 01:04:03,825 INFO : 
+2019-06-07 01:04:03,918 INFO : Time only for training updates: 0.09s
+2019-06-07 01:04:03,965 INFO : Epoch 106
+2019-06-07 01:04:03,965 INFO : train_loss                0.09801
+2019-06-07 01:04:03,965 INFO : valid_loss                2.41755
+2019-06-07 01:04:03,965 INFO : test_loss                 3.71657
+2019-06-07 01:04:03,965 INFO : train_misclass            0.03390
+2019-06-07 01:04:03,965 INFO : valid_misclass            0.63158
+2019-06-07 01:04:03,965 INFO : test_misclass             0.71429
+2019-06-07 01:04:03,965 INFO : runtime                   0.15625
+2019-06-07 01:04:03,965 INFO : 
+2019-06-07 01:04:04,059 INFO : Time only for training updates: 0.09s
+2019-06-07 01:04:04,122 INFO : Epoch 107
+2019-06-07 01:04:04,122 INFO : train_loss                0.13753
+2019-06-07 01:04:04,122 INFO : valid_loss                2.61464
+2019-06-07 01:04:04,122 INFO : test_loss                 4.02794
+2019-06-07 01:04:04,122 INFO : train_misclass            0.05085
+2019-06-07 01:04:04,122 INFO : valid_misclass            0.63158
+2019-06-07 01:04:04,122 INFO : test_misclass             0.80952
+2019-06-07 01:04:04,122 INFO : runtime                   0.14063
+2019-06-07 01:04:04,122 INFO : 
+2019-06-07 01:04:04,215 INFO : Time only for training updates: 0.09s
+2019-06-07 01:04:04,262 INFO : Epoch 108
+2019-06-07 01:04:04,262 INFO : train_loss                0.12951
+2019-06-07 01:04:04,262 INFO : valid_loss                2.44000
+2019-06-07 01:04:04,262 INFO : test_loss                 3.86804
+2019-06-07 01:04:04,262 INFO : train_misclass            0.03390
+2019-06-07 01:04:04,262 INFO : valid_misclass            0.63158
+2019-06-07 01:04:04,262 INFO : test_misclass             0.66667
+2019-06-07 01:04:04,262 INFO : runtime                   0.15625
+2019-06-07 01:04:04,262 INFO : 
+2019-06-07 01:04:04,356 INFO : Time only for training updates: 0.09s
+2019-06-07 01:04:04,403 INFO : Epoch 109
+2019-06-07 01:04:04,403 INFO : train_loss                0.12587
+2019-06-07 01:04:04,403 INFO : valid_loss                2.44026
+2019-06-07 01:04:04,403 INFO : test_loss                 3.90563
+2019-06-07 01:04:04,403 INFO : train_misclass            0.03390
+2019-06-07 01:04:04,403 INFO : valid_misclass            0.57895
+2019-06-07 01:04:04,403 INFO : test_misclass             0.66667
+2019-06-07 01:04:04,403 INFO : runtime                   0.14063
+2019-06-07 01:04:04,403 INFO : 
+2019-06-07 01:04:04,497 INFO : Time only for training updates: 0.08s
+2019-06-07 01:04:04,559 INFO : Epoch 110
+2019-06-07 01:04:04,559 INFO : train_loss                0.10522
+2019-06-07 01:04:04,559 INFO : valid_loss                2.58324
+2019-06-07 01:04:04,559 INFO : test_loss                 3.91978
+2019-06-07 01:04:04,559 INFO : train_misclass            0.03390
+2019-06-07 01:04:04,559 INFO : valid_misclass            0.63158
+2019-06-07 01:04:04,559 INFO : test_misclass             0.66667
+2019-06-07 01:04:04,559 INFO : runtime                   0.14063
+2019-06-07 01:04:04,559 INFO : 
+2019-06-07 01:04:04,653 INFO : Time only for training updates: 0.09s
+2019-06-07 01:04:04,731 INFO : Epoch 111
+2019-06-07 01:04:04,731 INFO : train_loss                0.11209
+2019-06-07 01:04:04,731 INFO : valid_loss                2.79286
+2019-06-07 01:04:04,731 INFO : test_loss                 3.98705
+2019-06-07 01:04:04,731 INFO : train_misclass            0.03390
+2019-06-07 01:04:04,731 INFO : valid_misclass            0.63158
+2019-06-07 01:04:04,731 INFO : test_misclass             0.71429
+2019-06-07 01:04:04,731 INFO : runtime                   0.15625
+2019-06-07 01:04:04,731 INFO : 
+2019-06-07 01:04:04,809 INFO : Time only for training updates: 0.08s
+2019-06-07 01:04:04,872 INFO : Epoch 112
+2019-06-07 01:04:04,872 INFO : train_loss                0.09741
+2019-06-07 01:04:04,872 INFO : valid_loss                2.72664
+2019-06-07 01:04:04,872 INFO : test_loss                 4.01599
+2019-06-07 01:04:04,872 INFO : train_misclass            0.03390
+2019-06-07 01:04:04,872 INFO : valid_misclass            0.63158
+2019-06-07 01:04:04,872 INFO : test_misclass             0.71429
+2019-06-07 01:04:04,872 INFO : runtime                   0.15625
+2019-06-07 01:04:04,872 INFO : 
+2019-06-07 01:04:04,965 INFO : Time only for training updates: 0.09s
+2019-06-07 01:04:05,012 INFO : Epoch 113
+2019-06-07 01:04:05,012 INFO : train_loss                0.09313
+2019-06-07 01:04:05,012 INFO : valid_loss                2.47864
+2019-06-07 01:04:05,012 INFO : test_loss                 3.92543
+2019-06-07 01:04:05,012 INFO : train_misclass            0.03390
+2019-06-07 01:04:05,012 INFO : valid_misclass            0.63158
+2019-06-07 01:04:05,012 INFO : test_misclass             0.66667
+2019-06-07 01:04:05,012 INFO : runtime                   0.15625
+2019-06-07 01:04:05,012 INFO : 
+2019-06-07 01:04:05,106 INFO : Time only for training updates: 0.09s
+2019-06-07 01:04:05,168 INFO : Epoch 114
+2019-06-07 01:04:05,168 INFO : train_loss                0.08818
+2019-06-07 01:04:05,168 INFO : valid_loss                2.44074
+2019-06-07 01:04:05,168 INFO : test_loss                 3.95752
+2019-06-07 01:04:05,168 INFO : train_misclass            0.03390
+2019-06-07 01:04:05,168 INFO : valid_misclass            0.63158
+2019-06-07 01:04:05,168 INFO : test_misclass             0.66667
+2019-06-07 01:04:05,168 INFO : runtime                   0.14063
+2019-06-07 01:04:05,168 INFO : 
+2019-06-07 01:04:05,262 INFO : Time only for training updates: 0.09s
+2019-06-07 01:04:05,325 INFO : Epoch 115
+2019-06-07 01:04:05,325 INFO : train_loss                0.09355
+2019-06-07 01:04:05,325 INFO : valid_loss                2.46691
+2019-06-07 01:04:05,325 INFO : test_loss                 4.09339
+2019-06-07 01:04:05,325 INFO : train_misclass            0.01695
+2019-06-07 01:04:05,325 INFO : valid_misclass            0.63158
+2019-06-07 01:04:05,325 INFO : test_misclass             0.76190
+2019-06-07 01:04:05,325 INFO : runtime                   0.15625
+2019-06-07 01:04:05,325 INFO : 
+2019-06-07 01:04:05,418 INFO : Time only for training updates: 0.09s
+2019-06-07 01:04:05,465 INFO : Epoch 116
+2019-06-07 01:04:05,465 INFO : train_loss                0.12185
+2019-06-07 01:04:05,465 INFO : valid_loss                2.37295
+2019-06-07 01:04:05,465 INFO : test_loss                 4.13540
+2019-06-07 01:04:05,465 INFO : train_misclass            0.01695
+2019-06-07 01:04:05,465 INFO : valid_misclass            0.57895
+2019-06-07 01:04:05,465 INFO : test_misclass             0.66667
+2019-06-07 01:04:05,465 INFO : runtime                   0.15625
+2019-06-07 01:04:05,465 INFO : 
+2019-06-07 01:04:05,559 INFO : Time only for training updates: 0.09s
+2019-06-07 01:04:05,622 INFO : Epoch 117
+2019-06-07 01:04:05,622 INFO : train_loss                0.16583
+2019-06-07 01:04:05,622 INFO : valid_loss                2.61247
+2019-06-07 01:04:05,622 INFO : test_loss                 4.39860
+2019-06-07 01:04:05,622 INFO : train_misclass            0.01695
+2019-06-07 01:04:05,622 INFO : valid_misclass            0.63158
+2019-06-07 01:04:05,622 INFO : test_misclass             0.66667
+2019-06-07 01:04:05,622 INFO : runtime                   0.14063
+2019-06-07 01:04:05,622 INFO : 
+2019-06-07 01:04:05,715 INFO : Time only for training updates: 0.09s
+2019-06-07 01:04:05,762 INFO : Epoch 118
+2019-06-07 01:04:05,762 INFO : train_loss                0.13137
+2019-06-07 01:04:05,762 INFO : valid_loss                2.73273
+2019-06-07 01:04:05,762 INFO : test_loss                 4.22864
+2019-06-07 01:04:05,762 INFO : train_misclass            0.03390
+2019-06-07 01:04:05,762 INFO : valid_misclass            0.63158
+2019-06-07 01:04:05,762 INFO : test_misclass             0.71429
+2019-06-07 01:04:05,762 INFO : runtime                   0.15625
+2019-06-07 01:04:05,762 INFO : 
+2019-06-07 01:04:05,856 INFO : Time only for training updates: 0.09s
+2019-06-07 01:04:05,903 INFO : Epoch 119
+2019-06-07 01:04:05,903 INFO : train_loss                0.12787
+2019-06-07 01:04:05,903 INFO : valid_loss                2.58549
+2019-06-07 01:04:05,903 INFO : test_loss                 3.99122
+2019-06-07 01:04:05,903 INFO : train_misclass            0.05085
+2019-06-07 01:04:05,903 INFO : valid_misclass            0.68421
+2019-06-07 01:04:05,903 INFO : test_misclass             0.71429
+2019-06-07 01:04:05,903 INFO : runtime                   0.14063
+2019-06-07 01:04:05,903 INFO : 
+2019-06-07 01:04:06,012 INFO : Time only for training updates: 0.08s
+2019-06-07 01:04:06,075 INFO : Epoch 120
+2019-06-07 01:04:06,075 INFO : train_loss                0.10546
+2019-06-07 01:04:06,075 INFO : valid_loss                2.24469
+2019-06-07 01:04:06,075 INFO : test_loss                 3.82522
+2019-06-07 01:04:06,075 INFO : train_misclass            0.01695
+2019-06-07 01:04:06,075 INFO : valid_misclass            0.63158
+2019-06-07 01:04:06,075 INFO : test_misclass             0.66667
+2019-06-07 01:04:06,075 INFO : runtime                   0.15625
+2019-06-07 01:04:06,075 INFO : 
+2019-06-07 01:04:06,153 INFO : Time only for training updates: 0.08s
+2019-06-07 01:04:06,215 INFO : Epoch 121
+2019-06-07 01:04:06,215 INFO : train_loss                0.09071
+2019-06-07 01:04:06,215 INFO : valid_loss                2.27544
+2019-06-07 01:04:06,215 INFO : test_loss                 3.75896
+2019-06-07 01:04:06,215 INFO : train_misclass            0.00000
+2019-06-07 01:04:06,215 INFO : valid_misclass            0.63158
+2019-06-07 01:04:06,215 INFO : test_misclass             0.71429
+2019-06-07 01:04:06,215 INFO : runtime                   0.15625
+2019-06-07 01:04:06,215 INFO : 
+2019-06-07 01:04:06,309 INFO : Time only for training updates: 0.09s
+2019-06-07 01:04:06,356 INFO : Epoch 122
+2019-06-07 01:04:06,356 INFO : train_loss                0.13699
+2019-06-07 01:04:06,356 INFO : valid_loss                2.43086
+2019-06-07 01:04:06,356 INFO : test_loss                 3.71608
+2019-06-07 01:04:06,356 INFO : train_misclass            0.05085
+2019-06-07 01:04:06,356 INFO : valid_misclass            0.63158
+2019-06-07 01:04:06,356 INFO : test_misclass             0.76190
+2019-06-07 01:04:06,356 INFO : runtime                   0.14063
+2019-06-07 01:04:06,356 INFO : 
+2019-06-07 01:04:06,450 INFO : Time only for training updates: 0.09s
+2019-06-07 01:04:06,512 INFO : Epoch 123
+2019-06-07 01:04:06,512 INFO : train_loss                0.11891
+2019-06-07 01:04:06,512 INFO : valid_loss                2.53039
+2019-06-07 01:04:06,512 INFO : test_loss                 3.87237
+2019-06-07 01:04:06,512 INFO : train_misclass            0.05085
+2019-06-07 01:04:06,512 INFO : valid_misclass            0.63158
+2019-06-07 01:04:06,512 INFO : test_misclass             0.76190
+2019-06-07 01:04:06,512 INFO : runtime                   0.14063
+2019-06-07 01:04:06,512 INFO : 
+2019-06-07 01:04:06,590 INFO : Time only for training updates: 0.08s
+2019-06-07 01:04:06,668 INFO : Epoch 124
+2019-06-07 01:04:06,668 INFO : train_loss                0.12042
+2019-06-07 01:04:06,668 INFO : valid_loss                2.36510
+2019-06-07 01:04:06,668 INFO : test_loss                 3.88718
+2019-06-07 01:04:06,668 INFO : train_misclass            0.06780
+2019-06-07 01:04:06,668 INFO : valid_misclass            0.57895
+2019-06-07 01:04:06,668 INFO : test_misclass             0.71429
+2019-06-07 01:04:06,668 INFO : runtime                   0.14063
+2019-06-07 01:04:06,668 INFO : 
+2019-06-07 01:04:06,762 INFO : Time only for training updates: 0.09s
+2019-06-07 01:04:06,809 INFO : Epoch 125
+2019-06-07 01:04:06,809 INFO : train_loss                0.12303
+2019-06-07 01:04:06,809 INFO : valid_loss                2.30353
+2019-06-07 01:04:06,809 INFO : test_loss                 3.90661
+2019-06-07 01:04:06,809 INFO : train_misclass            0.03390
+2019-06-07 01:04:06,809 INFO : valid_misclass            0.57895
+2019-06-07 01:04:06,809 INFO : test_misclass             0.76190
+2019-06-07 01:04:06,809 INFO : runtime                   0.17187
+2019-06-07 01:04:06,809 INFO : 
+2019-06-07 01:04:06,903 INFO : Time only for training updates: 0.09s
+2019-06-07 01:04:06,950 INFO : Epoch 126
+2019-06-07 01:04:06,965 INFO : train_loss                0.10721
+2019-06-07 01:04:06,965 INFO : valid_loss                2.35853
+2019-06-07 01:04:06,965 INFO : test_loss                 4.10907
+2019-06-07 01:04:06,965 INFO : train_misclass            0.05085
+2019-06-07 01:04:06,965 INFO : valid_misclass            0.57895
+2019-06-07 01:04:06,965 INFO : test_misclass             0.71429
+2019-06-07 01:04:06,965 INFO : runtime                   0.14063
+2019-06-07 01:04:06,965 INFO : 
+2019-06-07 01:04:07,043 INFO : Time only for training updates: 0.08s
+2019-06-07 01:04:07,106 INFO : Epoch 127
+2019-06-07 01:04:07,106 INFO : train_loss                0.15253
+2019-06-07 01:04:07,106 INFO : valid_loss                2.70343
+2019-06-07 01:04:07,106 INFO : test_loss                 4.54266
+2019-06-07 01:04:07,106 INFO : train_misclass            0.06780
+2019-06-07 01:04:07,106 INFO : valid_misclass            0.63158
+2019-06-07 01:04:07,106 INFO : test_misclass             0.80952
+2019-06-07 01:04:07,106 INFO : runtime                   0.14063
+2019-06-07 01:04:07,106 INFO : 
+2019-06-07 01:04:07,200 INFO : Time only for training updates: 0.09s
+2019-06-07 01:04:07,247 INFO : Epoch 128
+2019-06-07 01:04:07,247 INFO : train_loss                0.13476
+2019-06-07 01:04:07,247 INFO : valid_loss                2.56017
+2019-06-07 01:04:07,247 INFO : test_loss                 4.14756
+2019-06-07 01:04:07,247 INFO : train_misclass            0.05085
+2019-06-07 01:04:07,247 INFO : valid_misclass            0.63158
+2019-06-07 01:04:07,247 INFO : test_misclass             0.66667
+2019-06-07 01:04:07,247 INFO : runtime                   0.15625
+2019-06-07 01:04:07,247 INFO : 
+2019-06-07 01:04:07,340 INFO : Time only for training updates: 0.09s
+2019-06-07 01:04:07,387 INFO : Epoch 129
+2019-06-07 01:04:07,387 INFO : train_loss                0.18472
+2019-06-07 01:04:07,387 INFO : valid_loss                2.50280
+2019-06-07 01:04:07,387 INFO : test_loss                 4.23554
+2019-06-07 01:04:07,387 INFO : train_misclass            0.06780
+2019-06-07 01:04:07,387 INFO : valid_misclass            0.63158
+2019-06-07 01:04:07,387 INFO : test_misclass             0.66667
+2019-06-07 01:04:07,387 INFO : runtime                   0.14063
+2019-06-07 01:04:07,387 INFO : 
+2019-06-07 01:04:07,481 INFO : Time only for training updates: 0.09s
+2019-06-07 01:04:07,559 INFO : Epoch 130
+2019-06-07 01:04:07,559 INFO : train_loss                0.16999
+2019-06-07 01:04:07,559 INFO : valid_loss                2.52808
+2019-06-07 01:04:07,559 INFO : test_loss                 4.17332
+2019-06-07 01:04:07,559 INFO : train_misclass            0.05085
+2019-06-07 01:04:07,559 INFO : valid_misclass            0.63158
+2019-06-07 01:04:07,559 INFO : test_misclass             0.66667
+2019-06-07 01:04:07,559 INFO : runtime                   0.14063
+2019-06-07 01:04:07,559 INFO : 
+2019-06-07 01:04:07,637 INFO : Time only for training updates: 0.08s
+2019-06-07 01:04:07,700 INFO : Epoch 131
+2019-06-07 01:04:07,700 INFO : train_loss                0.13413
+2019-06-07 01:04:07,700 INFO : valid_loss                2.69231
+2019-06-07 01:04:07,700 INFO : test_loss                 4.16867
+2019-06-07 01:04:07,700 INFO : train_misclass            0.03390
+2019-06-07 01:04:07,700 INFO : valid_misclass            0.63158
+2019-06-07 01:04:07,700 INFO : test_misclass             0.71429
+2019-06-07 01:04:07,700 INFO : runtime                   0.15625
+2019-06-07 01:04:07,700 INFO : 
+2019-06-07 01:04:07,793 INFO : Time only for training updates: 0.09s
+2019-06-07 01:04:07,841 INFO : Epoch 132
+2019-06-07 01:04:07,841 INFO : train_loss                0.14610
+2019-06-07 01:04:07,841 INFO : valid_loss                2.51443
+2019-06-07 01:04:07,841 INFO : test_loss                 4.02812
+2019-06-07 01:04:07,841 INFO : train_misclass            0.06780
+2019-06-07 01:04:07,841 INFO : valid_misclass            0.57895
+2019-06-07 01:04:07,841 INFO : test_misclass             0.71429
+2019-06-07 01:04:07,841 INFO : runtime                   0.15625
+2019-06-07 01:04:07,841 INFO : 
+2019-06-07 01:04:07,934 INFO : Time only for training updates: 0.09s
+2019-06-07 01:04:07,981 INFO : Epoch 133
+2019-06-07 01:04:07,981 INFO : train_loss                0.09555
+2019-06-07 01:04:07,981 INFO : valid_loss                2.35954
+2019-06-07 01:04:07,981 INFO : test_loss                 3.84382
+2019-06-07 01:04:07,981 INFO : train_misclass            0.05085
+2019-06-07 01:04:07,981 INFO : valid_misclass            0.63158
+2019-06-07 01:04:07,981 INFO : test_misclass             0.71429
+2019-06-07 01:04:07,981 INFO : runtime                   0.14063
+2019-06-07 01:04:07,981 INFO : 
+2019-06-07 01:04:08,075 INFO : Time only for training updates: 0.09s
+2019-06-07 01:04:08,153 INFO : Epoch 134
+2019-06-07 01:04:08,153 INFO : train_loss                0.06066
+2019-06-07 01:04:08,153 INFO : valid_loss                2.25900
+2019-06-07 01:04:08,153 INFO : test_loss                 3.82521
+2019-06-07 01:04:08,153 INFO : train_misclass            0.00000
+2019-06-07 01:04:08,153 INFO : valid_misclass            0.63158
+2019-06-07 01:04:08,153 INFO : test_misclass             0.76190
+2019-06-07 01:04:08,153 INFO : runtime                   0.14063
+2019-06-07 01:04:08,153 INFO : 
+2019-06-07 01:04:08,231 INFO : Time only for training updates: 0.08s
+2019-06-07 01:04:08,293 INFO : Epoch 135
+2019-06-07 01:04:08,293 INFO : train_loss                0.22475
+2019-06-07 01:04:08,293 INFO : valid_loss                2.35177
+2019-06-07 01:04:08,293 INFO : test_loss                 4.21151
+2019-06-07 01:04:08,293 INFO : train_misclass            0.06780
+2019-06-07 01:04:08,293 INFO : valid_misclass            0.68421
+2019-06-07 01:04:08,293 INFO : test_misclass             0.71429
+2019-06-07 01:04:08,293 INFO : runtime                   0.15625
+2019-06-07 01:04:08,293 INFO : 
+2019-06-07 01:04:08,387 INFO : Time only for training updates: 0.09s
+2019-06-07 01:04:08,450 INFO : Epoch 136
+2019-06-07 01:04:08,450 INFO : train_loss                0.27007
+2019-06-07 01:04:08,450 INFO : valid_loss                2.38202
+2019-06-07 01:04:08,450 INFO : test_loss                 4.22928
+2019-06-07 01:04:08,450 INFO : train_misclass            0.10169
+2019-06-07 01:04:08,450 INFO : valid_misclass            0.63158
+2019-06-07 01:04:08,450 INFO : test_misclass             0.76190
+2019-06-07 01:04:08,450 INFO : runtime                   0.15625
+2019-06-07 01:04:08,450 INFO : 
+2019-06-07 01:04:08,543 INFO : Time only for training updates: 0.09s
+2019-06-07 01:04:08,606 INFO : Epoch 137
+2019-06-07 01:04:08,606 INFO : train_loss                0.13510
+2019-06-07 01:04:08,606 INFO : valid_loss                2.26341
+2019-06-07 01:04:08,606 INFO : test_loss                 3.85208
+2019-06-07 01:04:08,606 INFO : train_misclass            0.05085
+2019-06-07 01:04:08,606 INFO : valid_misclass            0.57895
+2019-06-07 01:04:08,606 INFO : test_misclass             0.66667
+2019-06-07 01:04:08,606 INFO : runtime                   0.15625
+2019-06-07 01:04:08,606 INFO : 
+2019-06-07 01:04:08,684 INFO : Time only for training updates: 0.08s
+2019-06-07 01:04:08,747 INFO : Epoch 138
+2019-06-07 01:04:08,747 INFO : train_loss                0.24943
+2019-06-07 01:04:08,747 INFO : valid_loss                2.42575
+2019-06-07 01:04:08,747 INFO : test_loss                 3.85626
+2019-06-07 01:04:08,747 INFO : train_misclass            0.10169
+2019-06-07 01:04:08,747 INFO : valid_misclass            0.52632
+2019-06-07 01:04:08,747 INFO : test_misclass             0.80952
+2019-06-07 01:04:08,747 INFO : runtime                   0.14063
+2019-06-07 01:04:08,747 INFO : 
+2019-06-07 01:04:08,840 INFO : Time only for training updates: 0.09s
+2019-06-07 01:04:08,887 INFO : Epoch 139
+2019-06-07 01:04:08,887 INFO : train_loss                0.12588
+2019-06-07 01:04:08,887 INFO : valid_loss                2.45910
+2019-06-07 01:04:08,887 INFO : test_loss                 3.59161
+2019-06-07 01:04:08,887 INFO : train_misclass            0.03390
+2019-06-07 01:04:08,887 INFO : valid_misclass            0.63158
+2019-06-07 01:04:08,887 INFO : test_misclass             0.76190
+2019-06-07 01:04:08,887 INFO : runtime                   0.15625
+2019-06-07 01:04:08,887 INFO : 
+2019-06-07 01:04:08,981 INFO : Time only for training updates: 0.09s
+2019-06-07 01:04:09,043 INFO : Epoch 140
+2019-06-07 01:04:09,043 INFO : train_loss                0.20004
+2019-06-07 01:04:09,043 INFO : valid_loss                2.89078
+2019-06-07 01:04:09,043 INFO : test_loss                 3.81594
+2019-06-07 01:04:09,043 INFO : train_misclass            0.08475
+2019-06-07 01:04:09,043 INFO : valid_misclass            0.68421
+2019-06-07 01:04:09,043 INFO : test_misclass             0.76190
+2019-06-07 01:04:09,043 INFO : runtime                   0.14063
+2019-06-07 01:04:09,043 INFO : 
+2019-06-07 01:04:09,122 INFO : Time only for training updates: 0.08s
+2019-06-07 01:04:09,184 INFO : Epoch 141
+2019-06-07 01:04:09,184 INFO : train_loss                0.14482
+2019-06-07 01:04:09,184 INFO : valid_loss                2.92552
+2019-06-07 01:04:09,184 INFO : test_loss                 3.85569
+2019-06-07 01:04:09,184 INFO : train_misclass            0.03390
+2019-06-07 01:04:09,184 INFO : valid_misclass            0.57895
+2019-06-07 01:04:09,184 INFO : test_misclass             0.76190
+2019-06-07 01:04:09,184 INFO : runtime                   0.14063
+2019-06-07 01:04:09,184 INFO : 
+2019-06-07 01:04:09,278 INFO : Time only for training updates: 0.09s
+2019-06-07 01:04:09,325 INFO : Epoch 142
+2019-06-07 01:04:09,325 INFO : train_loss                0.15813
+2019-06-07 01:04:09,325 INFO : valid_loss                2.91007
+2019-06-07 01:04:09,325 INFO : test_loss                 3.97259
+2019-06-07 01:04:09,325 INFO : train_misclass            0.05085
+2019-06-07 01:04:09,325 INFO : valid_misclass            0.63158
+2019-06-07 01:04:09,325 INFO : test_misclass             0.71429
+2019-06-07 01:04:09,325 INFO : runtime                   0.15625
+2019-06-07 01:04:09,325 INFO : 
+2019-06-07 01:04:09,418 INFO : Time only for training updates: 0.09s
+2019-06-07 01:04:09,481 INFO : Epoch 143
+2019-06-07 01:04:09,481 INFO : train_loss                0.18590
+2019-06-07 01:04:09,481 INFO : valid_loss                2.83921
+2019-06-07 01:04:09,481 INFO : test_loss                 4.04080
+2019-06-07 01:04:09,481 INFO : train_misclass            0.10169
+2019-06-07 01:04:09,481 INFO : valid_misclass            0.63158
+2019-06-07 01:04:09,481 INFO : test_misclass             0.66667
+2019-06-07 01:04:09,481 INFO : runtime                   0.14063
+2019-06-07 01:04:09,481 INFO : 
+2019-06-07 01:04:09,575 INFO : Time only for training updates: 0.09s
+2019-06-07 01:04:09,637 INFO : Epoch 144
+2019-06-07 01:04:09,637 INFO : train_loss                0.24489
+2019-06-07 01:04:09,637 INFO : valid_loss                2.80635
+2019-06-07 01:04:09,637 INFO : test_loss                 3.83013
+2019-06-07 01:04:09,637 INFO : train_misclass            0.08475
+2019-06-07 01:04:09,637 INFO : valid_misclass            0.68421
+2019-06-07 01:04:09,637 INFO : test_misclass             0.71429
+2019-06-07 01:04:09,637 INFO : runtime                   0.15625
+2019-06-07 01:04:09,637 INFO : 
+2019-06-07 01:04:09,715 INFO : Time only for training updates: 0.08s
+2019-06-07 01:04:09,778 INFO : Epoch 145
+2019-06-07 01:04:09,778 INFO : train_loss                0.20388
+2019-06-07 01:04:09,778 INFO : valid_loss                2.93199
+2019-06-07 01:04:09,778 INFO : test_loss                 3.94011
+2019-06-07 01:04:09,778 INFO : train_misclass            0.03390
+2019-06-07 01:04:09,778 INFO : valid_misclass            0.63158
+2019-06-07 01:04:09,778 INFO : test_misclass             0.66667
+2019-06-07 01:04:09,778 INFO : runtime                   0.14063
+2019-06-07 01:04:09,778 INFO : 
+2019-06-07 01:04:09,872 INFO : Time only for training updates: 0.09s
+2019-06-07 01:04:09,934 INFO : Epoch 146
+2019-06-07 01:04:09,934 INFO : train_loss                0.15965
+2019-06-07 01:04:09,934 INFO : valid_loss                2.91954
+2019-06-07 01:04:09,934 INFO : test_loss                 4.10085
+2019-06-07 01:04:09,934 INFO : train_misclass            0.05085
+2019-06-07 01:04:09,934 INFO : valid_misclass            0.63158
+2019-06-07 01:04:09,934 INFO : test_misclass             0.71429
+2019-06-07 01:04:09,934 INFO : runtime                   0.15625
+2019-06-07 01:04:09,934 INFO : 
+2019-06-07 01:04:10,028 INFO : Time only for training updates: 0.09s
+2019-06-07 01:04:10,075 INFO : Epoch 147
+2019-06-07 01:04:10,075 INFO : train_loss                0.23680
+2019-06-07 01:04:10,075 INFO : valid_loss                2.47876
+2019-06-07 01:04:10,075 INFO : test_loss                 4.07690
+2019-06-07 01:04:10,075 INFO : train_misclass            0.06780
+2019-06-07 01:04:10,075 INFO : valid_misclass            0.63158
+2019-06-07 01:04:10,075 INFO : test_misclass             0.66667
+2019-06-07 01:04:10,075 INFO : runtime                   0.15625
+2019-06-07 01:04:10,075 INFO : 
+2019-06-07 01:04:10,169 INFO : Time only for training updates: 0.08s
+2019-06-07 01:04:10,262 INFO : Epoch 148
+2019-06-07 01:04:10,262 INFO : train_loss                0.14367
+2019-06-07 01:04:10,262 INFO : valid_loss                2.46967
+2019-06-07 01:04:10,262 INFO : test_loss                 4.03633
+2019-06-07 01:04:10,262 INFO : train_misclass            0.03390
+2019-06-07 01:04:10,262 INFO : valid_misclass            0.68421
+2019-06-07 01:04:10,262 INFO : test_misclass             0.71429
+2019-06-07 01:04:10,262 INFO : runtime                   0.14063
+2019-06-07 01:04:10,262 INFO : 
+2019-06-07 01:04:10,340 INFO : Time only for training updates: 0.08s
+2019-06-07 01:04:10,403 INFO : Epoch 149
+2019-06-07 01:04:10,403 INFO : train_loss                0.14713
+2019-06-07 01:04:10,403 INFO : valid_loss                2.59478
+2019-06-07 01:04:10,403 INFO : test_loss                 3.92368
+2019-06-07 01:04:10,403 INFO : train_misclass            0.05085
+2019-06-07 01:04:10,403 INFO : valid_misclass            0.63158
+2019-06-07 01:04:10,403 INFO : test_misclass             0.71429
+2019-06-07 01:04:10,403 INFO : runtime                   0.17188
+2019-06-07 01:04:10,403 INFO : 
+2019-06-07 01:04:10,497 INFO : Time only for training updates: 0.09s
+2019-06-07 01:04:10,559 INFO : Epoch 150
+2019-06-07 01:04:10,559 INFO : train_loss                0.13662
+2019-06-07 01:04:10,559 INFO : valid_loss                2.62958
+2019-06-07 01:04:10,559 INFO : test_loss                 3.73778
+2019-06-07 01:04:10,559 INFO : train_misclass            0.03390
+2019-06-07 01:04:10,559 INFO : valid_misclass            0.63158
+2019-06-07 01:04:10,559 INFO : test_misclass             0.66667
+2019-06-07 01:04:10,559 INFO : runtime                   0.15625
+2019-06-07 01:04:10,559 INFO : 
+2019-06-07 01:04:10,653 INFO : Time only for training updates: 0.09s
+2019-06-07 01:04:10,715 INFO : Epoch 151
+2019-06-07 01:04:10,715 INFO : train_loss                0.09794
+2019-06-07 01:04:10,715 INFO : valid_loss                2.24939
+2019-06-07 01:04:10,715 INFO : test_loss                 3.45415
+2019-06-07 01:04:10,715 INFO : train_misclass            0.01695
+2019-06-07 01:04:10,715 INFO : valid_misclass            0.63158
+2019-06-07 01:04:10,715 INFO : test_misclass             0.71429
+2019-06-07 01:04:10,715 INFO : runtime                   0.15625
+2019-06-07 01:04:10,715 INFO : 
+2019-06-07 01:04:10,794 INFO : Time only for training updates: 0.08s
+2019-06-07 01:04:10,856 INFO : Epoch 152
+2019-06-07 01:04:10,856 INFO : train_loss                0.08401
+2019-06-07 01:04:10,856 INFO : valid_loss                2.18511
+2019-06-07 01:04:10,856 INFO : test_loss                 3.45861
+2019-06-07 01:04:10,856 INFO : train_misclass            0.01695
+2019-06-07 01:04:10,856 INFO : valid_misclass            0.63158
+2019-06-07 01:04:10,856 INFO : test_misclass             0.71429
+2019-06-07 01:04:10,856 INFO : runtime                   0.14063
+2019-06-07 01:04:10,856 INFO : 
+2019-06-07 01:04:10,950 INFO : Time only for training updates: 0.09s
+2019-06-07 01:04:10,997 INFO : Epoch 153
+2019-06-07 01:04:10,997 INFO : train_loss                0.08487
+2019-06-07 01:04:10,997 INFO : valid_loss                2.24397
+2019-06-07 01:04:10,997 INFO : test_loss                 3.49308
+2019-06-07 01:04:10,997 INFO : train_misclass            0.01695
+2019-06-07 01:04:10,997 INFO : valid_misclass            0.57895
+2019-06-07 01:04:10,997 INFO : test_misclass             0.66667
+2019-06-07 01:04:10,997 INFO : runtime                   0.15625
+2019-06-07 01:04:10,997 INFO : 
+2019-06-07 01:04:11,090 INFO : Time only for training updates: 0.09s
+2019-06-07 01:04:11,137 INFO : Epoch 154
+2019-06-07 01:04:11,153 INFO : train_loss                0.08651
+2019-06-07 01:04:11,153 INFO : valid_loss                2.31870
+2019-06-07 01:04:11,153 INFO : test_loss                 3.70198
+2019-06-07 01:04:11,153 INFO : train_misclass            0.01695
+2019-06-07 01:04:11,153 INFO : valid_misclass            0.57895
+2019-06-07 01:04:11,153 INFO : test_misclass             0.76190
+2019-06-07 01:04:11,153 INFO : runtime                   0.14062
+2019-06-07 01:04:11,153 INFO : 
+2019-06-07 01:04:11,231 INFO : Time only for training updates: 0.08s
+2019-06-07 01:04:11,294 INFO : Epoch 155
+2019-06-07 01:04:11,294 INFO : train_loss                0.08703
+2019-06-07 01:04:11,294 INFO : valid_loss                2.39679
+2019-06-07 01:04:11,294 INFO : test_loss                 4.05141
+2019-06-07 01:04:11,294 INFO : train_misclass            0.01695
+2019-06-07 01:04:11,294 INFO : valid_misclass            0.63158
+2019-06-07 01:04:11,294 INFO : test_misclass             0.76190
+2019-06-07 01:04:11,294 INFO : runtime                   0.14063
+2019-06-07 01:04:11,294 INFO : 
+2019-06-07 01:04:11,389 INFO : Time only for training updates: 0.10s
+2019-06-07 01:04:11,450 INFO : Epoch 156
+2019-06-07 01:04:11,450 INFO : train_loss                0.09250
+2019-06-07 01:04:11,450 INFO : valid_loss                2.60228
+2019-06-07 01:04:11,450 INFO : test_loss                 4.22511
+2019-06-07 01:04:11,450 INFO : train_misclass            0.01695
+2019-06-07 01:04:11,450 INFO : valid_misclass            0.63158
+2019-06-07 01:04:11,450 INFO : test_misclass             0.76190
+2019-06-07 01:04:11,450 INFO : runtime                   0.15756
+2019-06-07 01:04:11,450 INFO : 
+2019-06-07 01:04:11,559 INFO : Time only for training updates: 0.11s
+2019-06-07 01:04:11,606 INFO : Epoch 157
+2019-06-07 01:04:11,606 INFO : train_loss                0.10783
+2019-06-07 01:04:11,606 INFO : valid_loss                2.79522
+2019-06-07 01:04:11,606 INFO : test_loss                 4.16955
+2019-06-07 01:04:11,606 INFO : train_misclass            0.03390
+2019-06-07 01:04:11,606 INFO : valid_misclass            0.63158
+2019-06-07 01:04:11,606 INFO : test_misclass             0.76190
+2019-06-07 01:04:11,606 INFO : runtime                   0.17057
+2019-06-07 01:04:11,606 INFO : 
+2019-06-07 01:04:11,700 INFO : Time only for training updates: 0.09s
+2019-06-07 01:04:11,762 INFO : Epoch 158
+2019-06-07 01:04:11,762 INFO : train_loss                0.13384
+2019-06-07 01:04:11,762 INFO : valid_loss                2.75729
+2019-06-07 01:04:11,762 INFO : test_loss                 4.05426
+2019-06-07 01:04:11,762 INFO : train_misclass            0.03390
+2019-06-07 01:04:11,762 INFO : valid_misclass            0.63158
+2019-06-07 01:04:11,762 INFO : test_misclass             0.71429
+2019-06-07 01:04:11,762 INFO : runtime                   0.14063
+2019-06-07 01:04:11,762 INFO : 
+2019-06-07 01:04:11,856 INFO : Time only for training updates: 0.09s
+2019-06-07 01:04:11,903 INFO : Epoch 159
+2019-06-07 01:04:11,903 INFO : train_loss                0.08617
+2019-06-07 01:04:11,903 INFO : valid_loss                2.53061
+2019-06-07 01:04:11,903 INFO : test_loss                 3.96894
+2019-06-07 01:04:11,903 INFO : train_misclass            0.03390
+2019-06-07 01:04:11,903 INFO : valid_misclass            0.63158
+2019-06-07 01:04:11,903 INFO : test_misclass             0.76190
+2019-06-07 01:04:11,903 INFO : runtime                   0.15625
+2019-06-07 01:04:11,903 INFO : 
+2019-06-07 01:04:11,997 INFO : Time only for training updates: 0.09s
+2019-06-07 01:04:12,059 INFO : Epoch 160
+2019-06-07 01:04:12,059 INFO : train_loss                0.08517
+2019-06-07 01:04:12,059 INFO : valid_loss                2.37166
+2019-06-07 01:04:12,059 INFO : test_loss                 3.98415
+2019-06-07 01:04:12,059 INFO : train_misclass            0.03390
+2019-06-07 01:04:12,059 INFO : valid_misclass            0.68421
+2019-06-07 01:04:12,059 INFO : test_misclass             0.76190
+2019-06-07 01:04:12,059 INFO : runtime                   0.14063
+2019-06-07 01:04:12,059 INFO : 
+2019-06-07 01:04:12,137 INFO : Time only for training updates: 0.08s
+2019-06-07 01:04:12,200 INFO : Epoch 161
+2019-06-07 01:04:12,200 INFO : train_loss                0.11049
+2019-06-07 01:04:12,200 INFO : valid_loss                2.39350
+2019-06-07 01:04:12,200 INFO : test_loss                 3.83609
+2019-06-07 01:04:12,200 INFO : train_misclass            0.05085
+2019-06-07 01:04:12,200 INFO : valid_misclass            0.63158
+2019-06-07 01:04:12,200 INFO : test_misclass             0.71429
+2019-06-07 01:04:12,200 INFO : runtime                   0.14063
+2019-06-07 01:04:12,200 INFO : 
+2019-06-07 01:04:12,294 INFO : Time only for training updates: 0.09s
+2019-06-07 01:04:12,340 INFO : Epoch 162
+2019-06-07 01:04:12,340 INFO : train_loss                0.09259
+2019-06-07 01:04:12,340 INFO : valid_loss                2.25799
+2019-06-07 01:04:12,340 INFO : test_loss                 3.79827
+2019-06-07 01:04:12,340 INFO : train_misclass            0.01695
+2019-06-07 01:04:12,340 INFO : valid_misclass            0.63158
+2019-06-07 01:04:12,340 INFO : test_misclass             0.71429
+2019-06-07 01:04:12,340 INFO : runtime                   0.15625
+2019-06-07 01:04:12,340 INFO : 
+2019-06-07 01:04:12,434 INFO : Time only for training updates: 0.09s
+2019-06-07 01:04:12,481 INFO : Epoch 163
+2019-06-07 01:04:12,481 INFO : train_loss                0.12197
+2019-06-07 01:04:12,481 INFO : valid_loss                2.17519
+2019-06-07 01:04:12,481 INFO : test_loss                 3.54089
+2019-06-07 01:04:12,481 INFO : train_misclass            0.01695
+2019-06-07 01:04:12,481 INFO : valid_misclass            0.63158
+2019-06-07 01:04:12,481 INFO : test_misclass             0.76190
+2019-06-07 01:04:12,481 INFO : runtime                   0.14063
+2019-06-07 01:04:12,481 INFO : 
+2019-06-07 01:04:12,575 INFO : Time only for training updates: 0.09s
+2019-06-07 01:04:12,637 INFO : Epoch 164
+2019-06-07 01:04:12,637 INFO : train_loss                0.11270
+2019-06-07 01:04:12,637 INFO : valid_loss                2.67299
+2019-06-07 01:04:12,637 INFO : test_loss                 4.02739
+2019-06-07 01:04:12,637 INFO : train_misclass            0.05085
+2019-06-07 01:04:12,637 INFO : valid_misclass            0.63158
+2019-06-07 01:04:12,637 INFO : test_misclass             0.76190
+2019-06-07 01:04:12,637 INFO : runtime                   0.14063
+2019-06-07 01:04:12,637 INFO : 
+2019-06-07 01:04:12,731 INFO : Time only for training updates: 0.09s
+2019-06-07 01:04:12,794 INFO : Epoch 165
+2019-06-07 01:04:12,794 INFO : train_loss                0.07573
+2019-06-07 01:04:12,794 INFO : valid_loss                2.49230
+2019-06-07 01:04:12,794 INFO : test_loss                 3.86355
+2019-06-07 01:04:12,794 INFO : train_misclass            0.01695
+2019-06-07 01:04:12,794 INFO : valid_misclass            0.68421
+2019-06-07 01:04:12,794 INFO : test_misclass             0.71429
+2019-06-07 01:04:12,794 INFO : runtime                   0.15625
+2019-06-07 01:04:12,794 INFO : 
+2019-06-07 01:04:12,887 INFO : Time only for training updates: 0.09s
+2019-06-07 01:04:12,950 INFO : Epoch 166
+2019-06-07 01:04:12,950 INFO : train_loss                0.08072
+2019-06-07 01:04:12,950 INFO : valid_loss                2.45530
+2019-06-07 01:04:12,950 INFO : test_loss                 3.86869
+2019-06-07 01:04:12,950 INFO : train_misclass            0.01695
+2019-06-07 01:04:12,950 INFO : valid_misclass            0.63158
+2019-06-07 01:04:12,950 INFO : test_misclass             0.71429
+2019-06-07 01:04:12,950 INFO : runtime                   0.15625
+2019-06-07 01:04:12,950 INFO : 
+2019-06-07 01:04:13,044 INFO : Time only for training updates: 0.09s
+2019-06-07 01:04:13,090 INFO : Epoch 167
+2019-06-07 01:04:13,090 INFO : train_loss                0.12082
+2019-06-07 01:04:13,090 INFO : valid_loss                2.56194
+2019-06-07 01:04:13,090 INFO : test_loss                 3.72677
+2019-06-07 01:04:13,090 INFO : train_misclass            0.01695
+2019-06-07 01:04:13,090 INFO : valid_misclass            0.57895
+2019-06-07 01:04:13,090 INFO : test_misclass             0.71429
+2019-06-07 01:04:13,090 INFO : runtime                   0.15625
+2019-06-07 01:04:13,090 INFO : 
+2019-06-07 01:04:13,184 INFO : Time only for training updates: 0.09s
+2019-06-07 01:04:13,231 INFO : Epoch 168
+2019-06-07 01:04:13,231 INFO : train_loss                0.12868
+2019-06-07 01:04:13,231 INFO : valid_loss                2.75347
+2019-06-07 01:04:13,231 INFO : test_loss                 3.73102
+2019-06-07 01:04:13,231 INFO : train_misclass            0.03390
+2019-06-07 01:04:13,231 INFO : valid_misclass            0.57895
+2019-06-07 01:04:13,231 INFO : test_misclass             0.71429
+2019-06-07 01:04:13,231 INFO : runtime                   0.14063
+2019-06-07 01:04:13,231 INFO : 
+2019-06-07 01:04:13,325 INFO : Time only for training updates: 0.09s
+2019-06-07 01:04:13,387 INFO : Epoch 169
+2019-06-07 01:04:13,387 INFO : train_loss                0.16899
+2019-06-07 01:04:13,387 INFO : valid_loss                2.78218
+2019-06-07 01:04:13,387 INFO : test_loss                 3.66622
+2019-06-07 01:04:13,387 INFO : train_misclass            0.06780
+2019-06-07 01:04:13,387 INFO : valid_misclass            0.57895
+2019-06-07 01:04:13,387 INFO : test_misclass             0.71429
+2019-06-07 01:04:13,387 INFO : runtime                   0.14063
+2019-06-07 01:04:13,387 INFO : 
+2019-06-07 01:04:13,481 INFO : Time only for training updates: 0.09s
+2019-06-07 01:04:13,544 INFO : Epoch 170
+2019-06-07 01:04:13,544 INFO : train_loss                0.13260
+2019-06-07 01:04:13,544 INFO : valid_loss                2.43342
+2019-06-07 01:04:13,544 INFO : test_loss                 3.77433
+2019-06-07 01:04:13,544 INFO : train_misclass            0.05085
+2019-06-07 01:04:13,544 INFO : valid_misclass            0.57895
+2019-06-07 01:04:13,544 INFO : test_misclass             0.71429
+2019-06-07 01:04:13,544 INFO : runtime                   0.15625
+2019-06-07 01:04:13,544 INFO : 
+2019-06-07 01:04:13,637 INFO : Time only for training updates: 0.09s
+2019-06-07 01:04:13,684 INFO : Epoch 171
+2019-06-07 01:04:13,684 INFO : train_loss                0.14964
+2019-06-07 01:04:13,684 INFO : valid_loss                2.32426
+2019-06-07 01:04:13,684 INFO : test_loss                 3.93877
+2019-06-07 01:04:13,684 INFO : train_misclass            0.03390
+2019-06-07 01:04:13,684 INFO : valid_misclass            0.57895
+2019-06-07 01:04:13,684 INFO : test_misclass             0.66667
+2019-06-07 01:04:13,684 INFO : runtime                   0.15625
+2019-06-07 01:04:13,684 INFO : 
+2019-06-07 01:04:13,778 INFO : Time only for training updates: 0.09s
+2019-06-07 01:04:13,840 INFO : Epoch 172
+2019-06-07 01:04:13,840 INFO : train_loss                0.11741
+2019-06-07 01:04:13,840 INFO : valid_loss                2.27326
+2019-06-07 01:04:13,840 INFO : test_loss                 3.93958
+2019-06-07 01:04:13,840 INFO : train_misclass            0.03390
+2019-06-07 01:04:13,840 INFO : valid_misclass            0.52632
+2019-06-07 01:04:13,840 INFO : test_misclass             0.76190
+2019-06-07 01:04:13,840 INFO : runtime                   0.14063
+2019-06-07 01:04:13,840 INFO : 
+2019-06-07 01:04:13,934 INFO : Time only for training updates: 0.09s
+2019-06-07 01:04:13,997 INFO : Epoch 173
+2019-06-07 01:04:13,997 INFO : train_loss                0.10515
+2019-06-07 01:04:13,997 INFO : valid_loss                2.24450
+2019-06-07 01:04:13,997 INFO : test_loss                 3.96818
+2019-06-07 01:04:13,997 INFO : train_misclass            0.01695
+2019-06-07 01:04:13,997 INFO : valid_misclass            0.57895
+2019-06-07 01:04:13,997 INFO : test_misclass             0.76190
+2019-06-07 01:04:13,997 INFO : runtime                   0.15625
+2019-06-07 01:04:13,997 INFO : 
+2019-06-07 01:04:14,090 INFO : Time only for training updates: 0.09s
+2019-06-07 01:04:14,137 INFO : Epoch 174
+2019-06-07 01:04:14,137 INFO : train_loss                0.09248
+2019-06-07 01:04:14,137 INFO : valid_loss                2.29630
+2019-06-07 01:04:14,137 INFO : test_loss                 4.10555
+2019-06-07 01:04:14,137 INFO : train_misclass            0.01695
+2019-06-07 01:04:14,137 INFO : valid_misclass            0.57895
+2019-06-07 01:04:14,137 INFO : test_misclass             0.76190
+2019-06-07 01:04:14,137 INFO : runtime                   0.15625
+2019-06-07 01:04:14,137 INFO : 
+2019-06-07 01:04:14,231 INFO : Time only for training updates: 0.09s
+2019-06-07 01:04:14,278 INFO : Epoch 175
+2019-06-07 01:04:14,278 INFO : train_loss                0.07246
+2019-06-07 01:04:14,278 INFO : valid_loss                2.28194
+2019-06-07 01:04:14,278 INFO : test_loss                 4.15326
+2019-06-07 01:04:14,278 INFO : train_misclass            0.01695
+2019-06-07 01:04:14,278 INFO : valid_misclass            0.47368
+2019-06-07 01:04:14,278 INFO : test_misclass             0.71429
+2019-06-07 01:04:14,278 INFO : runtime                   0.14062
+2019-06-07 01:04:14,278 INFO : 
+2019-06-07 01:04:14,372 INFO : Time only for training updates: 0.09s
+2019-06-07 01:04:14,434 INFO : Epoch 176
+2019-06-07 01:04:14,434 INFO : train_loss                0.07188
+2019-06-07 01:04:14,434 INFO : valid_loss                2.46853
+2019-06-07 01:04:14,434 INFO : test_loss                 4.36146
+2019-06-07 01:04:14,434 INFO : train_misclass            0.03390
+2019-06-07 01:04:14,434 INFO : valid_misclass            0.68421
+2019-06-07 01:04:14,434 INFO : test_misclass             0.71429
+2019-06-07 01:04:14,434 INFO : runtime                   0.14063
+2019-06-07 01:04:14,434 INFO : 
+2019-06-07 01:04:14,528 INFO : Time only for training updates: 0.09s
+2019-06-07 01:04:14,575 INFO : Epoch 177
+2019-06-07 01:04:14,575 INFO : train_loss                0.12588
+2019-06-07 01:04:14,575 INFO : valid_loss                2.69105
+2019-06-07 01:04:14,575 INFO : test_loss                 4.62782
+2019-06-07 01:04:14,575 INFO : train_misclass            0.05085
+2019-06-07 01:04:14,575 INFO : valid_misclass            0.68421
+2019-06-07 01:04:14,575 INFO : test_misclass             0.76190
+2019-06-07 01:04:14,575 INFO : runtime                   0.15625
+2019-06-07 01:04:14,575 INFO : 
+2019-06-07 01:04:14,575 INFO : Setup for second stop...
+2019-06-07 01:04:14,590 INFO : Train loss to reach 0.63069
+2019-06-07 01:04:14,590 INFO : Run until second stop...
+2019-06-07 01:04:14,669 INFO : Epoch 18
+2019-06-07 01:04:14,669 INFO : train_loss                0.85735
+2019-06-07 01:04:14,669 INFO : valid_loss                1.52267
+2019-06-07 01:04:14,669 INFO : test_loss                 2.23226
+2019-06-07 01:04:14,669 INFO : train_misclass            0.33333
+2019-06-07 01:04:14,669 INFO : valid_misclass            0.42105
+2019-06-07 01:04:14,669 INFO : test_misclass             0.76190
+2019-06-07 01:04:14,669 INFO : runtime                   0.06250
+2019-06-07 01:04:14,669 INFO : 
+2019-06-07 01:04:14,669 INFO : New best valid_misclass: 0.421053
+2019-06-07 01:04:14,669 INFO : 
+2019-06-07 01:04:14,794 INFO : Time only for training updates: 0.13s
+2019-06-07 01:04:14,872 INFO : Epoch 19
+2019-06-07 01:04:14,872 INFO : train_loss                0.84276
+2019-06-07 01:04:14,872 INFO : valid_loss                1.47107
+2019-06-07 01:04:14,872 INFO : test_loss                 2.23278
+2019-06-07 01:04:14,872 INFO : train_misclass            0.28205
+2019-06-07 01:04:14,872 INFO : valid_misclass            0.42105
+2019-06-07 01:04:14,872 INFO : test_misclass             0.76190
+2019-06-07 01:04:14,872 INFO : runtime                   0.20313
+2019-06-07 01:04:14,872 INFO : 
+2019-06-07 01:04:14,872 INFO : New best valid_misclass: 0.421053
+2019-06-07 01:04:14,872 INFO : 
+2019-06-07 01:04:14,997 INFO : Time only for training updates: 0.12s
+2019-06-07 01:04:15,077 INFO : Epoch 20
+2019-06-07 01:04:15,077 INFO : train_loss                0.76335
+2019-06-07 01:04:15,077 INFO : valid_loss                1.25354
+2019-06-07 01:04:15,077 INFO : test_loss                 2.24949
+2019-06-07 01:04:15,077 INFO : train_misclass            0.33333
+2019-06-07 01:04:15,077 INFO : valid_misclass            0.42105
+2019-06-07 01:04:15,077 INFO : test_misclass             0.76190
+2019-06-07 01:04:15,077 INFO : runtime                   0.20312
+2019-06-07 01:04:15,077 INFO : 
+2019-06-07 01:04:15,077 INFO : New best valid_misclass: 0.421053
+2019-06-07 01:04:15,077 INFO : 
+2019-06-07 01:04:15,200 INFO : Time only for training updates: 0.12s
+2019-06-07 01:04:15,262 INFO : Epoch 21
+2019-06-07 01:04:15,262 INFO : train_loss                0.75431
+2019-06-07 01:04:15,262 INFO : valid_loss                1.23458
+2019-06-07 01:04:15,262 INFO : test_loss                 2.27408
+2019-06-07 01:04:15,262 INFO : train_misclass            0.30769
+2019-06-07 01:04:15,262 INFO : valid_misclass            0.47368
+2019-06-07 01:04:15,262 INFO : test_misclass             0.76190
+2019-06-07 01:04:15,262 INFO : runtime                   0.20313
+2019-06-07 01:04:15,262 INFO : 
+2019-06-07 01:04:15,387 INFO : Time only for training updates: 0.12s
+2019-06-07 01:04:15,465 INFO : Epoch 22
+2019-06-07 01:04:15,465 INFO : train_loss                0.77651
+2019-06-07 01:04:15,465 INFO : valid_loss                1.25172
+2019-06-07 01:04:15,465 INFO : test_loss                 2.42993
+2019-06-07 01:04:15,465 INFO : train_misclass            0.29487
+2019-06-07 01:04:15,465 INFO : valid_misclass            0.52632
+2019-06-07 01:04:15,465 INFO : test_misclass             0.85714
+2019-06-07 01:04:15,465 INFO : runtime                   0.18750
+2019-06-07 01:04:15,465 INFO : 
+2019-06-07 01:04:15,575 INFO : Time only for training updates: 0.11s
+2019-06-07 01:04:15,653 INFO : Epoch 23
+2019-06-07 01:04:15,653 INFO : train_loss                0.82193
+2019-06-07 01:04:15,653 INFO : valid_loss                0.99901
+2019-06-07 01:04:15,653 INFO : test_loss                 2.32445
+2019-06-07 01:04:15,653 INFO : train_misclass            0.37179
+2019-06-07 01:04:15,653 INFO : valid_misclass            0.47368
+2019-06-07 01:04:15,653 INFO : test_misclass             0.71429
+2019-06-07 01:04:15,653 INFO : runtime                   0.18750
+2019-06-07 01:04:15,653 INFO : 
+2019-06-07 01:04:15,778 INFO : Time only for training updates: 0.12s
+2019-06-07 01:04:15,856 INFO : Epoch 24
+2019-06-07 01:04:15,856 INFO : train_loss                0.61303
+2019-06-07 01:04:15,856 INFO : valid_loss                0.82891
+2019-06-07 01:04:15,856 INFO : test_loss                 2.35371
+2019-06-07 01:04:15,856 INFO : train_misclass            0.25641
+2019-06-07 01:04:15,856 INFO : valid_misclass            0.42105
+2019-06-07 01:04:15,856 INFO : test_misclass             0.71429
+2019-06-07 01:04:15,856 INFO : runtime                   0.20313
+2019-06-07 01:04:15,856 INFO : 
+2019-06-07 01:04:15,872 INFO : New best valid_misclass: 0.421053
+2019-06-07 01:04:15,872 INFO : 
+2019-06-07 01:04:15,981 INFO : Time only for training updates: 0.11s
+2019-06-07 01:04:16,059 INFO : Epoch 25
+2019-06-07 01:04:16,059 INFO : train_loss                0.66295
+2019-06-07 01:04:16,059 INFO : valid_loss                0.95282
+2019-06-07 01:04:16,059 INFO : test_loss                 2.54593
+2019-06-07 01:04:16,059 INFO : train_misclass            0.30769
+2019-06-07 01:04:16,059 INFO : valid_misclass            0.47368
+2019-06-07 01:04:16,059 INFO : test_misclass             0.80952
+2019-06-07 01:04:16,059 INFO : runtime                   0.20313
+2019-06-07 01:04:16,059 INFO : 
+2019-06-07 01:04:16,169 INFO : Time only for training updates: 0.11s
+2019-06-07 01:04:16,247 INFO : Epoch 26
+2019-06-07 01:04:16,247 INFO : train_loss                0.62139
+2019-06-07 01:04:16,247 INFO : valid_loss                0.85761
+2019-06-07 01:04:16,247 INFO : test_loss                 2.54065
+2019-06-07 01:04:16,247 INFO : train_misclass            0.24359
+2019-06-07 01:04:16,247 INFO : valid_misclass            0.42105
+2019-06-07 01:04:16,247 INFO : test_misclass             0.76190
+2019-06-07 01:04:16,247 INFO : runtime                   0.18750
+2019-06-07 01:04:16,247 INFO : 
+2019-06-07 01:04:16,247 INFO : New best valid_misclass: 0.421053
+2019-06-07 01:04:16,247 INFO : 
+2019-06-07 01:04:16,372 INFO : Time only for training updates: 0.12s
+2019-06-07 01:04:16,450 INFO : Epoch 27
+2019-06-07 01:04:16,450 INFO : train_loss                0.58631
+2019-06-07 01:04:16,450 INFO : valid_loss                0.74466
+2019-06-07 01:04:16,450 INFO : test_loss                 2.34809
+2019-06-07 01:04:16,450 INFO : train_misclass            0.24359
+2019-06-07 01:04:16,450 INFO : valid_misclass            0.31579
+2019-06-07 01:04:16,450 INFO : test_misclass             0.76190
+2019-06-07 01:04:16,450 INFO : runtime                   0.20313
+2019-06-07 01:04:16,450 INFO : 
+2019-06-07 01:04:16,450 INFO : New best valid_misclass: 0.315789
+2019-06-07 01:04:16,450 INFO : 
+2019-06-07 01:04:16,575 INFO : Time only for training updates: 0.12s
+2019-06-07 01:04:16,669 INFO : Epoch 28
+2019-06-07 01:04:16,669 INFO : train_loss                0.59671
+2019-06-07 01:04:16,669 INFO : valid_loss                0.83509
+2019-06-07 01:04:16,669 INFO : test_loss                 2.13481
+2019-06-07 01:04:16,669 INFO : train_misclass            0.21795
+2019-06-07 01:04:16,669 INFO : valid_misclass            0.36842
+2019-06-07 01:04:16,669 INFO : test_misclass             0.66667
+2019-06-07 01:04:16,669 INFO : runtime                   0.20313
+2019-06-07 01:04:16,669 INFO : 
+2019-06-07 01:04:16,794 INFO : Time only for training updates: 0.13s
+2019-06-07 01:04:16,872 INFO : Epoch 29
+2019-06-07 01:04:16,872 INFO : train_loss                0.59607
+2019-06-07 01:04:16,872 INFO : valid_loss                0.82461
+2019-06-07 01:04:16,872 INFO : test_loss                 2.24168
+2019-06-07 01:04:16,872 INFO : train_misclass            0.23077
+2019-06-07 01:04:16,872 INFO : valid_misclass            0.36842
+2019-06-07 01:04:16,872 INFO : test_misclass             0.76190
+2019-06-07 01:04:16,872 INFO : runtime                   0.21875
+2019-06-07 01:04:16,872 INFO : 
+2019-06-07 01:04:16,997 INFO : Time only for training updates: 0.12s
+2019-06-07 01:04:17,090 INFO : Epoch 30
+2019-06-07 01:04:17,090 INFO : train_loss                0.60028
+2019-06-07 01:04:17,090 INFO : valid_loss                0.80591
+2019-06-07 01:04:17,090 INFO : test_loss                 2.60094
+2019-06-07 01:04:17,090 INFO : train_misclass            0.20513
+2019-06-07 01:04:17,090 INFO : valid_misclass            0.21053
+2019-06-07 01:04:17,090 INFO : test_misclass             0.85714
+2019-06-07 01:04:17,090 INFO : runtime                   0.20313
+2019-06-07 01:04:17,090 INFO : 
+2019-06-07 01:04:17,090 INFO : New best valid_misclass: 0.210526
+2019-06-07 01:04:17,090 INFO : 
+2019-06-07 01:04:17,215 INFO : Time only for training updates: 0.12s
+2019-06-07 01:04:17,278 INFO : Epoch 31
+2019-06-07 01:04:17,278 INFO : train_loss                0.52577
+2019-06-07 01:04:17,278 INFO : valid_loss                0.63192
+2019-06-07 01:04:17,278 INFO : test_loss                 2.54059
+2019-06-07 01:04:17,278 INFO : train_misclass            0.19231
+2019-06-07 01:04:17,278 INFO : valid_misclass            0.21053
+2019-06-07 01:04:17,278 INFO : test_misclass             0.76190
+2019-06-07 01:04:17,278 INFO : runtime                   0.21875
+2019-06-07 01:04:17,278 INFO : 
+2019-06-07 01:04:17,294 INFO : New best valid_misclass: 0.210526
+2019-06-07 01:04:17,294 INFO : 
+2019-06-07 01:04:17,403 INFO : Time only for training updates: 0.11s
+2019-06-07 01:04:17,481 INFO : Epoch 32
+2019-06-07 01:04:17,481 INFO : train_loss                0.45944
+2019-06-07 01:04:17,481 INFO : valid_loss                0.57826
+2019-06-07 01:04:17,481 INFO : test_loss                 2.74794
+2019-06-07 01:04:17,481 INFO : train_misclass            0.16667
+2019-06-07 01:04:17,481 INFO : valid_misclass            0.26316
+2019-06-07 01:04:17,481 INFO : test_misclass             0.76190
+2019-06-07 01:04:17,481 INFO : runtime                   0.18750
+2019-06-07 01:04:17,481 INFO : 
+2019-06-07 01:04:17,481 INFO : epochs
+2019-06-07 01:04:17,497 INFO : 
+    train_loss  valid_loss  test_loss  ...  valid_misclass  test_misclass   runtime
+0     2.098945    3.281090   3.326708  ...        0.947368       0.857143  0.000000
+1     1.067659    1.251309   1.207214  ...        0.631579       0.714286  0.937502
+2     1.001176    1.178278   1.119983  ...        0.684211       0.571429  0.203126
+3     1.003286    1.250750   1.247911  ...        0.684211       0.571429  0.187501
+4     0.941527    1.241043   1.350428  ...        0.684211       0.666667  0.171876
+5     0.888950    1.192082   1.431237  ...        0.684211       0.666667  0.171877
+6     0.872536    1.125094   1.464097  ...        0.473684       0.666667  0.156250
+7     0.863231    1.136600   1.518010  ...        0.526316       0.666667  0.156251
+8     0.848326    1.169211   1.544527  ...        0.526316       0.714286  0.140626
+9     0.820936    1.292553   1.678069  ...        0.578947       0.714286  0.156251
+10    0.826361    1.379848   1.639939  ...        0.578947       0.666667  0.140626
+11    0.801922    1.394653   1.651380  ...        0.631579       0.714286  0.156252
+12    0.766745    1.429645   1.679529  ...        0.578947       0.761905  0.140625
+13    0.715281    1.476221   1.807720  ...        0.578947       0.809524  0.140625
+14    0.711690    1.551132   1.980034  ...        0.526316       0.761905  0.156251
+15    0.694198    1.527732   2.077478  ...        0.473684       0.761905  0.140626
+16    0.662267    1.549953   2.186520  ...        0.473684       0.809524  0.140627
+17    0.630686    1.522674   2.232265  ...        0.421053       0.761905  0.171877
+18    0.857354    1.522674   2.232265  ...        0.421053       0.761905  0.062501
+19    0.842762    1.471068   2.232779  ...        0.421053       0.761905  0.203126
+20    0.763350    1.253539   2.249491  ...        0.421053       0.761905  0.203125
+21    0.754313    1.234577   2.274084  ...        0.473684       0.761905  0.203128
+22    0.776507    1.251721   2.429926  ...        0.526316       0.857143  0.187500
+23    0.821931    0.999007   2.324450  ...        0.473684       0.714286  0.187502
+24    0.613026    0.828912   2.353708  ...        0.421053       0.714286  0.203126
+25    0.662947    0.952818   2.545930  ...        0.473684       0.809524  0.203128
+26    0.621391    0.857612   2.540647  ...        0.421053       0.761905  0.187499
+27    0.586307    0.744656   2.348089  ...        0.315789       0.761905  0.203126
+28    0.596708    0.835088   2.134808  ...        0.368421       0.666667  0.203128
+29    0.596074    0.824614   2.241680  ...        0.368421       0.761905  0.218752
+30    0.600278    0.805912   2.600941  ...        0.210526       0.857143  0.203125
+31    0.525771    0.631920   2.540593  ...        0.210526       0.761905  0.218751
+32    0.459436    0.578260   2.747942  ...        0.263158       0.761905  0.187502
+
+[33 rows x 7 columns]
+2019-06-07 01:04:17,497 INFO : XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+(33, 7)
+2019-06-07 01:04:17,559 DEBUG : findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=12.0.
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'STIXGeneral' (STIXGeneralBol.ttf) normal normal bold normal>) = 10.335
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'DejaVu Sans' (DejaVuSans-Oblique.ttf) oblique normal 400 normal>) = 1.05
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'DejaVu Serif' (DejaVuSerif.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'STIXNonUnicode' (STIXNonUniBolIta.ttf) italic normal bold normal>) = 11.335
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'DejaVu Sans Mono' (DejaVuSansMono-Oblique.ttf) oblique normal 400 normal>) = 11.05
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'cmr10' (cmr10.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'DejaVu Serif' (DejaVuSerif-Italic.ttf) italic normal 400 normal>) = 11.05
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'STIXGeneral' (STIXGeneral.ttf) normal normal regular normal>) = 10.05
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'STIXSizeFiveSym' (STIXSizFiveSymReg.ttf) normal normal regular normal>) = 10.05
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'STIXSizeOneSym' (STIXSizOneSymBol.ttf) normal normal bold normal>) = 10.335
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'STIXSizeTwoSym' (STIXSizTwoSymBol.ttf) normal normal bold normal>) = 10.335
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'STIXSizeThreeSym' (STIXSizThreeSymBol.ttf) normal normal bold normal>) = 10.335
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'DejaVu Sans' (DejaVuSans.ttf) normal normal 400 normal>) = 0.05
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'STIXNonUnicode' (STIXNonUniIta.ttf) italic normal 400 normal>) = 11.05
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'cmss10' (cmss10.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'cmtt10' (cmtt10.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'DejaVu Serif' (DejaVuSerif-Bold.ttf) normal normal bold normal>) = 10.335
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'DejaVu Sans' (DejaVuSans-Bold.ttf) normal normal bold normal>) = 0.33499999999999996
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'STIXSizeFourSym' (STIXSizFourSymBol.ttf) normal normal bold normal>) = 10.335
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'STIXSizeFourSym' (STIXSizFourSymReg.ttf) normal normal regular normal>) = 10.05
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'DejaVu Sans Mono' (DejaVuSansMono.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'DejaVu Sans Display' (DejaVuSansDisplay.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'STIXGeneral' (STIXGeneralBolIta.ttf) italic normal bold normal>) = 11.335
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'STIXNonUnicode' (STIXNonUniBol.ttf) normal normal bold normal>) = 10.335
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'cmsy10' (cmsy10.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'STIXSizeOneSym' (STIXSizOneSymReg.ttf) normal normal regular normal>) = 10.05
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'STIXSizeThreeSym' (STIXSizThreeSymReg.ttf) normal normal regular normal>) = 10.05
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'cmb10' (cmb10.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'DejaVu Sans Mono' (DejaVuSansMono-BoldOblique.ttf) oblique normal bold normal>) = 11.335
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'DejaVu Sans' (DejaVuSans-BoldOblique.ttf) oblique normal bold normal>) = 1.335
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'cmmi10' (cmmi10.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'DejaVu Sans Mono' (DejaVuSansMono-Bold.ttf) normal normal bold normal>) = 10.335
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'STIXGeneral' (STIXGeneralItalic.ttf) italic normal 400 normal>) = 11.05
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'STIXSizeTwoSym' (STIXSizTwoSymReg.ttf) normal normal regular normal>) = 10.05
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'DejaVu Serif Display' (DejaVuSerifDisplay.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'cmex10' (cmex10.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'STIXNonUnicode' (STIXNonUni.ttf) normal normal regular normal>) = 10.05
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'DejaVu Serif' (DejaVuSerif-BoldItalic.ttf) italic normal bold normal>) = 11.335
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'Georgia' (georgiaz.ttf) italic normal bold normal>) = 11.335
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'Segoe UI' (segoeuil.ttf) normal normal light normal>) = 10.24
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'Palatino Linotype' (palab.ttf) normal normal bold normal>) = 10.335
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'Consolas' (consolab.ttf) normal normal bold normal>) = 10.335
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'Courier New' (cour.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'Candara' (Candara.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'Ink Free' (Inkfree.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'Cambria' (cambriai.ttf) italic normal 400 normal>) = 11.05
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'Yu Gothic' (YuGothM.ttc) normal normal medium normal>) = 10.145
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'Segoe Print' (segoeprb.ttf) normal normal bold normal>) = 10.335
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'Courier New' (couri.ttf) italic normal 400 normal>) = 11.05
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'Comic Sans MS' (comicz.ttf) italic normal bold normal>) = 11.335
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'Trebuchet MS' (trebucit.ttf) italic normal 400 normal>) = 11.05
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'Microsoft YaHei' (msyh.ttc) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'Palatino Linotype' (pala.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'Verdana' (verdana.ttf) normal normal 400 normal>) = 3.6863636363636365
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'Segoe UI' (segoeuisl.ttf) normal normal light normal>) = 10.24
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'Candara' (Candaral.ttf) normal normal light normal>) = 10.24
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'Segoe UI' (seguisli.ttf) italic normal light normal>) = 11.24
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'Candara' (Candarai.ttf) italic normal 400 normal>) = 11.05
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'Yu Gothic' (YuGothL.ttc) normal normal light normal>) = 10.24
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'Courier New' (courbi.ttf) italic normal bold normal>) = 11.335
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'Nirmala UI' (NirmalaB.ttf) normal normal bold normal>) = 10.335
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'Consolas' (consola.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'Times New Roman' (times.ttf) normal normal roman normal>) = 10.145
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'Leelawadee UI' (LeelawUI.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'Segoe Print' (segoepr.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'Mongolian Baiti' (monbaiti.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'Microsoft Tai Le' (taile.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'Leelawadee UI' (LeelaUIb.ttf) normal normal bold normal>) = 10.335
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'Candara' (Candaraz.ttf) italic normal bold normal>) = 11.335
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'Calibri' (calibrili.ttf) italic normal light normal>) = 11.24
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'Segoe UI Symbol' (seguisym.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'Trebuchet MS' (trebucbd.ttf) normal normal bold normal>) = 10.335
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'MV Boli' (mvboli.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'Malgun Gothic' (malgunsl.ttf) normal normal light normal>) = 10.24
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'Georgia' (georgiai.ttf) italic normal 400 normal>) = 11.05
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'Malgun Gothic' (malgun.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'Corbel' (corbeli.ttf) italic normal 400 normal>) = 11.05
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'Marlett' (marlett.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'Microsoft PhagsPa' (phagspa.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'Lucida Sans Unicode' (l_10646.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'Times New Roman' (timesbd.ttf) normal normal roman normal>) = 10.145
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'Courier New' (courbd.ttf) normal normal bold normal>) = 10.335
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'Gabriola' (Gabriola.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'Segoe MDL2 Assets' (segmdl2.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'Constantia' (constanz.ttf) italic normal bold normal>) = 11.335
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'Comic Sans MS' (comici.ttf) italic normal 400 normal>) = 11.05
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'Segoe UI Historic' (seguihis.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'SimSun-ExtB' (simsunb.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'Nirmala UI' (Nirmala.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'Arial' (ariblk.ttf) normal normal black normal>) = 6.888636363636364
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'Segoe UI' (seguibli.ttf) italic normal black normal>) = 11.525
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'Segoe Script' (segoesc.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'Times New Roman' (timesi.ttf) italic normal roman normal>) = 11.145
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'Candara' (Candarali.ttf) italic normal light normal>) = 11.24
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'Microsoft PhagsPa' (phagspab.ttf) normal normal bold normal>) = 10.335
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'Lucida Console' (lucon.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'Segoe UI' (seguibl.ttf) normal normal black normal>) = 10.525
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'Sitka Small' (Sitka.ttc) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'Segoe UI Emoji' (seguiemj.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'Candara' (Candarab.ttf) normal normal bold normal>) = 10.335
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'Microsoft JhengHei' (msjh.ttc) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'Bahnschrift' (bahnschrift.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'Corbel' (corbel.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,559 DEBUG : findfont: score(<Font 'Webdings' (webdings.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,575 DEBUG : findfont: score(<Font 'Javanese Text' (javatext.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,575 DEBUG : findfont: score(<Font 'Malgun Gothic' (malgunbd.ttf) normal normal bold normal>) = 10.335
+2019-06-07 01:04:17,575 DEBUG : findfont: score(<Font 'Cambria' (cambriaz.ttf) italic normal bold normal>) = 11.335
+2019-06-07 01:04:17,575 DEBUG : findfont: score(<Font 'Segoe UI' (seguisbi.ttf) italic normal semibold normal>) = 11.24
+2019-06-07 01:04:17,575 DEBUG : findfont: score(<Font 'Consolas' (consolaz.ttf) italic normal bold normal>) = 11.335
+2019-06-07 01:04:17,575 DEBUG : findfont: score(<Font 'Segoe UI' (segoeuib.ttf) normal normal bold normal>) = 10.335
+2019-06-07 01:04:17,575 DEBUG : findfont: score(<Font 'Segoe UI' (segoeuii.ttf) italic normal 400 normal>) = 11.05
+2019-06-07 01:04:17,575 DEBUG : findfont: score(<Font 'Calibri' (calibriz.ttf) italic normal bold normal>) = 11.335
+2019-06-07 01:04:17,575 DEBUG : findfont: score(<Font 'Georgia' (georgia.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,575 DEBUG : findfont: score(<Font 'Arial' (arialbd.ttf) normal normal bold normal>) = 6.698636363636363
+2019-06-07 01:04:17,575 DEBUG : findfont: score(<Font 'Franklin Gothic Medium' (framd.ttf) normal normal medium normal>) = 10.145
+2019-06-07 01:04:17,575 DEBUG : findfont: score(<Font 'Ebrima' (ebrimabd.ttf) normal normal bold normal>) = 10.335
+2019-06-07 01:04:17,575 DEBUG : findfont: score(<Font 'SimSun' (simsun.ttc) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,575 DEBUG : findfont: score(<Font 'Gadugi' (gadugib.ttf) normal normal bold normal>) = 10.335
+2019-06-07 01:04:17,575 DEBUG : findfont: score(<Font 'Verdana' (verdanaz.ttf) italic normal bold normal>) = 4.971363636363637
+2019-06-07 01:04:17,575 DEBUG : findfont: score(<Font 'Microsoft Yi Baiti' (msyi.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,575 DEBUG : findfont: score(<Font 'Microsoft New Tai Lue' (ntailub.ttf) normal normal bold normal>) = 10.335
+2019-06-07 01:04:17,575 DEBUG : findfont: score(<Font 'Constantia' (constan.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,575 DEBUG : findfont: score(<Font 'Verdana' (verdanab.ttf) normal normal bold normal>) = 3.9713636363636367
+2019-06-07 01:04:17,575 DEBUG : findfont: score(<Font 'Ebrima' (ebrima.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,575 DEBUG : findfont: score(<Font 'Segoe UI' (seguili.ttf) italic normal light normal>) = 11.24
+2019-06-07 01:04:17,575 DEBUG : findfont: score(<Font 'Sitka Small' (SitkaZ.ttc) italic normal bold normal>) = 11.335
+2019-06-07 01:04:17,575 DEBUG : findfont: score(<Font 'Myanmar Text' (mmrtextb.ttf) normal normal bold normal>) = 10.335
+2019-06-07 01:04:17,575 DEBUG : findfont: score(<Font 'Segoe Script' (segoescb.ttf) normal normal bold normal>) = 10.335
+2019-06-07 01:04:17,575 DEBUG : findfont: score(<Font 'Calibri' (calibril.ttf) normal normal light normal>) = 10.24
+2019-06-07 01:04:17,575 DEBUG : findfont: score(<Font 'Comic Sans MS' (comic.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,575 DEBUG : findfont: score(<Font 'Verdana' (verdanai.ttf) italic normal 400 normal>) = 4.6863636363636365
+2019-06-07 01:04:17,575 DEBUG : findfont: score(<Font 'MS Gothic' (msgothic.ttc) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,575 DEBUG : findfont: score(<Font 'Microsoft JhengHei' (msjhl.ttc) normal normal light normal>) = 10.24
+2019-06-07 01:04:17,575 DEBUG : findfont: score(<Font 'Gadugi' (gadugi.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,575 DEBUG : findfont: score(<Font 'Microsoft Sans Serif' (micross.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,575 DEBUG : findfont: score(<Font 'Segoe UI' (segoeui.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,575 DEBUG : findfont: score(<Font 'Nirmala UI' (NirmalaS.ttf) normal normal light normal>) = 10.24
+2019-06-07 01:04:17,575 DEBUG : findfont: score(<Font 'Corbel' (corbelli.ttf) italic normal light normal>) = 11.24
+2019-06-07 01:04:17,575 DEBUG : findfont: score(<Font 'Corbel' (corbell.ttf) normal normal light normal>) = 10.24
+2019-06-07 01:04:17,575 DEBUG : findfont: score(<Font 'Microsoft JhengHei' (msjhbd.ttc) normal normal bold normal>) = 10.335
+2019-06-07 01:04:17,575 DEBUG : findfont: score(<Font 'Impact' (impact.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,575 DEBUG : findfont: score(<Font 'Tahoma' (tahoma.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,575 DEBUG : findfont: score(<Font 'Cambria' (cambria.ttc) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,575 DEBUG : findfont: score(<Font 'Trebuchet MS' (trebuc.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,575 DEBUG : findfont: score(<Font 'Palatino Linotype' (palai.ttf) italic normal 400 normal>) = 11.05
+2019-06-07 01:04:17,575 DEBUG : findfont: score(<Font 'Constantia' (constanb.ttf) normal normal bold normal>) = 10.335
+2019-06-07 01:04:17,575 DEBUG : findfont: score(<Font 'Segoe UI' (seguisb.ttf) normal normal semibold normal>) = 10.24
+2019-06-07 01:04:17,575 DEBUG : findfont: score(<Font 'Microsoft YaHei' (msyhbd.ttc) normal normal bold normal>) = 10.335
+2019-06-07 01:04:17,575 DEBUG : findfont: score(<Font 'Cambria' (cambriab.ttf) normal normal bold normal>) = 10.335
+2019-06-07 01:04:17,575 DEBUG : findfont: score(<Font 'Georgia' (georgiab.ttf) normal normal bold normal>) = 10.335
+2019-06-07 01:04:17,575 DEBUG : findfont: score(<Font 'Calibri' (calibri.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,575 DEBUG : findfont: score(<Font 'Trebuchet MS' (trebucbi.ttf) italic normal bold normal>) = 11.335
+2019-06-07 01:04:17,575 DEBUG : findfont: score(<Font 'MingLiU-ExtB' (mingliub.ttc) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,575 DEBUG : findfont: score(<Font 'Leelawadee UI' (LeelUIsl.ttf) normal normal light normal>) = 10.24
+2019-06-07 01:04:17,575 DEBUG : findfont: score(<Font 'Calibri' (calibrii.ttf) italic normal 400 normal>) = 11.05
+2019-06-07 01:04:17,575 DEBUG : findfont: score(<Font 'Microsoft Tai Le' (taileb.ttf) normal normal bold normal>) = 10.335
+2019-06-07 01:04:17,575 DEBUG : findfont: score(<Font 'Wingdings' (wingding.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,575 DEBUG : findfont: score(<Font 'Corbel' (corbelz.ttf) italic normal bold normal>) = 11.335
+2019-06-07 01:04:17,575 DEBUG : findfont: score(<Font 'Sitka Small' (SitkaB.ttc) normal normal bold normal>) = 10.335
+2019-06-07 01:04:17,575 DEBUG : findfont: score(<Font 'Corbel' (corbelb.ttf) normal normal bold normal>) = 10.335
+2019-06-07 01:04:17,575 DEBUG : findfont: score(<Font 'Sitka Small' (SitkaI.ttc) italic normal 400 normal>) = 11.05
+2019-06-07 01:04:17,575 DEBUG : findfont: score(<Font 'Yu Gothic' (YuGothB.ttc) normal normal bold normal>) = 10.335
+2019-06-07 01:04:17,575 DEBUG : findfont: score(<Font 'Arial' (arial.ttf) normal normal 400 normal>) = 6.413636363636363
+2019-06-07 01:04:17,575 DEBUG : findfont: score(<Font 'Consolas' (consolai.ttf) italic normal 400 normal>) = 11.05
+2019-06-07 01:04:17,575 DEBUG : findfont: score(<Font 'Calibri' (calibrib.ttf) normal normal bold normal>) = 10.335
+2019-06-07 01:04:17,575 DEBUG : findfont: score(<Font 'Times New Roman' (timesbi.ttf) italic normal roman normal>) = 11.145
+2019-06-07 01:04:17,575 DEBUG : findfont: score(<Font 'Arial' (arialbi.ttf) italic normal bold normal>) = 7.698636363636363
+2019-06-07 01:04:17,575 DEBUG : findfont: score(<Font 'Palatino Linotype' (palabi.ttf) italic normal bold normal>) = 11.335
+2019-06-07 01:04:17,575 DEBUG : findfont: score(<Font 'Myanmar Text' (mmrtext.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,575 DEBUG : findfont: score(<Font 'Arial' (ariali.ttf) italic normal 400 normal>) = 7.413636363636363
+2019-06-07 01:04:17,575 DEBUG : findfont: score(<Font 'Comic Sans MS' (comicbd.ttf) normal normal bold normal>) = 10.335
+2019-06-07 01:04:17,575 DEBUG : findfont: score(<Font 'Sylfaen' (sylfaen.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,575 DEBUG : findfont: score(<Font 'Tahoma' (tahomabd.ttf) normal normal bold normal>) = 10.335
+2019-06-07 01:04:17,575 DEBUG : findfont: score(<Font 'Franklin Gothic Medium' (framdit.ttf) italic normal medium normal>) = 11.145
+2019-06-07 01:04:17,575 DEBUG : findfont: score(<Font 'Symbol' (symbol.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,575 DEBUG : findfont: score(<Font 'Microsoft Himalaya' (himalaya.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,575 DEBUG : findfont: score(<Font 'Segoe UI' (segoeuiz.ttf) italic normal bold normal>) = 11.335
+2019-06-07 01:04:17,575 DEBUG : findfont: score(<Font 'Microsoft New Tai Lue' (ntailu.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,575 DEBUG : findfont: score(<Font 'Yu Gothic' (YuGothR.ttc) normal normal regular normal>) = 10.05
+2019-06-07 01:04:17,575 DEBUG : findfont: score(<Font 'Microsoft YaHei' (msyhl.ttc) normal normal light normal>) = 10.24
+2019-06-07 01:04:17,575 DEBUG : findfont: score(<Font 'Constantia' (constani.ttf) italic normal 400 normal>) = 11.05
+2019-06-07 01:04:17,575 DEBUG : findfont: score(<Font 'HoloLens MDL2 Assets' (holomdl2.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,575 DEBUG : findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=12.0 to DejaVu Sans ('C:\\ProgramData\\Anaconda3\\lib\\site-packages\\matplotlib\\mpl-data\\fonts\\ttf\\DejaVuSans.ttf') with score of 0.050000.
+2019-06-07 01:04:17,590 DEBUG : findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0.
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'STIXGeneral' (STIXGeneralBol.ttf) normal normal bold normal>) = 10.335
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'DejaVu Sans' (DejaVuSans-Oblique.ttf) oblique normal 400 normal>) = 1.05
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'DejaVu Serif' (DejaVuSerif.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'STIXNonUnicode' (STIXNonUniBolIta.ttf) italic normal bold normal>) = 11.335
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'DejaVu Sans Mono' (DejaVuSansMono-Oblique.ttf) oblique normal 400 normal>) = 11.05
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'cmr10' (cmr10.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'DejaVu Serif' (DejaVuSerif-Italic.ttf) italic normal 400 normal>) = 11.05
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'STIXGeneral' (STIXGeneral.ttf) normal normal regular normal>) = 10.05
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'STIXSizeFiveSym' (STIXSizFiveSymReg.ttf) normal normal regular normal>) = 10.05
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'STIXSizeOneSym' (STIXSizOneSymBol.ttf) normal normal bold normal>) = 10.335
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'STIXSizeTwoSym' (STIXSizTwoSymBol.ttf) normal normal bold normal>) = 10.335
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'STIXSizeThreeSym' (STIXSizThreeSymBol.ttf) normal normal bold normal>) = 10.335
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'DejaVu Sans' (DejaVuSans.ttf) normal normal 400 normal>) = 0.05
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'STIXNonUnicode' (STIXNonUniIta.ttf) italic normal 400 normal>) = 11.05
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'cmss10' (cmss10.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'cmtt10' (cmtt10.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'DejaVu Serif' (DejaVuSerif-Bold.ttf) normal normal bold normal>) = 10.335
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'DejaVu Sans' (DejaVuSans-Bold.ttf) normal normal bold normal>) = 0.33499999999999996
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'STIXSizeFourSym' (STIXSizFourSymBol.ttf) normal normal bold normal>) = 10.335
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'STIXSizeFourSym' (STIXSizFourSymReg.ttf) normal normal regular normal>) = 10.05
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'DejaVu Sans Mono' (DejaVuSansMono.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'DejaVu Sans Display' (DejaVuSansDisplay.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'STIXGeneral' (STIXGeneralBolIta.ttf) italic normal bold normal>) = 11.335
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'STIXNonUnicode' (STIXNonUniBol.ttf) normal normal bold normal>) = 10.335
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'cmsy10' (cmsy10.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'STIXSizeOneSym' (STIXSizOneSymReg.ttf) normal normal regular normal>) = 10.05
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'STIXSizeThreeSym' (STIXSizThreeSymReg.ttf) normal normal regular normal>) = 10.05
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'cmb10' (cmb10.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'DejaVu Sans Mono' (DejaVuSansMono-BoldOblique.ttf) oblique normal bold normal>) = 11.335
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'DejaVu Sans' (DejaVuSans-BoldOblique.ttf) oblique normal bold normal>) = 1.335
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'cmmi10' (cmmi10.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'DejaVu Sans Mono' (DejaVuSansMono-Bold.ttf) normal normal bold normal>) = 10.335
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'STIXGeneral' (STIXGeneralItalic.ttf) italic normal 400 normal>) = 11.05
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'STIXSizeTwoSym' (STIXSizTwoSymReg.ttf) normal normal regular normal>) = 10.05
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'DejaVu Serif Display' (DejaVuSerifDisplay.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'cmex10' (cmex10.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'STIXNonUnicode' (STIXNonUni.ttf) normal normal regular normal>) = 10.05
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'DejaVu Serif' (DejaVuSerif-BoldItalic.ttf) italic normal bold normal>) = 11.335
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'Georgia' (georgiaz.ttf) italic normal bold normal>) = 11.335
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'Segoe UI' (segoeuil.ttf) normal normal light normal>) = 10.24
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'Palatino Linotype' (palab.ttf) normal normal bold normal>) = 10.335
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'Consolas' (consolab.ttf) normal normal bold normal>) = 10.335
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'Courier New' (cour.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'Candara' (Candara.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'Ink Free' (Inkfree.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'Cambria' (cambriai.ttf) italic normal 400 normal>) = 11.05
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'Yu Gothic' (YuGothM.ttc) normal normal medium normal>) = 10.145
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'Segoe Print' (segoeprb.ttf) normal normal bold normal>) = 10.335
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'Courier New' (couri.ttf) italic normal 400 normal>) = 11.05
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'Comic Sans MS' (comicz.ttf) italic normal bold normal>) = 11.335
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'Trebuchet MS' (trebucit.ttf) italic normal 400 normal>) = 11.05
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'Microsoft YaHei' (msyh.ttc) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'Palatino Linotype' (pala.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'Verdana' (verdana.ttf) normal normal 400 normal>) = 3.6863636363636365
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'Segoe UI' (segoeuisl.ttf) normal normal light normal>) = 10.24
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'Candara' (Candaral.ttf) normal normal light normal>) = 10.24
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'Segoe UI' (seguisli.ttf) italic normal light normal>) = 11.24
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'Candara' (Candarai.ttf) italic normal 400 normal>) = 11.05
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'Yu Gothic' (YuGothL.ttc) normal normal light normal>) = 10.24
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'Courier New' (courbi.ttf) italic normal bold normal>) = 11.335
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'Nirmala UI' (NirmalaB.ttf) normal normal bold normal>) = 10.335
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'Consolas' (consola.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'Times New Roman' (times.ttf) normal normal roman normal>) = 10.145
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'Leelawadee UI' (LeelawUI.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'Segoe Print' (segoepr.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'Mongolian Baiti' (monbaiti.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'Microsoft Tai Le' (taile.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'Leelawadee UI' (LeelaUIb.ttf) normal normal bold normal>) = 10.335
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'Candara' (Candaraz.ttf) italic normal bold normal>) = 11.335
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'Calibri' (calibrili.ttf) italic normal light normal>) = 11.24
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'Segoe UI Symbol' (seguisym.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'Trebuchet MS' (trebucbd.ttf) normal normal bold normal>) = 10.335
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'MV Boli' (mvboli.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'Malgun Gothic' (malgunsl.ttf) normal normal light normal>) = 10.24
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'Georgia' (georgiai.ttf) italic normal 400 normal>) = 11.05
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'Malgun Gothic' (malgun.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'Corbel' (corbeli.ttf) italic normal 400 normal>) = 11.05
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'Marlett' (marlett.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'Microsoft PhagsPa' (phagspa.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'Lucida Sans Unicode' (l_10646.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'Times New Roman' (timesbd.ttf) normal normal roman normal>) = 10.145
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'Courier New' (courbd.ttf) normal normal bold normal>) = 10.335
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'Gabriola' (Gabriola.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'Segoe MDL2 Assets' (segmdl2.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'Constantia' (constanz.ttf) italic normal bold normal>) = 11.335
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'Comic Sans MS' (comici.ttf) italic normal 400 normal>) = 11.05
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'Segoe UI Historic' (seguihis.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'SimSun-ExtB' (simsunb.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'Nirmala UI' (Nirmala.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'Arial' (ariblk.ttf) normal normal black normal>) = 6.888636363636364
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'Segoe UI' (seguibli.ttf) italic normal black normal>) = 11.525
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'Segoe Script' (segoesc.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'Times New Roman' (timesi.ttf) italic normal roman normal>) = 11.145
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'Candara' (Candarali.ttf) italic normal light normal>) = 11.24
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'Microsoft PhagsPa' (phagspab.ttf) normal normal bold normal>) = 10.335
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'Lucida Console' (lucon.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'Segoe UI' (seguibl.ttf) normal normal black normal>) = 10.525
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'Sitka Small' (Sitka.ttc) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'Segoe UI Emoji' (seguiemj.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'Candara' (Candarab.ttf) normal normal bold normal>) = 10.335
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'Microsoft JhengHei' (msjh.ttc) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'Bahnschrift' (bahnschrift.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'Corbel' (corbel.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'Webdings' (webdings.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'Javanese Text' (javatext.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'Malgun Gothic' (malgunbd.ttf) normal normal bold normal>) = 10.335
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'Cambria' (cambriaz.ttf) italic normal bold normal>) = 11.335
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'Segoe UI' (seguisbi.ttf) italic normal semibold normal>) = 11.24
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'Consolas' (consolaz.ttf) italic normal bold normal>) = 11.335
+2019-06-07 01:04:17,590 DEBUG : findfont: score(<Font 'Segoe UI' (segoeuib.ttf) normal normal bold normal>) = 10.335
+2019-06-07 01:04:17,606 DEBUG : findfont: score(<Font 'Segoe UI' (segoeuii.ttf) italic normal 400 normal>) = 11.05
+2019-06-07 01:04:17,606 DEBUG : findfont: score(<Font 'Calibri' (calibriz.ttf) italic normal bold normal>) = 11.335
+2019-06-07 01:04:17,606 DEBUG : findfont: score(<Font 'Georgia' (georgia.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,606 DEBUG : findfont: score(<Font 'Arial' (arialbd.ttf) normal normal bold normal>) = 6.698636363636363
+2019-06-07 01:04:17,606 DEBUG : findfont: score(<Font 'Franklin Gothic Medium' (framd.ttf) normal normal medium normal>) = 10.145
+2019-06-07 01:04:17,606 DEBUG : findfont: score(<Font 'Ebrima' (ebrimabd.ttf) normal normal bold normal>) = 10.335
+2019-06-07 01:04:17,606 DEBUG : findfont: score(<Font 'SimSun' (simsun.ttc) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,606 DEBUG : findfont: score(<Font 'Gadugi' (gadugib.ttf) normal normal bold normal>) = 10.335
+2019-06-07 01:04:17,606 DEBUG : findfont: score(<Font 'Verdana' (verdanaz.ttf) italic normal bold normal>) = 4.971363636363637
+2019-06-07 01:04:17,606 DEBUG : findfont: score(<Font 'Microsoft Yi Baiti' (msyi.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,606 DEBUG : findfont: score(<Font 'Microsoft New Tai Lue' (ntailub.ttf) normal normal bold normal>) = 10.335
+2019-06-07 01:04:17,606 DEBUG : findfont: score(<Font 'Constantia' (constan.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,606 DEBUG : findfont: score(<Font 'Verdana' (verdanab.ttf) normal normal bold normal>) = 3.9713636363636367
+2019-06-07 01:04:17,606 DEBUG : findfont: score(<Font 'Ebrima' (ebrima.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,606 DEBUG : findfont: score(<Font 'Segoe UI' (seguili.ttf) italic normal light normal>) = 11.24
+2019-06-07 01:04:17,606 DEBUG : findfont: score(<Font 'Sitka Small' (SitkaZ.ttc) italic normal bold normal>) = 11.335
+2019-06-07 01:04:17,606 DEBUG : findfont: score(<Font 'Myanmar Text' (mmrtextb.ttf) normal normal bold normal>) = 10.335
+2019-06-07 01:04:17,606 DEBUG : findfont: score(<Font 'Segoe Script' (segoescb.ttf) normal normal bold normal>) = 10.335
+2019-06-07 01:04:17,606 DEBUG : findfont: score(<Font 'Calibri' (calibril.ttf) normal normal light normal>) = 10.24
+2019-06-07 01:04:17,606 DEBUG : findfont: score(<Font 'Comic Sans MS' (comic.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,606 DEBUG : findfont: score(<Font 'Verdana' (verdanai.ttf) italic normal 400 normal>) = 4.6863636363636365
+2019-06-07 01:04:17,606 DEBUG : findfont: score(<Font 'MS Gothic' (msgothic.ttc) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,606 DEBUG : findfont: score(<Font 'Microsoft JhengHei' (msjhl.ttc) normal normal light normal>) = 10.24
+2019-06-07 01:04:17,606 DEBUG : findfont: score(<Font 'Gadugi' (gadugi.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,606 DEBUG : findfont: score(<Font 'Microsoft Sans Serif' (micross.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,606 DEBUG : findfont: score(<Font 'Segoe UI' (segoeui.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,606 DEBUG : findfont: score(<Font 'Nirmala UI' (NirmalaS.ttf) normal normal light normal>) = 10.24
+2019-06-07 01:04:17,606 DEBUG : findfont: score(<Font 'Corbel' (corbelli.ttf) italic normal light normal>) = 11.24
+2019-06-07 01:04:17,606 DEBUG : findfont: score(<Font 'Corbel' (corbell.ttf) normal normal light normal>) = 10.24
+2019-06-07 01:04:17,606 DEBUG : findfont: score(<Font 'Microsoft JhengHei' (msjhbd.ttc) normal normal bold normal>) = 10.335
+2019-06-07 01:04:17,606 DEBUG : findfont: score(<Font 'Impact' (impact.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,606 DEBUG : findfont: score(<Font 'Tahoma' (tahoma.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,606 DEBUG : findfont: score(<Font 'Cambria' (cambria.ttc) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,606 DEBUG : findfont: score(<Font 'Trebuchet MS' (trebuc.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,606 DEBUG : findfont: score(<Font 'Palatino Linotype' (palai.ttf) italic normal 400 normal>) = 11.05
+2019-06-07 01:04:17,606 DEBUG : findfont: score(<Font 'Constantia' (constanb.ttf) normal normal bold normal>) = 10.335
+2019-06-07 01:04:17,606 DEBUG : findfont: score(<Font 'Segoe UI' (seguisb.ttf) normal normal semibold normal>) = 10.24
+2019-06-07 01:04:17,606 DEBUG : findfont: score(<Font 'Microsoft YaHei' (msyhbd.ttc) normal normal bold normal>) = 10.335
+2019-06-07 01:04:17,606 DEBUG : findfont: score(<Font 'Cambria' (cambriab.ttf) normal normal bold normal>) = 10.335
+2019-06-07 01:04:17,606 DEBUG : findfont: score(<Font 'Georgia' (georgiab.ttf) normal normal bold normal>) = 10.335
+2019-06-07 01:04:17,606 DEBUG : findfont: score(<Font 'Calibri' (calibri.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,606 DEBUG : findfont: score(<Font 'Trebuchet MS' (trebucbi.ttf) italic normal bold normal>) = 11.335
+2019-06-07 01:04:17,606 DEBUG : findfont: score(<Font 'MingLiU-ExtB' (mingliub.ttc) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,606 DEBUG : findfont: score(<Font 'Leelawadee UI' (LeelUIsl.ttf) normal normal light normal>) = 10.24
+2019-06-07 01:04:17,606 DEBUG : findfont: score(<Font 'Calibri' (calibrii.ttf) italic normal 400 normal>) = 11.05
+2019-06-07 01:04:17,606 DEBUG : findfont: score(<Font 'Microsoft Tai Le' (taileb.ttf) normal normal bold normal>) = 10.335
+2019-06-07 01:04:17,606 DEBUG : findfont: score(<Font 'Wingdings' (wingding.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,606 DEBUG : findfont: score(<Font 'Corbel' (corbelz.ttf) italic normal bold normal>) = 11.335
+2019-06-07 01:04:17,606 DEBUG : findfont: score(<Font 'Sitka Small' (SitkaB.ttc) normal normal bold normal>) = 10.335
+2019-06-07 01:04:17,606 DEBUG : findfont: score(<Font 'Corbel' (corbelb.ttf) normal normal bold normal>) = 10.335
+2019-06-07 01:04:17,606 DEBUG : findfont: score(<Font 'Sitka Small' (SitkaI.ttc) italic normal 400 normal>) = 11.05
+2019-06-07 01:04:17,606 DEBUG : findfont: score(<Font 'Yu Gothic' (YuGothB.ttc) normal normal bold normal>) = 10.335
+2019-06-07 01:04:17,606 DEBUG : findfont: score(<Font 'Arial' (arial.ttf) normal normal 400 normal>) = 6.413636363636363
+2019-06-07 01:04:17,606 DEBUG : findfont: score(<Font 'Consolas' (consolai.ttf) italic normal 400 normal>) = 11.05
+2019-06-07 01:04:17,606 DEBUG : findfont: score(<Font 'Calibri' (calibrib.ttf) normal normal bold normal>) = 10.335
+2019-06-07 01:04:17,606 DEBUG : findfont: score(<Font 'Times New Roman' (timesbi.ttf) italic normal roman normal>) = 11.145
+2019-06-07 01:04:17,606 DEBUG : findfont: score(<Font 'Arial' (arialbi.ttf) italic normal bold normal>) = 7.698636363636363
+2019-06-07 01:04:17,606 DEBUG : findfont: score(<Font 'Palatino Linotype' (palabi.ttf) italic normal bold normal>) = 11.335
+2019-06-07 01:04:17,606 DEBUG : findfont: score(<Font 'Myanmar Text' (mmrtext.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,606 DEBUG : findfont: score(<Font 'Arial' (ariali.ttf) italic normal 400 normal>) = 7.413636363636363
+2019-06-07 01:04:17,606 DEBUG : findfont: score(<Font 'Comic Sans MS' (comicbd.ttf) normal normal bold normal>) = 10.335
+2019-06-07 01:04:17,606 DEBUG : findfont: score(<Font 'Sylfaen' (sylfaen.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,606 DEBUG : findfont: score(<Font 'Tahoma' (tahomabd.ttf) normal normal bold normal>) = 10.335
+2019-06-07 01:04:17,606 DEBUG : findfont: score(<Font 'Franklin Gothic Medium' (framdit.ttf) italic normal medium normal>) = 11.145
+2019-06-07 01:04:17,606 DEBUG : findfont: score(<Font 'Symbol' (symbol.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,606 DEBUG : findfont: score(<Font 'Microsoft Himalaya' (himalaya.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,606 DEBUG : findfont: score(<Font 'Segoe UI' (segoeuiz.ttf) italic normal bold normal>) = 11.335
+2019-06-07 01:04:17,606 DEBUG : findfont: score(<Font 'Microsoft New Tai Lue' (ntailu.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,606 DEBUG : findfont: score(<Font 'Yu Gothic' (YuGothR.ttc) normal normal regular normal>) = 10.05
+2019-06-07 01:04:17,606 DEBUG : findfont: score(<Font 'Microsoft YaHei' (msyhl.ttc) normal normal light normal>) = 10.24
+2019-06-07 01:04:17,606 DEBUG : findfont: score(<Font 'Constantia' (constani.ttf) italic normal 400 normal>) = 11.05
+2019-06-07 01:04:17,606 DEBUG : findfont: score(<Font 'HoloLens MDL2 Assets' (holomdl2.ttf) normal normal 400 normal>) = 10.05
+2019-06-07 01:04:17,606 DEBUG : findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0 to DejaVu Sans ('C:\\ProgramData\\Anaconda3\\lib\\site-packages\\matplotlib\\mpl-data\\fonts\\ttf\\DejaVuSans.ttf') with score of 0.050000.
