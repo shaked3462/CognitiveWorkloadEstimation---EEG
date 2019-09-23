@@ -15,13 +15,11 @@ import seaborn as sn
 import pandas as pd
 
 finetuning = False
-batch_size = 64
-epoches = 400
-model_type = 'shallow'
-train_type = 'trialwise'
+batch_size = 32
+epoches = 200
+model_type = 'deep'
+train_type = 'cropped'
 cuda = True
-
-
 
 subject_id = sys.argv[1]
 
@@ -76,11 +74,11 @@ else: # cropped
     if model_type == 'shallow':
         model = ShallowFBCSPNet(in_chans=in_chans, n_classes=n_classes,
                             input_time_length=None,
-                            final_conv_length=12)
+                            final_conv_length=1)
     else:
         model = Deep4Net(in_chans=in_chans, n_classes=n_classes,
                             input_time_length=None,
-                            final_conv_length=12)
+                            final_conv_length=1)
 if cuda:
     model.cuda()
 

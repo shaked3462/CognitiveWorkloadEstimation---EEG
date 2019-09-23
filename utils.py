@@ -37,14 +37,16 @@ def loadSubjects(subjectNum):
         X = np.concatenate((X0[:examplesPerAllSubjects], X1[:examplesPerAllSubjects], X2[:examplesPerAllSubjects]), axis=0)
         y = np.concatenate((y0[:examplesPerAllSubjects], y1[:examplesPerAllSubjects], y2[:examplesPerAllSubjects]), axis=0)
         X, y = shuffle(X, y)
+        X = X.astype(np.float32)
+        y = y.astype(np.int64)
 
         print(X.shape)
-        sizeOf70PercentOfDataSet = int(X.shape[0]*7/10)
+        sizeOf70PercentOfTrainDataSet = int(X.shape[0]*7/10)
 
-        np.save("NirDataset\Single\subject{}_data_train".format(subject_id), X[:sizeOf70PercentOfDataSet])
-        np.save("NirDataset\Single\subject{}_data_test".format(subject_id), X[sizeOf70PercentOfDataSet:])
-        np.save("NirDataset\Single\subject{}_labels_train".format(subject_id), y[:sizeOf70PercentOfDataSet])
-        np.save("NirDataset\Single\subject{}_labels".format(subject_id), y[sizeOf70PercentOfDataSet:])
+        np.save("NirDataset\Single\subject{}_data_train".format(subject_id), X[:sizeOf70PercentOfTrainDataSet])
+        np.save("NirDataset\Single\subject{}_data_test".format(subject_id), X[sizeOf70PercentOfTrainDataSet:])
+        np.save("NirDataset\Single\subject{}_labels_train".format(subject_id), y[:sizeOf70PercentOfTrainDataSet])
+        np.save("NirDataset\Single\subject{}_labels".format(subject_id), y[sizeOf70PercentOfTrainDataSet:])
     
 
 def plotConfusionMatrix(confusion_matrix):
@@ -55,5 +57,38 @@ def plotConfusionMatrix(confusion_matrix):
     sn.heatmap(df_cm, annot=True, cmap='Blues', annot_kws={"size": 16}, fmt='d')# font size
     plt.show()
 
+def procDataForCross():
+    for subject_id in range(1,52+1):
+        if (subject_id == 15) or (subject_id == 24) or (subject_id == 25) or (subject_id == 34) or (subject_id == 40): #subjects that were excluded from experiment.
+            continue
+        Xtmp = np.load("NirDataset\Single\subject{}_data_train.npy".format(subject_id))
+        ytmp = np.load("NirDataset\Single\subject{}_labels_train.npy".format(subject_id))
 
-loadSubjects(52)
+        print("subject_id: {}".format(subject_id))
+        print("Xtmp shape: {}".format(Xtmp.shape))
+        print("ytmp shape: {}".format(ytmp.shape))
+        print("ytmp: {}".format(ytmp))
+        if subject_id == 1:
+            X = Xtmp
+            y = ytmp
+        else:
+            X = np.concatenate((X, Xtmp), axis=0)
+            y = np.concatenate((y, ytmp), axis=0)
+        
+        print("y shape: {}".format(y.shape))
+        print("y: {}".format(y))
+    
+    X, y = shuffle(X, y)
+    X = X.astype(np.float32)
+    y = y.astype(np.int64)
+
+    sizeOf70PercentOfTrainDataSet = int(X.shape[0]*7/10)
+    print("sizeOf70PercentOfTrainDataSet: {}".format(sizeOf70PercentOfTrainDataSet))
+
+    np.save("NirDataset\cross_data_train", X[:sizeOf70PercentOfTrainDataSet])
+    np.save("NirDataset\cross_data_test", X[sizeOf70PercentOfTrainDataSet:])
+    np.save("NirDataset\cross_labels_train", y[:sizeOf70PercentOfTrainDataSet])
+    np.save("NirDataset\cross_labels", y[sizeOf70PercentOfTrainDataSet:])
+
+
+# procDataForCross()
