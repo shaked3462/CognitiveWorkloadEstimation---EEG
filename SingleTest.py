@@ -31,9 +31,9 @@ subject_id = sys.argv[1]
 print('XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
 print('XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
 if finetuning == True:
-    print('{} {} - Subject Number {} - Fintuning'.format(model_type, train_type, subject_id))
+    print('\t{} {} - Subject Number {} - Fintuning'.format(model_type, train_type, subject_id))
 else:
-    print('{} {} - Subject Number {}'.format(model_type, train_type, subject_id))
+    print('\t{} {} - Subject Number {}'.format(model_type, train_type, subject_id))
 print('XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
 print('XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
 
@@ -98,20 +98,27 @@ if cuda:
 
 from braindecode.torch_ext.optimizers import AdamW
 import torch.nn.functional as F
-if model_type == 'shallow':
-    optimizer = AdamW(model.parameters(), lr=0.0625 * 0.01, weight_decay=0)
+if finetuning == True:
+    if model_type == 'shallow':
+        optimizer = AdamW(model.parameters(), lr=0.0625 * 0.01 * 0.5, weight_decay=0)
+    else:
+        optimizer = AdamW(model.parameters(), lr=1*0.01 * 0.5, weight_decay=0.5*0.001) # these are good values for the deep model
 else:
-    optimizer = AdamW(model.parameters(), lr=1*0.01, weight_decay=0.5*0.001) # these are good values for the deep model
+    if model_type == 'shallow':
+        optimizer = AdamW(model.parameters(), lr=0.0625 * 0.01, weight_decay=0)
+    else:
+        optimizer = AdamW(model.parameters(), lr=1*0.01, weight_decay=0.5*0.001) # these are good values for the deep model
 
 if finetuning == True:
     path_to_classifier = "crossModels\\{}-{}-cross-40epoches-torch-model".format(model_type, train_type)
     if th.cuda.is_available():
         print('Cuda is available.')
-        checkpoint = th.load(path_to_classifier).state_dict()
+        checkpoint = th.load(path_to_classifier).network.state_dict()
     else:
         print('Cuda is not available.')
-        checkpoint = th.load(path_to_classifier, map_location='cpu').state_dict()
+        checkpoint = th.load(path_to_classifier, map_location='cpu').network.state_dict()
     np.set_printoptions(suppress=True, threshold=np.inf)
+    print("INFO : Finished Loading Model")
     model.network.load_state_dict(checkpoint)
 
 # Compile model exactly the same way as when you trained it

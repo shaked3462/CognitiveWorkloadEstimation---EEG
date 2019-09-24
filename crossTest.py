@@ -15,13 +15,13 @@ import seaborn as sn
 import pandas as pd
 
 batch_size = 32
-epoches = 40
+epoches = 400
 model_type = 'shallow'
 train_type = 'trialwise'
 cuda = True
 print('XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
 print('XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
-print('{} {}'.format(model_type, train_type))
+print('\t\t{} {}'.format(model_type, train_type))
 print('XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
 print('XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
 # Enable logging
