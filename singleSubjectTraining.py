@@ -14,11 +14,12 @@ from braindecode.datautil.signal_target import SignalAndTarget
 import seaborn as sn
 import pandas as pd
 
+# finetuning = False
 finetuning = True
 batch_size = 32
 epoches = 200
 model_type = 'shallow'
-train_type = 'cropped'
+train_type = 'trialwise'
 cuda = True
 
 if finetuning == True:
@@ -31,7 +32,7 @@ subject_id = sys.argv[1]
 print('XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
 print('XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
 if finetuning == True:
-    print('\t{} {} - Subject Number {} - Fintuning'.format(model_type, train_type, subject_id))
+    print('{} {} - Subject Number {} - Fintuning'.format(model_type, train_type, subject_id))
 else:
     print('\t{} {} - Subject Number {}'.format(model_type, train_type, subject_id))
 print('XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
@@ -72,6 +73,7 @@ set_random_seeds(seed=20170629, cuda=cuda)
 n_classes = 3
 in_chans = train_set.X.shape[1]
 print("INFO : in_chans: {}".format(in_chans))
+np.set_printoptions(suppress=True, threshold=np.inf)
 
 # final_conv_length = auto ensures we only get a single output in the time dimension
 if train_type == 'trialwise':
@@ -100,9 +102,9 @@ from braindecode.torch_ext.optimizers import AdamW
 import torch.nn.functional as F
 if finetuning == True:
     if model_type == 'shallow':
-        optimizer = AdamW(model.parameters(), lr=0.0625 * 0.01 * 0.5, weight_decay=0)
+        optimizer = AdamW(model.parameters(), lr=0.0625 * 0.01 * 0.1, weight_decay=0)
     else:
-        optimizer = AdamW(model.parameters(), lr=1*0.01 * 0.5, weight_decay=0.5*0.001) # these are good values for the deep model
+        optimizer = AdamW(model.parameters(), lr=1*0.01 * 0.1, weight_decay=0.5*0.001) # these are good values for the deep model
 else:
     if model_type == 'shallow':
         optimizer = AdamW(model.parameters(), lr=0.0625 * 0.01, weight_decay=0)
@@ -110,14 +112,13 @@ else:
         optimizer = AdamW(model.parameters(), lr=1*0.01, weight_decay=0.5*0.001) # these are good values for the deep model
 
 if finetuning == True:
-    path_to_classifier = "crossModels\\{}-{}-cross-40epoches-torch-model".format(model_type, train_type)
+    path_to_classifier = "crossModels\\{}-{}-cross-20epoches-torch-model".format(model_type, train_type)
     if th.cuda.is_available():
         print('Cuda is available.')
         checkpoint = th.load(path_to_classifier).network.state_dict()
     else:
         print('Cuda is not available.')
         checkpoint = th.load(path_to_classifier, map_location='cpu').network.state_dict()
-    np.set_printoptions(suppress=True, threshold=np.inf)
     print("INFO : Finished Loading Model")
     model.network.load_state_dict(checkpoint)
 

@@ -14,14 +14,15 @@ from braindecode.datautil.signal_target import SignalAndTarget
 import seaborn as sn
 import pandas as pd
 
-batch_size = 32
 epoches = 400
-model_type = 'shallow'
-train_type = 'trialwise'
+model_type = 'deep'
+train_type = 'cropped'
+
+batch_size = 32
 cuda = True
 print('XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
 print('XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
-print('\t\t{} {}'.format(model_type, train_type))
+print('\t\t{} {} - Cross Training'.format(model_type, train_type))
 print('XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
 print('XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
 # Enable logging
@@ -59,6 +60,7 @@ set_random_seeds(seed=20170629, cuda=cuda)
 n_classes = 3
 in_chans = train_set.X.shape[1]
 print("INFO : in_chans: {}".format(in_chans))
+np.set_printoptions(suppress=True, threshold=np.inf)
 
 # final_conv_length = auto ensures we only get a single output in the time dimension
 if train_type == 'trialwise':
