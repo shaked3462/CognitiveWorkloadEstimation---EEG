@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 import time
 import os
 import copy
-from utils import loadSubjects, plotConfusionMatrix
+from utils import loadSubjects, plot
 from braindecode.datautil.signal_target import SignalAndTarget
 import seaborn as sn
 import pandas as pd
@@ -19,7 +19,11 @@ epoches = 40
 model_type = 'shallow'
 train_type = 'trialwise'
 cuda = True
-
+print('XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+print('XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+print('{} {}'.format(model_type, train_type))
+print('XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+print('XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
 # Enable logging
 import logging
 import importlib
@@ -37,10 +41,10 @@ singleTrainLabels = np.load("NirDataset\\cross_labels_train.npy")
 singleTestLabels = np.load("NirDataset\\cross_labels.npy")
 
 trainingSampleSize = int(len(singleTrainData)*0.8)
-valudationSampleSize = int(len(singleTrainData)*0.2)
+validationSampleSize = int(len(singleTrainData)*0.2)
 testSampleSize = int(len(singleTestData))
 print("INFO : Training sample size: {}".format(trainingSampleSize))
-print("INFO : Validation sample size: {}".format(valudationSampleSize))
+print("INFO : Validation sample size: {}".format(validationSampleSize))
 print("INFO : Test sample size: {}".format(testSampleSize))
 
 train_set = SignalAndTarget(singleTrainData[:trainingSampleSize], y=singleTrainLabels[:trainingSampleSize])
@@ -108,7 +112,7 @@ else: # cropped
             validation_data=(valid_set.X, valid_set.y),))
 
 print(model.epochs_df)
-# np.save("finetuneCrossSubjects\{}-{}-singleSubjectNum{}-2.5sec-{}epoches".format(model_type, train_type, single_subject_num, epoches), model.epochs_df.iloc[:])
+np.save("DataForRestoration\\CrossSubject\\{}-{}-{}epoches".format(model_type, train_type, epoches), model.epochs_df.iloc[:])
 
 # Evaluation
 test_set = SignalAndTarget(singleTestData, y=singleTestLabels)
@@ -116,60 +120,17 @@ test_set = SignalAndTarget(singleTestData, y=singleTestLabels)
 eval = model.evaluate(test_set.X, test_set.y)
 print(eval)
 print(eval['misclass'])
-th.save(model, "crossModels\{}-{}-cross--{}epoches-torch-model".format(model_type, train_type, epoches))
+th.save(model, "crossModels\\{}-{}-cross-{}epoches-torch-model".format(model_type, train_type, epoches))
 
-# np.save("finetuneCrossSubjects\{}-{}-singleSubjectNum{}-2.5sec-{}epoches-testSetMisclass".format(model_type, train_type, single_subject_num, epoches), eval['misclass'])
+np.save("DataForRestoration\\CrossSubject\\{}-{}-{}epoches-testSetMisclass".format(model_type, train_type, epoches), eval['misclass'])
 
 from sklearn.metrics import confusion_matrix
 
-try:
-    print("prediction")
-    y_pred = model.predict_classes(test_set.X)
-    print(y_pred)
-    print("real labels")
-    print(test_set.y)
-    confusion_matrix = confusion_matrix(test_set.y, y_pred)
-    print(confusion_matrix)
-except:
-    print("predict_classes method failed")
+y_pred = model.predict_classes(test_set.X)
+print("prediction {}".format(y_pred))
+print("real labels {}".format(test_set.y))
+confusion_matrix = confusion_matrix(test_set.y, y_pred)
+print(confusion_matrix)
 
-# plotMisclass()
-
-def plotMisclass():
-    plt.plot(model.epochs_df.iloc[:,2], 'g-', label='Train misclass')
-    plt.plot(model.epochs_df.iloc[:,3], 'b-', label='Validation misclass')
-    model# plt.plot(exp.epochs_df.iloc[:,5], 'r.-', label='Test misclass')
-    plt.title('misclass rate / epoches')
-    plt.xlabel('Epoches')
-    plt.ylabel('Misclass')
-    plt.legend(loc='best')
-    plt.show()
-    # plt.savefig("finetuneCrossSubjects\{}-{}-singleSubjectNum{}-2.5sec-{}epoches-plot-misclass.png".format(model_type, train_type, single_subject_num, epoches), bbox_inches='tight')
-    plt.close()
-
-def plotAccuracy():
-    plt.plot(1-model.epochs_df.iloc[:,2], 'g-', label='Train accuracy')
-    plt.plot(1-model.epochs_df.iloc[:,3], 'b-', label='Validation accuracy')
-    model# plt.plot(exp.epochs_df.iloc[:,5], 'r.-', label='Test misclass')
-    plt.title('accuracy rate / epoches')
-    plt.xlabel('Epoches')
-    plt.ylabel('Accuracy')
-    plt.legend(loc='best')
-    plt.show()
-    # plt.savefig("finetuneCrossSubjects\{}-{}-singleSubjectNum{}-2.5sec-{}epoches-plot-accuracy.png".format(model_type, train_type, single_subject_num, epoches), bbox_inches='tight')
-    plt.close()
-
-def plotConfusionMatrixFinetune(confusion_matrix):
-    array = confusion_matrix       
-    df_cm = pd.DataFrame(array, range(3),
-                    range(3))
-    #plt.figure(figsize = (10,7))
-    sn.set(font_scale=1.4)#for label size
-    sn.heatmap(df_cm, annot=True, cmap='Blues', annot_kws={"size": 16}, fmt='d')# font size
-    pd.set_option('display.float_format', lambda x: '%.3f' % x)
-    plt.show()
-    # plt.savefig("finetuneCrossSubjects\{}-{}-singleSubjectNum{}-2.5sec-{}epoches-confusion_matrix.png".format(model_type, train_type, single_subject_num, epoches), bbox_inches='tight')
-    plt.close()
-
-plotAccuracy()
-plotConfusionMatrixFinetune(confusion_matrix)
+plot('accuracy', 'Plots\\CrossSubject\\', model, 0, model_type, train_type, epoches)
+plot('confusionMatrix', 'Plots\\CrossSubject\\', model, confusion_matrix, model_type, train_type, epoches)
