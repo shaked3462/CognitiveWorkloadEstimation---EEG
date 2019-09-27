@@ -1,25 +1,18 @@
 import numpy as np
-from sklearn.utils import shuffle
 import sys
-import torch as th
-from torch import optim, nn
-import torchvision
+import torch
 from torchvision import datasets, models, transforms
-import matplotlib.pyplot as plt
-import time
-import os
-import copy
-from utils import loadSubjects, plot
+from utils import plot
 from braindecode.datautil.signal_target import SignalAndTarget
-import seaborn as sn
-import pandas as pd
 
 # finetuning = False
 finetuning = True
-batch_size = 32
-epoches = 200
+epoches = 20
 model_type = 'shallow'
 train_type = 'trialwise'
+n_classes = 3
+
+batch_size = 32
 cuda = True
 
 if finetuning == True:
@@ -44,7 +37,6 @@ import importlib
 importlib.reload(logging) # see https://stackoverflow.com/a/21475297/1469195
 log = logging.getLogger()
 log.setLevel('INFO')
-import sys
 
 logging.basicConfig(format='%(asctime)s %(levelname)s : %(message)s',
                      level=logging.INFO, stream=sys.stdout)
@@ -55,10 +47,10 @@ singleTrainLabels = np.load("NirDataset\\Single\\subject{}_labels_train.npy".for
 singleTestLabels = np.load("NirDataset\\Single\\subject{}_labels.npy".format(subject_id))
 
 trainingSampleSize = int(len(singleTrainData)*0.8)
-valudationSampleSize = int(len(singleTrainData)*0.2)
+validationSampleSize = int(len(singleTrainData)*0.2)
 testSampleSize = int(len(singleTestData))
 print("INFO : Training sample size: {}".format(trainingSampleSize))
-print("INFO : Validation sample size: {}".format(valudationSampleSize))
+print("INFO : Validation sample size: {}".format(validationSampleSize))
 print("INFO : Test sample size: {}".format(testSampleSize))
 
 train_set = SignalAndTarget(singleTrainData[:trainingSampleSize], y=singleTrainLabels[:trainingSampleSize])
@@ -70,7 +62,6 @@ from braindecode.models.deep4 import Deep4Net
 from braindecode.torch_ext.util import set_random_seeds
 
 set_random_seeds(seed=20170629, cuda=cuda)
-n_classes = 3
 in_chans = train_set.X.shape[1]
 print("INFO : in_chans: {}".format(in_chans))
 np.set_printoptions(suppress=True, threshold=np.inf)
@@ -112,13 +103,13 @@ else:
         optimizer = AdamW(model.parameters(), lr=1*0.01, weight_decay=0.5*0.001) # these are good values for the deep model
 
 if finetuning == True:
-    path_to_classifier = "crossModels\\{}-{}-cross-20epoches-torch-model".format(model_type, train_type)
-    if th.cuda.is_available():
+    path_to_classifier = "crossModels\\{}-{}-cross-400epoches-torch-model".format(model_type, train_type)
+    if torch.cuda.is_available():
         print('Cuda is available.')
-        checkpoint = th.load(path_to_classifier).network.state_dict()
+        checkpoint = torch.load(path_to_classifier).network.state_dict()
     else:
         print('Cuda is not available.')
-        checkpoint = th.load(path_to_classifier, map_location='cpu').network.state_dict()
+        checkpoint = torch.load(path_to_classifier, map_location='cpu').network.state_dict()
     print("INFO : Finished Loading Model")
     model.network.load_state_dict(checkpoint)
 
@@ -155,14 +146,7 @@ eval = model.evaluate(test_set.X, test_set.y)
 print(eval)
 print(eval['misclass'])
 np.save("DataForRestoration\\{}\\{}-{}-{}epoches-testSetMisclass".format(path, model_type, train_type, epoches), model.epochs_df.iloc[:])
-
-from sklearn.metrics import confusion_matrix
-
 y_pred = model.predict_classes(test_set.X)
-print("prediction {}".format(y_pred))
-print("real labels {}".format(test_set.y))
-confusion_matrix = confusion_matrix(test_set.y, y_pred)
-print(confusion_matrix)
-    
-plot('accuracy', 'Plots\\{}\\'.format(path), model, 0, model_type, train_type, epoches)
-plot('confusionMatrix', 'Plots\\{}\\'.format(path), model, confusion_matrix, model_type, train_type, epoches)
+
+plot('accuracy', path, model, test_set, y_pred, model_type, train_type, epoches, subject_id)
+plot('confusionMatrix', path, model, test_set, y_pred, model_type, train_type, epoches, subject_id)

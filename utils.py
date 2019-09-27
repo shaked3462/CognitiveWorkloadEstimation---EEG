@@ -8,14 +8,16 @@ import scipy.io as sio
 from matplotlib import colors as mcolors
 from sklearn.metrics import confusion_matrix
 
+numOfLabels = 3
+
 def loadEegDataFromMatlabtoNumpy():
+    
     subject_num = 52
     cropped_trial_length = 640 # 2.5 sec at 256Hz sampling rate
 
     for subject_id in range(1,subject_num + 1):
         if (subject_id == 15) or (subject_id == 24) or (subject_id == 25) or (subject_id == 34) or (subject_id == 40): #subjects that were excluded from experiment.
             continue
-        # try:
         print("XXXXXXXXXX STARTING DATA PROCESSING FOR SUBJECT {} XXXXXXXXXX".format(subject_id))
         if (subject_id < 10):
             mat_contents = sio.loadmat("NirDataset\subject{}\Subject_00{}_Main_Exp_Segmented_shaked.mat".format(subject_id, subject_id))
@@ -36,8 +38,6 @@ def loadEegDataFromMatlabtoNumpy():
 
         np.set_printoptions(suppress=True)
         first = 0
-        # data = np.zeros((1,62,cropped_trial_length + 1)) # XXXXXXXXXXXXXXXXX NEED TO ADD DURATION OF TRIAL AS ANOTHER PARAM
-        # labels = np.zeros((1))
         for i in range(0,36): # question number
             # try:
             if answer_vec[i] == 0: #wrong answer
@@ -45,27 +45,22 @@ def loadEegDataFromMatlabtoNumpy():
                 continue 
             timeToAnswerQuestion = respMat[i][3][0][0]
             currQuestionDuration = len(segments[i][0][0]) # number of timestamps in original recording
-            # print("curr questions duration {}".format(currQuestionDuration))
             last_crop_start = 0
             numOfCropsForCurrQuestion = int(currQuestionDuration/cropped_trial_length)
             for b in range(0,numOfCropsForCurrQuestion):
                 currCrop = np.zeros((1,62,cropped_trial_length + 1))
                 for k in range(0,cropped_trial_length):
-                    # if last_crop_start + cropped_trial_length >= currQuestionDuration:
-                    #     print("Q{}: last crop start {}, cropped trial length {}, curr question duration {}. breaking".format(i, last_crop_start, cropped_trial_length, currQuestionDuration))
-                    #     break
-                    # numOfCropsForCurrQuestion += 1
                     for j in range(0,62):
                         currCrop[0,j,k] = segments[i][0][j,(last_crop_start + k)]
                         currCrop[0,j,cropped_trial_length] = timeToAnswerQuestion
                 last_crop_start += cropped_trial_length
                 if first == 0:
                     data = currCrop
-                    labels = np.array([int((i-1)/12)])
+                    labels = np.array([int((i-1)/(36/numOfLabels))])
                     first += 1
                 else:
                     data = np.concatenate((data, currCrop), axis=0)
-                    labels = np.concatenate((labels, np.array([int((i-1)/12)])), axis=0)
+                    labels = np.concatenate((labels, np.array([int((i-1)/(36/numOfLabels))])), axis=0)
             print("Q{}: number of crops {}".format(i, numOfCropsForCurrQuestion))
             # except:
             #     continue
@@ -78,9 +73,9 @@ def loadEegDataFromMatlabtoNumpy():
         np.save("NirDataset/croppedLabelsForSubject{}".format(subject_id), labels[1:])
         print("finished saving data for subject {}".format(subject_id))
 
-def loadSubjects(subjectNum):
+def proccessSubjects(subjectNum):
     for subject_id in range(1,subjectNum+1):
-        labelCounters = np.zeros(3) #[0counter, 1counter, 2counter]
+        labelCounters = np.zeros(numOfLabels) #[0counter, 1counter, 2counter...]
         if (subject_id == 15) or (subject_id == 24) or (subject_id == 25) or (subject_id == 34) or (subject_id == 40): #subjects that were excluded from experiment.
             continue
 
@@ -152,17 +147,32 @@ def procDataForCross():
     np.save("NirDataset\\cross_labels_train", y[:sizeOf70PercentOfTrainDataSet])
     np.save("NirDataset\\cross_labels", y[sizeOf70PercentOfTrainDataSet:])
 
-def plot(plotType, dirPath, model, confusion_matrix, model_type, train_type, epoches): # dir path of format /dir1/dir2/
+def plot(plotType, path, model, test_set, y_pred, model_type, train_type, epoches, subject_num): # dir path of format /dir1/dir2/
+    subjectNumSuffix = ''
+    if subject_num != 0:
+        subjectNumSuffix = '-Subject{}'.format(subject_num)
     if plotType == 'confusionMatrix':
-        array = confusion_matrix       
-        df_cm = pd.DataFrame(array, range(3),
-                                    range(3))
-        #plt.figure(figsize = (10,7))
+        print("prediction \n{}".format(y_pred))
+        print("real labels \n{}".format(test_set.y))
+        confusionMatrix = confusion_matrix(test_set.y, y_pred)
+        np.save("DataForRestoration\\{}\\{}-{}-{}epoches{}-confusion_matrix".format(path, model_type, train_type, epoches, subjectNumSuffix), confusionMatrix)
+        print(confusionMatrix)
+        df_cm = pd.DataFrame(confusionMatrix, range(numOfLabels),
+                                                range(numOfLabels))
         sn.set(font_scale=1.4)#for label size
         sn.heatmap(df_cm, annot=True, cmap='Blues', annot_kws={"size": 16}, fmt='d')# font size
         pd.set_option('display.float_format', lambda x: '%.3f' % x)
-        # plt.show()
-        plt.savefig("{}{}-{}-{}epoches-confusion_matrix.png".format(dirPath, model_type, train_type, epoches), bbox_inches='tight')
+        plt.savefig("Plots\\{}\\{}-{}-{}epoches{}-confusion_matrix.png".format(path, model_type, train_type, epoches, subjectNumSuffix), bbox_inches='tight')
+        plt.close()
+
+        confusionMatrix = np.true_divide(confusionMatrix, confusionMatrix.sum(axis=1, keepdims=True))
+        np.save("DataForRestoration\\{}\\{}-{}-{}epoches{}-confusion_matrix-percentage".format(path, model_type, train_type, epoches, subjectNumSuffix), confusionMatrix)
+        df_cm = pd.DataFrame(confusionMatrix,  range(numOfLabels),
+                                                range(numOfLabels))
+        sn.set(font_scale=1.4)#for label size
+        sn.heatmap(df_cm, annot=True, cmap='Blues', annot_kws={"size": 16}, fmt='.2f')# font size
+        pd.set_option('display.float_format', lambda x: '%.3f' % x)
+        plt.savefig("Plots\\{}\\{}-{}-{}epoches{}-confusion_matrix-percentage.png".format(path, model_type, train_type, epoches, subjectNumSuffix), bbox_inches='tight')
         plt.close()
     else:    
         if plotType == 'accuracy':
@@ -178,5 +188,5 @@ def plot(plotType, dirPath, model, confusion_matrix, model_type, train_type, epo
         plt.xlabel('Epoches')
         plt.legend(loc='best')
         # plt.show()
-        plt.savefig("{}{}-{}-{}epoches-accuracy.png".format(dirPath,model_type, train_type, epoches), bbox_inches='tight')
+        plt.savefig("Plots\\{}\\{}-{}-{}epoches{}-accuracy.png".format(path,model_type, train_type, epoches, subjectNumSuffix), bbox_inches='tight')
         plt.close()

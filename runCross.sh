@@ -1,2 +1,2 @@
 #!/bin/bash
-python crossTraining.py > Logs\\CrossSubject\\deep-cross-400epoches.txt
+python crossTraining.py > Logs\\CrossSubject\\deep-trialwise-400epoches.txt

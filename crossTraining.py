@@ -1,25 +1,18 @@
 import numpy as np
-from sklearn.utils import shuffle
 import sys
-import torch as th
-from torch import optim, nn
-import torchvision
+import torch
 from torchvision import datasets, models, transforms
-import matplotlib.pyplot as plt
-import time
-import os
-import copy
-from utils import loadSubjects, plot
+from utils import plot
 from braindecode.datautil.signal_target import SignalAndTarget
-import seaborn as sn
-import pandas as pd
 
 epoches = 400
 model_type = 'deep'
-train_type = 'cropped'
+train_type = 'trialwise'
+n_classes = 3
 
 batch_size = 32
 cuda = True
+
 print('XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
 print('XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
 print('\t\t{} {} - Cross Training'.format(model_type, train_type))
@@ -31,7 +24,6 @@ import importlib
 importlib.reload(logging) # see https://stackoverflow.com/a/21475297/1469195
 log = logging.getLogger()
 log.setLevel('INFO')
-import sys
 
 logging.basicConfig(format='%(asctime)s %(levelname)s : %(message)s',
                      level=logging.INFO, stream=sys.stdout)
@@ -57,7 +49,6 @@ from braindecode.models.deep4 import Deep4Net
 from braindecode.torch_ext.util import set_random_seeds
 
 set_random_seeds(seed=20170629, cuda=cuda)
-n_classes = 3
 in_chans = train_set.X.shape[1]
 print("INFO : in_chans: {}".format(in_chans))
 np.set_printoptions(suppress=True, threshold=np.inf)
@@ -122,17 +113,10 @@ test_set = SignalAndTarget(singleTestData, y=singleTestLabels)
 eval = model.evaluate(test_set.X, test_set.y)
 print(eval)
 print(eval['misclass'])
-th.save(model, "crossModels\\{}-{}-cross-{}epoches-torch-model".format(model_type, train_type, epoches))
+torch.save(model, "crossModels\\{}-{}-cross-{}epoches-torch-model".format(model_type, train_type, epoches))
 
 np.save("DataForRestoration\\CrossSubject\\{}-{}-{}epoches-testSetMisclass".format(model_type, train_type, epoches), eval['misclass'])
-
-from sklearn.metrics import confusion_matrix
-
 y_pred = model.predict_classes(test_set.X)
-print("prediction {}".format(y_pred))
-print("real labels {}".format(test_set.y))
-confusion_matrix = confusion_matrix(test_set.y, y_pred)
-print(confusion_matrix)
 
-plot('accuracy', 'Plots\\CrossSubject\\', model, 0, model_type, train_type, epoches)
-plot('confusionMatrix', 'Plots\\CrossSubject\\', model, confusion_matrix, model_type, train_type, epoches)
+plot('accuracy', 'Plots\\CrossSubject\\', model, test_set, y_pred, model_type, train_type, epoches, 0)
+plot('confusionMatrix', 'Plots\\CrossSubject\\', model, test_set, y_pred, model_type, train_type, epoches, 0)
