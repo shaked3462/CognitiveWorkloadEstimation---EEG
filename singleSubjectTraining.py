@@ -7,9 +7,10 @@ from braindecode.datautil.signal_target import SignalAndTarget
 
 # finetuning = False
 finetuning = True
-epoches = 20
+epoches = 400
 model_type = 'shallow'
 train_type = 'trialwise'
+cross_train_type = 'trialwise'
 n_classes = 3
 
 batch_size = 32
@@ -26,6 +27,7 @@ print('XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
 print('XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
 if finetuning == True:
     print('{} {} - Subject Number {} - Fintuning'.format(model_type, train_type, subject_id))
+    print('Cross Model : {} {}.'.format(model_type, cross_train_type))
 else:
     print('\t{} {} - Subject Number {}'.format(model_type, train_type, subject_id))
 print('XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
@@ -103,7 +105,8 @@ else:
         optimizer = AdamW(model.parameters(), lr=1*0.01, weight_decay=0.5*0.001) # these are good values for the deep model
 
 if finetuning == True:
-    path_to_classifier = "crossModels\\{}-{}-cross-400epoches-torch-model".format(model_type, train_type)
+    path_to_classifier = "crossModels\\{}-{}-cross-400epoches-torch-model".format(model_type, cross_train_type)
+    print('Loaded saved torch model from "{}".'.format(path_to_classifier))
     if torch.cuda.is_available():
         print('Cuda is available.')
         checkpoint = torch.load(path_to_classifier).network.state_dict()
@@ -133,11 +136,9 @@ else: # cropped
     print(model.fit(train_set.X, train_set.y, epochs=epoches, batch_size=batch_size, scheduler='cosine',
             input_time_length=input_time_length,
             validation_data=(valid_set.X, valid_set.y),))
-if finetuning == True:
-    print('Loaded saved torch model from "{}".'.format(path_to_classifier))
 
 print(model.epochs_df)
-np.save("DataForRestoration\\{}\\{}-{}-{}epoches".format(path, model_type, train_type, epoches), model.epochs_df.iloc[:])
+np.save("DataForRestoration\\{}\\{}-{}-subject{}-{}epoches".format(path, model_type, train_type,subject_id,  epoches), model.epochs_df.iloc[:])
 
 # Evaluation
 test_set = SignalAndTarget(singleTestData, y=singleTestLabels)
@@ -145,7 +146,7 @@ test_set = SignalAndTarget(singleTestData, y=singleTestLabels)
 eval = model.evaluate(test_set.X, test_set.y)
 print(eval)
 print(eval['misclass'])
-np.save("DataForRestoration\\{}\\{}-{}-{}epoches-testSetMisclass".format(path, model_type, train_type, epoches), model.epochs_df.iloc[:])
+np.save("DataForRestoration\\{}\\{}-{}-subject{}-{}epoches-testSetMisclass".format(path, model_type, train_type, subject_id, epoches), model.epochs_df.iloc[:])
 y_pred = model.predict_classes(test_set.X)
 
 plot('accuracy', path, model, test_set, y_pred, model_type, train_type, epoches, subject_id)

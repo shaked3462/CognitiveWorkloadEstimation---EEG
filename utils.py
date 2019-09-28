@@ -150,29 +150,29 @@ def procDataForCross():
 def plot(plotType, path, model, test_set, y_pred, model_type, train_type, epoches, subject_num): # dir path of format /dir1/dir2/
     subjectNumSuffix = ''
     if subject_num != 0:
-        subjectNumSuffix = '-Subject{}'.format(subject_num)
+        subjectNumSuffix = '-subject{}'.format(subject_num)
     if plotType == 'confusionMatrix':
         print("prediction \n{}".format(y_pred))
         print("real labels \n{}".format(test_set.y))
         confusionMatrix = confusion_matrix(test_set.y, y_pred)
-        np.save("DataForRestoration\\{}\\{}-{}-{}epoches{}-confusion_matrix".format(path, model_type, train_type, epoches, subjectNumSuffix), confusionMatrix)
+        np.save("DataForRestoration\\{}\\{}-{}{}-{}epoches-confusion_matrix".format(path, model_type, train_type, subjectNumSuffix, epoches), confusionMatrix)
         print(confusionMatrix)
         df_cm = pd.DataFrame(confusionMatrix, range(numOfLabels),
                                                 range(numOfLabels))
         sn.set(font_scale=1.4)#for label size
         sn.heatmap(df_cm, annot=True, cmap='Blues', annot_kws={"size": 16}, fmt='d')# font size
         pd.set_option('display.float_format', lambda x: '%.3f' % x)
-        plt.savefig("Plots\\{}\\{}-{}-{}epoches{}-confusion_matrix.png".format(path, model_type, train_type, epoches, subjectNumSuffix), bbox_inches='tight')
+        plt.savefig("Plots\\{}\\{}-{}{}-{}epoches-confusion_matrix.png".format(path, model_type, train_type, subjectNumSuffix, epoches), bbox_inches='tight')
         plt.close()
 
         confusionMatrix = np.true_divide(confusionMatrix, confusionMatrix.sum(axis=1, keepdims=True))
-        np.save("DataForRestoration\\{}\\{}-{}-{}epoches{}-confusion_matrix-percentage".format(path, model_type, train_type, epoches, subjectNumSuffix), confusionMatrix)
+        np.save("DataForRestoration\\{}\\{}-{}{}-{}epoches-confusion_matrix-percentage".format(path, model_type, train_type, subjectNumSuffix, epoches), confusionMatrix)
         df_cm = pd.DataFrame(confusionMatrix,  range(numOfLabels),
                                                 range(numOfLabels))
         sn.set(font_scale=1.4)#for label size
         sn.heatmap(df_cm, annot=True, cmap='Blues', annot_kws={"size": 16}, fmt='.2f')# font size
         pd.set_option('display.float_format', lambda x: '%.3f' % x)
-        plt.savefig("Plots\\{}\\{}-{}-{}epoches{}-confusion_matrix-percentage.png".format(path, model_type, train_type, epoches, subjectNumSuffix), bbox_inches='tight')
+        plt.savefig("Plots\\{}\\{}-{}{}-{}epoches-confusion_matrix-percentage.png".format(path, model_type, train_type, subjectNumSuffix, epoches), bbox_inches='tight')
         plt.close()
     else:    
         if plotType == 'accuracy':
@@ -188,5 +188,5 @@ def plot(plotType, path, model, test_set, y_pred, model_type, train_type, epoche
         plt.xlabel('Epoches')
         plt.legend(loc='best')
         # plt.show()
-        plt.savefig("Plots\\{}\\{}-{}-{}epoches{}-accuracy.png".format(path,model_type, train_type, epoches, subjectNumSuffix), bbox_inches='tight')
+        plt.savefig("Plots\\{}\\{}-{}{}-{}epoches-accuracy.png".format(path,model_type, train_type, subjectNumSuffix, epoches), bbox_inches='tight')
         plt.close()
