@@ -1,0 +1,3307 @@
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+shallow trialwise - Subject Number 14 - Fintuning
+Cross Model : shallow trialwise.
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+INFO : Training sample size: 356
+INFO : Validation sample size: 89
+INFO : Test sample size: 191
+INFO : in_chans: 62
+Loaded saved torch model from "crossModels\shallow-trialwise-cross-400epoches-torch-model".
+Cuda is available.
+INFO : Finished Loading Model
+INFO : Epochs: 400
+INFO : Batch Size: 32
+2019-09-28 11:16:27,326 INFO : Run until first stop...
+2019-09-28 11:16:28,451 INFO : Epoch 0
+2019-09-28 11:16:28,451 INFO : train_loss                0.52447
+2019-09-28 11:16:28,451 INFO : valid_loss                0.46555
+2019-09-28 11:16:28,451 INFO : train_misclass            0.22472
+2019-09-28 11:16:28,451 INFO : valid_misclass            0.19101
+2019-09-28 11:16:28,451 INFO : runtime                   0.00000
+2019-09-28 11:16:28,451 INFO : 
+2019-09-28 11:16:29,123 INFO : Time only for training updates: 0.67s
+2019-09-28 11:16:29,529 INFO : Epoch 1
+2019-09-28 11:16:29,529 INFO : train_loss                0.49313
+2019-09-28 11:16:29,529 INFO : valid_loss                0.46818
+2019-09-28 11:16:29,529 INFO : train_misclass            0.18539
+2019-09-28 11:16:29,529 INFO : valid_misclass            0.16854
+2019-09-28 11:16:29,529 INFO : runtime                   1.79687
+2019-09-28 11:16:29,529 INFO : 
+2019-09-28 11:16:30,185 INFO : Time only for training updates: 0.64s
+2019-09-28 11:16:30,592 INFO : Epoch 2
+2019-09-28 11:16:30,592 INFO : train_loss                0.48423
+2019-09-28 11:16:30,592 INFO : valid_loss                0.47801
+2019-09-28 11:16:30,592 INFO : train_misclass            0.18820
+2019-09-28 11:16:30,592 INFO : valid_misclass            0.17978
+2019-09-28 11:16:30,592 INFO : runtime                   1.06249
+2019-09-28 11:16:30,592 INFO : 
+2019-09-28 11:16:31,248 INFO : Time only for training updates: 0.66s
+2019-09-28 11:16:31,654 INFO : Epoch 3
+2019-09-28 11:16:31,654 INFO : train_loss                0.47036
+2019-09-28 11:16:31,654 INFO : valid_loss                0.47744
+2019-09-28 11:16:31,654 INFO : train_misclass            0.17978
+2019-09-28 11:16:31,654 INFO : valid_misclass            0.19101
+2019-09-28 11:16:31,654 INFO : runtime                   1.06250
+2019-09-28 11:16:31,654 INFO : 
+2019-09-28 11:16:32,310 INFO : Time only for training updates: 0.66s
+2019-09-28 11:16:32,717 INFO : Epoch 4
+2019-09-28 11:16:32,717 INFO : train_loss                0.44964
+2019-09-28 11:16:32,717 INFO : valid_loss                0.46592
+2019-09-28 11:16:32,717 INFO : train_misclass            0.17135
+2019-09-28 11:16:32,717 INFO : valid_misclass            0.17978
+2019-09-28 11:16:32,717 INFO : runtime                   1.06249
+2019-09-28 11:16:32,717 INFO : 
+2019-09-28 11:16:33,373 INFO : Time only for training updates: 0.64s
+2019-09-28 11:16:33,779 INFO : Epoch 5
+2019-09-28 11:16:33,779 INFO : train_loss                0.43455
+2019-09-28 11:16:33,779 INFO : valid_loss                0.45658
+2019-09-28 11:16:33,779 INFO : train_misclass            0.16292
+2019-09-28 11:16:33,779 INFO : valid_misclass            0.19101
+2019-09-28 11:16:33,779 INFO : runtime                   1.06250
+2019-09-28 11:16:33,779 INFO : 
+2019-09-28 11:16:34,435 INFO : Time only for training updates: 0.66s
+2019-09-28 11:16:34,857 INFO : Epoch 6
+2019-09-28 11:16:34,857 INFO : train_loss                0.42431
+2019-09-28 11:16:34,857 INFO : valid_loss                0.45430
+2019-09-28 11:16:34,857 INFO : train_misclass            0.16011
+2019-09-28 11:16:34,857 INFO : valid_misclass            0.17978
+2019-09-28 11:16:34,857 INFO : runtime                   1.06250
+2019-09-28 11:16:34,857 INFO : 
+2019-09-28 11:16:35,529 INFO : Time only for training updates: 0.67s
+2019-09-28 11:16:35,935 INFO : Epoch 7
+2019-09-28 11:16:35,935 INFO : train_loss                0.41416
+2019-09-28 11:16:35,935 INFO : valid_loss                0.45256
+2019-09-28 11:16:35,935 INFO : train_misclass            0.15730
+2019-09-28 11:16:35,935 INFO : valid_misclass            0.17978
+2019-09-28 11:16:35,935 INFO : runtime                   1.09375
+2019-09-28 11:16:35,935 INFO : 
+2019-09-28 11:16:36,592 INFO : Time only for training updates: 0.66s
+2019-09-28 11:16:36,998 INFO : Epoch 8
+2019-09-28 11:16:36,998 INFO : train_loss                0.40468
+2019-09-28 11:16:36,998 INFO : valid_loss                0.45557
+2019-09-28 11:16:36,998 INFO : train_misclass            0.15730
+2019-09-28 11:16:36,998 INFO : valid_misclass            0.19101
+2019-09-28 11:16:36,998 INFO : runtime                   1.06250
+2019-09-28 11:16:36,998 INFO : 
+2019-09-28 11:16:37,654 INFO : Time only for training updates: 0.66s
+2019-09-28 11:16:38,060 INFO : Epoch 9
+2019-09-28 11:16:38,060 INFO : train_loss                0.39383
+2019-09-28 11:16:38,060 INFO : valid_loss                0.45185
+2019-09-28 11:16:38,060 INFO : train_misclass            0.14888
+2019-09-28 11:16:38,060 INFO : valid_misclass            0.19101
+2019-09-28 11:16:38,060 INFO : runtime                   1.06249
+2019-09-28 11:16:38,060 INFO : 
+2019-09-28 11:16:38,717 INFO : Time only for training updates: 0.66s
+2019-09-28 11:16:39,123 INFO : Epoch 10
+2019-09-28 11:16:39,123 INFO : train_loss                0.38453
+2019-09-28 11:16:39,123 INFO : valid_loss                0.44670
+2019-09-28 11:16:39,123 INFO : train_misclass            0.14607
+2019-09-28 11:16:39,123 INFO : valid_misclass            0.20225
+2019-09-28 11:16:39,123 INFO : runtime                   1.06250
+2019-09-28 11:16:39,123 INFO : 
+2019-09-28 11:16:39,779 INFO : Time only for training updates: 0.66s
+2019-09-28 11:16:40,185 INFO : Epoch 11
+2019-09-28 11:16:40,185 INFO : train_loss                0.37552
+2019-09-28 11:16:40,185 INFO : valid_loss                0.44379
+2019-09-28 11:16:40,185 INFO : train_misclass            0.14607
+2019-09-28 11:16:40,185 INFO : valid_misclass            0.20225
+2019-09-28 11:16:40,185 INFO : runtime                   1.06250
+2019-09-28 11:16:40,185 INFO : 
+2019-09-28 11:16:40,842 INFO : Time only for training updates: 0.66s
+2019-09-28 11:16:41,248 INFO : Epoch 12
+2019-09-28 11:16:41,248 INFO : train_loss                0.36604
+2019-09-28 11:16:41,248 INFO : valid_loss                0.43975
+2019-09-28 11:16:41,248 INFO : train_misclass            0.13764
+2019-09-28 11:16:41,248 INFO : valid_misclass            0.19101
+2019-09-28 11:16:41,248 INFO : runtime                   1.06250
+2019-09-28 11:16:41,248 INFO : 
+2019-09-28 11:16:41,920 INFO : Time only for training updates: 0.67s
+2019-09-28 11:16:42,326 INFO : Epoch 13
+2019-09-28 11:16:42,326 INFO : train_loss                0.36231
+2019-09-28 11:16:42,326 INFO : valid_loss                0.44485
+2019-09-28 11:16:42,326 INFO : train_misclass            0.13483
+2019-09-28 11:16:42,326 INFO : valid_misclass            0.17978
+2019-09-28 11:16:42,326 INFO : runtime                   1.07812
+2019-09-28 11:16:42,326 INFO : 
+2019-09-28 11:16:42,998 INFO : Time only for training updates: 0.67s
+2019-09-28 11:16:43,404 INFO : Epoch 14
+2019-09-28 11:16:43,404 INFO : train_loss                0.35467
+2019-09-28 11:16:43,404 INFO : valid_loss                0.44022
+2019-09-28 11:16:43,404 INFO : train_misclass            0.13483
+2019-09-28 11:16:43,404 INFO : valid_misclass            0.19101
+2019-09-28 11:16:43,404 INFO : runtime                   1.07812
+2019-09-28 11:16:43,404 INFO : 
+2019-09-28 11:16:44,060 INFO : Time only for training updates: 0.66s
+2019-09-28 11:16:44,467 INFO : Epoch 15
+2019-09-28 11:16:44,467 INFO : train_loss                0.34733
+2019-09-28 11:16:44,467 INFO : valid_loss                0.44267
+2019-09-28 11:16:44,467 INFO : train_misclass            0.12360
+2019-09-28 11:16:44,467 INFO : valid_misclass            0.17978
+2019-09-28 11:16:44,467 INFO : runtime                   1.06250
+2019-09-28 11:16:44,467 INFO : 
+2019-09-28 11:16:45,123 INFO : Time only for training updates: 0.66s
+2019-09-28 11:16:45,545 INFO : Epoch 16
+2019-09-28 11:16:45,545 INFO : train_loss                0.33860
+2019-09-28 11:16:45,545 INFO : valid_loss                0.43810
+2019-09-28 11:16:45,545 INFO : train_misclass            0.12360
+2019-09-28 11:16:45,545 INFO : valid_misclass            0.19101
+2019-09-28 11:16:45,545 INFO : runtime                   1.06250
+2019-09-28 11:16:45,545 INFO : 
+2019-09-28 11:16:46,217 INFO : Time only for training updates: 0.67s
+2019-09-28 11:16:46,623 INFO : Epoch 17
+2019-09-28 11:16:46,623 INFO : train_loss                0.33028
+2019-09-28 11:16:46,623 INFO : valid_loss                0.43482
+2019-09-28 11:16:46,623 INFO : train_misclass            0.11517
+2019-09-28 11:16:46,623 INFO : valid_misclass            0.19101
+2019-09-28 11:16:46,623 INFO : runtime                   1.09375
+2019-09-28 11:16:46,623 INFO : 
+2019-09-28 11:16:47,279 INFO : Time only for training updates: 0.66s
+2019-09-28 11:16:47,701 INFO : Epoch 18
+2019-09-28 11:16:47,701 INFO : train_loss                0.32495
+2019-09-28 11:16:47,701 INFO : valid_loss                0.43426
+2019-09-28 11:16:47,701 INFO : train_misclass            0.10955
+2019-09-28 11:16:47,701 INFO : valid_misclass            0.17978
+2019-09-28 11:16:47,701 INFO : runtime                   1.06250
+2019-09-28 11:16:47,701 INFO : 
+2019-09-28 11:16:48,357 INFO : Time only for training updates: 0.66s
+2019-09-28 11:16:48,795 INFO : Epoch 19
+2019-09-28 11:16:48,795 INFO : train_loss                0.31909
+2019-09-28 11:16:48,795 INFO : valid_loss                0.43441
+2019-09-28 11:16:48,795 INFO : train_misclass            0.10393
+2019-09-28 11:16:48,795 INFO : valid_misclass            0.17978
+2019-09-28 11:16:48,795 INFO : runtime                   1.07812
+2019-09-28 11:16:48,795 INFO : 
+2019-09-28 11:16:49,451 INFO : Time only for training updates: 0.66s
+2019-09-28 11:16:49,873 INFO : Epoch 20
+2019-09-28 11:16:49,873 INFO : train_loss                0.31346
+2019-09-28 11:16:49,873 INFO : valid_loss                0.43287
+2019-09-28 11:16:49,873 INFO : train_misclass            0.10112
+2019-09-28 11:16:49,873 INFO : valid_misclass            0.17978
+2019-09-28 11:16:49,873 INFO : runtime                   1.09375
+2019-09-28 11:16:49,873 INFO : 
+2019-09-28 11:16:50,529 INFO : Time only for training updates: 0.66s
+2019-09-28 11:16:50,951 INFO : Epoch 21
+2019-09-28 11:16:50,951 INFO : train_loss                0.30793
+2019-09-28 11:16:50,951 INFO : valid_loss                0.43504
+2019-09-28 11:16:50,951 INFO : train_misclass            0.09831
+2019-09-28 11:16:50,951 INFO : valid_misclass            0.17978
+2019-09-28 11:16:50,951 INFO : runtime                   1.07812
+2019-09-28 11:16:50,951 INFO : 
+2019-09-28 11:16:51,607 INFO : Time only for training updates: 0.66s
+2019-09-28 11:16:52,045 INFO : Epoch 22
+2019-09-28 11:16:52,045 INFO : train_loss                0.30071
+2019-09-28 11:16:52,045 INFO : valid_loss                0.43485
+2019-09-28 11:16:52,045 INFO : train_misclass            0.09831
+2019-09-28 11:16:52,045 INFO : valid_misclass            0.17978
+2019-09-28 11:16:52,045 INFO : runtime                   1.07812
+2019-09-28 11:16:52,045 INFO : 
+2019-09-28 11:16:52,701 INFO : Time only for training updates: 0.66s
+2019-09-28 11:16:53,107 INFO : Epoch 23
+2019-09-28 11:16:53,107 INFO : train_loss                0.29777
+2019-09-28 11:16:53,107 INFO : valid_loss                0.43533
+2019-09-28 11:16:53,107 INFO : train_misclass            0.09270
+2019-09-28 11:16:53,107 INFO : valid_misclass            0.19101
+2019-09-28 11:16:53,107 INFO : runtime                   1.09375
+2019-09-28 11:16:53,107 INFO : 
+2019-09-28 11:16:53,795 INFO : Time only for training updates: 0.67s
+2019-09-28 11:16:54,217 INFO : Epoch 24
+2019-09-28 11:16:54,217 INFO : train_loss                0.29266
+2019-09-28 11:16:54,217 INFO : valid_loss                0.43520
+2019-09-28 11:16:54,217 INFO : train_misclass            0.08989
+2019-09-28 11:16:54,217 INFO : valid_misclass            0.17978
+2019-09-28 11:16:54,217 INFO : runtime                   1.09375
+2019-09-28 11:16:54,217 INFO : 
+2019-09-28 11:16:54,873 INFO : Time only for training updates: 0.66s
+2019-09-28 11:16:55,279 INFO : Epoch 25
+2019-09-28 11:16:55,279 INFO : train_loss                0.28484
+2019-09-28 11:16:55,279 INFO : valid_loss                0.43158
+2019-09-28 11:16:55,279 INFO : train_misclass            0.08989
+2019-09-28 11:16:55,279 INFO : valid_misclass            0.19101
+2019-09-28 11:16:55,279 INFO : runtime                   1.07812
+2019-09-28 11:16:55,279 INFO : 
+2019-09-28 11:16:55,935 INFO : Time only for training updates: 0.66s
+2019-09-28 11:16:56,373 INFO : Epoch 26
+2019-09-28 11:16:56,373 INFO : train_loss                0.28297
+2019-09-28 11:16:56,373 INFO : valid_loss                0.44232
+2019-09-28 11:16:56,373 INFO : train_misclass            0.08427
+2019-09-28 11:16:56,373 INFO : valid_misclass            0.19101
+2019-09-28 11:16:56,373 INFO : runtime                   1.06249
+2019-09-28 11:16:56,373 INFO : 
+2019-09-28 11:16:57,013 INFO : Time only for training updates: 0.64s
+2019-09-28 11:16:57,435 INFO : Epoch 27
+2019-09-28 11:16:57,435 INFO : train_loss                0.27494
+2019-09-28 11:16:57,435 INFO : valid_loss                0.44208
+2019-09-28 11:16:57,435 INFO : train_misclass            0.07865
+2019-09-28 11:16:57,435 INFO : valid_misclass            0.19101
+2019-09-28 11:16:57,435 INFO : runtime                   1.07812
+2019-09-28 11:16:57,435 INFO : 
+2019-09-28 11:16:58,076 INFO : Time only for training updates: 0.64s
+2019-09-28 11:16:58,482 INFO : Epoch 28
+2019-09-28 11:16:58,482 INFO : train_loss                0.27652
+2019-09-28 11:16:58,482 INFO : valid_loss                0.45306
+2019-09-28 11:16:58,482 INFO : train_misclass            0.08146
+2019-09-28 11:16:58,482 INFO : valid_misclass            0.19101
+2019-09-28 11:16:58,482 INFO : runtime                   1.06250
+2019-09-28 11:16:58,482 INFO : 
+2019-09-28 11:16:59,138 INFO : Time only for training updates: 0.66s
+2019-09-28 11:16:59,607 INFO : Epoch 29
+2019-09-28 11:16:59,607 INFO : train_loss                0.26573
+2019-09-28 11:16:59,607 INFO : valid_loss                0.44377
+2019-09-28 11:16:59,607 INFO : train_misclass            0.08146
+2019-09-28 11:16:59,607 INFO : valid_misclass            0.17978
+2019-09-28 11:16:59,607 INFO : runtime                   1.06250
+2019-09-28 11:16:59,607 INFO : 
+2019-09-28 11:17:00,248 INFO : Time only for training updates: 0.64s
+2019-09-28 11:17:00,670 INFO : Epoch 30
+2019-09-28 11:17:00,670 INFO : train_loss                0.26261
+2019-09-28 11:17:00,670 INFO : valid_loss                0.44322
+2019-09-28 11:17:00,670 INFO : train_misclass            0.07584
+2019-09-28 11:17:00,670 INFO : valid_misclass            0.17978
+2019-09-28 11:17:00,670 INFO : runtime                   1.10960
+2019-09-28 11:17:00,670 INFO : 
+2019-09-28 11:17:01,310 INFO : Time only for training updates: 0.64s
+2019-09-28 11:17:01,748 INFO : Epoch 31
+2019-09-28 11:17:01,748 INFO : train_loss                0.25702
+2019-09-28 11:17:01,748 INFO : valid_loss                0.44198
+2019-09-28 11:17:01,748 INFO : train_misclass            0.06742
+2019-09-28 11:17:01,748 INFO : valid_misclass            0.19101
+2019-09-28 11:17:01,748 INFO : runtime                   1.06227
+2019-09-28 11:17:01,748 INFO : 
+2019-09-28 11:17:02,393 INFO : Time only for training updates: 0.64s
+2019-09-28 11:17:02,815 INFO : Epoch 32
+2019-09-28 11:17:02,815 INFO : train_loss                0.25222
+2019-09-28 11:17:02,815 INFO : valid_loss                0.44872
+2019-09-28 11:17:02,815 INFO : train_misclass            0.06742
+2019-09-28 11:17:02,815 INFO : valid_misclass            0.17978
+2019-09-28 11:17:02,815 INFO : runtime                   1.08250
+2019-09-28 11:17:02,815 INFO : 
+2019-09-28 11:17:03,487 INFO : Time only for training updates: 0.67s
+2019-09-28 11:17:03,908 INFO : Epoch 33
+2019-09-28 11:17:03,908 INFO : train_loss                0.24771
+2019-09-28 11:17:03,908 INFO : valid_loss                0.45584
+2019-09-28 11:17:03,908 INFO : train_misclass            0.06461
+2019-09-28 11:17:03,908 INFO : valid_misclass            0.19101
+2019-09-28 11:17:03,908 INFO : runtime                   1.09375
+2019-09-28 11:17:03,908 INFO : 
+2019-09-28 11:17:04,565 INFO : Time only for training updates: 0.66s
+2019-09-28 11:17:05,002 INFO : Epoch 34
+2019-09-28 11:17:05,002 INFO : train_loss                0.24209
+2019-09-28 11:17:05,002 INFO : valid_loss                0.45125
+2019-09-28 11:17:05,002 INFO : train_misclass            0.05618
+2019-09-28 11:17:05,002 INFO : valid_misclass            0.19101
+2019-09-28 11:17:05,002 INFO : runtime                   1.07812
+2019-09-28 11:17:05,002 INFO : 
+2019-09-28 11:17:05,658 INFO : Time only for training updates: 0.66s
+2019-09-28 11:17:06,080 INFO : Epoch 35
+2019-09-28 11:17:06,080 INFO : train_loss                0.23831
+2019-09-28 11:17:06,080 INFO : valid_loss                0.45038
+2019-09-28 11:17:06,080 INFO : train_misclass            0.05056
+2019-09-28 11:17:06,080 INFO : valid_misclass            0.17978
+2019-09-28 11:17:06,080 INFO : runtime                   1.09375
+2019-09-28 11:17:06,080 INFO : 
+2019-09-28 11:17:06,752 INFO : Time only for training updates: 0.67s
+2019-09-28 11:17:07,174 INFO : Epoch 36
+2019-09-28 11:17:07,174 INFO : train_loss                0.23396
+2019-09-28 11:17:07,174 INFO : valid_loss                0.44624
+2019-09-28 11:17:07,174 INFO : train_misclass            0.05056
+2019-09-28 11:17:07,174 INFO : valid_misclass            0.17978
+2019-09-28 11:17:07,174 INFO : runtime                   1.09375
+2019-09-28 11:17:07,174 INFO : 
+2019-09-28 11:17:07,846 INFO : Time only for training updates: 0.67s
+2019-09-28 11:17:08,252 INFO : Epoch 37
+2019-09-28 11:17:08,252 INFO : train_loss                0.23165
+2019-09-28 11:17:08,252 INFO : valid_loss                0.44425
+2019-09-28 11:17:08,252 INFO : train_misclass            0.05056
+2019-09-28 11:17:08,252 INFO : valid_misclass            0.20225
+2019-09-28 11:17:08,252 INFO : runtime                   1.09375
+2019-09-28 11:17:08,252 INFO : 
+2019-09-28 11:17:08,908 INFO : Time only for training updates: 0.66s
+2019-09-28 11:17:09,472 INFO : Epoch 38
+2019-09-28 11:17:09,478 INFO : train_loss                0.22716
+2019-09-28 11:17:09,478 INFO : valid_loss                0.44191
+2019-09-28 11:17:09,479 INFO : train_misclass            0.04775
+2019-09-28 11:17:09,479 INFO : valid_misclass            0.19101
+2019-09-28 11:17:09,479 INFO : runtime                   1.06250
+2019-09-28 11:17:09,479 INFO : 
+2019-09-28 11:17:10,176 INFO : Time only for training updates: 0.70s
+2019-09-28 11:17:10,622 INFO : Epoch 39
+2019-09-28 11:17:10,623 INFO : train_loss                0.22544
+2019-09-28 11:17:10,623 INFO : valid_loss                0.44201
+2019-09-28 11:17:10,624 INFO : train_misclass            0.05056
+2019-09-28 11:17:10,624 INFO : valid_misclass            0.20225
+2019-09-28 11:17:10,624 INFO : runtime                   1.26910
+2019-09-28 11:17:10,624 INFO : 
+2019-09-28 11:17:11,306 INFO : Time only for training updates: 0.68s
+2019-09-28 11:17:11,717 INFO : Epoch 40
+2019-09-28 11:17:11,717 INFO : train_loss                0.22084
+2019-09-28 11:17:11,717 INFO : valid_loss                0.44128
+2019-09-28 11:17:11,717 INFO : train_misclass            0.04494
+2019-09-28 11:17:11,717 INFO : valid_misclass            0.20225
+2019-09-28 11:17:11,717 INFO : runtime                   1.12813
+2019-09-28 11:17:11,717 INFO : 
+2019-09-28 11:17:12,403 INFO : Time only for training updates: 0.69s
+2019-09-28 11:17:12,828 INFO : Epoch 41
+2019-09-28 11:17:12,828 INFO : train_loss                0.21878
+2019-09-28 11:17:12,829 INFO : valid_loss                0.44512
+2019-09-28 11:17:12,829 INFO : train_misclass            0.04494
+2019-09-28 11:17:12,829 INFO : valid_misclass            0.20225
+2019-09-28 11:17:12,829 INFO : runtime                   1.09783
+2019-09-28 11:17:12,829 INFO : 
+2019-09-28 11:17:13,496 INFO : Time only for training updates: 0.67s
+2019-09-28 11:17:13,920 INFO : Epoch 42
+2019-09-28 11:17:13,921 INFO : train_loss                0.21445
+2019-09-28 11:17:13,921 INFO : valid_loss                0.44376
+2019-09-28 11:17:13,921 INFO : train_misclass            0.04213
+2019-09-28 11:17:13,921 INFO : valid_misclass            0.22472
+2019-09-28 11:17:13,921 INFO : runtime                   1.09290
+2019-09-28 11:17:13,921 INFO : 
+2019-09-28 11:17:14,598 INFO : Time only for training updates: 0.67s
+2019-09-28 11:17:15,024 INFO : Epoch 43
+2019-09-28 11:17:15,024 INFO : train_loss                0.20981
+2019-09-28 11:17:15,025 INFO : valid_loss                0.44577
+2019-09-28 11:17:15,025 INFO : train_misclass            0.03933
+2019-09-28 11:17:15,025 INFO : valid_misclass            0.20225
+2019-09-28 11:17:15,025 INFO : runtime                   1.10181
+2019-09-28 11:17:15,025 INFO : 
+2019-09-28 11:17:15,700 INFO : Time only for training updates: 0.67s
+2019-09-28 11:17:16,134 INFO : Epoch 44
+2019-09-28 11:17:16,134 INFO : train_loss                0.20811
+2019-09-28 11:17:16,134 INFO : valid_loss                0.45135
+2019-09-28 11:17:16,134 INFO : train_misclass            0.04213
+2019-09-28 11:17:16,134 INFO : valid_misclass            0.22472
+2019-09-28 11:17:16,134 INFO : runtime                   1.10141
+2019-09-28 11:17:16,134 INFO : 
+2019-09-28 11:17:16,799 INFO : Time only for training updates: 0.67s
+2019-09-28 11:17:17,199 INFO : Epoch 45
+2019-09-28 11:17:17,199 INFO : train_loss                0.20412
+2019-09-28 11:17:17,199 INFO : valid_loss                0.44813
+2019-09-28 11:17:17,199 INFO : train_misclass            0.04213
+2019-09-28 11:17:17,199 INFO : valid_misclass            0.22472
+2019-09-28 11:17:17,199 INFO : runtime                   1.09981
+2019-09-28 11:17:17,199 INFO : 
+2019-09-28 11:17:17,878 INFO : Time only for training updates: 0.68s
+2019-09-28 11:17:18,297 INFO : Epoch 46
+2019-09-28 11:17:18,297 INFO : train_loss                0.19998
+2019-09-28 11:17:18,297 INFO : valid_loss                0.44300
+2019-09-28 11:17:18,297 INFO : train_misclass            0.03933
+2019-09-28 11:17:18,297 INFO : valid_misclass            0.23596
+2019-09-28 11:17:18,297 INFO : runtime                   1.07874
+2019-09-28 11:17:18,297 INFO : 
+2019-09-28 11:17:18,968 INFO : Time only for training updates: 0.67s
+2019-09-28 11:17:19,414 INFO : Epoch 47
+2019-09-28 11:17:19,414 INFO : train_loss                0.19756
+2019-09-28 11:17:19,414 INFO : valid_loss                0.44221
+2019-09-28 11:17:19,414 INFO : train_misclass            0.03933
+2019-09-28 11:17:19,414 INFO : valid_misclass            0.23596
+2019-09-28 11:17:19,414 INFO : runtime                   1.08960
+2019-09-28 11:17:19,415 INFO : 
+2019-09-28 11:17:20,077 INFO : Time only for training updates: 0.66s
+2019-09-28 11:17:20,497 INFO : Epoch 48
+2019-09-28 11:17:20,497 INFO : train_loss                0.19319
+2019-09-28 11:17:20,497 INFO : valid_loss                0.43848
+2019-09-28 11:17:20,497 INFO : train_misclass            0.03933
+2019-09-28 11:17:20,497 INFO : valid_misclass            0.23596
+2019-09-28 11:17:20,497 INFO : runtime                   1.10892
+2019-09-28 11:17:20,497 INFO : 
+2019-09-28 11:17:21,156 INFO : Time only for training updates: 0.66s
+2019-09-28 11:17:21,609 INFO : Epoch 49
+2019-09-28 11:17:21,609 INFO : train_loss                0.19128
+2019-09-28 11:17:21,609 INFO : valid_loss                0.44194
+2019-09-28 11:17:21,609 INFO : train_misclass            0.03090
+2019-09-28 11:17:21,609 INFO : valid_misclass            0.21348
+2019-09-28 11:17:21,609 INFO : runtime                   1.07927
+2019-09-28 11:17:21,609 INFO : 
+2019-09-28 11:17:22,250 INFO : Time only for training updates: 0.64s
+2019-09-28 11:17:22,687 INFO : Epoch 50
+2019-09-28 11:17:22,687 INFO : train_loss                0.18791
+2019-09-28 11:17:22,687 INFO : valid_loss                0.44756
+2019-09-28 11:17:22,687 INFO : train_misclass            0.03090
+2019-09-28 11:17:22,687 INFO : valid_misclass            0.22472
+2019-09-28 11:17:22,687 INFO : runtime                   1.09375
+2019-09-28 11:17:22,687 INFO : 
+2019-09-28 11:17:23,343 INFO : Time only for training updates: 0.66s
+2019-09-28 11:17:23,750 INFO : Epoch 51
+2019-09-28 11:17:23,750 INFO : train_loss                0.18407
+2019-09-28 11:17:23,750 INFO : valid_loss                0.44549
+2019-09-28 11:17:23,750 INFO : train_misclass            0.02528
+2019-09-28 11:17:23,750 INFO : valid_misclass            0.22472
+2019-09-28 11:17:23,750 INFO : runtime                   1.09375
+2019-09-28 11:17:23,750 INFO : 
+2019-09-28 11:17:24,419 INFO : Time only for training updates: 0.67s
+2019-09-28 11:17:24,836 INFO : Epoch 52
+2019-09-28 11:17:24,836 INFO : train_loss                0.18210
+2019-09-28 11:17:24,836 INFO : valid_loss                0.44891
+2019-09-28 11:17:24,836 INFO : train_misclass            0.02528
+2019-09-28 11:17:24,836 INFO : valid_misclass            0.22472
+2019-09-28 11:17:24,836 INFO : runtime                   1.07597
+2019-09-28 11:17:24,836 INFO : 
+2019-09-28 11:17:25,508 INFO : Time only for training updates: 0.67s
+2019-09-28 11:17:25,914 INFO : Epoch 53
+2019-09-28 11:17:25,914 INFO : train_loss                0.17975
+2019-09-28 11:17:25,914 INFO : valid_loss                0.45244
+2019-09-28 11:17:25,914 INFO : train_misclass            0.02528
+2019-09-28 11:17:25,914 INFO : valid_misclass            0.21348
+2019-09-28 11:17:25,914 INFO : runtime                   1.08868
+2019-09-28 11:17:25,914 INFO : 
+2019-09-28 11:17:26,595 INFO : Time only for training updates: 0.68s
+2019-09-28 11:17:27,001 INFO : Epoch 54
+2019-09-28 11:17:27,001 INFO : train_loss                0.17776
+2019-09-28 11:17:27,001 INFO : valid_loss                0.45184
+2019-09-28 11:17:27,001 INFO : train_misclass            0.02528
+2019-09-28 11:17:27,001 INFO : valid_misclass            0.22472
+2019-09-28 11:17:27,017 INFO : runtime                   1.08658
+2019-09-28 11:17:27,017 INFO : 
+2019-09-28 11:17:27,653 INFO : Time only for training updates: 0.64s
+2019-09-28 11:17:28,088 INFO : Epoch 55
+2019-09-28 11:17:28,089 INFO : train_loss                0.17658
+2019-09-28 11:17:28,089 INFO : valid_loss                0.45756
+2019-09-28 11:17:28,089 INFO : train_misclass            0.02528
+2019-09-28 11:17:28,089 INFO : valid_misclass            0.23596
+2019-09-28 11:17:28,089 INFO : runtime                   1.05792
+2019-09-28 11:17:28,089 INFO : 
+2019-09-28 11:17:28,756 INFO : Time only for training updates: 0.67s
+2019-09-28 11:17:29,173 INFO : Epoch 56
+2019-09-28 11:17:29,174 INFO : train_loss                0.17540
+2019-09-28 11:17:29,174 INFO : valid_loss                0.46244
+2019-09-28 11:17:29,174 INFO : train_misclass            0.02809
+2019-09-28 11:17:29,174 INFO : valid_misclass            0.24719
+2019-09-28 11:17:29,174 INFO : runtime                   1.10321
+2019-09-28 11:17:29,174 INFO : 
+2019-09-28 11:17:29,829 INFO : Time only for training updates: 0.65s
+2019-09-28 11:17:30,249 INFO : Epoch 57
+2019-09-28 11:17:30,249 INFO : train_loss                0.17152
+2019-09-28 11:17:30,249 INFO : valid_loss                0.46036
+2019-09-28 11:17:30,249 INFO : train_misclass            0.02809
+2019-09-28 11:17:30,249 INFO : valid_misclass            0.23596
+2019-09-28 11:17:30,249 INFO : runtime                   1.07308
+2019-09-28 11:17:30,249 INFO : 
+2019-09-28 11:17:30,920 INFO : Time only for training updates: 0.67s
+2019-09-28 11:17:31,328 INFO : Epoch 58
+2019-09-28 11:17:31,328 INFO : train_loss                0.17153
+2019-09-28 11:17:31,328 INFO : valid_loss                0.46163
+2019-09-28 11:17:31,328 INFO : train_misclass            0.02809
+2019-09-28 11:17:31,328 INFO : valid_misclass            0.23596
+2019-09-28 11:17:31,328 INFO : runtime                   1.09108
+2019-09-28 11:17:31,328 INFO : 
+2019-09-28 11:17:31,984 INFO : Time only for training updates: 0.66s
+2019-09-28 11:17:32,406 INFO : Epoch 59
+2019-09-28 11:17:32,406 INFO : train_loss                0.16977
+2019-09-28 11:17:32,406 INFO : valid_loss                0.46069
+2019-09-28 11:17:32,406 INFO : train_misclass            0.02809
+2019-09-28 11:17:32,406 INFO : valid_misclass            0.24719
+2019-09-28 11:17:32,406 INFO : runtime                   1.06453
+2019-09-28 11:17:32,406 INFO : 
+2019-09-28 11:17:33,068 INFO : Time only for training updates: 0.66s
+2019-09-28 11:17:33,474 INFO : Epoch 60
+2019-09-28 11:17:33,474 INFO : train_loss                0.16574
+2019-09-28 11:17:33,474 INFO : valid_loss                0.45380
+2019-09-28 11:17:33,474 INFO : train_misclass            0.01966
+2019-09-28 11:17:33,474 INFO : valid_misclass            0.22472
+2019-09-28 11:17:33,474 INFO : runtime                   1.08348
+2019-09-28 11:17:33,474 INFO : 
+2019-09-28 11:17:34,130 INFO : Time only for training updates: 0.66s
+2019-09-28 11:17:34,535 INFO : Epoch 61
+2019-09-28 11:17:34,535 INFO : train_loss                0.16076
+2019-09-28 11:17:34,535 INFO : valid_loss                0.45075
+2019-09-28 11:17:34,535 INFO : train_misclass            0.01966
+2019-09-28 11:17:34,551 INFO : valid_misclass            0.20225
+2019-09-28 11:17:34,551 INFO : runtime                   1.06249
+2019-09-28 11:17:34,551 INFO : 
+2019-09-28 11:17:35,202 INFO : Time only for training updates: 0.65s
+2019-09-28 11:17:35,621 INFO : Epoch 62
+2019-09-28 11:17:35,621 INFO : train_loss                0.15664
+2019-09-28 11:17:35,621 INFO : valid_loss                0.44514
+2019-09-28 11:17:35,621 INFO : train_misclass            0.01966
+2019-09-28 11:17:35,621 INFO : valid_misclass            0.21348
+2019-09-28 11:17:35,621 INFO : runtime                   1.07192
+2019-09-28 11:17:35,621 INFO : 
+2019-09-28 11:17:36,285 INFO : Time only for training updates: 0.66s
+2019-09-28 11:17:36,695 INFO : Epoch 63
+2019-09-28 11:17:36,695 INFO : train_loss                0.15457
+2019-09-28 11:17:36,695 INFO : valid_loss                0.44864
+2019-09-28 11:17:36,695 INFO : train_misclass            0.01966
+2019-09-28 11:17:36,696 INFO : valid_misclass            0.21348
+2019-09-28 11:17:36,696 INFO : runtime                   1.08341
+2019-09-28 11:17:36,696 INFO : 
+2019-09-28 11:17:37,339 INFO : Time only for training updates: 0.64s
+2019-09-28 11:17:37,761 INFO : Epoch 64
+2019-09-28 11:17:37,761 INFO : train_loss                0.15181
+2019-09-28 11:17:37,761 INFO : valid_loss                0.44268
+2019-09-28 11:17:37,761 INFO : train_misclass            0.01685
+2019-09-28 11:17:37,761 INFO : valid_misclass            0.21348
+2019-09-28 11:17:37,761 INFO : runtime                   1.05334
+2019-09-28 11:17:37,761 INFO : 
+2019-09-28 11:17:38,404 INFO : Time only for training updates: 0.64s
+2019-09-28 11:17:38,810 INFO : Epoch 65
+2019-09-28 11:17:38,810 INFO : train_loss                0.15143
+2019-09-28 11:17:38,810 INFO : valid_loss                0.45091
+2019-09-28 11:17:38,810 INFO : train_misclass            0.01404
+2019-09-28 11:17:38,810 INFO : valid_misclass            0.22472
+2019-09-28 11:17:38,810 INFO : runtime                   1.06504
+2019-09-28 11:17:38,810 INFO : 
+2019-09-28 11:17:39,478 INFO : Time only for training updates: 0.65s
+2019-09-28 11:17:39,883 INFO : Epoch 66
+2019-09-28 11:17:39,883 INFO : train_loss                0.14870
+2019-09-28 11:17:39,883 INFO : valid_loss                0.44953
+2019-09-28 11:17:39,883 INFO : train_misclass            0.01124
+2019-09-28 11:17:39,883 INFO : valid_misclass            0.22472
+2019-09-28 11:17:39,884 INFO : runtime                   1.07364
+2019-09-28 11:17:39,884 INFO : 
+2019-09-28 11:17:40,544 INFO : Time only for training updates: 0.66s
+2019-09-28 11:17:40,961 INFO : Epoch 67
+2019-09-28 11:17:40,962 INFO : train_loss                0.14918
+2019-09-28 11:17:40,962 INFO : valid_loss                0.45706
+2019-09-28 11:17:40,962 INFO : train_misclass            0.01124
+2019-09-28 11:17:40,962 INFO : valid_misclass            0.23596
+2019-09-28 11:17:40,962 INFO : runtime                   1.06603
+2019-09-28 11:17:40,962 INFO : 
+2019-09-28 11:17:41,608 INFO : Time only for training updates: 0.65s
+2019-09-28 11:17:42,030 INFO : Epoch 68
+2019-09-28 11:17:42,030 INFO : train_loss                0.14604
+2019-09-28 11:17:42,030 INFO : valid_loss                0.45201
+2019-09-28 11:17:42,030 INFO : train_misclass            0.00843
+2019-09-28 11:17:42,030 INFO : valid_misclass            0.23596
+2019-09-28 11:17:42,030 INFO : runtime                   1.06463
+2019-09-28 11:17:42,030 INFO : 
+2019-09-28 11:17:42,687 INFO : Time only for training updates: 0.66s
+2019-09-28 11:17:43,134 INFO : Epoch 69
+2019-09-28 11:17:43,134 INFO : train_loss                0.14483
+2019-09-28 11:17:43,134 INFO : valid_loss                0.45040
+2019-09-28 11:17:43,135 INFO : train_misclass            0.01124
+2019-09-28 11:17:43,135 INFO : valid_misclass            0.21348
+2019-09-28 11:17:43,135 INFO : runtime                   1.07812
+2019-09-28 11:17:43,135 INFO : 
+2019-09-28 11:17:43,795 INFO : Time only for training updates: 0.66s
+2019-09-28 11:17:44,205 INFO : Epoch 70
+2019-09-28 11:17:44,206 INFO : train_loss                0.14119
+2019-09-28 11:17:44,206 INFO : valid_loss                0.44562
+2019-09-28 11:17:44,206 INFO : train_misclass            0.01124
+2019-09-28 11:17:44,206 INFO : valid_misclass            0.22472
+2019-09-28 11:17:44,206 INFO : runtime                   1.10864
+2019-09-28 11:17:44,206 INFO : 
+2019-09-28 11:17:44,857 INFO : Time only for training updates: 0.65s
+2019-09-28 11:17:45,274 INFO : Epoch 71
+2019-09-28 11:17:45,275 INFO : train_loss                0.14027
+2019-09-28 11:17:45,275 INFO : valid_loss                0.44881
+2019-09-28 11:17:45,275 INFO : train_misclass            0.00843
+2019-09-28 11:17:45,275 INFO : valid_misclass            0.22472
+2019-09-28 11:17:45,275 INFO : runtime                   1.06189
+2019-09-28 11:17:45,275 INFO : 
+2019-09-28 11:17:45,924 INFO : Time only for training updates: 0.65s
+2019-09-28 11:17:46,346 INFO : Epoch 72
+2019-09-28 11:17:46,346 INFO : train_loss                0.13672
+2019-09-28 11:17:46,346 INFO : valid_loss                0.44304
+2019-09-28 11:17:46,346 INFO : train_misclass            0.00562
+2019-09-28 11:17:46,346 INFO : valid_misclass            0.22472
+2019-09-28 11:17:46,346 INFO : runtime                   1.06678
+2019-09-28 11:17:46,346 INFO : 
+2019-09-28 11:17:47,018 INFO : Time only for training updates: 0.67s
+2019-09-28 11:17:47,439 INFO : Epoch 73
+2019-09-28 11:17:47,439 INFO : train_loss                0.13393
+2019-09-28 11:17:47,439 INFO : valid_loss                0.43957
+2019-09-28 11:17:47,439 INFO : train_misclass            0.00562
+2019-09-28 11:17:47,439 INFO : valid_misclass            0.21348
+2019-09-28 11:17:47,439 INFO : runtime                   1.09375
+2019-09-28 11:17:47,439 INFO : 
+2019-09-28 11:17:48,086 INFO : Time only for training updates: 0.65s
+2019-09-28 11:17:48,516 INFO : Epoch 74
+2019-09-28 11:17:48,517 INFO : train_loss                0.13252
+2019-09-28 11:17:48,517 INFO : valid_loss                0.44253
+2019-09-28 11:17:48,517 INFO : train_misclass            0.00562
+2019-09-28 11:17:48,517 INFO : valid_misclass            0.20225
+2019-09-28 11:17:48,517 INFO : runtime                   1.06798
+2019-09-28 11:17:48,517 INFO : 
+2019-09-28 11:17:49,172 INFO : Time only for training updates: 0.65s
+2019-09-28 11:17:49,592 INFO : Epoch 75
+2019-09-28 11:17:49,592 INFO : train_loss                0.13117
+2019-09-28 11:17:49,592 INFO : valid_loss                0.44432
+2019-09-28 11:17:49,592 INFO : train_misclass            0.00843
+2019-09-28 11:17:49,592 INFO : valid_misclass            0.22472
+2019-09-28 11:17:49,593 INFO : runtime                   1.08673
+2019-09-28 11:17:49,593 INFO : 
+2019-09-28 11:17:50,256 INFO : Time only for training updates: 0.66s
+2019-09-28 11:17:50,678 INFO : Epoch 76
+2019-09-28 11:17:50,678 INFO : train_loss                0.13088
+2019-09-28 11:17:50,678 INFO : valid_loss                0.44373
+2019-09-28 11:17:50,678 INFO : train_misclass            0.00843
+2019-09-28 11:17:50,678 INFO : valid_misclass            0.22472
+2019-09-28 11:17:50,678 INFO : runtime                   1.08397
+2019-09-28 11:17:50,678 INFO : 
+2019-09-28 11:17:51,319 INFO : Time only for training updates: 0.64s
+2019-09-28 11:17:51,741 INFO : Epoch 77
+2019-09-28 11:17:51,741 INFO : train_loss                0.12973
+2019-09-28 11:17:51,741 INFO : valid_loss                0.44840
+2019-09-28 11:17:51,741 INFO : train_misclass            0.00843
+2019-09-28 11:17:51,741 INFO : valid_misclass            0.22472
+2019-09-28 11:17:51,741 INFO : runtime                   1.06250
+2019-09-28 11:17:51,741 INFO : 
+2019-09-28 11:17:52,397 INFO : Time only for training updates: 0.66s
+2019-09-28 11:17:52,834 INFO : Epoch 78
+2019-09-28 11:17:52,834 INFO : train_loss                0.12525
+2019-09-28 11:17:52,834 INFO : valid_loss                0.44080
+2019-09-28 11:17:52,834 INFO : train_misclass            0.00562
+2019-09-28 11:17:52,834 INFO : valid_misclass            0.21348
+2019-09-28 11:17:52,834 INFO : runtime                   1.07812
+2019-09-28 11:17:52,834 INFO : 
+2019-09-28 11:17:53,491 INFO : Time only for training updates: 0.66s
+2019-09-28 11:17:53,920 INFO : Epoch 79
+2019-09-28 11:17:53,921 INFO : train_loss                0.12372
+2019-09-28 11:17:53,921 INFO : valid_loss                0.43946
+2019-09-28 11:17:53,921 INFO : train_misclass            0.00562
+2019-09-28 11:17:53,921 INFO : valid_misclass            0.22472
+2019-09-28 11:17:53,921 INFO : runtime                   1.09375
+2019-09-28 11:17:53,921 INFO : 
+2019-09-28 11:17:54,585 INFO : Time only for training updates: 0.66s
+2019-09-28 11:17:55,007 INFO : Epoch 80
+2019-09-28 11:17:55,007 INFO : train_loss                0.12171
+2019-09-28 11:17:55,007 INFO : valid_loss                0.44415
+2019-09-28 11:17:55,007 INFO : train_misclass            0.00562
+2019-09-28 11:17:55,007 INFO : valid_misclass            0.21348
+2019-09-28 11:17:55,007 INFO : runtime                   1.09412
+2019-09-28 11:17:55,007 INFO : 
+2019-09-28 11:17:55,679 INFO : Time only for training updates: 0.67s
+2019-09-28 11:17:56,085 INFO : Epoch 81
+2019-09-28 11:17:56,085 INFO : train_loss                0.12079
+2019-09-28 11:17:56,085 INFO : valid_loss                0.45524
+2019-09-28 11:17:56,085 INFO : train_misclass            0.00562
+2019-09-28 11:17:56,085 INFO : valid_misclass            0.22472
+2019-09-28 11:17:56,085 INFO : runtime                   1.09375
+2019-09-28 11:17:56,085 INFO : 
+2019-09-28 11:17:56,741 INFO : Time only for training updates: 0.66s
+2019-09-28 11:17:57,147 INFO : Epoch 82
+2019-09-28 11:17:57,147 INFO : train_loss                0.12002
+2019-09-28 11:17:57,147 INFO : valid_loss                0.45840
+2019-09-28 11:17:57,147 INFO : train_misclass            0.00562
+2019-09-28 11:17:57,147 INFO : valid_misclass            0.20225
+2019-09-28 11:17:57,147 INFO : runtime                   1.06250
+2019-09-28 11:17:57,147 INFO : 
+2019-09-28 11:17:57,804 INFO : Time only for training updates: 0.66s
+2019-09-28 11:17:58,225 INFO : Epoch 83
+2019-09-28 11:17:58,225 INFO : train_loss                0.12017
+2019-09-28 11:17:58,225 INFO : valid_loss                0.46363
+2019-09-28 11:17:58,225 INFO : train_misclass            0.00562
+2019-09-28 11:17:58,225 INFO : valid_misclass            0.21348
+2019-09-28 11:17:58,225 INFO : runtime                   1.06250
+2019-09-28 11:17:58,225 INFO : 
+2019-09-28 11:17:58,882 INFO : Time only for training updates: 0.66s
+2019-09-28 11:17:59,304 INFO : Epoch 84
+2019-09-28 11:17:59,304 INFO : train_loss                0.11764
+2019-09-28 11:17:59,304 INFO : valid_loss                0.45466
+2019-09-28 11:17:59,304 INFO : train_misclass            0.00562
+2019-09-28 11:17:59,304 INFO : valid_misclass            0.20225
+2019-09-28 11:17:59,304 INFO : runtime                   1.07812
+2019-09-28 11:17:59,304 INFO : 
+2019-09-28 11:17:59,959 INFO : Time only for training updates: 0.66s
+2019-09-28 11:18:00,384 INFO : Epoch 85
+2019-09-28 11:18:00,384 INFO : train_loss                0.11552
+2019-09-28 11:18:00,384 INFO : valid_loss                0.44462
+2019-09-28 11:18:00,384 INFO : train_misclass            0.00281
+2019-09-28 11:18:00,384 INFO : valid_misclass            0.21348
+2019-09-28 11:18:00,384 INFO : runtime                   1.07732
+2019-09-28 11:18:00,384 INFO : 
+2019-09-28 11:18:01,049 INFO : Time only for training updates: 0.66s
+2019-09-28 11:18:01,470 INFO : Epoch 86
+2019-09-28 11:18:01,471 INFO : train_loss                0.11459
+2019-09-28 11:18:01,471 INFO : valid_loss                0.44152
+2019-09-28 11:18:01,471 INFO : train_misclass            0.00281
+2019-09-28 11:18:01,471 INFO : valid_misclass            0.21348
+2019-09-28 11:18:01,471 INFO : runtime                   1.08986
+2019-09-28 11:18:01,471 INFO : 
+2019-09-28 11:18:02,135 INFO : Time only for training updates: 0.66s
+2019-09-28 11:18:02,554 INFO : Epoch 87
+2019-09-28 11:18:02,555 INFO : train_loss                0.11633
+2019-09-28 11:18:02,555 INFO : valid_loss                0.43832
+2019-09-28 11:18:02,555 INFO : train_misclass            0.00281
+2019-09-28 11:18:02,555 INFO : valid_misclass            0.21348
+2019-09-28 11:18:02,555 INFO : runtime                   1.08597
+2019-09-28 11:18:02,555 INFO : 
+2019-09-28 11:18:03,220 INFO : Time only for training updates: 0.66s
+2019-09-28 11:18:03,643 INFO : Epoch 88
+2019-09-28 11:18:03,643 INFO : train_loss                0.11212
+2019-09-28 11:18:03,643 INFO : valid_loss                0.43252
+2019-09-28 11:18:03,643 INFO : train_misclass            0.00281
+2019-09-28 11:18:03,643 INFO : valid_misclass            0.20225
+2019-09-28 11:18:03,643 INFO : runtime                   1.08497
+2019-09-28 11:18:03,643 INFO : 
+2019-09-28 11:18:04,307 INFO : Time only for training updates: 0.66s
+2019-09-28 11:18:04,730 INFO : Epoch 89
+2019-09-28 11:18:04,730 INFO : train_loss                0.11102
+2019-09-28 11:18:04,730 INFO : valid_loss                0.43298
+2019-09-28 11:18:04,730 INFO : train_misclass            0.00281
+2019-09-28 11:18:04,730 INFO : valid_misclass            0.20225
+2019-09-28 11:18:04,730 INFO : runtime                   1.08768
+2019-09-28 11:18:04,730 INFO : 
+2019-09-28 11:18:05,391 INFO : Time only for training updates: 0.66s
+2019-09-28 11:18:05,822 INFO : Epoch 90
+2019-09-28 11:18:05,822 INFO : train_loss                0.10997
+2019-09-28 11:18:05,822 INFO : valid_loss                0.43427
+2019-09-28 11:18:05,822 INFO : train_misclass            0.00281
+2019-09-28 11:18:05,822 INFO : valid_misclass            0.22472
+2019-09-28 11:18:05,822 INFO : runtime                   1.08328
+2019-09-28 11:18:05,822 INFO : 
+2019-09-28 11:18:06,488 INFO : Time only for training updates: 0.67s
+2019-09-28 11:18:06,884 INFO : Epoch 91
+2019-09-28 11:18:06,884 INFO : train_loss                0.10623
+2019-09-28 11:18:06,884 INFO : valid_loss                0.42984
+2019-09-28 11:18:06,884 INFO : train_misclass            0.00281
+2019-09-28 11:18:06,884 INFO : valid_misclass            0.22472
+2019-09-28 11:18:06,884 INFO : runtime                   1.09720
+2019-09-28 11:18:06,884 INFO : 
+2019-09-28 11:18:07,554 INFO : Time only for training updates: 0.65s
+2019-09-28 11:18:07,994 INFO : Epoch 92
+2019-09-28 11:18:07,995 INFO : train_loss                0.10513
+2019-09-28 11:18:07,995 INFO : valid_loss                0.42892
+2019-09-28 11:18:07,995 INFO : train_misclass            0.00281
+2019-09-28 11:18:07,995 INFO : valid_misclass            0.21348
+2019-09-28 11:18:07,995 INFO : runtime                   1.06570
+2019-09-28 11:18:07,995 INFO : 
+2019-09-28 11:18:08,663 INFO : Time only for training updates: 0.67s
+2019-09-28 11:18:09,085 INFO : Epoch 93
+2019-09-28 11:18:09,085 INFO : train_loss                0.10438
+2019-09-28 11:18:09,085 INFO : valid_loss                0.43822
+2019-09-28 11:18:09,085 INFO : train_misclass            0.00281
+2019-09-28 11:18:09,085 INFO : valid_misclass            0.21348
+2019-09-28 11:18:09,085 INFO : runtime                   1.10941
+2019-09-28 11:18:09,085 INFO : 
+2019-09-28 11:18:09,748 INFO : Time only for training updates: 0.66s
+2019-09-28 11:18:10,166 INFO : Epoch 94
+2019-09-28 11:18:10,167 INFO : train_loss                0.10333
+2019-09-28 11:18:10,167 INFO : valid_loss                0.44068
+2019-09-28 11:18:10,167 INFO : train_misclass            0.00281
+2019-09-28 11:18:10,167 INFO : valid_misclass            0.20225
+2019-09-28 11:18:10,167 INFO : runtime                   1.08587
+2019-09-28 11:18:10,167 INFO : 
+2019-09-28 11:18:10,819 INFO : Time only for training updates: 0.65s
+2019-09-28 11:18:11,225 INFO : Epoch 95
+2019-09-28 11:18:11,225 INFO : train_loss                0.10233
+2019-09-28 11:18:11,225 INFO : valid_loss                0.44043
+2019-09-28 11:18:11,225 INFO : train_misclass            0.00281
+2019-09-28 11:18:11,225 INFO : valid_misclass            0.20225
+2019-09-28 11:18:11,225 INFO : runtime                   1.07002
+2019-09-28 11:18:11,225 INFO : 
+2019-09-28 11:18:11,897 INFO : Time only for training updates: 0.67s
+2019-09-28 11:18:12,302 INFO : Epoch 96
+2019-09-28 11:18:12,302 INFO : train_loss                0.10190
+2019-09-28 11:18:12,302 INFO : valid_loss                0.45068
+2019-09-28 11:18:12,302 INFO : train_misclass            0.00281
+2019-09-28 11:18:12,302 INFO : valid_misclass            0.20225
+2019-09-28 11:18:12,302 INFO : runtime                   1.07873
+2019-09-28 11:18:12,303 INFO : 
+2019-09-28 11:18:12,963 INFO : Time only for training updates: 0.66s
+2019-09-28 11:18:13,381 INFO : Epoch 97
+2019-09-28 11:18:13,381 INFO : train_loss                0.09949
+2019-09-28 11:18:13,381 INFO : valid_loss                0.45174
+2019-09-28 11:18:13,382 INFO : train_misclass            0.00281
+2019-09-28 11:18:13,382 INFO : valid_misclass            0.20225
+2019-09-28 11:18:13,382 INFO : runtime                   1.06639
+2019-09-28 11:18:13,382 INFO : 
+2019-09-28 11:18:14,059 INFO : Time only for training updates: 0.68s
+2019-09-28 11:18:14,483 INFO : Epoch 98
+2019-09-28 11:18:14,484 INFO : train_loss                0.09769
+2019-09-28 11:18:14,484 INFO : valid_loss                0.45484
+2019-09-28 11:18:14,484 INFO : train_misclass            0.00281
+2019-09-28 11:18:14,484 INFO : valid_misclass            0.21348
+2019-09-28 11:18:14,484 INFO : runtime                   1.09471
+2019-09-28 11:18:14,484 INFO : 
+2019-09-28 11:18:15,150 INFO : Time only for training updates: 0.67s
+2019-09-28 11:18:15,575 INFO : Epoch 99
+2019-09-28 11:18:15,575 INFO : train_loss                0.09653
+2019-09-28 11:18:15,575 INFO : valid_loss                0.46210
+2019-09-28 11:18:15,575 INFO : train_misclass            0.00281
+2019-09-28 11:18:15,575 INFO : valid_misclass            0.21348
+2019-09-28 11:18:15,575 INFO : runtime                   1.09133
+2019-09-28 11:18:15,575 INFO : 
+2019-09-28 11:18:16,238 INFO : Time only for training updates: 0.66s
+2019-09-28 11:18:16,648 INFO : Epoch 100
+2019-09-28 11:18:16,648 INFO : train_loss                0.09483
+2019-09-28 11:18:16,648 INFO : valid_loss                0.45999
+2019-09-28 11:18:16,648 INFO : train_misclass            0.00281
+2019-09-28 11:18:16,648 INFO : valid_misclass            0.21348
+2019-09-28 11:18:16,648 INFO : runtime                   1.08822
+2019-09-28 11:18:16,648 INFO : 
+2019-09-28 11:18:17,302 INFO : Time only for training updates: 0.65s
+2019-09-28 11:18:17,727 INFO : Epoch 101
+2019-09-28 11:18:17,728 INFO : train_loss                0.09402
+2019-09-28 11:18:17,728 INFO : valid_loss                0.45885
+2019-09-28 11:18:17,728 INFO : train_misclass            0.00000
+2019-09-28 11:18:17,728 INFO : valid_misclass            0.21348
+2019-09-28 11:18:17,728 INFO : runtime                   1.06399
+2019-09-28 11:18:17,728 INFO : 
+2019-09-28 11:18:18,409 INFO : Time only for training updates: 0.68s
+2019-09-28 11:18:18,837 INFO : Epoch 102
+2019-09-28 11:18:18,837 INFO : train_loss                0.09257
+2019-09-28 11:18:18,837 INFO : valid_loss                0.45304
+2019-09-28 11:18:18,837 INFO : train_misclass            0.00000
+2019-09-28 11:18:18,837 INFO : valid_misclass            0.21348
+2019-09-28 11:18:18,838 INFO : runtime                   1.10703
+2019-09-28 11:18:18,838 INFO : 
+2019-09-28 11:18:19,491 INFO : Time only for training updates: 0.65s
+2019-09-28 11:18:19,898 INFO : Epoch 103
+2019-09-28 11:18:19,898 INFO : train_loss                0.09212
+2019-09-28 11:18:19,898 INFO : valid_loss                0.44903
+2019-09-28 11:18:19,898 INFO : train_misclass            0.00000
+2019-09-28 11:18:19,898 INFO : valid_misclass            0.20225
+2019-09-28 11:18:19,899 INFO : runtime                   1.08179
+2019-09-28 11:18:19,899 INFO : 
+2019-09-28 11:18:20,553 INFO : Time only for training updates: 0.65s
+2019-09-28 11:18:20,968 INFO : Epoch 104
+2019-09-28 11:18:20,968 INFO : train_loss                0.09031
+2019-09-28 11:18:20,969 INFO : valid_loss                0.44807
+2019-09-28 11:18:20,969 INFO : train_misclass            0.00281
+2019-09-28 11:18:20,969 INFO : valid_misclass            0.21348
+2019-09-28 11:18:20,969 INFO : runtime                   1.06213
+2019-09-28 11:18:20,969 INFO : 
+2019-09-28 11:18:21,638 INFO : Time only for training updates: 0.67s
+2019-09-28 11:18:22,058 INFO : Epoch 105
+2019-09-28 11:18:22,058 INFO : train_loss                0.08956
+2019-09-28 11:18:22,058 INFO : valid_loss                0.45210
+2019-09-28 11:18:22,058 INFO : train_misclass            0.00281
+2019-09-28 11:18:22,058 INFO : valid_misclass            0.21348
+2019-09-28 11:18:22,058 INFO : runtime                   1.08512
+2019-09-28 11:18:22,058 INFO : 
+2019-09-28 11:18:22,711 INFO : Time only for training updates: 0.65s
+2019-09-28 11:18:23,131 INFO : Epoch 106
+2019-09-28 11:18:23,131 INFO : train_loss                0.08778
+2019-09-28 11:18:23,131 INFO : valid_loss                0.44989
+2019-09-28 11:18:23,131 INFO : train_misclass            0.00281
+2019-09-28 11:18:23,131 INFO : valid_misclass            0.21348
+2019-09-28 11:18:23,131 INFO : runtime                   1.07244
+2019-09-28 11:18:23,131 INFO : 
+2019-09-28 11:18:23,776 INFO : Time only for training updates: 0.65s
+2019-09-28 11:18:24,209 INFO : Epoch 107
+2019-09-28 11:18:24,209 INFO : train_loss                0.08733
+2019-09-28 11:18:24,209 INFO : valid_loss                0.45664
+2019-09-28 11:18:24,209 INFO : train_misclass            0.00281
+2019-09-28 11:18:24,209 INFO : valid_misclass            0.21348
+2019-09-28 11:18:24,209 INFO : runtime                   1.06567
+2019-09-28 11:18:24,209 INFO : 
+2019-09-28 11:18:24,870 INFO : Time only for training updates: 0.66s
+2019-09-28 11:18:25,291 INFO : Epoch 108
+2019-09-28 11:18:25,291 INFO : train_loss                0.08661
+2019-09-28 11:18:25,291 INFO : valid_loss                0.46245
+2019-09-28 11:18:25,291 INFO : train_misclass            0.00281
+2019-09-28 11:18:25,291 INFO : valid_misclass            0.21348
+2019-09-28 11:18:25,291 INFO : runtime                   1.09338
+2019-09-28 11:18:25,291 INFO : 
+2019-09-28 11:18:25,959 INFO : Time only for training updates: 0.67s
+2019-09-28 11:18:26,385 INFO : Epoch 109
+2019-09-28 11:18:26,385 INFO : train_loss                0.08571
+2019-09-28 11:18:26,385 INFO : valid_loss                0.46428
+2019-09-28 11:18:26,385 INFO : train_misclass            0.00281
+2019-09-28 11:18:26,385 INFO : valid_misclass            0.21348
+2019-09-28 11:18:26,385 INFO : runtime                   1.08895
+2019-09-28 11:18:26,385 INFO : 
+2019-09-28 11:18:27,066 INFO : Time only for training updates: 0.68s
+2019-09-28 11:18:27,485 INFO : Epoch 110
+2019-09-28 11:18:27,486 INFO : train_loss                0.08452
+2019-09-28 11:18:27,486 INFO : valid_loss                0.45834
+2019-09-28 11:18:27,486 INFO : train_misclass            0.00000
+2019-09-28 11:18:27,486 INFO : valid_misclass            0.20225
+2019-09-28 11:18:27,486 INFO : runtime                   1.10744
+2019-09-28 11:18:27,486 INFO : 
+2019-09-28 11:18:28,152 INFO : Time only for training updates: 0.66s
+2019-09-28 11:18:28,570 INFO : Epoch 111
+2019-09-28 11:18:28,570 INFO : train_loss                0.08309
+2019-09-28 11:18:28,570 INFO : valid_loss                0.45260
+2019-09-28 11:18:28,570 INFO : train_misclass            0.00000
+2019-09-28 11:18:28,570 INFO : valid_misclass            0.20225
+2019-09-28 11:18:28,570 INFO : runtime                   1.08599
+2019-09-28 11:18:28,570 INFO : 
+2019-09-28 11:18:29,245 INFO : Time only for training updates: 0.68s
+2019-09-28 11:18:29,672 INFO : Epoch 112
+2019-09-28 11:18:29,672 INFO : train_loss                0.08258
+2019-09-28 11:18:29,672 INFO : valid_loss                0.45778
+2019-09-28 11:18:29,672 INFO : train_misclass            0.00000
+2019-09-28 11:18:29,672 INFO : valid_misclass            0.20225
+2019-09-28 11:18:29,672 INFO : runtime                   1.09255
+2019-09-28 11:18:29,672 INFO : 
+2019-09-28 11:18:30,338 INFO : Time only for training updates: 0.65s
+2019-09-28 11:18:30,745 INFO : Epoch 113
+2019-09-28 11:18:30,746 INFO : train_loss                0.08122
+2019-09-28 11:18:30,746 INFO : valid_loss                0.45818
+2019-09-28 11:18:30,746 INFO : train_misclass            0.00000
+2019-09-28 11:18:30,746 INFO : valid_misclass            0.20225
+2019-09-28 11:18:30,746 INFO : runtime                   1.09303
+2019-09-28 11:18:30,746 INFO : 
+2019-09-28 11:18:31,399 INFO : Time only for training updates: 0.65s
+2019-09-28 11:18:31,837 INFO : Epoch 114
+2019-09-28 11:18:31,837 INFO : train_loss                0.08079
+2019-09-28 11:18:31,837 INFO : valid_loss                0.46315
+2019-09-28 11:18:31,837 INFO : train_misclass            0.00000
+2019-09-28 11:18:31,837 INFO : valid_misclass            0.21348
+2019-09-28 11:18:31,837 INFO : runtime                   1.06126
+2019-09-28 11:18:31,837 INFO : 
+2019-09-28 11:18:32,505 INFO : Time only for training updates: 0.67s
+2019-09-28 11:18:32,936 INFO : Epoch 115
+2019-09-28 11:18:32,936 INFO : train_loss                0.07988
+2019-09-28 11:18:32,936 INFO : valid_loss                0.47366
+2019-09-28 11:18:32,936 INFO : train_misclass            0.00000
+2019-09-28 11:18:32,936 INFO : valid_misclass            0.23596
+2019-09-28 11:18:32,936 INFO : runtime                   1.10638
+2019-09-28 11:18:32,936 INFO : 
+2019-09-28 11:18:33,588 INFO : Time only for training updates: 0.65s
+2019-09-28 11:18:34,025 INFO : Epoch 116
+2019-09-28 11:18:34,025 INFO : train_loss                0.08000
+2019-09-28 11:18:34,025 INFO : valid_loss                0.47821
+2019-09-28 11:18:34,025 INFO : train_misclass            0.00000
+2019-09-28 11:18:34,025 INFO : valid_misclass            0.23596
+2019-09-28 11:18:34,025 INFO : runtime                   1.08248
+2019-09-28 11:18:34,025 INFO : 
+2019-09-28 11:18:34,681 INFO : Time only for training updates: 0.66s
+2019-09-28 11:18:35,102 INFO : Epoch 117
+2019-09-28 11:18:35,103 INFO : train_loss                0.08010
+2019-09-28 11:18:35,103 INFO : valid_loss                0.47670
+2019-09-28 11:18:35,103 INFO : train_misclass            0.00000
+2019-09-28 11:18:35,103 INFO : valid_misclass            0.20225
+2019-09-28 11:18:35,103 INFO : runtime                   1.09325
+2019-09-28 11:18:35,103 INFO : 
+2019-09-28 11:18:35,766 INFO : Time only for training updates: 0.66s
+2019-09-28 11:18:36,204 INFO : Epoch 118
+2019-09-28 11:18:36,204 INFO : train_loss                0.07885
+2019-09-28 11:18:36,204 INFO : valid_loss                0.47393
+2019-09-28 11:18:36,204 INFO : train_misclass            0.00000
+2019-09-28 11:18:36,204 INFO : valid_misclass            0.20225
+2019-09-28 11:18:36,204 INFO : runtime                   1.08514
+2019-09-28 11:18:36,204 INFO : 
+2019-09-28 11:18:36,860 INFO : Time only for training updates: 0.66s
+2019-09-28 11:18:37,282 INFO : Epoch 119
+2019-09-28 11:18:37,282 INFO : train_loss                0.07700
+2019-09-28 11:18:37,282 INFO : valid_loss                0.47654
+2019-09-28 11:18:37,282 INFO : train_misclass            0.00000
+2019-09-28 11:18:37,282 INFO : valid_misclass            0.21348
+2019-09-28 11:18:37,282 INFO : runtime                   1.09374
+2019-09-28 11:18:37,282 INFO : 
+2019-09-28 11:18:37,938 INFO : Time only for training updates: 0.66s
+2019-09-28 11:18:38,344 INFO : Epoch 120
+2019-09-28 11:18:38,344 INFO : train_loss                0.07483
+2019-09-28 11:18:38,344 INFO : valid_loss                0.48076
+2019-09-28 11:18:38,344 INFO : train_misclass            0.00000
+2019-09-28 11:18:38,344 INFO : valid_misclass            0.21348
+2019-09-28 11:18:38,344 INFO : runtime                   1.07812
+2019-09-28 11:18:38,344 INFO : 
+2019-09-28 11:18:39,007 INFO : Time only for training updates: 0.66s
+2019-09-28 11:18:39,445 INFO : Epoch 121
+2019-09-28 11:18:39,445 INFO : train_loss                0.07397
+2019-09-28 11:18:39,445 INFO : valid_loss                0.48174
+2019-09-28 11:18:39,445 INFO : train_misclass            0.00000
+2019-09-28 11:18:39,445 INFO : valid_misclass            0.21348
+2019-09-28 11:18:39,445 INFO : runtime                   1.06893
+2019-09-28 11:18:39,445 INFO : 
+2019-09-28 11:18:40,101 INFO : Time only for training updates: 0.66s
+2019-09-28 11:18:40,523 INFO : Epoch 122
+2019-09-28 11:18:40,523 INFO : train_loss                0.07374
+2019-09-28 11:18:40,523 INFO : valid_loss                0.48601
+2019-09-28 11:18:40,523 INFO : train_misclass            0.00000
+2019-09-28 11:18:40,523 INFO : valid_misclass            0.21348
+2019-09-28 11:18:40,523 INFO : runtime                   1.09374
+2019-09-28 11:18:40,523 INFO : 
+2019-09-28 11:18:41,195 INFO : Time only for training updates: 0.67s
+2019-09-28 11:18:41,601 INFO : Epoch 123
+2019-09-28 11:18:41,601 INFO : train_loss                0.07351
+2019-09-28 11:18:41,601 INFO : valid_loss                0.48478
+2019-09-28 11:18:41,601 INFO : train_misclass            0.00000
+2019-09-28 11:18:41,601 INFO : valid_misclass            0.21348
+2019-09-28 11:18:41,601 INFO : runtime                   1.09375
+2019-09-28 11:18:41,601 INFO : 
+2019-09-28 11:18:42,273 INFO : Time only for training updates: 0.67s
+2019-09-28 11:18:42,695 INFO : Epoch 124
+2019-09-28 11:18:42,695 INFO : train_loss                0.07290
+2019-09-28 11:18:42,695 INFO : valid_loss                0.47687
+2019-09-28 11:18:42,695 INFO : train_misclass            0.00000
+2019-09-28 11:18:42,695 INFO : valid_misclass            0.20225
+2019-09-28 11:18:42,695 INFO : runtime                   1.07812
+2019-09-28 11:18:42,695 INFO : 
+2019-09-28 11:18:43,351 INFO : Time only for training updates: 0.66s
+2019-09-28 11:18:43,773 INFO : Epoch 125
+2019-09-28 11:18:43,773 INFO : train_loss                0.07158
+2019-09-28 11:18:43,773 INFO : valid_loss                0.47341
+2019-09-28 11:18:43,773 INFO : train_misclass            0.00000
+2019-09-28 11:18:43,773 INFO : valid_misclass            0.22472
+2019-09-28 11:18:43,773 INFO : runtime                   1.07812
+2019-09-28 11:18:43,773 INFO : 
+2019-09-28 11:18:44,429 INFO : Time only for training updates: 0.66s
+2019-09-28 11:18:44,835 INFO : Epoch 126
+2019-09-28 11:18:44,835 INFO : train_loss                0.07143
+2019-09-28 11:18:44,835 INFO : valid_loss                0.47411
+2019-09-28 11:18:44,835 INFO : train_misclass            0.00000
+2019-09-28 11:18:44,835 INFO : valid_misclass            0.21348
+2019-09-28 11:18:44,835 INFO : runtime                   1.07812
+2019-09-28 11:18:44,835 INFO : 
+2019-09-28 11:18:45,507 INFO : Time only for training updates: 0.67s
+2019-09-28 11:18:45,913 INFO : Epoch 127
+2019-09-28 11:18:45,913 INFO : train_loss                0.07133
+2019-09-28 11:18:45,913 INFO : valid_loss                0.47496
+2019-09-28 11:18:45,913 INFO : train_misclass            0.00000
+2019-09-28 11:18:45,913 INFO : valid_misclass            0.21348
+2019-09-28 11:18:45,913 INFO : runtime                   1.07812
+2019-09-28 11:18:45,913 INFO : 
+2019-09-28 11:18:46,585 INFO : Time only for training updates: 0.67s
+2019-09-28 11:18:46,991 INFO : Epoch 128
+2019-09-28 11:18:46,991 INFO : train_loss                0.06878
+2019-09-28 11:18:46,991 INFO : valid_loss                0.46773
+2019-09-28 11:18:46,991 INFO : train_misclass            0.00000
+2019-09-28 11:18:46,991 INFO : valid_misclass            0.21348
+2019-09-28 11:18:46,991 INFO : runtime                   1.07812
+2019-09-28 11:18:46,991 INFO : 
+2019-09-28 11:18:47,663 INFO : Time only for training updates: 0.67s
+2019-09-28 11:18:48,085 INFO : Epoch 129
+2019-09-28 11:18:48,085 INFO : train_loss                0.06800
+2019-09-28 11:18:48,085 INFO : valid_loss                0.45296
+2019-09-28 11:18:48,085 INFO : train_misclass            0.00000
+2019-09-28 11:18:48,085 INFO : valid_misclass            0.21348
+2019-09-28 11:18:48,085 INFO : runtime                   1.07812
+2019-09-28 11:18:48,085 INFO : 
+2019-09-28 11:18:48,741 INFO : Time only for training updates: 0.66s
+2019-09-28 11:18:49,148 INFO : Epoch 130
+2019-09-28 11:18:49,148 INFO : train_loss                0.06862
+2019-09-28 11:18:49,148 INFO : valid_loss                0.45355
+2019-09-28 11:18:49,148 INFO : train_misclass            0.00000
+2019-09-28 11:18:49,148 INFO : valid_misclass            0.21348
+2019-09-28 11:18:49,148 INFO : runtime                   1.07812
+2019-09-28 11:18:49,148 INFO : 
+2019-09-28 11:18:49,804 INFO : Time only for training updates: 0.66s
+2019-09-28 11:18:50,210 INFO : Epoch 131
+2019-09-28 11:18:50,210 INFO : train_loss                0.06756
+2019-09-28 11:18:50,210 INFO : valid_loss                0.45719
+2019-09-28 11:18:50,210 INFO : train_misclass            0.00000
+2019-09-28 11:18:50,210 INFO : valid_misclass            0.22472
+2019-09-28 11:18:50,210 INFO : runtime                   1.06250
+2019-09-28 11:18:50,210 INFO : 
+2019-09-28 11:18:50,866 INFO : Time only for training updates: 0.66s
+2019-09-28 11:18:51,273 INFO : Epoch 132
+2019-09-28 11:18:51,273 INFO : train_loss                0.06621
+2019-09-28 11:18:51,273 INFO : valid_loss                0.45389
+2019-09-28 11:18:51,273 INFO : train_misclass            0.00000
+2019-09-28 11:18:51,273 INFO : valid_misclass            0.23596
+2019-09-28 11:18:51,273 INFO : runtime                   1.06249
+2019-09-28 11:18:51,273 INFO : 
+2019-09-28 11:18:51,945 INFO : Time only for training updates: 0.67s
+2019-09-28 11:18:52,366 INFO : Epoch 133
+2019-09-28 11:18:52,366 INFO : train_loss                0.06618
+2019-09-28 11:18:52,366 INFO : valid_loss                0.46528
+2019-09-28 11:18:52,366 INFO : train_misclass            0.00000
+2019-09-28 11:18:52,366 INFO : valid_misclass            0.24719
+2019-09-28 11:18:52,366 INFO : runtime                   1.07812
+2019-09-28 11:18:52,366 INFO : 
+2019-09-28 11:18:53,023 INFO : Time only for training updates: 0.66s
+2019-09-28 11:18:53,445 INFO : Epoch 134
+2019-09-28 11:18:53,445 INFO : train_loss                0.06490
+2019-09-28 11:18:53,445 INFO : valid_loss                0.46713
+2019-09-28 11:18:53,445 INFO : train_misclass            0.00000
+2019-09-28 11:18:53,445 INFO : valid_misclass            0.24719
+2019-09-28 11:18:53,445 INFO : runtime                   1.07812
+2019-09-28 11:18:53,445 INFO : 
+2019-09-28 11:18:54,101 INFO : Time only for training updates: 0.66s
+2019-09-28 11:18:54,523 INFO : Epoch 135
+2019-09-28 11:18:54,523 INFO : train_loss                0.06426
+2019-09-28 11:18:54,523 INFO : valid_loss                0.47557
+2019-09-28 11:18:54,523 INFO : train_misclass            0.00000
+2019-09-28 11:18:54,523 INFO : valid_misclass            0.22472
+2019-09-28 11:18:54,523 INFO : runtime                   1.07812
+2019-09-28 11:18:54,523 INFO : 
+2019-09-28 11:18:55,195 INFO : Time only for training updates: 0.67s
+2019-09-28 11:18:55,601 INFO : Epoch 136
+2019-09-28 11:18:55,601 INFO : train_loss                0.06356
+2019-09-28 11:18:55,601 INFO : valid_loss                0.47980
+2019-09-28 11:18:55,601 INFO : train_misclass            0.00000
+2019-09-28 11:18:55,601 INFO : valid_misclass            0.20225
+2019-09-28 11:18:55,601 INFO : runtime                   1.09375
+2019-09-28 11:18:55,601 INFO : 
+2019-09-28 11:18:56,273 INFO : Time only for training updates: 0.67s
+2019-09-28 11:18:56,679 INFO : Epoch 137
+2019-09-28 11:18:56,679 INFO : train_loss                0.06269
+2019-09-28 11:18:56,679 INFO : valid_loss                0.47902
+2019-09-28 11:18:56,679 INFO : train_misclass            0.00000
+2019-09-28 11:18:56,679 INFO : valid_misclass            0.20225
+2019-09-28 11:18:56,679 INFO : runtime                   1.07812
+2019-09-28 11:18:56,679 INFO : 
+2019-09-28 11:18:57,335 INFO : Time only for training updates: 0.66s
+2019-09-28 11:18:57,773 INFO : Epoch 138
+2019-09-28 11:18:57,773 INFO : train_loss                0.06209
+2019-09-28 11:18:57,773 INFO : valid_loss                0.48303
+2019-09-28 11:18:57,773 INFO : train_misclass            0.00000
+2019-09-28 11:18:57,773 INFO : valid_misclass            0.22472
+2019-09-28 11:18:57,773 INFO : runtime                   1.06249
+2019-09-28 11:18:57,773 INFO : 
+2019-09-28 11:18:58,429 INFO : Time only for training updates: 0.66s
+2019-09-28 11:18:58,851 INFO : Epoch 139
+2019-09-28 11:18:58,851 INFO : train_loss                0.06177
+2019-09-28 11:18:58,851 INFO : valid_loss                0.49033
+2019-09-28 11:18:58,851 INFO : train_misclass            0.00000
+2019-09-28 11:18:58,851 INFO : valid_misclass            0.23596
+2019-09-28 11:18:58,851 INFO : runtime                   1.09375
+2019-09-28 11:18:58,851 INFO : 
+2019-09-28 11:18:59,507 INFO : Time only for training updates: 0.66s
+2019-09-28 11:18:59,913 INFO : Epoch 140
+2019-09-28 11:18:59,913 INFO : train_loss                0.06119
+2019-09-28 11:18:59,913 INFO : valid_loss                0.49787
+2019-09-28 11:18:59,913 INFO : train_misclass            0.00000
+2019-09-28 11:18:59,913 INFO : valid_misclass            0.23596
+2019-09-28 11:18:59,913 INFO : runtime                   1.07812
+2019-09-28 11:18:59,913 INFO : 
+2019-09-28 11:19:00,570 INFO : Time only for training updates: 0.66s
+2019-09-28 11:19:00,991 INFO : Epoch 141
+2019-09-28 11:19:00,991 INFO : train_loss                0.06180
+2019-09-28 11:19:00,991 INFO : valid_loss                0.49986
+2019-09-28 11:19:00,991 INFO : train_misclass            0.00000
+2019-09-28 11:19:00,991 INFO : valid_misclass            0.20225
+2019-09-28 11:19:00,991 INFO : runtime                   1.06250
+2019-09-28 11:19:00,991 INFO : 
+2019-09-28 11:19:01,648 INFO : Time only for training updates: 0.66s
+2019-09-28 11:19:02,054 INFO : Epoch 142
+2019-09-28 11:19:02,054 INFO : train_loss                0.06018
+2019-09-28 11:19:02,054 INFO : valid_loss                0.48551
+2019-09-28 11:19:02,054 INFO : train_misclass            0.00000
+2019-09-28 11:19:02,054 INFO : valid_misclass            0.22472
+2019-09-28 11:19:02,054 INFO : runtime                   1.07812
+2019-09-28 11:19:02,054 INFO : 
+2019-09-28 11:19:02,726 INFO : Time only for training updates: 0.67s
+2019-09-28 11:19:03,132 INFO : Epoch 143
+2019-09-28 11:19:03,132 INFO : train_loss                0.06203
+2019-09-28 11:19:03,132 INFO : valid_loss                0.49043
+2019-09-28 11:19:03,132 INFO : train_misclass            0.00000
+2019-09-28 11:19:03,132 INFO : valid_misclass            0.21348
+2019-09-28 11:19:03,132 INFO : runtime                   1.07812
+2019-09-28 11:19:03,132 INFO : 
+2019-09-28 11:19:03,804 INFO : Time only for training updates: 0.67s
+2019-09-28 11:19:04,226 INFO : Epoch 144
+2019-09-28 11:19:04,226 INFO : train_loss                0.05951
+2019-09-28 11:19:04,226 INFO : valid_loss                0.48147
+2019-09-28 11:19:04,226 INFO : train_misclass            0.00000
+2019-09-28 11:19:04,226 INFO : valid_misclass            0.21348
+2019-09-28 11:19:04,226 INFO : runtime                   1.07812
+2019-09-28 11:19:04,226 INFO : 
+2019-09-28 11:19:04,882 INFO : Time only for training updates: 0.66s
+2019-09-28 11:19:05,304 INFO : Epoch 145
+2019-09-28 11:19:05,304 INFO : train_loss                0.05921
+2019-09-28 11:19:05,304 INFO : valid_loss                0.47977
+2019-09-28 11:19:05,304 INFO : train_misclass            0.00000
+2019-09-28 11:19:05,320 INFO : valid_misclass            0.22472
+2019-09-28 11:19:05,320 INFO : runtime                   1.07813
+2019-09-28 11:19:05,320 INFO : 
+2019-09-28 11:19:05,976 INFO : Time only for training updates: 0.64s
+2019-09-28 11:19:06,398 INFO : Epoch 146
+2019-09-28 11:19:06,398 INFO : train_loss                0.05792
+2019-09-28 11:19:06,398 INFO : valid_loss                0.47122
+2019-09-28 11:19:06,398 INFO : train_misclass            0.00000
+2019-09-28 11:19:06,398 INFO : valid_misclass            0.23596
+2019-09-28 11:19:06,398 INFO : runtime                   1.09374
+2019-09-28 11:19:06,398 INFO : 
+2019-09-28 11:19:07,054 INFO : Time only for training updates: 0.66s
+2019-09-28 11:19:07,476 INFO : Epoch 147
+2019-09-28 11:19:07,476 INFO : train_loss                0.05711
+2019-09-28 11:19:07,476 INFO : valid_loss                0.47732
+2019-09-28 11:19:07,476 INFO : train_misclass            0.00000
+2019-09-28 11:19:07,476 INFO : valid_misclass            0.24719
+2019-09-28 11:19:07,476 INFO : runtime                   1.07812
+2019-09-28 11:19:07,476 INFO : 
+2019-09-28 11:19:08,148 INFO : Time only for training updates: 0.67s
+2019-09-28 11:19:08,570 INFO : Epoch 148
+2019-09-28 11:19:08,570 INFO : train_loss                0.05631
+2019-09-28 11:19:08,570 INFO : valid_loss                0.46758
+2019-09-28 11:19:08,570 INFO : train_misclass            0.00000
+2019-09-28 11:19:08,570 INFO : valid_misclass            0.23596
+2019-09-28 11:19:08,570 INFO : runtime                   1.09375
+2019-09-28 11:19:08,570 INFO : 
+2019-09-28 11:19:09,226 INFO : Time only for training updates: 0.66s
+2019-09-28 11:19:09,648 INFO : Epoch 149
+2019-09-28 11:19:09,648 INFO : train_loss                0.05607
+2019-09-28 11:19:09,648 INFO : valid_loss                0.47401
+2019-09-28 11:19:09,648 INFO : train_misclass            0.00000
+2019-09-28 11:19:09,648 INFO : valid_misclass            0.22472
+2019-09-28 11:19:09,648 INFO : runtime                   1.07812
+2019-09-28 11:19:09,648 INFO : 
+2019-09-28 11:19:10,304 INFO : Time only for training updates: 0.66s
+2019-09-28 11:19:10,726 INFO : Epoch 150
+2019-09-28 11:19:10,726 INFO : train_loss                0.05588
+2019-09-28 11:19:10,726 INFO : valid_loss                0.48139
+2019-09-28 11:19:10,726 INFO : train_misclass            0.00000
+2019-09-28 11:19:10,726 INFO : valid_misclass            0.21348
+2019-09-28 11:19:10,726 INFO : runtime                   1.07812
+2019-09-28 11:19:10,726 INFO : 
+2019-09-28 11:19:11,398 INFO : Time only for training updates: 0.67s
+2019-09-28 11:19:11,835 INFO : Epoch 151
+2019-09-28 11:19:11,835 INFO : train_loss                0.05519
+2019-09-28 11:19:11,835 INFO : valid_loss                0.48146
+2019-09-28 11:19:11,835 INFO : train_misclass            0.00000
+2019-09-28 11:19:11,835 INFO : valid_misclass            0.21348
+2019-09-28 11:19:11,835 INFO : runtime                   1.09375
+2019-09-28 11:19:11,835 INFO : 
+2019-09-28 11:19:12,491 INFO : Time only for training updates: 0.66s
+2019-09-28 11:19:12,913 INFO : Epoch 152
+2019-09-28 11:19:12,913 INFO : train_loss                0.05513
+2019-09-28 11:19:12,913 INFO : valid_loss                0.46961
+2019-09-28 11:19:12,913 INFO : train_misclass            0.00000
+2019-09-28 11:19:12,913 INFO : valid_misclass            0.23596
+2019-09-28 11:19:12,913 INFO : runtime                   1.09374
+2019-09-28 11:19:12,913 INFO : 
+2019-09-28 11:19:13,585 INFO : Time only for training updates: 0.67s
+2019-09-28 11:19:14,007 INFO : Epoch 153
+2019-09-28 11:19:14,007 INFO : train_loss                0.05531
+2019-09-28 11:19:14,007 INFO : valid_loss                0.46404
+2019-09-28 11:19:14,007 INFO : train_misclass            0.00000
+2019-09-28 11:19:14,007 INFO : valid_misclass            0.23596
+2019-09-28 11:19:14,007 INFO : runtime                   1.09375
+2019-09-28 11:19:14,007 INFO : 
+2019-09-28 11:19:14,679 INFO : Time only for training updates: 0.67s
+2019-09-28 11:19:15,101 INFO : Epoch 154
+2019-09-28 11:19:15,101 INFO : train_loss                0.05347
+2019-09-28 11:19:15,101 INFO : valid_loss                0.46813
+2019-09-28 11:19:15,101 INFO : train_misclass            0.00000
+2019-09-28 11:19:15,101 INFO : valid_misclass            0.21348
+2019-09-28 11:19:15,101 INFO : runtime                   1.09374
+2019-09-28 11:19:15,101 INFO : 
+2019-09-28 11:19:15,773 INFO : Time only for training updates: 0.67s
+2019-09-28 11:19:16,194 INFO : Epoch 155
+2019-09-28 11:19:16,194 INFO : train_loss                0.05283
+2019-09-28 11:19:16,194 INFO : valid_loss                0.47587
+2019-09-28 11:19:16,194 INFO : train_misclass            0.00000
+2019-09-28 11:19:16,194 INFO : valid_misclass            0.21348
+2019-09-28 11:19:16,194 INFO : runtime                   1.09375
+2019-09-28 11:19:16,194 INFO : 
+2019-09-28 11:19:16,866 INFO : Time only for training updates: 0.67s
+2019-09-28 11:19:17,288 INFO : Epoch 156
+2019-09-28 11:19:17,288 INFO : train_loss                0.05319
+2019-09-28 11:19:17,288 INFO : valid_loss                0.48111
+2019-09-28 11:19:17,288 INFO : train_misclass            0.00000
+2019-09-28 11:19:17,288 INFO : valid_misclass            0.21348
+2019-09-28 11:19:17,288 INFO : runtime                   1.09374
+2019-09-28 11:19:17,288 INFO : 
+2019-09-28 11:19:17,944 INFO : Time only for training updates: 0.66s
+2019-09-28 11:19:18,351 INFO : Epoch 157
+2019-09-28 11:19:18,351 INFO : train_loss                0.05347
+2019-09-28 11:19:18,351 INFO : valid_loss                0.47912
+2019-09-28 11:19:18,351 INFO : train_misclass            0.00000
+2019-09-28 11:19:18,351 INFO : valid_misclass            0.21348
+2019-09-28 11:19:18,351 INFO : runtime                   1.07811
+2019-09-28 11:19:18,351 INFO : 
+2019-09-28 11:19:19,007 INFO : Time only for training updates: 0.66s
+2019-09-28 11:19:19,413 INFO : Epoch 158
+2019-09-28 11:19:19,413 INFO : train_loss                0.05167
+2019-09-28 11:19:19,413 INFO : valid_loss                0.46984
+2019-09-28 11:19:19,413 INFO : train_misclass            0.00000
+2019-09-28 11:19:19,429 INFO : valid_misclass            0.21348
+2019-09-28 11:19:19,429 INFO : runtime                   1.06250
+2019-09-28 11:19:19,429 INFO : 
+2019-09-28 11:19:20,085 INFO : Time only for training updates: 0.66s
+2019-09-28 11:19:20,507 INFO : Epoch 159
+2019-09-28 11:19:20,507 INFO : train_loss                0.05121
+2019-09-28 11:19:20,507 INFO : valid_loss                0.47297
+2019-09-28 11:19:20,507 INFO : train_misclass            0.00000
+2019-09-28 11:19:20,507 INFO : valid_misclass            0.21348
+2019-09-28 11:19:20,507 INFO : runtime                   1.07812
+2019-09-28 11:19:20,507 INFO : 
+2019-09-28 11:19:21,179 INFO : Time only for training updates: 0.67s
+2019-09-28 11:19:21,601 INFO : Epoch 160
+2019-09-28 11:19:21,601 INFO : train_loss                0.05060
+2019-09-28 11:19:21,601 INFO : valid_loss                0.48050
+2019-09-28 11:19:21,601 INFO : train_misclass            0.00000
+2019-09-28 11:19:21,601 INFO : valid_misclass            0.22472
+2019-09-28 11:19:21,601 INFO : runtime                   1.09374
+2019-09-28 11:19:21,601 INFO : 
+2019-09-28 11:19:22,257 INFO : Time only for training updates: 0.66s
+2019-09-28 11:19:22,679 INFO : Epoch 161
+2019-09-28 11:19:22,679 INFO : train_loss                0.05045
+2019-09-28 11:19:22,679 INFO : valid_loss                0.48845
+2019-09-28 11:19:22,679 INFO : train_misclass            0.00000
+2019-09-28 11:19:22,679 INFO : valid_misclass            0.22472
+2019-09-28 11:19:22,679 INFO : runtime                   1.07812
+2019-09-28 11:19:22,679 INFO : 
+2019-09-28 11:19:23,351 INFO : Time only for training updates: 0.67s
+2019-09-28 11:19:23,757 INFO : Epoch 162
+2019-09-28 11:19:23,757 INFO : train_loss                0.05014
+2019-09-28 11:19:23,757 INFO : valid_loss                0.48367
+2019-09-28 11:19:23,757 INFO : train_misclass            0.00000
+2019-09-28 11:19:23,757 INFO : valid_misclass            0.21348
+2019-09-28 11:19:23,757 INFO : runtime                   1.09375
+2019-09-28 11:19:23,757 INFO : 
+2019-09-28 11:19:24,429 INFO : Time only for training updates: 0.67s
+2019-09-28 11:19:24,866 INFO : Epoch 163
+2019-09-28 11:19:24,866 INFO : train_loss                0.04981
+2019-09-28 11:19:24,866 INFO : valid_loss                0.48110
+2019-09-28 11:19:24,866 INFO : train_misclass            0.00000
+2019-09-28 11:19:24,866 INFO : valid_misclass            0.21348
+2019-09-28 11:19:24,866 INFO : runtime                   1.07812
+2019-09-28 11:19:24,866 INFO : 
+2019-09-28 11:19:25,523 INFO : Time only for training updates: 0.66s
+2019-09-28 11:19:25,929 INFO : Epoch 164
+2019-09-28 11:19:25,929 INFO : train_loss                0.04991
+2019-09-28 11:19:25,929 INFO : valid_loss                0.47814
+2019-09-28 11:19:25,929 INFO : train_misclass            0.00000
+2019-09-28 11:19:25,929 INFO : valid_misclass            0.21348
+2019-09-28 11:19:25,929 INFO : runtime                   1.09375
+2019-09-28 11:19:25,929 INFO : 
+2019-09-28 11:19:26,601 INFO : Time only for training updates: 0.67s
+2019-09-28 11:19:27,038 INFO : Epoch 165
+2019-09-28 11:19:27,038 INFO : train_loss                0.04835
+2019-09-28 11:19:27,038 INFO : valid_loss                0.46774
+2019-09-28 11:19:27,038 INFO : train_misclass            0.00000
+2019-09-28 11:19:27,038 INFO : valid_misclass            0.20225
+2019-09-28 11:19:27,038 INFO : runtime                   1.07812
+2019-09-28 11:19:27,038 INFO : 
+2019-09-28 11:19:27,694 INFO : Time only for training updates: 0.66s
+2019-09-28 11:19:28,116 INFO : Epoch 166
+2019-09-28 11:19:28,116 INFO : train_loss                0.04866
+2019-09-28 11:19:28,116 INFO : valid_loss                0.48259
+2019-09-28 11:19:28,116 INFO : train_misclass            0.00000
+2019-09-28 11:19:28,116 INFO : valid_misclass            0.21348
+2019-09-28 11:19:28,116 INFO : runtime                   1.09374
+2019-09-28 11:19:28,116 INFO : 
+2019-09-28 11:19:28,773 INFO : Time only for training updates: 0.66s
+2019-09-28 11:19:29,179 INFO : Epoch 167
+2019-09-28 11:19:29,179 INFO : train_loss                0.04763
+2019-09-28 11:19:29,179 INFO : valid_loss                0.48593
+2019-09-28 11:19:29,179 INFO : train_misclass            0.00000
+2019-09-28 11:19:29,179 INFO : valid_misclass            0.21348
+2019-09-28 11:19:29,179 INFO : runtime                   1.07812
+2019-09-28 11:19:29,179 INFO : 
+2019-09-28 11:19:30,038 INFO : Time only for training updates: 0.86s
+2019-09-28 11:19:30,444 INFO : Epoch 168
+2019-09-28 11:19:30,444 INFO : train_loss                0.04746
+2019-09-28 11:19:30,444 INFO : valid_loss                0.48240
+2019-09-28 11:19:30,444 INFO : train_misclass            0.00000
+2019-09-28 11:19:30,444 INFO : valid_misclass            0.21348
+2019-09-28 11:19:30,444 INFO : runtime                   1.26562
+2019-09-28 11:19:30,444 INFO : 
+2019-09-28 11:19:31,101 INFO : Time only for training updates: 0.64s
+2019-09-28 11:19:31,523 INFO : Epoch 169
+2019-09-28 11:19:31,538 INFO : train_loss                0.04755
+2019-09-28 11:19:31,538 INFO : valid_loss                0.48021
+2019-09-28 11:19:31,538 INFO : train_misclass            0.00000
+2019-09-28 11:19:31,538 INFO : valid_misclass            0.21348
+2019-09-28 11:19:31,538 INFO : runtime                   1.06249
+2019-09-28 11:19:31,538 INFO : 
+2019-09-28 11:19:32,194 INFO : Time only for training updates: 0.66s
+2019-09-28 11:19:32,601 INFO : Epoch 170
+2019-09-28 11:19:32,601 INFO : train_loss                0.04694
+2019-09-28 11:19:32,601 INFO : valid_loss                0.47108
+2019-09-28 11:19:32,601 INFO : train_misclass            0.00000
+2019-09-28 11:19:32,601 INFO : valid_misclass            0.21348
+2019-09-28 11:19:32,601 INFO : runtime                   1.09375
+2019-09-28 11:19:32,601 INFO : 
+2019-09-28 11:19:33,257 INFO : Time only for training updates: 0.66s
+2019-09-28 11:19:33,679 INFO : Epoch 171
+2019-09-28 11:19:33,679 INFO : train_loss                0.04610
+2019-09-28 11:19:33,679 INFO : valid_loss                0.46076
+2019-09-28 11:19:33,679 INFO : train_misclass            0.00000
+2019-09-28 11:19:33,679 INFO : valid_misclass            0.21348
+2019-09-28 11:19:33,679 INFO : runtime                   1.06249
+2019-09-28 11:19:33,679 INFO : 
+2019-09-28 11:19:34,335 INFO : Time only for training updates: 0.66s
+2019-09-28 11:19:34,741 INFO : Epoch 172
+2019-09-28 11:19:34,741 INFO : train_loss                0.04562
+2019-09-28 11:19:34,741 INFO : valid_loss                0.45736
+2019-09-28 11:19:34,741 INFO : train_misclass            0.00000
+2019-09-28 11:19:34,741 INFO : valid_misclass            0.21348
+2019-09-28 11:19:34,741 INFO : runtime                   1.07812
+2019-09-28 11:19:34,741 INFO : 
+2019-09-28 11:19:35,413 INFO : Time only for training updates: 0.67s
+2019-09-28 11:19:35,835 INFO : Epoch 173
+2019-09-28 11:19:35,835 INFO : train_loss                0.04602
+2019-09-28 11:19:35,835 INFO : valid_loss                0.47035
+2019-09-28 11:19:35,835 INFO : train_misclass            0.00000
+2019-09-28 11:19:35,835 INFO : valid_misclass            0.21348
+2019-09-28 11:19:35,835 INFO : runtime                   1.07812
+2019-09-28 11:19:35,835 INFO : 
+2019-09-28 11:19:36,491 INFO : Time only for training updates: 0.66s
+2019-09-28 11:19:36,929 INFO : Epoch 174
+2019-09-28 11:19:36,929 INFO : train_loss                0.04586
+2019-09-28 11:19:36,929 INFO : valid_loss                0.47963
+2019-09-28 11:19:36,929 INFO : train_misclass            0.00000
+2019-09-28 11:19:36,929 INFO : valid_misclass            0.21348
+2019-09-28 11:19:36,929 INFO : runtime                   1.07812
+2019-09-28 11:19:36,929 INFO : 
+2019-09-28 11:19:37,601 INFO : Time only for training updates: 0.67s
+2019-09-28 11:19:38,023 INFO : Epoch 175
+2019-09-28 11:19:38,023 INFO : train_loss                0.04529
+2019-09-28 11:19:38,023 INFO : valid_loss                0.48045
+2019-09-28 11:19:38,023 INFO : train_misclass            0.00000
+2019-09-28 11:19:38,023 INFO : valid_misclass            0.21348
+2019-09-28 11:19:38,023 INFO : runtime                   1.10937
+2019-09-28 11:19:38,023 INFO : 
+2019-09-28 11:19:38,694 INFO : Time only for training updates: 0.67s
+2019-09-28 11:19:39,119 INFO : Epoch 176
+2019-09-28 11:19:39,119 INFO : train_loss                0.04440
+2019-09-28 11:19:39,119 INFO : valid_loss                0.46801
+2019-09-28 11:19:39,119 INFO : train_misclass            0.00000
+2019-09-28 11:19:39,119 INFO : valid_misclass            0.20225
+2019-09-28 11:19:39,119 INFO : runtime                   1.09375
+2019-09-28 11:19:39,119 INFO : 
+2019-09-28 11:19:39,757 INFO : Time only for training updates: 0.64s
+2019-09-28 11:19:40,194 INFO : Epoch 177
+2019-09-28 11:19:40,194 INFO : train_loss                0.04397
+2019-09-28 11:19:40,194 INFO : valid_loss                0.46190
+2019-09-28 11:19:40,194 INFO : train_misclass            0.00000
+2019-09-28 11:19:40,194 INFO : valid_misclass            0.22472
+2019-09-28 11:19:40,194 INFO : runtime                   1.06250
+2019-09-28 11:19:40,194 INFO : 
+2019-09-28 11:19:40,851 INFO : Time only for training updates: 0.66s
+2019-09-28 11:19:41,257 INFO : Epoch 178
+2019-09-28 11:19:41,257 INFO : train_loss                0.04407
+2019-09-28 11:19:41,257 INFO : valid_loss                0.46415
+2019-09-28 11:19:41,257 INFO : train_misclass            0.00000
+2019-09-28 11:19:41,257 INFO : valid_misclass            0.22472
+2019-09-28 11:19:41,257 INFO : runtime                   1.09375
+2019-09-28 11:19:41,257 INFO : 
+2019-09-28 11:19:41,913 INFO : Time only for training updates: 0.66s
+2019-09-28 11:19:42,319 INFO : Epoch 179
+2019-09-28 11:19:42,319 INFO : train_loss                0.04404
+2019-09-28 11:19:42,319 INFO : valid_loss                0.45745
+2019-09-28 11:19:42,319 INFO : train_misclass            0.00000
+2019-09-28 11:19:42,319 INFO : valid_misclass            0.22472
+2019-09-28 11:19:42,319 INFO : runtime                   1.06249
+2019-09-28 11:19:42,319 INFO : 
+2019-09-28 11:19:42,976 INFO : Time only for training updates: 0.66s
+2019-09-28 11:19:43,398 INFO : Epoch 180
+2019-09-28 11:19:43,398 INFO : train_loss                0.04335
+2019-09-28 11:19:43,398 INFO : valid_loss                0.45632
+2019-09-28 11:19:43,398 INFO : train_misclass            0.00000
+2019-09-28 11:19:43,398 INFO : valid_misclass            0.22472
+2019-09-28 11:19:43,398 INFO : runtime                   1.06249
+2019-09-28 11:19:43,398 INFO : 
+2019-09-28 11:19:44,054 INFO : Time only for training updates: 0.66s
+2019-09-28 11:19:44,476 INFO : Epoch 181
+2019-09-28 11:19:44,476 INFO : train_loss                0.04332
+2019-09-28 11:19:44,476 INFO : valid_loss                0.45726
+2019-09-28 11:19:44,476 INFO : train_misclass            0.00000
+2019-09-28 11:19:44,476 INFO : valid_misclass            0.21348
+2019-09-28 11:19:44,476 INFO : runtime                   1.07812
+2019-09-28 11:19:44,476 INFO : 
+2019-09-28 11:19:45,132 INFO : Time only for training updates: 0.66s
+2019-09-28 11:19:45,569 INFO : Epoch 182
+2019-09-28 11:19:45,569 INFO : train_loss                0.04304
+2019-09-28 11:19:45,569 INFO : valid_loss                0.45896
+2019-09-28 11:19:45,569 INFO : train_misclass            0.00000
+2019-09-28 11:19:45,569 INFO : valid_misclass            0.21348
+2019-09-28 11:19:45,569 INFO : runtime                   1.07812
+2019-09-28 11:19:45,569 INFO : 
+2019-09-28 11:19:46,241 INFO : Time only for training updates: 0.66s
+2019-09-28 11:19:46,647 INFO : Epoch 183
+2019-09-28 11:19:46,647 INFO : train_loss                0.04283
+2019-09-28 11:19:46,647 INFO : valid_loss                0.46928
+2019-09-28 11:19:46,647 INFO : train_misclass            0.00000
+2019-09-28 11:19:46,647 INFO : valid_misclass            0.21348
+2019-09-28 11:19:46,647 INFO : runtime                   1.10937
+2019-09-28 11:19:46,647 INFO : 
+2019-09-28 11:19:47,335 INFO : Time only for training updates: 0.66s
+2019-09-28 11:19:47,757 INFO : Epoch 184
+2019-09-28 11:19:47,757 INFO : train_loss                0.04222
+2019-09-28 11:19:47,757 INFO : valid_loss                0.47323
+2019-09-28 11:19:47,757 INFO : train_misclass            0.00000
+2019-09-28 11:19:47,757 INFO : valid_misclass            0.21348
+2019-09-28 11:19:47,757 INFO : runtime                   1.09375
+2019-09-28 11:19:47,757 INFO : 
+2019-09-28 11:19:48,413 INFO : Time only for training updates: 0.66s
+2019-09-28 11:19:48,819 INFO : Epoch 185
+2019-09-28 11:19:48,819 INFO : train_loss                0.04153
+2019-09-28 11:19:48,819 INFO : valid_loss                0.47132
+2019-09-28 11:19:48,819 INFO : train_misclass            0.00000
+2019-09-28 11:19:48,819 INFO : valid_misclass            0.21348
+2019-09-28 11:19:48,819 INFO : runtime                   1.07812
+2019-09-28 11:19:48,819 INFO : 
+2019-09-28 11:19:49,491 INFO : Time only for training updates: 0.67s
+2019-09-28 11:19:49,897 INFO : Epoch 186
+2019-09-28 11:19:49,897 INFO : train_loss                0.04143
+2019-09-28 11:19:49,897 INFO : valid_loss                0.47264
+2019-09-28 11:19:49,897 INFO : train_misclass            0.00000
+2019-09-28 11:19:49,897 INFO : valid_misclass            0.21348
+2019-09-28 11:19:49,897 INFO : runtime                   1.07812
+2019-09-28 11:19:49,897 INFO : 
+2019-09-28 11:19:50,554 INFO : Time only for training updates: 0.66s
+2019-09-28 11:19:50,960 INFO : Epoch 187
+2019-09-28 11:19:50,960 INFO : train_loss                0.04121
+2019-09-28 11:19:50,960 INFO : valid_loss                0.47480
+2019-09-28 11:19:50,960 INFO : train_misclass            0.00000
+2019-09-28 11:19:50,960 INFO : valid_misclass            0.21348
+2019-09-28 11:19:50,960 INFO : runtime                   1.06250
+2019-09-28 11:19:50,960 INFO : 
+2019-09-28 11:19:51,616 INFO : Time only for training updates: 0.66s
+2019-09-28 11:19:52,038 INFO : Epoch 188
+2019-09-28 11:19:52,038 INFO : train_loss                0.04079
+2019-09-28 11:19:52,038 INFO : valid_loss                0.47232
+2019-09-28 11:19:52,038 INFO : train_misclass            0.00000
+2019-09-28 11:19:52,038 INFO : valid_misclass            0.21348
+2019-09-28 11:19:52,038 INFO : runtime                   1.06250
+2019-09-28 11:19:52,038 INFO : 
+2019-09-28 11:19:52,710 INFO : Time only for training updates: 0.67s
+2019-09-28 11:19:53,132 INFO : Epoch 189
+2019-09-28 11:19:53,132 INFO : train_loss                0.04032
+2019-09-28 11:19:53,132 INFO : valid_loss                0.47141
+2019-09-28 11:19:53,132 INFO : train_misclass            0.00000
+2019-09-28 11:19:53,132 INFO : valid_misclass            0.21348
+2019-09-28 11:19:53,132 INFO : runtime                   1.09375
+2019-09-28 11:19:53,132 INFO : 
+2019-09-28 11:19:53,788 INFO : Time only for training updates: 0.66s
+2019-09-28 11:19:54,210 INFO : Epoch 190
+2019-09-28 11:19:54,210 INFO : train_loss                0.04031
+2019-09-28 11:19:54,210 INFO : valid_loss                0.46986
+2019-09-28 11:19:54,210 INFO : train_misclass            0.00000
+2019-09-28 11:19:54,210 INFO : valid_misclass            0.19101
+2019-09-28 11:19:54,210 INFO : runtime                   1.07812
+2019-09-28 11:19:54,210 INFO : 
+2019-09-28 11:19:54,866 INFO : Time only for training updates: 0.66s
+2019-09-28 11:19:55,272 INFO : Epoch 191
+2019-09-28 11:19:55,272 INFO : train_loss                0.04030
+2019-09-28 11:19:55,272 INFO : valid_loss                0.46854
+2019-09-28 11:19:55,272 INFO : train_misclass            0.00000
+2019-09-28 11:19:55,272 INFO : valid_misclass            0.19101
+2019-09-28 11:19:55,272 INFO : runtime                   1.07812
+2019-09-28 11:19:55,272 INFO : 
+2019-09-28 11:19:55,929 INFO : Time only for training updates: 0.66s
+2019-09-28 11:19:56,335 INFO : Epoch 192
+2019-09-28 11:19:56,335 INFO : train_loss                0.03967
+2019-09-28 11:19:56,335 INFO : valid_loss                0.45839
+2019-09-28 11:19:56,335 INFO : train_misclass            0.00000
+2019-09-28 11:19:56,335 INFO : valid_misclass            0.21348
+2019-09-28 11:19:56,335 INFO : runtime                   1.06250
+2019-09-28 11:19:56,335 INFO : 
+2019-09-28 11:19:56,991 INFO : Time only for training updates: 0.66s
+2019-09-28 11:19:57,413 INFO : Epoch 193
+2019-09-28 11:19:57,413 INFO : train_loss                0.03940
+2019-09-28 11:19:57,413 INFO : valid_loss                0.45497
+2019-09-28 11:19:57,413 INFO : train_misclass            0.00000
+2019-09-28 11:19:57,413 INFO : valid_misclass            0.21348
+2019-09-28 11:19:57,413 INFO : runtime                   1.07812
+2019-09-28 11:19:57,413 INFO : 
+2019-09-28 11:19:58,085 INFO : Time only for training updates: 0.67s
+2019-09-28 11:19:58,491 INFO : Epoch 194
+2019-09-28 11:19:58,491 INFO : train_loss                0.03945
+2019-09-28 11:19:58,491 INFO : valid_loss                0.46773
+2019-09-28 11:19:58,491 INFO : train_misclass            0.00000
+2019-09-28 11:19:58,491 INFO : valid_misclass            0.21348
+2019-09-28 11:19:58,491 INFO : runtime                   1.07812
+2019-09-28 11:19:58,491 INFO : 
+2019-09-28 11:19:59,163 INFO : Time only for training updates: 0.67s
+2019-09-28 11:19:59,585 INFO : Epoch 195
+2019-09-28 11:19:59,585 INFO : train_loss                0.03922
+2019-09-28 11:19:59,585 INFO : valid_loss                0.47338
+2019-09-28 11:19:59,585 INFO : train_misclass            0.00000
+2019-09-28 11:19:59,585 INFO : valid_misclass            0.21348
+2019-09-28 11:19:59,585 INFO : runtime                   1.07812
+2019-09-28 11:19:59,585 INFO : 
+2019-09-28 11:20:00,257 INFO : Time only for training updates: 0.67s
+2019-09-28 11:20:00,663 INFO : Epoch 196
+2019-09-28 11:20:00,663 INFO : train_loss                0.03913
+2019-09-28 11:20:00,663 INFO : valid_loss                0.47567
+2019-09-28 11:20:00,663 INFO : train_misclass            0.00000
+2019-09-28 11:20:00,663 INFO : valid_misclass            0.21348
+2019-09-28 11:20:00,663 INFO : runtime                   1.09375
+2019-09-28 11:20:00,663 INFO : 
+2019-09-28 11:20:01,319 INFO : Time only for training updates: 0.66s
+2019-09-28 11:20:01,741 INFO : Epoch 197
+2019-09-28 11:20:01,741 INFO : train_loss                0.03880
+2019-09-28 11:20:01,741 INFO : valid_loss                0.47957
+2019-09-28 11:20:01,741 INFO : train_misclass            0.00000
+2019-09-28 11:20:01,741 INFO : valid_misclass            0.21348
+2019-09-28 11:20:01,741 INFO : runtime                   1.06250
+2019-09-28 11:20:01,741 INFO : 
+2019-09-28 11:20:02,397 INFO : Time only for training updates: 0.66s
+2019-09-28 11:20:02,819 INFO : Epoch 198
+2019-09-28 11:20:02,819 INFO : train_loss                0.03814
+2019-09-28 11:20:02,819 INFO : valid_loss                0.47200
+2019-09-28 11:20:02,819 INFO : train_misclass            0.00000
+2019-09-28 11:20:02,819 INFO : valid_misclass            0.21348
+2019-09-28 11:20:02,819 INFO : runtime                   1.07812
+2019-09-28 11:20:02,819 INFO : 
+2019-09-28 11:20:03,476 INFO : Time only for training updates: 0.66s
+2019-09-28 11:20:03,897 INFO : Epoch 199
+2019-09-28 11:20:03,897 INFO : train_loss                0.03908
+2019-09-28 11:20:03,897 INFO : valid_loss                0.47569
+2019-09-28 11:20:03,897 INFO : train_misclass            0.00000
+2019-09-28 11:20:03,897 INFO : valid_misclass            0.21348
+2019-09-28 11:20:03,897 INFO : runtime                   1.07812
+2019-09-28 11:20:03,897 INFO : 
+2019-09-28 11:20:04,554 INFO : Time only for training updates: 0.66s
+2019-09-28 11:20:04,976 INFO : Epoch 200
+2019-09-28 11:20:04,976 INFO : train_loss                0.03769
+2019-09-28 11:20:04,976 INFO : valid_loss                0.47278
+2019-09-28 11:20:04,976 INFO : train_misclass            0.00000
+2019-09-28 11:20:04,976 INFO : valid_misclass            0.21348
+2019-09-28 11:20:04,976 INFO : runtime                   1.07812
+2019-09-28 11:20:04,976 INFO : 
+2019-09-28 11:20:05,632 INFO : Time only for training updates: 0.66s
+2019-09-28 11:20:06,038 INFO : Epoch 201
+2019-09-28 11:20:06,038 INFO : train_loss                0.03739
+2019-09-28 11:20:06,038 INFO : valid_loss                0.47723
+2019-09-28 11:20:06,038 INFO : train_misclass            0.00000
+2019-09-28 11:20:06,038 INFO : valid_misclass            0.21348
+2019-09-28 11:20:06,038 INFO : runtime                   1.07812
+2019-09-28 11:20:06,038 INFO : 
+2019-09-28 11:20:06,710 INFO : Time only for training updates: 0.67s
+2019-09-28 11:20:07,116 INFO : Epoch 202
+2019-09-28 11:20:07,116 INFO : train_loss                0.03812
+2019-09-28 11:20:07,116 INFO : valid_loss                0.47689
+2019-09-28 11:20:07,116 INFO : train_misclass            0.00000
+2019-09-28 11:20:07,116 INFO : valid_misclass            0.21348
+2019-09-28 11:20:07,116 INFO : runtime                   1.07812
+2019-09-28 11:20:07,116 INFO : 
+2019-09-28 11:20:07,788 INFO : Time only for training updates: 0.67s
+2019-09-28 11:20:08,210 INFO : Epoch 203
+2019-09-28 11:20:08,210 INFO : train_loss                0.03733
+2019-09-28 11:20:08,210 INFO : valid_loss                0.46772
+2019-09-28 11:20:08,210 INFO : train_misclass            0.00000
+2019-09-28 11:20:08,210 INFO : valid_misclass            0.21348
+2019-09-28 11:20:08,210 INFO : runtime                   1.07812
+2019-09-28 11:20:08,210 INFO : 
+2019-09-28 11:20:08,866 INFO : Time only for training updates: 0.66s
+2019-09-28 11:20:09,288 INFO : Epoch 204
+2019-09-28 11:20:09,288 INFO : train_loss                0.03751
+2019-09-28 11:20:09,288 INFO : valid_loss                0.46788
+2019-09-28 11:20:09,288 INFO : train_misclass            0.00000
+2019-09-28 11:20:09,288 INFO : valid_misclass            0.21348
+2019-09-28 11:20:09,288 INFO : runtime                   1.07812
+2019-09-28 11:20:09,288 INFO : 
+2019-09-28 11:20:09,944 INFO : Time only for training updates: 0.66s
+2019-09-28 11:20:10,351 INFO : Epoch 205
+2019-09-28 11:20:10,351 INFO : train_loss                0.03728
+2019-09-28 11:20:10,351 INFO : valid_loss                0.47064
+2019-09-28 11:20:10,351 INFO : train_misclass            0.00000
+2019-09-28 11:20:10,351 INFO : valid_misclass            0.21348
+2019-09-28 11:20:10,351 INFO : runtime                   1.07812
+2019-09-28 11:20:10,351 INFO : 
+2019-09-28 11:20:11,022 INFO : Time only for training updates: 0.67s
+2019-09-28 11:20:11,429 INFO : Epoch 206
+2019-09-28 11:20:11,429 INFO : train_loss                0.03626
+2019-09-28 11:20:11,429 INFO : valid_loss                0.47489
+2019-09-28 11:20:11,429 INFO : train_misclass            0.00000
+2019-09-28 11:20:11,429 INFO : valid_misclass            0.21348
+2019-09-28 11:20:11,429 INFO : runtime                   1.07812
+2019-09-28 11:20:11,429 INFO : 
+2019-09-28 11:20:12,101 INFO : Time only for training updates: 0.67s
+2019-09-28 11:20:12,507 INFO : Epoch 207
+2019-09-28 11:20:12,507 INFO : train_loss                0.03597
+2019-09-28 11:20:12,522 INFO : valid_loss                0.48057
+2019-09-28 11:20:12,522 INFO : train_misclass            0.00000
+2019-09-28 11:20:12,522 INFO : valid_misclass            0.21348
+2019-09-28 11:20:12,522 INFO : runtime                   1.07812
+2019-09-28 11:20:12,522 INFO : 
+2019-09-28 11:20:13,163 INFO : Time only for training updates: 0.64s
+2019-09-28 11:20:13,585 INFO : Epoch 208
+2019-09-28 11:20:13,585 INFO : train_loss                0.03588
+2019-09-28 11:20:13,585 INFO : valid_loss                0.49162
+2019-09-28 11:20:13,585 INFO : train_misclass            0.00000
+2019-09-28 11:20:13,585 INFO : valid_misclass            0.21348
+2019-09-28 11:20:13,585 INFO : runtime                   1.06249
+2019-09-28 11:20:13,585 INFO : 
+2019-09-28 11:20:14,257 INFO : Time only for training updates: 0.67s
+2019-09-28 11:20:14,663 INFO : Epoch 209
+2019-09-28 11:20:14,663 INFO : train_loss                0.03557
+2019-09-28 11:20:14,663 INFO : valid_loss                0.49557
+2019-09-28 11:20:14,663 INFO : train_misclass            0.00000
+2019-09-28 11:20:14,663 INFO : valid_misclass            0.21348
+2019-09-28 11:20:14,663 INFO : runtime                   1.09374
+2019-09-28 11:20:14,663 INFO : 
+2019-09-28 11:20:15,335 INFO : Time only for training updates: 0.67s
+2019-09-28 11:20:15,757 INFO : Epoch 210
+2019-09-28 11:20:15,757 INFO : train_loss                0.03562
+2019-09-28 11:20:15,757 INFO : valid_loss                0.49185
+2019-09-28 11:20:15,757 INFO : train_misclass            0.00000
+2019-09-28 11:20:15,757 INFO : valid_misclass            0.21348
+2019-09-28 11:20:15,757 INFO : runtime                   1.07812
+2019-09-28 11:20:15,757 INFO : 
+2019-09-28 11:20:16,413 INFO : Time only for training updates: 0.66s
+2019-09-28 11:20:16,835 INFO : Epoch 211
+2019-09-28 11:20:16,835 INFO : train_loss                0.03480
+2019-09-28 11:20:16,835 INFO : valid_loss                0.49588
+2019-09-28 11:20:16,835 INFO : train_misclass            0.00000
+2019-09-28 11:20:16,835 INFO : valid_misclass            0.21348
+2019-09-28 11:20:16,835 INFO : runtime                   1.07812
+2019-09-28 11:20:16,835 INFO : 
+2019-09-28 11:20:17,507 INFO : Time only for training updates: 0.67s
+2019-09-28 11:20:17,913 INFO : Epoch 212
+2019-09-28 11:20:17,913 INFO : train_loss                0.03483
+2019-09-28 11:20:17,913 INFO : valid_loss                0.50375
+2019-09-28 11:20:17,913 INFO : train_misclass            0.00000
+2019-09-28 11:20:17,913 INFO : valid_misclass            0.21348
+2019-09-28 11:20:17,913 INFO : runtime                   1.09375
+2019-09-28 11:20:17,913 INFO : 
+2019-09-28 11:20:18,569 INFO : Time only for training updates: 0.66s
+2019-09-28 11:20:18,976 INFO : Epoch 213
+2019-09-28 11:20:18,976 INFO : train_loss                0.03494
+2019-09-28 11:20:18,976 INFO : valid_loss                0.51160
+2019-09-28 11:20:18,976 INFO : train_misclass            0.00000
+2019-09-28 11:20:18,976 INFO : valid_misclass            0.21348
+2019-09-28 11:20:18,976 INFO : runtime                   1.06250
+2019-09-28 11:20:18,976 INFO : 
+2019-09-28 11:20:19,647 INFO : Time only for training updates: 0.66s
+2019-09-28 11:20:20,069 INFO : Epoch 214
+2019-09-28 11:20:20,069 INFO : train_loss                0.03569
+2019-09-28 11:20:20,069 INFO : valid_loss                0.50950
+2019-09-28 11:20:20,069 INFO : train_misclass            0.00000
+2019-09-28 11:20:20,069 INFO : valid_misclass            0.21348
+2019-09-28 11:20:20,069 INFO : runtime                   1.07812
+2019-09-28 11:20:20,069 INFO : 
+2019-09-28 11:20:20,757 INFO : Time only for training updates: 0.69s
+2019-09-28 11:20:21,179 INFO : Epoch 215
+2019-09-28 11:20:21,179 INFO : train_loss                0.03489
+2019-09-28 11:20:21,179 INFO : valid_loss                0.50079
+2019-09-28 11:20:21,179 INFO : train_misclass            0.00000
+2019-09-28 11:20:21,179 INFO : valid_misclass            0.21348
+2019-09-28 11:20:21,179 INFO : runtime                   1.10937
+2019-09-28 11:20:21,179 INFO : 
+2019-09-28 11:20:21,835 INFO : Time only for training updates: 0.66s
+2019-09-28 11:20:22,241 INFO : Epoch 216
+2019-09-28 11:20:22,241 INFO : train_loss                0.03437
+2019-09-28 11:20:22,241 INFO : valid_loss                0.49466
+2019-09-28 11:20:22,241 INFO : train_misclass            0.00000
+2019-09-28 11:20:22,241 INFO : valid_misclass            0.21348
+2019-09-28 11:20:22,241 INFO : runtime                   1.07812
+2019-09-28 11:20:22,241 INFO : 
+2019-09-28 11:20:22,897 INFO : Time only for training updates: 0.66s
+2019-09-28 11:20:23,327 INFO : Epoch 217
+2019-09-28 11:20:23,327 INFO : train_loss                0.03374
+2019-09-28 11:20:23,327 INFO : valid_loss                0.49477
+2019-09-28 11:20:23,327 INFO : train_misclass            0.00000
+2019-09-28 11:20:23,327 INFO : valid_misclass            0.21348
+2019-09-28 11:20:23,327 INFO : runtime                   1.06250
+2019-09-28 11:20:23,327 INFO : 
+2019-09-28 11:20:23,975 INFO : Time only for training updates: 0.65s
+2019-09-28 11:20:24,397 INFO : Epoch 218
+2019-09-28 11:20:24,397 INFO : train_loss                0.03372
+2019-09-28 11:20:24,397 INFO : valid_loss                0.49688
+2019-09-28 11:20:24,397 INFO : train_misclass            0.00000
+2019-09-28 11:20:24,397 INFO : valid_misclass            0.21348
+2019-09-28 11:20:24,397 INFO : runtime                   1.07812
+2019-09-28 11:20:24,397 INFO : 
+2019-09-28 11:20:25,069 INFO : Time only for training updates: 0.67s
+2019-09-28 11:20:25,475 INFO : Epoch 219
+2019-09-28 11:20:25,475 INFO : train_loss                0.03339
+2019-09-28 11:20:25,475 INFO : valid_loss                0.49453
+2019-09-28 11:20:25,475 INFO : train_misclass            0.00000
+2019-09-28 11:20:25,475 INFO : valid_misclass            0.21348
+2019-09-28 11:20:25,475 INFO : runtime                   1.09375
+2019-09-28 11:20:25,475 INFO : 
+2019-09-28 11:20:26,132 INFO : Time only for training updates: 0.66s
+2019-09-28 11:20:26,554 INFO : Epoch 220
+2019-09-28 11:20:26,554 INFO : train_loss                0.03385
+2019-09-28 11:20:26,554 INFO : valid_loss                0.49883
+2019-09-28 11:20:26,554 INFO : train_misclass            0.00000
+2019-09-28 11:20:26,569 INFO : valid_misclass            0.21348
+2019-09-28 11:20:26,569 INFO : runtime                   1.06250
+2019-09-28 11:20:26,569 INFO : 
+2019-09-28 11:20:27,226 INFO : Time only for training updates: 0.66s
+2019-09-28 11:20:27,632 INFO : Epoch 221
+2019-09-28 11:20:27,632 INFO : train_loss                0.03474
+2019-09-28 11:20:27,632 INFO : valid_loss                0.50872
+2019-09-28 11:20:27,632 INFO : train_misclass            0.00000
+2019-09-28 11:20:27,632 INFO : valid_misclass            0.21348
+2019-09-28 11:20:27,632 INFO : runtime                   1.09382
+2019-09-28 11:20:27,632 INFO : 
+2019-09-28 11:20:28,319 INFO : Time only for training updates: 0.67s
+2019-09-28 11:20:28,725 INFO : Epoch 222
+2019-09-28 11:20:28,725 INFO : train_loss                0.03318
+2019-09-28 11:20:28,725 INFO : valid_loss                0.49810
+2019-09-28 11:20:28,725 INFO : train_misclass            0.00000
+2019-09-28 11:20:28,725 INFO : valid_misclass            0.21348
+2019-09-28 11:20:28,725 INFO : runtime                   1.09368
+2019-09-28 11:20:28,725 INFO : 
+2019-09-28 11:20:29,397 INFO : Time only for training updates: 0.67s
+2019-09-28 11:20:29,804 INFO : Epoch 223
+2019-09-28 11:20:29,804 INFO : train_loss                0.03324
+2019-09-28 11:20:29,804 INFO : valid_loss                0.49655
+2019-09-28 11:20:29,804 INFO : train_misclass            0.00000
+2019-09-28 11:20:29,804 INFO : valid_misclass            0.21348
+2019-09-28 11:20:29,804 INFO : runtime                   1.07812
+2019-09-28 11:20:29,804 INFO : 
+2019-09-28 11:20:30,460 INFO : Time only for training updates: 0.66s
+2019-09-28 11:20:30,882 INFO : Epoch 224
+2019-09-28 11:20:30,882 INFO : train_loss                0.03288
+2019-09-28 11:20:30,882 INFO : valid_loss                0.49827
+2019-09-28 11:20:30,882 INFO : train_misclass            0.00000
+2019-09-28 11:20:30,882 INFO : valid_misclass            0.21348
+2019-09-28 11:20:30,882 INFO : runtime                   1.06250
+2019-09-28 11:20:30,882 INFO : 
+2019-09-28 11:20:31,554 INFO : Time only for training updates: 0.67s
+2019-09-28 11:20:31,963 INFO : Epoch 225
+2019-09-28 11:20:31,963 INFO : train_loss                0.03237
+2019-09-28 11:20:31,963 INFO : valid_loss                0.49560
+2019-09-28 11:20:31,963 INFO : train_misclass            0.00000
+2019-09-28 11:20:31,963 INFO : valid_misclass            0.21348
+2019-09-28 11:20:31,963 INFO : runtime                   1.09375
+2019-09-28 11:20:31,963 INFO : 
+2019-09-28 11:20:32,632 INFO : Time only for training updates: 0.66s
+2019-09-28 11:20:33,054 INFO : Epoch 226
+2019-09-28 11:20:33,054 INFO : train_loss                0.03236
+2019-09-28 11:20:33,054 INFO : valid_loss                0.49588
+2019-09-28 11:20:33,054 INFO : train_misclass            0.00000
+2019-09-28 11:20:33,054 INFO : valid_misclass            0.21348
+2019-09-28 11:20:33,054 INFO : runtime                   1.07812
+2019-09-28 11:20:33,054 INFO : 
+2019-09-28 11:20:33,694 INFO : Time only for training updates: 0.64s
+2019-09-28 11:20:34,116 INFO : Epoch 227
+2019-09-28 11:20:34,116 INFO : train_loss                0.03223
+2019-09-28 11:20:34,116 INFO : valid_loss                0.49681
+2019-09-28 11:20:34,116 INFO : train_misclass            0.00000
+2019-09-28 11:20:34,116 INFO : valid_misclass            0.21348
+2019-09-28 11:20:34,116 INFO : runtime                   1.06250
+2019-09-28 11:20:34,116 INFO : 
+2019-09-28 11:20:34,772 INFO : Time only for training updates: 0.66s
+2019-09-28 11:20:35,179 INFO : Epoch 228
+2019-09-28 11:20:35,179 INFO : train_loss                0.03223
+2019-09-28 11:20:35,179 INFO : valid_loss                0.49727
+2019-09-28 11:20:35,179 INFO : train_misclass            0.00000
+2019-09-28 11:20:35,179 INFO : valid_misclass            0.21348
+2019-09-28 11:20:35,179 INFO : runtime                   1.07812
+2019-09-28 11:20:35,179 INFO : 
+2019-09-28 11:20:35,850 INFO : Time only for training updates: 0.67s
+2019-09-28 11:20:36,272 INFO : Epoch 229
+2019-09-28 11:20:36,272 INFO : train_loss                0.03215
+2019-09-28 11:20:36,272 INFO : valid_loss                0.49356
+2019-09-28 11:20:36,272 INFO : train_misclass            0.00000
+2019-09-28 11:20:36,272 INFO : valid_misclass            0.21348
+2019-09-28 11:20:36,272 INFO : runtime                   1.07812
+2019-09-28 11:20:36,272 INFO : 
+2019-09-28 11:20:36,944 INFO : Time only for training updates: 0.67s
+2019-09-28 11:20:37,382 INFO : Epoch 230
+2019-09-28 11:20:37,382 INFO : train_loss                0.03181
+2019-09-28 11:20:37,382 INFO : valid_loss                0.48136
+2019-09-28 11:20:37,382 INFO : train_misclass            0.00000
+2019-09-28 11:20:37,382 INFO : valid_misclass            0.21348
+2019-09-28 11:20:37,382 INFO : runtime                   1.09374
+2019-09-28 11:20:37,382 INFO : 
+2019-09-28 11:20:38,038 INFO : Time only for training updates: 0.66s
+2019-09-28 11:20:38,475 INFO : Epoch 231
+2019-09-28 11:20:38,475 INFO : train_loss                0.03198
+2019-09-28 11:20:38,475 INFO : valid_loss                0.47616
+2019-09-28 11:20:38,475 INFO : train_misclass            0.00000
+2019-09-28 11:20:38,475 INFO : valid_misclass            0.21348
+2019-09-28 11:20:38,475 INFO : runtime                   1.09375
+2019-09-28 11:20:38,475 INFO : 
+2019-09-28 11:20:39,132 INFO : Time only for training updates: 0.66s
+2019-09-28 11:20:39,538 INFO : Epoch 232
+2019-09-28 11:20:39,538 INFO : train_loss                0.03150
+2019-09-28 11:20:39,538 INFO : valid_loss                0.47251
+2019-09-28 11:20:39,538 INFO : train_misclass            0.00000
+2019-09-28 11:20:39,538 INFO : valid_misclass            0.21348
+2019-09-28 11:20:39,538 INFO : runtime                   1.09375
+2019-09-28 11:20:39,538 INFO : 
+2019-09-28 11:20:40,210 INFO : Time only for training updates: 0.67s
+2019-09-28 11:20:40,616 INFO : Epoch 233
+2019-09-28 11:20:40,616 INFO : train_loss                0.03106
+2019-09-28 11:20:40,616 INFO : valid_loss                0.47346
+2019-09-28 11:20:40,616 INFO : train_misclass            0.00000
+2019-09-28 11:20:40,616 INFO : valid_misclass            0.21348
+2019-09-28 11:20:40,616 INFO : runtime                   1.07812
+2019-09-28 11:20:40,616 INFO : 
+2019-09-28 11:20:41,288 INFO : Time only for training updates: 0.67s
+2019-09-28 11:20:41,710 INFO : Epoch 234
+2019-09-28 11:20:41,725 INFO : train_loss                0.03089
+2019-09-28 11:20:41,725 INFO : valid_loss                0.47720
+2019-09-28 11:20:41,725 INFO : train_misclass            0.00000
+2019-09-28 11:20:41,725 INFO : valid_misclass            0.21348
+2019-09-28 11:20:41,725 INFO : runtime                   1.07812
+2019-09-28 11:20:41,725 INFO : 
+2019-09-28 11:20:42,382 INFO : Time only for training updates: 0.66s
+2019-09-28 11:20:42,788 INFO : Epoch 235
+2019-09-28 11:20:42,788 INFO : train_loss                0.03096
+2019-09-28 11:20:42,788 INFO : valid_loss                0.48069
+2019-09-28 11:20:42,788 INFO : train_misclass            0.00000
+2019-09-28 11:20:42,788 INFO : valid_misclass            0.21348
+2019-09-28 11:20:42,788 INFO : runtime                   1.09375
+2019-09-28 11:20:42,788 INFO : 
+2019-09-28 11:20:43,444 INFO : Time only for training updates: 0.66s
+2019-09-28 11:20:43,850 INFO : Epoch 236
+2019-09-28 11:20:43,850 INFO : train_loss                0.03086
+2019-09-28 11:20:43,850 INFO : valid_loss                0.48046
+2019-09-28 11:20:43,850 INFO : train_misclass            0.00000
+2019-09-28 11:20:43,850 INFO : valid_misclass            0.21348
+2019-09-28 11:20:43,850 INFO : runtime                   1.06250
+2019-09-28 11:20:43,850 INFO : 
+2019-09-28 11:20:44,507 INFO : Time only for training updates: 0.66s
+2019-09-28 11:20:44,929 INFO : Epoch 237
+2019-09-28 11:20:44,929 INFO : train_loss                0.03114
+2019-09-28 11:20:44,929 INFO : valid_loss                0.48119
+2019-09-28 11:20:44,929 INFO : train_misclass            0.00000
+2019-09-28 11:20:44,929 INFO : valid_misclass            0.21348
+2019-09-28 11:20:44,929 INFO : runtime                   1.06249
+2019-09-28 11:20:44,929 INFO : 
+2019-09-28 11:20:45,600 INFO : Time only for training updates: 0.67s
+2019-09-28 11:20:46,022 INFO : Epoch 238
+2019-09-28 11:20:46,022 INFO : train_loss                0.03055
+2019-09-28 11:20:46,022 INFO : valid_loss                0.47737
+2019-09-28 11:20:46,022 INFO : train_misclass            0.00000
+2019-09-28 11:20:46,022 INFO : valid_misclass            0.21348
+2019-09-28 11:20:46,022 INFO : runtime                   1.09375
+2019-09-28 11:20:46,022 INFO : 
+2019-09-28 11:20:46,679 INFO : Time only for training updates: 0.66s
+2019-09-28 11:20:47,116 INFO : Epoch 239
+2019-09-28 11:20:47,116 INFO : train_loss                0.03075
+2019-09-28 11:20:47,116 INFO : valid_loss                0.48342
+2019-09-28 11:20:47,116 INFO : train_misclass            0.00000
+2019-09-28 11:20:47,116 INFO : valid_misclass            0.21348
+2019-09-28 11:20:47,116 INFO : runtime                   1.07812
+2019-09-28 11:20:47,116 INFO : 
+2019-09-28 11:20:47,757 INFO : Time only for training updates: 0.64s
+2019-09-28 11:20:48,179 INFO : Epoch 240
+2019-09-28 11:20:48,179 INFO : train_loss                0.03028
+2019-09-28 11:20:48,179 INFO : valid_loss                0.48391
+2019-09-28 11:20:48,179 INFO : train_misclass            0.00000
+2019-09-28 11:20:48,179 INFO : valid_misclass            0.21348
+2019-09-28 11:20:48,179 INFO : runtime                   1.07893
+2019-09-28 11:20:48,179 INFO : 
+2019-09-28 11:20:48,836 INFO : Time only for training updates: 0.66s
+2019-09-28 11:20:49,257 INFO : Epoch 241
+2019-09-28 11:20:49,257 INFO : train_loss                0.02970
+2019-09-28 11:20:49,257 INFO : valid_loss                0.48160
+2019-09-28 11:20:49,257 INFO : train_misclass            0.00000
+2019-09-28 11:20:49,257 INFO : valid_misclass            0.21348
+2019-09-28 11:20:49,257 INFO : runtime                   1.07812
+2019-09-28 11:20:49,257 INFO : 
+2019-09-28 11:20:49,914 INFO : Time only for training updates: 0.66s
+2019-09-28 11:20:50,336 INFO : Epoch 242
+2019-09-28 11:20:50,336 INFO : train_loss                0.02953
+2019-09-28 11:20:50,336 INFO : valid_loss                0.48433
+2019-09-28 11:20:50,336 INFO : train_misclass            0.00000
+2019-09-28 11:20:50,336 INFO : valid_misclass            0.21348
+2019-09-28 11:20:50,336 INFO : runtime                   1.07812
+2019-09-28 11:20:50,336 INFO : 
+2019-09-28 11:20:50,992 INFO : Time only for training updates: 0.66s
+2019-09-28 11:20:51,429 INFO : Epoch 243
+2019-09-28 11:20:51,429 INFO : train_loss                0.03005
+2019-09-28 11:20:51,429 INFO : valid_loss                0.49484
+2019-09-28 11:20:51,429 INFO : train_misclass            0.00000
+2019-09-28 11:20:51,429 INFO : valid_misclass            0.21348
+2019-09-28 11:20:51,429 INFO : runtime                   1.07812
+2019-09-28 11:20:51,429 INFO : 
+2019-09-28 11:20:52,086 INFO : Time only for training updates: 0.66s
+2019-09-28 11:20:52,492 INFO : Epoch 244
+2019-09-28 11:20:52,492 INFO : train_loss                0.03010
+2019-09-28 11:20:52,492 INFO : valid_loss                0.49541
+2019-09-28 11:20:52,492 INFO : train_misclass            0.00000
+2019-09-28 11:20:52,492 INFO : valid_misclass            0.21348
+2019-09-28 11:20:52,492 INFO : runtime                   1.09374
+2019-09-28 11:20:52,492 INFO : 
+2019-09-28 11:20:53,148 INFO : Time only for training updates: 0.66s
+2019-09-28 11:20:53,555 INFO : Epoch 245
+2019-09-28 11:20:53,555 INFO : train_loss                0.02960
+2019-09-28 11:20:53,555 INFO : valid_loss                0.49157
+2019-09-28 11:20:53,555 INFO : train_misclass            0.00000
+2019-09-28 11:20:53,555 INFO : valid_misclass            0.21348
+2019-09-28 11:20:53,555 INFO : runtime                   1.06250
+2019-09-28 11:20:53,555 INFO : 
+2019-09-28 11:20:54,211 INFO : Time only for training updates: 0.66s
+2019-09-28 11:20:54,633 INFO : Epoch 246
+2019-09-28 11:20:54,633 INFO : train_loss                0.02971
+2019-09-28 11:20:54,633 INFO : valid_loss                0.49286
+2019-09-28 11:20:54,633 INFO : train_misclass            0.00000
+2019-09-28 11:20:54,633 INFO : valid_misclass            0.21348
+2019-09-28 11:20:54,633 INFO : runtime                   1.06319
+2019-09-28 11:20:54,633 INFO : 
+2019-09-28 11:20:55,289 INFO : Time only for training updates: 0.66s
+2019-09-28 11:20:55,711 INFO : Epoch 247
+2019-09-28 11:20:55,711 INFO : train_loss                0.02937
+2019-09-28 11:20:55,711 INFO : valid_loss                0.48741
+2019-09-28 11:20:55,711 INFO : train_misclass            0.00000
+2019-09-28 11:20:55,711 INFO : valid_misclass            0.21348
+2019-09-28 11:20:55,711 INFO : runtime                   1.07812
+2019-09-28 11:20:55,711 INFO : 
+2019-09-28 11:20:56,383 INFO : Time only for training updates: 0.66s
+2019-09-28 11:20:56,805 INFO : Epoch 248
+2019-09-28 11:20:56,805 INFO : train_loss                0.02963
+2019-09-28 11:20:56,805 INFO : valid_loss                0.48980
+2019-09-28 11:20:56,805 INFO : train_misclass            0.00000
+2019-09-28 11:20:56,805 INFO : valid_misclass            0.21348
+2019-09-28 11:20:56,805 INFO : runtime                   1.09375
+2019-09-28 11:20:56,805 INFO : 
+2019-09-28 11:20:57,461 INFO : Time only for training updates: 0.66s
+2019-09-28 11:20:57,868 INFO : Epoch 249
+2019-09-28 11:20:57,868 INFO : train_loss                0.02991
+2019-09-28 11:20:57,868 INFO : valid_loss                0.49224
+2019-09-28 11:20:57,868 INFO : train_misclass            0.00000
+2019-09-28 11:20:57,868 INFO : valid_misclass            0.21348
+2019-09-28 11:20:57,868 INFO : runtime                   1.07812
+2019-09-28 11:20:57,868 INFO : 
+2019-09-28 11:20:58,524 INFO : Time only for training updates: 0.66s
+2019-09-28 11:20:58,930 INFO : Epoch 250
+2019-09-28 11:20:58,930 INFO : train_loss                0.02984
+2019-09-28 11:20:58,930 INFO : valid_loss                0.49027
+2019-09-28 11:20:58,930 INFO : train_misclass            0.00000
+2019-09-28 11:20:58,930 INFO : valid_misclass            0.21348
+2019-09-28 11:20:58,930 INFO : runtime                   1.06250
+2019-09-28 11:20:58,930 INFO : 
+2019-09-28 11:20:59,586 INFO : Time only for training updates: 0.66s
+2019-09-28 11:21:00,008 INFO : Epoch 251
+2019-09-28 11:21:00,008 INFO : train_loss                0.02871
+2019-09-28 11:21:00,008 INFO : valid_loss                0.48136
+2019-09-28 11:21:00,008 INFO : train_misclass            0.00000
+2019-09-28 11:21:00,008 INFO : valid_misclass            0.21348
+2019-09-28 11:21:00,008 INFO : runtime                   1.06249
+2019-09-28 11:21:00,008 INFO : 
+2019-09-28 11:21:00,680 INFO : Time only for training updates: 0.67s
+2019-09-28 11:21:01,102 INFO : Epoch 252
+2019-09-28 11:21:01,102 INFO : train_loss                0.02862
+2019-09-28 11:21:01,102 INFO : valid_loss                0.47965
+2019-09-28 11:21:01,102 INFO : train_misclass            0.00000
+2019-09-28 11:21:01,102 INFO : valid_misclass            0.21348
+2019-09-28 11:21:01,102 INFO : runtime                   1.09375
+2019-09-28 11:21:01,102 INFO : 
+2019-09-28 11:21:01,774 INFO : Time only for training updates: 0.67s
+2019-09-28 11:21:02,211 INFO : Epoch 253
+2019-09-28 11:21:02,211 INFO : train_loss                0.02882
+2019-09-28 11:21:02,211 INFO : valid_loss                0.48084
+2019-09-28 11:21:02,211 INFO : train_misclass            0.00000
+2019-09-28 11:21:02,211 INFO : valid_misclass            0.21348
+2019-09-28 11:21:02,211 INFO : runtime                   1.09375
+2019-09-28 11:21:02,211 INFO : 
+2019-09-28 11:21:02,869 INFO : Time only for training updates: 0.66s
+2019-09-28 11:21:03,276 INFO : Epoch 254
+2019-09-28 11:21:03,276 INFO : train_loss                0.02841
+2019-09-28 11:21:03,276 INFO : valid_loss                0.48210
+2019-09-28 11:21:03,276 INFO : train_misclass            0.00000
+2019-09-28 11:21:03,276 INFO : valid_misclass            0.21348
+2019-09-28 11:21:03,276 INFO : runtime                   1.09558
+2019-09-28 11:21:03,276 INFO : 
+2019-09-28 11:21:03,932 INFO : Time only for training updates: 0.66s
+2019-09-28 11:21:04,354 INFO : Epoch 255
+2019-09-28 11:21:04,354 INFO : train_loss                0.02919
+2019-09-28 11:21:04,354 INFO : valid_loss                0.48919
+2019-09-28 11:21:04,354 INFO : train_misclass            0.00000
+2019-09-28 11:21:04,354 INFO : valid_misclass            0.21348
+2019-09-28 11:21:04,354 INFO : runtime                   1.06250
+2019-09-28 11:21:04,354 INFO : 
+2019-09-28 11:21:05,026 INFO : Time only for training updates: 0.67s
+2019-09-28 11:21:05,447 INFO : Epoch 256
+2019-09-28 11:21:05,447 INFO : train_loss                0.02804
+2019-09-28 11:21:05,447 INFO : valid_loss                0.47410
+2019-09-28 11:21:05,447 INFO : train_misclass            0.00000
+2019-09-28 11:21:05,447 INFO : valid_misclass            0.21348
+2019-09-28 11:21:05,447 INFO : runtime                   1.09375
+2019-09-28 11:21:05,447 INFO : 
+2019-09-28 11:21:06,097 INFO : Time only for training updates: 0.65s
+2019-09-28 11:21:06,519 INFO : Epoch 257
+2019-09-28 11:21:06,519 INFO : train_loss                0.02807
+2019-09-28 11:21:06,519 INFO : valid_loss                0.47082
+2019-09-28 11:21:06,519 INFO : train_misclass            0.00000
+2019-09-28 11:21:06,519 INFO : valid_misclass            0.21348
+2019-09-28 11:21:06,519 INFO : runtime                   1.07172
+2019-09-28 11:21:06,519 INFO : 
+2019-09-28 11:21:07,191 INFO : Time only for training updates: 0.67s
+2019-09-28 11:21:07,597 INFO : Epoch 258
+2019-09-28 11:21:07,597 INFO : train_loss                0.02817
+2019-09-28 11:21:07,597 INFO : valid_loss                0.47689
+2019-09-28 11:21:07,597 INFO : train_misclass            0.00000
+2019-09-28 11:21:07,597 INFO : valid_misclass            0.21348
+2019-09-28 11:21:07,597 INFO : runtime                   1.09375
+2019-09-28 11:21:07,597 INFO : 
+2019-09-28 11:21:08,254 INFO : Time only for training updates: 0.66s
+2019-09-28 11:21:08,675 INFO : Epoch 259
+2019-09-28 11:21:08,675 INFO : train_loss                0.02804
+2019-09-28 11:21:08,675 INFO : valid_loss                0.48106
+2019-09-28 11:21:08,675 INFO : train_misclass            0.00000
+2019-09-28 11:21:08,675 INFO : valid_misclass            0.21348
+2019-09-28 11:21:08,675 INFO : runtime                   1.06250
+2019-09-28 11:21:08,675 INFO : 
+2019-09-28 11:21:09,332 INFO : Time only for training updates: 0.66s
+2019-09-28 11:21:09,754 INFO : Epoch 260
+2019-09-28 11:21:09,754 INFO : train_loss                0.02808
+2019-09-28 11:21:09,754 INFO : valid_loss                0.48664
+2019-09-28 11:21:09,754 INFO : train_misclass            0.00000
+2019-09-28 11:21:09,754 INFO : valid_misclass            0.21348
+2019-09-28 11:21:09,754 INFO : runtime                   1.07812
+2019-09-28 11:21:09,754 INFO : 
+2019-09-28 11:21:10,410 INFO : Time only for training updates: 0.66s
+2019-09-28 11:21:10,839 INFO : Epoch 261
+2019-09-28 11:21:10,839 INFO : train_loss                0.02764
+2019-09-28 11:21:10,839 INFO : valid_loss                0.48394
+2019-09-28 11:21:10,839 INFO : train_misclass            0.00000
+2019-09-28 11:21:10,839 INFO : valid_misclass            0.21348
+2019-09-28 11:21:10,839 INFO : runtime                   1.07812
+2019-09-28 11:21:10,839 INFO : 
+2019-09-28 11:21:11,506 INFO : Time only for training updates: 0.67s
+2019-09-28 11:21:11,928 INFO : Epoch 262
+2019-09-28 11:21:11,928 INFO : train_loss                0.02805
+2019-09-28 11:21:11,928 INFO : valid_loss                0.49182
+2019-09-28 11:21:11,928 INFO : train_misclass            0.00000
+2019-09-28 11:21:11,928 INFO : valid_misclass            0.21348
+2019-09-28 11:21:11,928 INFO : runtime                   1.09618
+2019-09-28 11:21:11,928 INFO : 
+2019-09-28 11:21:12,584 INFO : Time only for training updates: 0.66s
+2019-09-28 11:21:13,022 INFO : Epoch 263
+2019-09-28 11:21:13,022 INFO : train_loss                0.02794
+2019-09-28 11:21:13,022 INFO : valid_loss                0.49240
+2019-09-28 11:21:13,022 INFO : train_misclass            0.00000
+2019-09-28 11:21:13,022 INFO : valid_misclass            0.21348
+2019-09-28 11:21:13,022 INFO : runtime                   1.07812
+2019-09-28 11:21:13,022 INFO : 
+2019-09-28 11:21:13,678 INFO : Time only for training updates: 0.66s
+2019-09-28 11:21:14,100 INFO : Epoch 264
+2019-09-28 11:21:14,100 INFO : train_loss                0.02755
+2019-09-28 11:21:14,100 INFO : valid_loss                0.49262
+2019-09-28 11:21:14,100 INFO : train_misclass            0.00000
+2019-09-28 11:21:14,100 INFO : valid_misclass            0.21348
+2019-09-28 11:21:14,100 INFO : runtime                   1.09374
+2019-09-28 11:21:14,100 INFO : 
+2019-09-28 11:21:14,761 INFO : Time only for training updates: 0.66s
+2019-09-28 11:21:15,167 INFO : Epoch 265
+2019-09-28 11:21:15,167 INFO : train_loss                0.02712
+2019-09-28 11:21:15,167 INFO : valid_loss                0.48453
+2019-09-28 11:21:15,167 INFO : train_misclass            0.00000
+2019-09-28 11:21:15,167 INFO : valid_misclass            0.21348
+2019-09-28 11:21:15,167 INFO : runtime                   1.08283
+2019-09-28 11:21:15,167 INFO : 
+2019-09-28 11:21:15,840 INFO : Time only for training updates: 0.67s
+2019-09-28 11:21:16,278 INFO : Epoch 266
+2019-09-28 11:21:16,278 INFO : train_loss                0.02704
+2019-09-28 11:21:16,278 INFO : valid_loss                0.47789
+2019-09-28 11:21:16,278 INFO : train_misclass            0.00000
+2019-09-28 11:21:16,278 INFO : valid_misclass            0.21348
+2019-09-28 11:21:16,278 INFO : runtime                   1.07944
+2019-09-28 11:21:16,278 INFO : 
+2019-09-28 11:21:16,934 INFO : Time only for training updates: 0.66s
+2019-09-28 11:21:17,340 INFO : Epoch 267
+2019-09-28 11:21:17,340 INFO : train_loss                0.02693
+2019-09-28 11:21:17,340 INFO : valid_loss                0.49394
+2019-09-28 11:21:17,340 INFO : train_misclass            0.00000
+2019-09-28 11:21:17,340 INFO : valid_misclass            0.21348
+2019-09-28 11:21:17,340 INFO : runtime                   1.09375
+2019-09-28 11:21:17,340 INFO : 
+2019-09-28 11:21:18,012 INFO : Time only for training updates: 0.67s
+2019-09-28 11:21:18,434 INFO : Epoch 268
+2019-09-28 11:21:18,434 INFO : train_loss                0.02735
+2019-09-28 11:21:18,434 INFO : valid_loss                0.51125
+2019-09-28 11:21:18,434 INFO : train_misclass            0.00000
+2019-09-28 11:21:18,434 INFO : valid_misclass            0.21348
+2019-09-28 11:21:18,434 INFO : runtime                   1.07812
+2019-09-28 11:21:18,434 INFO : 
+2019-09-28 11:21:19,106 INFO : Time only for training updates: 0.67s
+2019-09-28 11:21:19,528 INFO : Epoch 269
+2019-09-28 11:21:19,528 INFO : train_loss                0.02822
+2019-09-28 11:21:19,528 INFO : valid_loss                0.51863
+2019-09-28 11:21:19,528 INFO : train_misclass            0.00000
+2019-09-28 11:21:19,528 INFO : valid_misclass            0.20225
+2019-09-28 11:21:19,528 INFO : runtime                   1.09375
+2019-09-28 11:21:19,528 INFO : 
+2019-09-28 11:21:20,184 INFO : Time only for training updates: 0.66s
+2019-09-28 11:21:20,606 INFO : Epoch 270
+2019-09-28 11:21:20,606 INFO : train_loss                0.02723
+2019-09-28 11:21:20,606 INFO : valid_loss                0.51105
+2019-09-28 11:21:20,606 INFO : train_misclass            0.00000
+2019-09-28 11:21:20,606 INFO : valid_misclass            0.21348
+2019-09-28 11:21:20,606 INFO : runtime                   1.07812
+2019-09-28 11:21:20,606 INFO : 
+2019-09-28 11:21:21,278 INFO : Time only for training updates: 0.67s
+2019-09-28 11:21:21,699 INFO : Epoch 271
+2019-09-28 11:21:21,699 INFO : train_loss                0.02707
+2019-09-28 11:21:21,699 INFO : valid_loss                0.50121
+2019-09-28 11:21:21,699 INFO : train_misclass            0.00000
+2019-09-28 11:21:21,699 INFO : valid_misclass            0.21348
+2019-09-28 11:21:21,699 INFO : runtime                   1.09375
+2019-09-28 11:21:21,699 INFO : 
+2019-09-28 11:21:22,371 INFO : Time only for training updates: 0.67s
+2019-09-28 11:21:22,778 INFO : Epoch 272
+2019-09-28 11:21:22,778 INFO : train_loss                0.02693
+2019-09-28 11:21:22,778 INFO : valid_loss                0.49511
+2019-09-28 11:21:22,778 INFO : train_misclass            0.00000
+2019-09-28 11:21:22,778 INFO : valid_misclass            0.21348
+2019-09-28 11:21:22,778 INFO : runtime                   1.09375
+2019-09-28 11:21:22,778 INFO : 
+2019-09-28 11:21:23,434 INFO : Time only for training updates: 0.66s
+2019-09-28 11:21:23,840 INFO : Epoch 273
+2019-09-28 11:21:23,840 INFO : train_loss                0.02692
+2019-09-28 11:21:23,840 INFO : valid_loss                0.49024
+2019-09-28 11:21:23,840 INFO : train_misclass            0.00000
+2019-09-28 11:21:23,840 INFO : valid_misclass            0.21348
+2019-09-28 11:21:23,840 INFO : runtime                   1.06249
+2019-09-28 11:21:23,840 INFO : 
+2019-09-28 11:21:24,496 INFO : Time only for training updates: 0.66s
+2019-09-28 11:21:24,918 INFO : Epoch 274
+2019-09-28 11:21:24,918 INFO : train_loss                0.02690
+2019-09-28 11:21:24,918 INFO : valid_loss                0.48672
+2019-09-28 11:21:24,918 INFO : train_misclass            0.00000
+2019-09-28 11:21:24,918 INFO : valid_misclass            0.21348
+2019-09-28 11:21:24,918 INFO : runtime                   1.06250
+2019-09-28 11:21:24,918 INFO : 
+2019-09-28 11:21:25,590 INFO : Time only for training updates: 0.67s
+2019-09-28 11:21:26,012 INFO : Epoch 275
+2019-09-28 11:21:26,012 INFO : train_loss                0.02717
+2019-09-28 11:21:26,012 INFO : valid_loss                0.48637
+2019-09-28 11:21:26,012 INFO : train_misclass            0.00000
+2019-09-28 11:21:26,012 INFO : valid_misclass            0.21348
+2019-09-28 11:21:26,012 INFO : runtime                   1.09375
+2019-09-28 11:21:26,012 INFO : 
+2019-09-28 11:21:26,668 INFO : Time only for training updates: 0.66s
+2019-09-28 11:21:27,090 INFO : Epoch 276
+2019-09-28 11:21:27,090 INFO : train_loss                0.02636
+2019-09-28 11:21:27,090 INFO : valid_loss                0.47604
+2019-09-28 11:21:27,090 INFO : train_misclass            0.00000
+2019-09-28 11:21:27,090 INFO : valid_misclass            0.21348
+2019-09-28 11:21:27,090 INFO : runtime                   1.07812
+2019-09-28 11:21:27,090 INFO : 
+2019-09-28 11:21:27,731 INFO : Time only for training updates: 0.64s
+2019-09-28 11:21:28,153 INFO : Epoch 277
+2019-09-28 11:21:28,153 INFO : train_loss                0.02609
+2019-09-28 11:21:28,153 INFO : valid_loss                0.47523
+2019-09-28 11:21:28,153 INFO : train_misclass            0.00000
+2019-09-28 11:21:28,153 INFO : valid_misclass            0.21348
+2019-09-28 11:21:28,153 INFO : runtime                   1.06250
+2019-09-28 11:21:28,153 INFO : 
+2019-09-28 11:21:28,824 INFO : Time only for training updates: 0.67s
+2019-09-28 11:21:29,231 INFO : Epoch 278
+2019-09-28 11:21:29,231 INFO : train_loss                0.02690
+2019-09-28 11:21:29,231 INFO : valid_loss                0.48416
+2019-09-28 11:21:29,231 INFO : train_misclass            0.00000
+2019-09-28 11:21:29,231 INFO : valid_misclass            0.21348
+2019-09-28 11:21:29,231 INFO : runtime                   1.09375
+2019-09-28 11:21:29,231 INFO : 
+2019-09-28 11:21:29,903 INFO : Time only for training updates: 0.67s
+2019-09-28 11:21:30,309 INFO : Epoch 279
+2019-09-28 11:21:30,309 INFO : train_loss                0.02606
+2019-09-28 11:21:30,309 INFO : valid_loss                0.47633
+2019-09-28 11:21:30,309 INFO : train_misclass            0.00000
+2019-09-28 11:21:30,309 INFO : valid_misclass            0.21348
+2019-09-28 11:21:30,309 INFO : runtime                   1.07812
+2019-09-28 11:21:30,309 INFO : 
+2019-09-28 11:21:30,981 INFO : Time only for training updates: 0.67s
+2019-09-28 11:21:31,387 INFO : Epoch 280
+2019-09-28 11:21:31,387 INFO : train_loss                0.02596
+2019-09-28 11:21:31,387 INFO : valid_loss                0.47604
+2019-09-28 11:21:31,387 INFO : train_misclass            0.00000
+2019-09-28 11:21:31,387 INFO : valid_misclass            0.21348
+2019-09-28 11:21:31,387 INFO : runtime                   1.07812
+2019-09-28 11:21:31,387 INFO : 
+2019-09-28 11:21:32,074 INFO : Time only for training updates: 0.69s
+2019-09-28 11:21:32,481 INFO : Epoch 281
+2019-09-28 11:21:32,481 INFO : train_loss                0.02584
+2019-09-28 11:21:32,481 INFO : valid_loss                0.47832
+2019-09-28 11:21:32,481 INFO : train_misclass            0.00000
+2019-09-28 11:21:32,481 INFO : valid_misclass            0.21348
+2019-09-28 11:21:32,481 INFO : runtime                   1.09374
+2019-09-28 11:21:32,481 INFO : 
+2019-09-28 11:21:33,137 INFO : Time only for training updates: 0.66s
+2019-09-28 11:21:33,543 INFO : Epoch 282
+2019-09-28 11:21:33,543 INFO : train_loss                0.02591
+2019-09-28 11:21:33,543 INFO : valid_loss                0.47802
+2019-09-28 11:21:33,543 INFO : train_misclass            0.00000
+2019-09-28 11:21:33,543 INFO : valid_misclass            0.21348
+2019-09-28 11:21:33,543 INFO : runtime                   1.06249
+2019-09-28 11:21:33,543 INFO : 
+2019-09-28 11:21:34,199 INFO : Time only for training updates: 0.66s
+2019-09-28 11:21:34,621 INFO : Epoch 283
+2019-09-28 11:21:34,621 INFO : train_loss                0.02572
+2019-09-28 11:21:34,621 INFO : valid_loss                0.47289
+2019-09-28 11:21:34,621 INFO : train_misclass            0.00000
+2019-09-28 11:21:34,621 INFO : valid_misclass            0.21348
+2019-09-28 11:21:34,621 INFO : runtime                   1.06250
+2019-09-28 11:21:34,621 INFO : 
+2019-09-28 11:21:35,293 INFO : Time only for training updates: 0.67s
+2019-09-28 11:21:35,715 INFO : Epoch 284
+2019-09-28 11:21:35,715 INFO : train_loss                0.02561
+2019-09-28 11:21:35,715 INFO : valid_loss                0.47245
+2019-09-28 11:21:35,715 INFO : train_misclass            0.00000
+2019-09-28 11:21:35,715 INFO : valid_misclass            0.21348
+2019-09-28 11:21:35,715 INFO : runtime                   1.09375
+2019-09-28 11:21:35,715 INFO : 
+2019-09-28 11:21:36,387 INFO : Time only for training updates: 0.67s
+2019-09-28 11:21:36,809 INFO : Epoch 285
+2019-09-28 11:21:36,809 INFO : train_loss                0.02578
+2019-09-28 11:21:36,809 INFO : valid_loss                0.47217
+2019-09-28 11:21:36,809 INFO : train_misclass            0.00000
+2019-09-28 11:21:36,809 INFO : valid_misclass            0.21348
+2019-09-28 11:21:36,809 INFO : runtime                   1.09375
+2019-09-28 11:21:36,824 INFO : 
+2019-09-28 11:21:37,496 INFO : Time only for training updates: 0.67s
+2019-09-28 11:21:37,903 INFO : Epoch 286
+2019-09-28 11:21:37,903 INFO : train_loss                0.02617
+2019-09-28 11:21:37,903 INFO : valid_loss                0.47608
+2019-09-28 11:21:37,903 INFO : train_misclass            0.00000
+2019-09-28 11:21:37,903 INFO : valid_misclass            0.21348
+2019-09-28 11:21:37,903 INFO : runtime                   1.10937
+2019-09-28 11:21:37,903 INFO : 
+2019-09-28 11:21:38,574 INFO : Time only for training updates: 0.67s
+2019-09-28 11:21:38,996 INFO : Epoch 287
+2019-09-28 11:21:38,996 INFO : train_loss                0.02571
+2019-09-28 11:21:38,996 INFO : valid_loss                0.47048
+2019-09-28 11:21:38,996 INFO : train_misclass            0.00000
+2019-09-28 11:21:38,996 INFO : valid_misclass            0.21348
+2019-09-28 11:21:38,996 INFO : runtime                   1.07812
+2019-09-28 11:21:38,996 INFO : 
+2019-09-28 11:21:39,637 INFO : Time only for training updates: 0.64s
+2019-09-28 11:21:40,059 INFO : Epoch 288
+2019-09-28 11:21:40,059 INFO : train_loss                0.02571
+2019-09-28 11:21:40,059 INFO : valid_loss                0.47078
+2019-09-28 11:21:40,059 INFO : train_misclass            0.00000
+2019-09-28 11:21:40,059 INFO : valid_misclass            0.21348
+2019-09-28 11:21:40,059 INFO : runtime                   1.07812
+2019-09-28 11:21:40,059 INFO : 
+2019-09-28 11:21:40,715 INFO : Time only for training updates: 0.66s
+2019-09-28 11:21:41,121 INFO : Epoch 289
+2019-09-28 11:21:41,121 INFO : train_loss                0.02565
+2019-09-28 11:21:41,121 INFO : valid_loss                0.46781
+2019-09-28 11:21:41,121 INFO : train_misclass            0.00000
+2019-09-28 11:21:41,121 INFO : valid_misclass            0.21348
+2019-09-28 11:21:41,121 INFO : runtime                   1.06250
+2019-09-28 11:21:41,121 INFO : 
+2019-09-28 11:21:41,793 INFO : Time only for training updates: 0.66s
+2019-09-28 11:21:42,215 INFO : Epoch 290
+2019-09-28 11:21:42,215 INFO : train_loss                0.02572
+2019-09-28 11:21:42,215 INFO : valid_loss                0.47146
+2019-09-28 11:21:42,215 INFO : train_misclass            0.00000
+2019-09-28 11:21:42,215 INFO : valid_misclass            0.21348
+2019-09-28 11:21:42,215 INFO : runtime                   1.07812
+2019-09-28 11:21:42,215 INFO : 
+2019-09-28 11:21:42,871 INFO : Time only for training updates: 0.66s
+2019-09-28 11:21:43,277 INFO : Epoch 291
+2019-09-28 11:21:43,293 INFO : train_loss                0.02574
+2019-09-28 11:21:43,293 INFO : valid_loss                0.48011
+2019-09-28 11:21:43,293 INFO : train_misclass            0.00000
+2019-09-28 11:21:43,293 INFO : valid_misclass            0.21348
+2019-09-28 11:21:43,293 INFO : runtime                   1.07812
+2019-09-28 11:21:43,293 INFO : 
+2019-09-28 11:21:43,949 INFO : Time only for training updates: 0.66s
+2019-09-28 11:21:44,371 INFO : Epoch 292
+2019-09-28 11:21:44,371 INFO : train_loss                0.02589
+2019-09-28 11:21:44,371 INFO : valid_loss                0.48134
+2019-09-28 11:21:44,371 INFO : train_misclass            0.00000
+2019-09-28 11:21:44,371 INFO : valid_misclass            0.21348
+2019-09-28 11:21:44,371 INFO : runtime                   1.07812
+2019-09-28 11:21:44,371 INFO : 
+2019-09-28 11:21:45,027 INFO : Time only for training updates: 0.66s
+2019-09-28 11:21:45,434 INFO : Epoch 293
+2019-09-28 11:21:45,434 INFO : train_loss                0.02551
+2019-09-28 11:21:45,434 INFO : valid_loss                0.48250
+2019-09-28 11:21:45,434 INFO : train_misclass            0.00000
+2019-09-28 11:21:45,434 INFO : valid_misclass            0.21348
+2019-09-28 11:21:45,449 INFO : runtime                   1.07812
+2019-09-28 11:21:45,449 INFO : 
+2019-09-28 11:21:46,090 INFO : Time only for training updates: 0.64s
+2019-09-28 11:21:46,512 INFO : Epoch 294
+2019-09-28 11:21:46,512 INFO : train_loss                0.02503
+2019-09-28 11:21:46,512 INFO : valid_loss                0.47819
+2019-09-28 11:21:46,512 INFO : train_misclass            0.00000
+2019-09-28 11:21:46,512 INFO : valid_misclass            0.21348
+2019-09-28 11:21:46,512 INFO : runtime                   1.06250
+2019-09-28 11:21:46,512 INFO : 
+2019-09-28 11:21:47,168 INFO : Time only for training updates: 0.66s
+2019-09-28 11:21:47,574 INFO : Epoch 295
+2019-09-28 11:21:47,574 INFO : train_loss                0.02504
+2019-09-28 11:21:47,574 INFO : valid_loss                0.48336
+2019-09-28 11:21:47,574 INFO : train_misclass            0.00000
+2019-09-28 11:21:47,574 INFO : valid_misclass            0.21348
+2019-09-28 11:21:47,574 INFO : runtime                   1.07812
+2019-09-28 11:21:47,574 INFO : 
+2019-09-28 11:21:48,231 INFO : Time only for training updates: 0.66s
+2019-09-28 11:21:48,652 INFO : Epoch 296
+2019-09-28 11:21:48,652 INFO : train_loss                0.02521
+2019-09-28 11:21:48,652 INFO : valid_loss                0.49132
+2019-09-28 11:21:48,652 INFO : train_misclass            0.00000
+2019-09-28 11:21:48,652 INFO : valid_misclass            0.21348
+2019-09-28 11:21:48,668 INFO : runtime                   1.06249
+2019-09-28 11:21:48,668 INFO : 
+2019-09-28 11:21:49,324 INFO : Time only for training updates: 0.66s
+2019-09-28 11:21:49,731 INFO : Epoch 297
+2019-09-28 11:21:49,746 INFO : train_loss                0.02505
+2019-09-28 11:21:49,746 INFO : valid_loss                0.49430
+2019-09-28 11:21:49,746 INFO : train_misclass            0.00000
+2019-09-28 11:21:49,746 INFO : valid_misclass            0.21348
+2019-09-28 11:21:49,746 INFO : runtime                   1.09375
+2019-09-28 11:21:49,746 INFO : 
+2019-09-28 11:21:50,387 INFO : Time only for training updates: 0.64s
+2019-09-28 11:21:50,809 INFO : Epoch 298
+2019-09-28 11:21:50,824 INFO : train_loss                0.02507
+2019-09-28 11:21:50,824 INFO : valid_loss                0.50193
+2019-09-28 11:21:50,824 INFO : train_misclass            0.00000
+2019-09-28 11:21:50,824 INFO : valid_misclass            0.21348
+2019-09-28 11:21:50,824 INFO : runtime                   1.06252
+2019-09-28 11:21:50,824 INFO : 
+2019-09-28 11:21:51,496 INFO : Time only for training updates: 0.67s
+2019-09-28 11:21:51,918 INFO : Epoch 299
+2019-09-28 11:21:51,918 INFO : train_loss                0.02517
+2019-09-28 11:21:51,918 INFO : valid_loss                0.50477
+2019-09-28 11:21:51,918 INFO : train_misclass            0.00000
+2019-09-28 11:21:51,918 INFO : valid_misclass            0.21348
+2019-09-28 11:21:51,918 INFO : runtime                   1.10935
+2019-09-28 11:21:51,918 INFO : 
+2019-09-28 11:21:52,590 INFO : Time only for training updates: 0.67s
+2019-09-28 11:21:53,012 INFO : Epoch 300
+2019-09-28 11:21:53,012 INFO : train_loss                0.02518
+2019-09-28 11:21:53,012 INFO : valid_loss                0.50262
+2019-09-28 11:21:53,012 INFO : train_misclass            0.00000
+2019-09-28 11:21:53,012 INFO : valid_misclass            0.21348
+2019-09-28 11:21:53,012 INFO : runtime                   1.09375
+2019-09-28 11:21:53,012 INFO : 
+2019-09-28 11:21:53,668 INFO : Time only for training updates: 0.66s
+2019-09-28 11:21:54,090 INFO : Epoch 301
+2019-09-28 11:21:54,090 INFO : train_loss                0.02485
+2019-09-28 11:21:54,090 INFO : valid_loss                0.49878
+2019-09-28 11:21:54,090 INFO : train_misclass            0.00000
+2019-09-28 11:21:54,090 INFO : valid_misclass            0.21348
+2019-09-28 11:21:54,090 INFO : runtime                   1.07812
+2019-09-28 11:21:54,090 INFO : 
+2019-09-28 11:21:54,746 INFO : Time only for training updates: 0.66s
+2019-09-28 11:21:55,184 INFO : Epoch 302
+2019-09-28 11:21:55,184 INFO : train_loss                0.02470
+2019-09-28 11:21:55,184 INFO : valid_loss                0.49537
+2019-09-28 11:21:55,184 INFO : train_misclass            0.00000
+2019-09-28 11:21:55,184 INFO : valid_misclass            0.21348
+2019-09-28 11:21:55,184 INFO : runtime                   1.07812
+2019-09-28 11:21:55,184 INFO : 
+2019-09-28 11:21:55,840 INFO : Time only for training updates: 0.66s
+2019-09-28 11:21:56,246 INFO : Epoch 303
+2019-09-28 11:21:56,246 INFO : train_loss                0.02465
+2019-09-28 11:21:56,246 INFO : valid_loss                0.48876
+2019-09-28 11:21:56,246 INFO : train_misclass            0.00000
+2019-09-28 11:21:56,246 INFO : valid_misclass            0.21348
+2019-09-28 11:21:56,246 INFO : runtime                   1.09375
+2019-09-28 11:21:56,246 INFO : 
+2019-09-28 11:21:56,902 INFO : Time only for training updates: 0.66s
+2019-09-28 11:21:57,340 INFO : Epoch 304
+2019-09-28 11:21:57,356 INFO : train_loss                0.02464
+2019-09-28 11:21:57,356 INFO : valid_loss                0.48823
+2019-09-28 11:21:57,356 INFO : train_misclass            0.00000
+2019-09-28 11:21:57,356 INFO : valid_misclass            0.21348
+2019-09-28 11:21:57,356 INFO : runtime                   1.06250
+2019-09-28 11:21:57,356 INFO : 
+2019-09-28 11:21:58,012 INFO : Time only for training updates: 0.66s
+2019-09-28 11:21:58,434 INFO : Epoch 305
+2019-09-28 11:21:58,434 INFO : train_loss                0.02479
+2019-09-28 11:21:58,434 INFO : valid_loss                0.48783
+2019-09-28 11:21:58,434 INFO : train_misclass            0.00000
+2019-09-28 11:21:58,434 INFO : valid_misclass            0.21348
+2019-09-28 11:21:58,434 INFO : runtime                   1.10937
+2019-09-28 11:21:58,434 INFO : 
+2019-09-28 11:21:59,090 INFO : Time only for training updates: 0.66s
+2019-09-28 11:21:59,496 INFO : Epoch 306
+2019-09-28 11:21:59,496 INFO : train_loss                0.02463
+2019-09-28 11:21:59,496 INFO : valid_loss                0.48217
+2019-09-28 11:21:59,496 INFO : train_misclass            0.00000
+2019-09-28 11:21:59,496 INFO : valid_misclass            0.21348
+2019-09-28 11:21:59,496 INFO : runtime                   1.07812
+2019-09-28 11:21:59,496 INFO : 
+2019-09-28 11:22:00,152 INFO : Time only for training updates: 0.66s
+2019-09-28 11:22:00,574 INFO : Epoch 307
+2019-09-28 11:22:00,574 INFO : train_loss                0.02456
+2019-09-28 11:22:00,574 INFO : valid_loss                0.48542
+2019-09-28 11:22:00,574 INFO : train_misclass            0.00000
+2019-09-28 11:22:00,574 INFO : valid_misclass            0.21348
+2019-09-28 11:22:00,574 INFO : runtime                   1.06249
+2019-09-28 11:22:00,574 INFO : 
+2019-09-28 11:22:01,246 INFO : Time only for training updates: 0.67s
+2019-09-28 11:22:01,652 INFO : Epoch 308
+2019-09-28 11:22:01,668 INFO : train_loss                0.02449
+2019-09-28 11:22:01,668 INFO : valid_loss                0.48596
+2019-09-28 11:22:01,668 INFO : train_misclass            0.00000
+2019-09-28 11:22:01,668 INFO : valid_misclass            0.21348
+2019-09-28 11:22:01,668 INFO : runtime                   1.09375
+2019-09-28 11:22:01,668 INFO : 
+2019-09-28 11:22:02,324 INFO : Time only for training updates: 0.66s
+2019-09-28 11:22:02,746 INFO : Epoch 309
+2019-09-28 11:22:02,746 INFO : train_loss                0.02460
+2019-09-28 11:22:02,746 INFO : valid_loss                0.48571
+2019-09-28 11:22:02,746 INFO : train_misclass            0.00000
+2019-09-28 11:22:02,746 INFO : valid_misclass            0.21348
+2019-09-28 11:22:02,746 INFO : runtime                   1.07812
+2019-09-28 11:22:02,746 INFO : 
+2019-09-28 11:22:03,418 INFO : Time only for training updates: 0.67s
+2019-09-28 11:22:03,824 INFO : Epoch 310
+2019-09-28 11:22:03,824 INFO : train_loss                0.02458
+2019-09-28 11:22:03,824 INFO : valid_loss                0.48318
+2019-09-28 11:22:03,824 INFO : train_misclass            0.00000
+2019-09-28 11:22:03,824 INFO : valid_misclass            0.21348
+2019-09-28 11:22:03,824 INFO : runtime                   1.09375
+2019-09-28 11:22:03,824 INFO : 
+2019-09-28 11:22:04,496 INFO : Time only for training updates: 0.66s
+2019-09-28 11:22:04,902 INFO : Epoch 311
+2019-09-28 11:22:04,902 INFO : train_loss                0.02491
+2019-09-28 11:22:04,902 INFO : valid_loss                0.48611
+2019-09-28 11:22:04,902 INFO : train_misclass            0.00000
+2019-09-28 11:22:04,902 INFO : valid_misclass            0.21348
+2019-09-28 11:22:04,902 INFO : runtime                   1.07812
+2019-09-28 11:22:04,902 INFO : 
+2019-09-28 11:22:05,559 INFO : Time only for training updates: 0.66s
+2019-09-28 11:22:05,965 INFO : Epoch 312
+2019-09-28 11:22:05,965 INFO : train_loss                0.02444
+2019-09-28 11:22:05,965 INFO : valid_loss                0.48176
+2019-09-28 11:22:05,965 INFO : train_misclass            0.00000
+2019-09-28 11:22:05,965 INFO : valid_misclass            0.21348
+2019-09-28 11:22:05,965 INFO : runtime                   1.06250
+2019-09-28 11:22:05,965 INFO : 
+2019-09-28 11:22:06,637 INFO : Time only for training updates: 0.67s
+2019-09-28 11:22:07,074 INFO : Epoch 313
+2019-09-28 11:22:07,074 INFO : train_loss                0.02451
+2019-09-28 11:22:07,074 INFO : valid_loss                0.48362
+2019-09-28 11:22:07,074 INFO : train_misclass            0.00000
+2019-09-28 11:22:07,074 INFO : valid_misclass            0.21348
+2019-09-28 11:22:07,074 INFO : runtime                   1.07812
+2019-09-28 11:22:07,074 INFO : 
+2019-09-28 11:22:07,731 INFO : Time only for training updates: 0.66s
+2019-09-28 11:22:08,137 INFO : Epoch 314
+2019-09-28 11:22:08,137 INFO : train_loss                0.02458
+2019-09-28 11:22:08,137 INFO : valid_loss                0.48732
+2019-09-28 11:22:08,137 INFO : train_misclass            0.00000
+2019-09-28 11:22:08,137 INFO : valid_misclass            0.21348
+2019-09-28 11:22:08,137 INFO : runtime                   1.09374
+2019-09-28 11:22:08,137 INFO : 
+2019-09-28 11:22:08,793 INFO : Time only for training updates: 0.66s
+2019-09-28 11:22:09,215 INFO : Epoch 315
+2019-09-28 11:22:09,215 INFO : train_loss                0.02447
+2019-09-28 11:22:09,215 INFO : valid_loss                0.48589
+2019-09-28 11:22:09,215 INFO : train_misclass            0.00000
+2019-09-28 11:22:09,215 INFO : valid_misclass            0.21348
+2019-09-28 11:22:09,215 INFO : runtime                   1.06250
+2019-09-28 11:22:09,215 INFO : 
+2019-09-28 11:22:09,871 INFO : Time only for training updates: 0.66s
+2019-09-28 11:22:10,277 INFO : Epoch 316
+2019-09-28 11:22:10,277 INFO : train_loss                0.02446
+2019-09-28 11:22:10,277 INFO : valid_loss                0.48524
+2019-09-28 11:22:10,277 INFO : train_misclass            0.00000
+2019-09-28 11:22:10,277 INFO : valid_misclass            0.21348
+2019-09-28 11:22:10,277 INFO : runtime                   1.07812
+2019-09-28 11:22:10,277 INFO : 
+2019-09-28 11:22:10,949 INFO : Time only for training updates: 0.67s
+2019-09-28 11:22:11,371 INFO : Epoch 317
+2019-09-28 11:22:11,371 INFO : train_loss                0.02438
+2019-09-28 11:22:11,371 INFO : valid_loss                0.48585
+2019-09-28 11:22:11,371 INFO : train_misclass            0.00000
+2019-09-28 11:22:11,371 INFO : valid_misclass            0.21348
+2019-09-28 11:22:11,371 INFO : runtime                   1.07812
+2019-09-28 11:22:11,371 INFO : 
+2019-09-28 11:22:12,027 INFO : Time only for training updates: 0.66s
+2019-09-28 11:22:12,434 INFO : Epoch 318
+2019-09-28 11:22:12,434 INFO : train_loss                0.02403
+2019-09-28 11:22:12,434 INFO : valid_loss                0.48165
+2019-09-28 11:22:12,434 INFO : train_misclass            0.00000
+2019-09-28 11:22:12,434 INFO : valid_misclass            0.21348
+2019-09-28 11:22:12,434 INFO : runtime                   1.07812
+2019-09-28 11:22:12,434 INFO : 
+2019-09-28 11:22:13,090 INFO : Time only for training updates: 0.66s
+2019-09-28 11:22:13,512 INFO : Epoch 319
+2019-09-28 11:22:13,512 INFO : train_loss                0.02397
+2019-09-28 11:22:13,512 INFO : valid_loss                0.48173
+2019-09-28 11:22:13,512 INFO : train_misclass            0.00000
+2019-09-28 11:22:13,512 INFO : valid_misclass            0.21348
+2019-09-28 11:22:13,512 INFO : runtime                   1.06249
+2019-09-28 11:22:13,512 INFO : 
+2019-09-28 11:22:14,152 INFO : Time only for training updates: 0.64s
+2019-09-28 11:22:14,559 INFO : Epoch 320
+2019-09-28 11:22:14,559 INFO : train_loss                0.02414
+2019-09-28 11:22:14,559 INFO : valid_loss                0.48419
+2019-09-28 11:22:14,559 INFO : train_misclass            0.00000
+2019-09-28 11:22:14,559 INFO : valid_misclass            0.21348
+2019-09-28 11:22:14,559 INFO : runtime                   1.06250
+2019-09-28 11:22:14,559 INFO : 
+2019-09-28 11:22:15,215 INFO : Time only for training updates: 0.66s
+2019-09-28 11:22:15,637 INFO : Epoch 321
+2019-09-28 11:22:15,637 INFO : train_loss                0.02441
+2019-09-28 11:22:15,637 INFO : valid_loss                0.48556
+2019-09-28 11:22:15,637 INFO : train_misclass            0.00000
+2019-09-28 11:22:15,637 INFO : valid_misclass            0.21348
+2019-09-28 11:22:15,637 INFO : runtime                   1.06250
+2019-09-28 11:22:15,637 INFO : 
+2019-09-28 11:22:16,293 INFO : Time only for training updates: 0.66s
+2019-09-28 11:22:16,715 INFO : Epoch 322
+2019-09-28 11:22:16,715 INFO : train_loss                0.02415
+2019-09-28 11:22:16,715 INFO : valid_loss                0.48458
+2019-09-28 11:22:16,715 INFO : train_misclass            0.00000
+2019-09-28 11:22:16,715 INFO : valid_misclass            0.21348
+2019-09-28 11:22:16,715 INFO : runtime                   1.07812
+2019-09-28 11:22:16,715 INFO : 
+2019-09-28 11:22:17,496 INFO : Time only for training updates: 0.78s
+2019-09-28 11:22:17,904 INFO : Epoch 323
+2019-09-28 11:22:17,904 INFO : train_loss                0.02406
+2019-09-28 11:22:17,904 INFO : valid_loss                0.48556
+2019-09-28 11:22:17,904 INFO : train_misclass            0.00000
+2019-09-28 11:22:17,904 INFO : valid_misclass            0.21348
+2019-09-28 11:22:17,904 INFO : runtime                   1.20312
+2019-09-28 11:22:17,904 INFO : 
+2019-09-28 11:22:18,559 INFO : Time only for training updates: 0.65s
+2019-09-28 11:22:18,980 INFO : Epoch 324
+2019-09-28 11:22:18,980 INFO : train_loss                0.02371
+2019-09-28 11:22:18,980 INFO : valid_loss                0.48358
+2019-09-28 11:22:18,980 INFO : train_misclass            0.00000
+2019-09-28 11:22:18,980 INFO : valid_misclass            0.21348
+2019-09-28 11:22:18,980 INFO : runtime                   1.06250
+2019-09-28 11:22:18,980 INFO : 
+2019-09-28 11:22:19,626 INFO : Time only for training updates: 0.65s
+2019-09-28 11:22:20,027 INFO : Epoch 325
+2019-09-28 11:22:20,027 INFO : train_loss                0.02378
+2019-09-28 11:22:20,027 INFO : valid_loss                0.48634
+2019-09-28 11:22:20,027 INFO : train_misclass            0.00000
+2019-09-28 11:22:20,027 INFO : valid_misclass            0.21348
+2019-09-28 11:22:20,027 INFO : runtime                   1.06777
+2019-09-28 11:22:20,027 INFO : 
+2019-09-28 11:22:20,684 INFO : Time only for training updates: 0.64s
+2019-09-28 11:22:21,090 INFO : Epoch 326
+2019-09-28 11:22:21,090 INFO : train_loss                0.02390
+2019-09-28 11:22:21,090 INFO : valid_loss                0.49057
+2019-09-28 11:22:21,090 INFO : train_misclass            0.00000
+2019-09-28 11:22:21,090 INFO : valid_misclass            0.21348
+2019-09-28 11:22:21,090 INFO : runtime                   1.05723
+2019-09-28 11:22:21,090 INFO : 
+2019-09-28 11:22:21,777 INFO : Time only for training updates: 0.69s
+2019-09-28 11:22:22,199 INFO : Epoch 327
+2019-09-28 11:22:22,199 INFO : train_loss                0.02376
+2019-09-28 11:22:22,199 INFO : valid_loss                0.48613
+2019-09-28 11:22:22,199 INFO : train_misclass            0.00000
+2019-09-28 11:22:22,199 INFO : valid_misclass            0.21348
+2019-09-28 11:22:22,199 INFO : runtime                   1.09375
+2019-09-28 11:22:22,199 INFO : 
+2019-09-28 11:22:22,855 INFO : Time only for training updates: 0.66s
+2019-09-28 11:22:23,277 INFO : Epoch 328
+2019-09-28 11:22:23,277 INFO : train_loss                0.02369
+2019-09-28 11:22:23,277 INFO : valid_loss                0.48415
+2019-09-28 11:22:23,277 INFO : train_misclass            0.00000
+2019-09-28 11:22:23,277 INFO : valid_misclass            0.21348
+2019-09-28 11:22:23,277 INFO : runtime                   1.07812
+2019-09-28 11:22:23,277 INFO : 
+2019-09-28 11:22:23,949 INFO : Time only for training updates: 0.67s
+2019-09-28 11:22:24,387 INFO : Epoch 329
+2019-09-28 11:22:24,387 INFO : train_loss                0.02381
+2019-09-28 11:22:24,387 INFO : valid_loss                0.48645
+2019-09-28 11:22:24,387 INFO : train_misclass            0.00000
+2019-09-28 11:22:24,387 INFO : valid_misclass            0.21348
+2019-09-28 11:22:24,387 INFO : runtime                   1.09374
+2019-09-28 11:22:24,387 INFO : 
+2019-09-28 11:22:25,043 INFO : Time only for training updates: 0.66s
+2019-09-28 11:22:25,480 INFO : Epoch 330
+2019-09-28 11:22:25,480 INFO : train_loss                0.02411
+2019-09-28 11:22:25,480 INFO : valid_loss                0.49044
+2019-09-28 11:22:25,480 INFO : train_misclass            0.00000
+2019-09-28 11:22:25,480 INFO : valid_misclass            0.21348
+2019-09-28 11:22:25,480 INFO : runtime                   1.09375
+2019-09-28 11:22:25,480 INFO : 
+2019-09-28 11:22:26,137 INFO : Time only for training updates: 0.66s
+2019-09-28 11:22:26,543 INFO : Epoch 331
+2019-09-28 11:22:26,543 INFO : train_loss                0.02389
+2019-09-28 11:22:26,543 INFO : valid_loss                0.49104
+2019-09-28 11:22:26,543 INFO : train_misclass            0.00000
+2019-09-28 11:22:26,543 INFO : valid_misclass            0.21348
+2019-09-28 11:22:26,543 INFO : runtime                   1.09375
+2019-09-28 11:22:26,543 INFO : 
+2019-09-28 11:22:27,215 INFO : Time only for training updates: 0.67s
+2019-09-28 11:22:27,621 INFO : Epoch 332
+2019-09-28 11:22:27,621 INFO : train_loss                0.02369
+2019-09-28 11:22:27,621 INFO : valid_loss                0.48998
+2019-09-28 11:22:27,621 INFO : train_misclass            0.00000
+2019-09-28 11:22:27,621 INFO : valid_misclass            0.21348
+2019-09-28 11:22:27,621 INFO : runtime                   1.07812
+2019-09-28 11:22:27,621 INFO : 
+2019-09-28 11:22:28,277 INFO : Time only for training updates: 0.66s
+2019-09-28 11:22:28,699 INFO : Epoch 333
+2019-09-28 11:22:28,699 INFO : train_loss                0.02369
+2019-09-28 11:22:28,699 INFO : valid_loss                0.48955
+2019-09-28 11:22:28,699 INFO : train_misclass            0.00000
+2019-09-28 11:22:28,699 INFO : valid_misclass            0.21348
+2019-09-28 11:22:28,699 INFO : runtime                   1.06250
+2019-09-28 11:22:28,699 INFO : 
+2019-09-28 11:22:29,371 INFO : Time only for training updates: 0.67s
+2019-09-28 11:22:29,777 INFO : Epoch 334
+2019-09-28 11:22:29,777 INFO : train_loss                0.02378
+2019-09-28 11:22:29,777 INFO : valid_loss                0.49083
+2019-09-28 11:22:29,777 INFO : train_misclass            0.00000
+2019-09-28 11:22:29,777 INFO : valid_misclass            0.21348
+2019-09-28 11:22:29,777 INFO : runtime                   1.09375
+2019-09-28 11:22:29,777 INFO : 
+2019-09-28 11:22:30,449 INFO : Time only for training updates: 0.67s
+2019-09-28 11:22:30,871 INFO : Epoch 335
+2019-09-28 11:22:30,871 INFO : train_loss                0.02372
+2019-09-28 11:22:30,871 INFO : valid_loss                0.48976
+2019-09-28 11:22:30,871 INFO : train_misclass            0.00000
+2019-09-28 11:22:30,871 INFO : valid_misclass            0.21348
+2019-09-28 11:22:30,871 INFO : runtime                   1.07812
+2019-09-28 11:22:30,871 INFO : 
+2019-09-28 11:22:31,527 INFO : Time only for training updates: 0.66s
+2019-09-28 11:22:31,934 INFO : Epoch 336
+2019-09-28 11:22:31,934 INFO : train_loss                0.02383
+2019-09-28 11:22:31,934 INFO : valid_loss                0.49287
+2019-09-28 11:22:31,934 INFO : train_misclass            0.00000
+2019-09-28 11:22:31,934 INFO : valid_misclass            0.21348
+2019-09-28 11:22:31,934 INFO : runtime                   1.07812
+2019-09-28 11:22:31,934 INFO : 
+2019-09-28 11:22:32,574 INFO : Time only for training updates: 0.64s
+2019-09-28 11:22:32,996 INFO : Epoch 337
+2019-09-28 11:22:32,996 INFO : train_loss                0.02361
+2019-09-28 11:22:32,996 INFO : valid_loss                0.48995
+2019-09-28 11:22:32,996 INFO : train_misclass            0.00000
+2019-09-28 11:22:32,996 INFO : valid_misclass            0.21348
+2019-09-28 11:22:32,996 INFO : runtime                   1.04687
+2019-09-28 11:22:32,996 INFO : 
+2019-09-28 11:22:33,668 INFO : Time only for training updates: 0.67s
+2019-09-28 11:22:34,090 INFO : Epoch 338
+2019-09-28 11:22:34,090 INFO : train_loss                0.02405
+2019-09-28 11:22:34,090 INFO : valid_loss                0.49434
+2019-09-28 11:22:34,090 INFO : train_misclass            0.00000
+2019-09-28 11:22:34,090 INFO : valid_misclass            0.21348
+2019-09-28 11:22:34,090 INFO : runtime                   1.09375
+2019-09-28 11:22:34,090 INFO : 
+2019-09-28 11:22:34,746 INFO : Time only for training updates: 0.66s
+2019-09-28 11:22:35,168 INFO : Epoch 339
+2019-09-28 11:22:35,168 INFO : train_loss                0.02363
+2019-09-28 11:22:35,168 INFO : valid_loss                0.48962
+2019-09-28 11:22:35,168 INFO : train_misclass            0.00000
+2019-09-28 11:22:35,168 INFO : valid_misclass            0.21348
+2019-09-28 11:22:35,168 INFO : runtime                   1.07812
+2019-09-28 11:22:35,168 INFO : 
+2019-09-28 11:22:35,845 INFO : Time only for training updates: 0.68s
+2019-09-28 11:22:36,251 INFO : Epoch 340
+2019-09-28 11:22:36,251 INFO : train_loss                0.02357
+2019-09-28 11:22:36,251 INFO : valid_loss                0.49023
+2019-09-28 11:22:36,251 INFO : train_misclass            0.00000
+2019-09-28 11:22:36,251 INFO : valid_misclass            0.21348
+2019-09-28 11:22:36,251 INFO : runtime                   1.09911
+2019-09-28 11:22:36,251 INFO : 
+2019-09-28 11:22:36,939 INFO : Time only for training updates: 0.69s
+2019-09-28 11:22:37,345 INFO : Epoch 341
+2019-09-28 11:22:37,345 INFO : train_loss                0.02369
+2019-09-28 11:22:37,345 INFO : valid_loss                0.49207
+2019-09-28 11:22:37,345 INFO : train_misclass            0.00000
+2019-09-28 11:22:37,345 INFO : valid_misclass            0.21348
+2019-09-28 11:22:37,345 INFO : runtime                   1.09375
+2019-09-28 11:22:37,345 INFO : 
+2019-09-28 11:22:38,001 INFO : Time only for training updates: 0.64s
+2019-09-28 11:22:38,408 INFO : Epoch 342
+2019-09-28 11:22:38,408 INFO : train_loss                0.02344
+2019-09-28 11:22:38,408 INFO : valid_loss                0.48930
+2019-09-28 11:22:38,408 INFO : train_misclass            0.00000
+2019-09-28 11:22:38,408 INFO : valid_misclass            0.21348
+2019-09-28 11:22:38,408 INFO : runtime                   1.06249
+2019-09-28 11:22:38,408 INFO : 
+2019-09-28 11:22:39,064 INFO : Time only for training updates: 0.66s
+2019-09-28 11:22:39,470 INFO : Epoch 343
+2019-09-28 11:22:39,470 INFO : train_loss                0.02362
+2019-09-28 11:22:39,470 INFO : valid_loss                0.49200
+2019-09-28 11:22:39,470 INFO : train_misclass            0.00000
+2019-09-28 11:22:39,470 INFO : valid_misclass            0.21348
+2019-09-28 11:22:39,470 INFO : runtime                   1.06250
+2019-09-28 11:22:39,470 INFO : 
+2019-09-28 11:22:40,142 INFO : Time only for training updates: 0.66s
+2019-09-28 11:22:40,564 INFO : Epoch 344
+2019-09-28 11:22:40,564 INFO : train_loss                0.02372
+2019-09-28 11:22:40,564 INFO : valid_loss                0.49210
+2019-09-28 11:22:40,564 INFO : train_misclass            0.00000
+2019-09-28 11:22:40,564 INFO : valid_misclass            0.21348
+2019-09-28 11:22:40,564 INFO : runtime                   1.07812
+2019-09-28 11:22:40,564 INFO : 
+2019-09-28 11:22:41,220 INFO : Time only for training updates: 0.66s
+2019-09-28 11:22:41,658 INFO : Epoch 345
+2019-09-28 11:22:41,658 INFO : train_loss                0.02341
+2019-09-28 11:22:41,658 INFO : valid_loss                0.49119
+2019-09-28 11:22:41,658 INFO : train_misclass            0.00000
+2019-09-28 11:22:41,658 INFO : valid_misclass            0.21348
+2019-09-28 11:22:41,658 INFO : runtime                   1.07812
+2019-09-28 11:22:41,658 INFO : 
+2019-09-28 11:22:42,314 INFO : Time only for training updates: 0.66s
+2019-09-28 11:22:42,720 INFO : Epoch 346
+2019-09-28 11:22:42,720 INFO : train_loss                0.02374
+2019-09-28 11:22:42,720 INFO : valid_loss                0.49487
+2019-09-28 11:22:42,720 INFO : train_misclass            0.00000
+2019-09-28 11:22:42,720 INFO : valid_misclass            0.21348
+2019-09-28 11:22:42,720 INFO : runtime                   1.09375
+2019-09-28 11:22:42,720 INFO : 
+2019-09-28 11:22:43,376 INFO : Time only for training updates: 0.66s
+2019-09-28 11:22:43,798 INFO : Epoch 347
+2019-09-28 11:22:43,798 INFO : train_loss                0.02358
+2019-09-28 11:22:43,798 INFO : valid_loss                0.49306
+2019-09-28 11:22:43,798 INFO : train_misclass            0.00000
+2019-09-28 11:22:43,798 INFO : valid_misclass            0.21348
+2019-09-28 11:22:43,798 INFO : runtime                   1.06249
+2019-09-28 11:22:43,798 INFO : 
+2019-09-28 11:22:44,455 INFO : Time only for training updates: 0.66s
+2019-09-28 11:22:44,876 INFO : Epoch 348
+2019-09-28 11:22:44,876 INFO : train_loss                0.02334
+2019-09-28 11:22:44,876 INFO : valid_loss                0.49067
+2019-09-28 11:22:44,876 INFO : train_misclass            0.00000
+2019-09-28 11:22:44,876 INFO : valid_misclass            0.21348
+2019-09-28 11:22:44,876 INFO : runtime                   1.07812
+2019-09-28 11:22:44,876 INFO : 
+2019-09-28 11:22:45,548 INFO : Time only for training updates: 0.67s
+2019-09-28 11:22:45,986 INFO : Epoch 349
+2019-09-28 11:22:45,986 INFO : train_loss                0.02336
+2019-09-28 11:22:45,986 INFO : valid_loss                0.48974
+2019-09-28 11:22:45,986 INFO : train_misclass            0.00000
+2019-09-28 11:22:45,986 INFO : valid_misclass            0.21348
+2019-09-28 11:22:45,986 INFO : runtime                   1.09374
+2019-09-28 11:22:45,986 INFO : 
+2019-09-28 11:22:46,642 INFO : Time only for training updates: 0.66s
+2019-09-28 11:22:47,048 INFO : Epoch 350
+2019-09-28 11:22:47,048 INFO : train_loss                0.02375
+2019-09-28 11:22:47,048 INFO : valid_loss                0.49391
+2019-09-28 11:22:47,048 INFO : train_misclass            0.00000
+2019-09-28 11:22:47,048 INFO : valid_misclass            0.21348
+2019-09-28 11:22:47,048 INFO : runtime                   1.09375
+2019-09-28 11:22:47,048 INFO : 
+2019-09-28 11:22:47,705 INFO : Time only for training updates: 0.66s
+2019-09-28 11:22:48,142 INFO : Epoch 351
+2019-09-28 11:22:48,142 INFO : train_loss                0.02385
+2019-09-28 11:22:48,142 INFO : valid_loss                0.49462
+2019-09-28 11:22:48,142 INFO : train_misclass            0.00000
+2019-09-28 11:22:48,142 INFO : valid_misclass            0.21348
+2019-09-28 11:22:48,142 INFO : runtime                   1.06250
+2019-09-28 11:22:48,142 INFO : 
+2019-09-28 11:22:48,798 INFO : Time only for training updates: 0.66s
+2019-09-28 11:22:49,236 INFO : Epoch 352
+2019-09-28 11:22:49,236 INFO : train_loss                0.02369
+2019-09-28 11:22:49,236 INFO : valid_loss                0.49221
+2019-09-28 11:22:49,236 INFO : train_misclass            0.00000
+2019-09-28 11:22:49,236 INFO : valid_misclass            0.21348
+2019-09-28 11:22:49,236 INFO : runtime                   1.09375
+2019-09-28 11:22:49,236 INFO : 
+2019-09-28 11:22:49,908 INFO : Time only for training updates: 0.67s
+2019-09-28 11:22:50,330 INFO : Epoch 353
+2019-09-28 11:22:50,330 INFO : train_loss                0.02340
+2019-09-28 11:22:50,330 INFO : valid_loss                0.48825
+2019-09-28 11:22:50,330 INFO : train_misclass            0.00000
+2019-09-28 11:22:50,330 INFO : valid_misclass            0.21348
+2019-09-28 11:22:50,330 INFO : runtime                   1.10937
+2019-09-28 11:22:50,330 INFO : 
+2019-09-28 11:22:50,986 INFO : Time only for training updates: 0.66s
+2019-09-28 11:22:51,408 INFO : Epoch 354
+2019-09-28 11:22:51,408 INFO : train_loss                0.02344
+2019-09-28 11:22:51,408 INFO : valid_loss                0.48877
+2019-09-28 11:22:51,408 INFO : train_misclass            0.00000
+2019-09-28 11:22:51,408 INFO : valid_misclass            0.21348
+2019-09-28 11:22:51,408 INFO : runtime                   1.07812
+2019-09-28 11:22:51,408 INFO : 
+2019-09-28 11:22:52,064 INFO : Time only for training updates: 0.66s
+2019-09-28 11:22:52,486 INFO : Epoch 355
+2019-09-28 11:22:52,486 INFO : train_loss                0.02327
+2019-09-28 11:22:52,486 INFO : valid_loss                0.48685
+2019-09-28 11:22:52,486 INFO : train_misclass            0.00000
+2019-09-28 11:22:52,486 INFO : valid_misclass            0.21348
+2019-09-28 11:22:52,486 INFO : runtime                   1.07812
+2019-09-28 11:22:52,486 INFO : 
+2019-09-28 11:22:53,173 INFO : Time only for training updates: 0.69s
+2019-09-28 11:22:53,580 INFO : Epoch 356
+2019-09-28 11:22:53,580 INFO : train_loss                0.02355
+2019-09-28 11:22:53,580 INFO : valid_loss                0.49092
+2019-09-28 11:22:53,580 INFO : train_misclass            0.00000
+2019-09-28 11:22:53,580 INFO : valid_misclass            0.21348
+2019-09-28 11:22:53,580 INFO : runtime                   1.10939
+2019-09-28 11:22:53,580 INFO : 
+2019-09-28 11:22:54,236 INFO : Time only for training updates: 0.66s
+2019-09-28 11:22:54,643 INFO : Epoch 357
+2019-09-28 11:22:54,643 INFO : train_loss                0.02357
+2019-09-28 11:22:54,643 INFO : valid_loss                0.48960
+2019-09-28 11:22:54,643 INFO : train_misclass            0.00000
+2019-09-28 11:22:54,643 INFO : valid_misclass            0.21348
+2019-09-28 11:22:54,643 INFO : runtime                   1.06309
+2019-09-28 11:22:54,643 INFO : 
+2019-09-28 11:22:55,314 INFO : Time only for training updates: 0.67s
+2019-09-28 11:22:55,721 INFO : Epoch 358
+2019-09-28 11:22:55,721 INFO : train_loss                0.02353
+2019-09-28 11:22:55,736 INFO : valid_loss                0.48864
+2019-09-28 11:22:55,736 INFO : train_misclass            0.00000
+2019-09-28 11:22:55,736 INFO : valid_misclass            0.21348
+2019-09-28 11:22:55,736 INFO : runtime                   1.07812
+2019-09-28 11:22:55,736 INFO : 
+2019-09-28 11:22:56,393 INFO : Time only for training updates: 0.66s
+2019-09-28 11:22:56,799 INFO : Epoch 359
+2019-09-28 11:22:56,799 INFO : train_loss                0.02327
+2019-09-28 11:22:56,799 INFO : valid_loss                0.48672
+2019-09-28 11:22:56,799 INFO : train_misclass            0.00000
+2019-09-28 11:22:56,799 INFO : valid_misclass            0.21348
+2019-09-28 11:22:56,799 INFO : runtime                   1.07812
+2019-09-28 11:22:56,799 INFO : 
+2019-09-28 11:22:57,455 INFO : Time only for training updates: 0.66s
+2019-09-28 11:22:57,877 INFO : Epoch 360
+2019-09-28 11:22:57,877 INFO : train_loss                0.02356
+2019-09-28 11:22:57,877 INFO : valid_loss                0.48961
+2019-09-28 11:22:57,877 INFO : train_misclass            0.00000
+2019-09-28 11:22:57,877 INFO : valid_misclass            0.21348
+2019-09-28 11:22:57,877 INFO : runtime                   1.06250
+2019-09-28 11:22:57,877 INFO : 
+2019-09-28 11:22:58,549 INFO : Time only for training updates: 0.67s
+2019-09-28 11:22:58,971 INFO : Epoch 361
+2019-09-28 11:22:58,971 INFO : train_loss                0.02377
+2019-09-28 11:22:58,971 INFO : valid_loss                0.49190
+2019-09-28 11:22:58,971 INFO : train_misclass            0.00000
+2019-09-28 11:22:58,971 INFO : valid_misclass            0.21348
+2019-09-28 11:22:58,971 INFO : runtime                   1.09379
+2019-09-28 11:22:58,971 INFO : 
+2019-09-28 11:22:59,627 INFO : Time only for training updates: 0.66s
+2019-09-28 11:23:00,049 INFO : Epoch 362
+2019-09-28 11:23:00,049 INFO : train_loss                0.02356
+2019-09-28 11:23:00,049 INFO : valid_loss                0.49081
+2019-09-28 11:23:00,049 INFO : train_misclass            0.00000
+2019-09-28 11:23:00,049 INFO : valid_misclass            0.21348
+2019-09-28 11:23:00,049 INFO : runtime                   1.07808
+2019-09-28 11:23:00,049 INFO : 
+2019-09-28 11:23:00,705 INFO : Time only for training updates: 0.66s
+2019-09-28 11:23:01,127 INFO : Epoch 363
+2019-09-28 11:23:01,127 INFO : train_loss                0.02330
+2019-09-28 11:23:01,127 INFO : valid_loss                0.48780
+2019-09-28 11:23:01,127 INFO : train_misclass            0.00000
+2019-09-28 11:23:01,127 INFO : valid_misclass            0.21348
+2019-09-28 11:23:01,127 INFO : runtime                   1.07812
+2019-09-28 11:23:01,127 INFO : 
+2019-09-28 11:23:01,783 INFO : Time only for training updates: 0.66s
+2019-09-28 11:23:02,189 INFO : Epoch 364
+2019-09-28 11:23:02,189 INFO : train_loss                0.02338
+2019-09-28 11:23:02,189 INFO : valid_loss                0.48948
+2019-09-28 11:23:02,189 INFO : train_misclass            0.00000
+2019-09-28 11:23:02,189 INFO : valid_misclass            0.21348
+2019-09-28 11:23:02,189 INFO : runtime                   1.07812
+2019-09-28 11:23:02,189 INFO : 
+2019-09-28 11:23:02,867 INFO : Time only for training updates: 0.68s
+2019-09-28 11:23:03,289 INFO : Epoch 365
+2019-09-28 11:23:03,289 INFO : train_loss                0.02325
+2019-09-28 11:23:03,289 INFO : valid_loss                0.48793
+2019-09-28 11:23:03,289 INFO : train_misclass            0.00000
+2019-09-28 11:23:03,289 INFO : valid_misclass            0.21348
+2019-09-28 11:23:03,289 INFO : runtime                   1.08345
+2019-09-28 11:23:03,289 INFO : 
+2019-09-28 11:23:03,945 INFO : Time only for training updates: 0.66s
+2019-09-28 11:23:04,351 INFO : Epoch 366
+2019-09-28 11:23:04,351 INFO : train_loss                0.02320
+2019-09-28 11:23:04,351 INFO : valid_loss                0.48759
+2019-09-28 11:23:04,351 INFO : train_misclass            0.00000
+2019-09-28 11:23:04,351 INFO : valid_misclass            0.21348
+2019-09-28 11:23:04,351 INFO : runtime                   1.07812
+2019-09-28 11:23:04,351 INFO : 
+2019-09-28 11:23:05,039 INFO : Time only for training updates: 0.69s
+2019-09-28 11:23:05,445 INFO : Epoch 367
+2019-09-28 11:23:05,445 INFO : train_loss                0.02324
+2019-09-28 11:23:05,445 INFO : valid_loss                0.48952
+2019-09-28 11:23:05,445 INFO : train_misclass            0.00000
+2019-09-28 11:23:05,445 INFO : valid_misclass            0.21348
+2019-09-28 11:23:05,445 INFO : runtime                   1.09375
+2019-09-28 11:23:05,445 INFO : 
+2019-09-28 11:23:06,111 INFO : Time only for training updates: 0.65s
+2019-09-28 11:23:06,533 INFO : Epoch 368
+2019-09-28 11:23:06,533 INFO : train_loss                0.02338
+2019-09-28 11:23:06,533 INFO : valid_loss                0.49084
+2019-09-28 11:23:06,533 INFO : train_misclass            0.00000
+2019-09-28 11:23:06,533 INFO : valid_misclass            0.21348
+2019-09-28 11:23:06,533 INFO : runtime                   1.07285
+2019-09-28 11:23:06,533 INFO : 
+2019-09-28 11:23:07,189 INFO : Time only for training updates: 0.66s
+2019-09-28 11:23:07,611 INFO : Epoch 369
+2019-09-28 11:23:07,611 INFO : train_loss                0.02335
+2019-09-28 11:23:07,611 INFO : valid_loss                0.48981
+2019-09-28 11:23:07,611 INFO : train_misclass            0.00000
+2019-09-28 11:23:07,611 INFO : valid_misclass            0.21348
+2019-09-28 11:23:07,611 INFO : runtime                   1.07812
+2019-09-28 11:23:07,611 INFO : 
+2019-09-28 11:23:08,268 INFO : Time only for training updates: 0.66s
+2019-09-28 11:23:08,679 INFO : Epoch 370
+2019-09-28 11:23:08,679 INFO : train_loss                0.02347
+2019-09-28 11:23:08,679 INFO : valid_loss                0.49002
+2019-09-28 11:23:08,679 INFO : train_misclass            0.00000
+2019-09-28 11:23:08,679 INFO : valid_misclass            0.21348
+2019-09-28 11:23:08,679 INFO : runtime                   1.07812
+2019-09-28 11:23:08,679 INFO : 
+2019-09-28 11:23:09,320 INFO : Time only for training updates: 0.64s
+2019-09-28 11:23:09,742 INFO : Epoch 371
+2019-09-28 11:23:09,742 INFO : train_loss                0.02335
+2019-09-28 11:23:09,742 INFO : valid_loss                0.48762
+2019-09-28 11:23:09,742 INFO : train_misclass            0.00000
+2019-09-28 11:23:09,742 INFO : valid_misclass            0.21348
+2019-09-28 11:23:09,742 INFO : runtime                   1.05234
+2019-09-28 11:23:09,742 INFO : 
+2019-09-28 11:23:10,382 INFO : Time only for training updates: 0.64s
+2019-09-28 11:23:10,804 INFO : Epoch 372
+2019-09-28 11:23:10,804 INFO : train_loss                0.02338
+2019-09-28 11:23:10,804 INFO : valid_loss                0.48993
+2019-09-28 11:23:10,804 INFO : train_misclass            0.00000
+2019-09-28 11:23:10,804 INFO : valid_misclass            0.21348
+2019-09-28 11:23:10,804 INFO : runtime                   1.06250
+2019-09-28 11:23:10,804 INFO : 
+2019-09-28 11:23:11,472 INFO : Time only for training updates: 0.67s
+2019-09-28 11:23:11,901 INFO : Epoch 373
+2019-09-28 11:23:11,901 INFO : train_loss                0.02322
+2019-09-28 11:23:11,901 INFO : valid_loss                0.48992
+2019-09-28 11:23:11,901 INFO : train_misclass            0.00000
+2019-09-28 11:23:11,901 INFO : valid_misclass            0.20225
+2019-09-28 11:23:11,901 INFO : runtime                   1.08964
+2019-09-28 11:23:11,901 INFO : 
+2019-09-28 11:23:12,566 INFO : Time only for training updates: 0.66s
+2019-09-28 11:23:12,988 INFO : Epoch 374
+2019-09-28 11:23:12,988 INFO : train_loss                0.02319
+2019-09-28 11:23:12,988 INFO : valid_loss                0.48769
+2019-09-28 11:23:12,988 INFO : train_misclass            0.00000
+2019-09-28 11:23:12,988 INFO : valid_misclass            0.21348
+2019-09-28 11:23:12,988 INFO : runtime                   1.09375
+2019-09-28 11:23:12,988 INFO : 
+2019-09-28 11:23:13,644 INFO : Time only for training updates: 0.66s
+2019-09-28 11:23:14,050 INFO : Epoch 375
+2019-09-28 11:23:14,050 INFO : train_loss                0.02314
+2019-09-28 11:23:14,050 INFO : valid_loss                0.48738
+2019-09-28 11:23:14,050 INFO : train_misclass            0.00000
+2019-09-28 11:23:14,050 INFO : valid_misclass            0.21348
+2019-09-28 11:23:14,050 INFO : runtime                   1.07812
+2019-09-28 11:23:14,050 INFO : 
+2019-09-28 11:23:14,706 INFO : Time only for training updates: 0.66s
+2019-09-28 11:23:15,113 INFO : Epoch 376
+2019-09-28 11:23:15,113 INFO : train_loss                0.02316
+2019-09-28 11:23:15,113 INFO : valid_loss                0.48514
+2019-09-28 11:23:15,113 INFO : train_misclass            0.00000
+2019-09-28 11:23:15,113 INFO : valid_misclass            0.21348
+2019-09-28 11:23:15,113 INFO : runtime                   1.06250
+2019-09-28 11:23:15,113 INFO : 
+2019-09-28 11:23:15,769 INFO : Time only for training updates: 0.66s
+2019-09-28 11:23:16,191 INFO : Epoch 377
+2019-09-28 11:23:16,191 INFO : train_loss                0.02306
+2019-09-28 11:23:16,191 INFO : valid_loss                0.48369
+2019-09-28 11:23:16,191 INFO : train_misclass            0.00000
+2019-09-28 11:23:16,191 INFO : valid_misclass            0.21348
+2019-09-28 11:23:16,191 INFO : runtime                   1.06250
+2019-09-28 11:23:16,191 INFO : 
+2019-09-28 11:23:16,863 INFO : Time only for training updates: 0.66s
+2019-09-28 11:23:17,269 INFO : Epoch 378
+2019-09-28 11:23:17,269 INFO : train_loss                0.02325
+2019-09-28 11:23:17,269 INFO : valid_loss                0.48861
+2019-09-28 11:23:17,269 INFO : train_misclass            0.00000
+2019-09-28 11:23:17,269 INFO : valid_misclass            0.21348
+2019-09-28 11:23:17,269 INFO : runtime                   1.09375
+2019-09-28 11:23:17,269 INFO : 
+2019-09-28 11:23:17,941 INFO : Time only for training updates: 0.67s
+2019-09-28 11:23:18,363 INFO : Epoch 379
+2019-09-28 11:23:18,363 INFO : train_loss                0.02334
+2019-09-28 11:23:18,363 INFO : valid_loss                0.49167
+2019-09-28 11:23:18,363 INFO : train_misclass            0.00000
+2019-09-28 11:23:18,363 INFO : valid_misclass            0.21348
+2019-09-28 11:23:18,363 INFO : runtime                   1.07812
+2019-09-28 11:23:18,363 INFO : 
+2019-09-28 11:23:19,011 INFO : Time only for training updates: 0.65s
+2019-09-28 11:23:19,425 INFO : Epoch 380
+2019-09-28 11:23:19,425 INFO : train_loss                0.02333
+2019-09-28 11:23:19,425 INFO : valid_loss                0.49047
+2019-09-28 11:23:19,425 INFO : train_misclass            0.00000
+2019-09-28 11:23:19,425 INFO : valid_misclass            0.21348
+2019-09-28 11:23:19,425 INFO : runtime                   1.06985
+2019-09-28 11:23:19,425 INFO : 
+2019-09-28 11:23:20,081 INFO : Time only for training updates: 0.66s
+2019-09-28 11:23:20,535 INFO : Epoch 381
+2019-09-28 11:23:20,535 INFO : train_loss                0.02302
+2019-09-28 11:23:20,535 INFO : valid_loss                0.48560
+2019-09-28 11:23:20,535 INFO : train_misclass            0.00000
+2019-09-28 11:23:20,535 INFO : valid_misclass            0.21348
+2019-09-28 11:23:20,535 INFO : runtime                   1.08639
+2019-09-28 11:23:20,535 INFO : 
+2019-09-28 11:23:21,191 INFO : Time only for training updates: 0.66s
+2019-09-28 11:23:21,613 INFO : Epoch 382
+2019-09-28 11:23:21,628 INFO : train_loss                0.02318
+2019-09-28 11:23:21,628 INFO : valid_loss                0.48735
+2019-09-28 11:23:21,628 INFO : train_misclass            0.00000
+2019-09-28 11:23:21,628 INFO : valid_misclass            0.21348
+2019-09-28 11:23:21,628 INFO : runtime                   1.09375
+2019-09-28 11:23:21,628 INFO : 
+2019-09-28 11:23:22,285 INFO : Time only for training updates: 0.66s
+2019-09-28 11:23:22,706 INFO : Epoch 383
+2019-09-28 11:23:22,706 INFO : train_loss                0.02326
+2019-09-28 11:23:22,706 INFO : valid_loss                0.48789
+2019-09-28 11:23:22,706 INFO : train_misclass            0.00000
+2019-09-28 11:23:22,706 INFO : valid_misclass            0.21348
+2019-09-28 11:23:22,706 INFO : runtime                   1.09375
+2019-09-28 11:23:22,706 INFO : 
+2019-09-28 11:23:23,363 INFO : Time only for training updates: 0.66s
+2019-09-28 11:23:23,801 INFO : Epoch 384
+2019-09-28 11:23:23,801 INFO : train_loss                0.02335
+2019-09-28 11:23:23,801 INFO : valid_loss                0.48774
+2019-09-28 11:23:23,801 INFO : train_misclass            0.00000
+2019-09-28 11:23:23,801 INFO : valid_misclass            0.21348
+2019-09-28 11:23:23,801 INFO : runtime                   1.07812
+2019-09-28 11:23:23,801 INFO : 
+2019-09-28 11:23:24,457 INFO : Time only for training updates: 0.66s
+2019-09-28 11:23:24,866 INFO : Epoch 385
+2019-09-28 11:23:24,866 INFO : train_loss                0.02312
+2019-09-28 11:23:24,866 INFO : valid_loss                0.48681
+2019-09-28 11:23:24,866 INFO : train_misclass            0.00000
+2019-09-28 11:23:24,879 INFO : valid_misclass            0.21348
+2019-09-28 11:23:24,879 INFO : runtime                   1.09461
+2019-09-28 11:23:24,879 INFO : 
+2019-09-28 11:23:25,535 INFO : Time only for training updates: 0.66s
+2019-09-28 11:23:25,957 INFO : Epoch 386
+2019-09-28 11:23:25,957 INFO : train_loss                0.02327
+2019-09-28 11:23:25,957 INFO : valid_loss                0.49061
+2019-09-28 11:23:25,957 INFO : train_misclass            0.00000
+2019-09-28 11:23:25,957 INFO : valid_misclass            0.21348
+2019-09-28 11:23:25,957 INFO : runtime                   1.07812
+2019-09-28 11:23:25,957 INFO : 
+2019-09-28 11:23:26,629 INFO : Time only for training updates: 0.67s
+2019-09-28 11:23:27,051 INFO : Epoch 387
+2019-09-28 11:23:27,051 INFO : train_loss                0.02336
+2019-09-28 11:23:27,051 INFO : valid_loss                0.49035
+2019-09-28 11:23:27,051 INFO : train_misclass            0.00000
+2019-09-28 11:23:27,051 INFO : valid_misclass            0.21348
+2019-09-28 11:23:27,051 INFO : runtime                   1.09375
+2019-09-28 11:23:27,051 INFO : 
+2019-09-28 11:23:27,707 INFO : Time only for training updates: 0.66s
+2019-09-28 11:23:28,114 INFO : Epoch 388
+2019-09-28 11:23:28,114 INFO : train_loss                0.02313
+2019-09-28 11:23:28,114 INFO : valid_loss                0.48623
+2019-09-28 11:23:28,114 INFO : train_misclass            0.00000
+2019-09-28 11:23:28,114 INFO : valid_misclass            0.21348
+2019-09-28 11:23:28,114 INFO : runtime                   1.07812
+2019-09-28 11:23:28,114 INFO : 
+2019-09-28 11:23:28,785 INFO : Time only for training updates: 0.67s
+2019-09-28 11:23:29,223 INFO : Epoch 389
+2019-09-28 11:23:29,223 INFO : train_loss                0.02317
+2019-09-28 11:23:29,223 INFO : valid_loss                0.48789
+2019-09-28 11:23:29,223 INFO : train_misclass            0.00000
+2019-09-28 11:23:29,223 INFO : valid_misclass            0.21348
+2019-09-28 11:23:29,223 INFO : runtime                   1.07812
+2019-09-28 11:23:29,223 INFO : 
+2019-09-28 11:23:29,895 INFO : Time only for training updates: 0.67s
+2019-09-28 11:23:30,317 INFO : Epoch 390
+2019-09-28 11:23:30,317 INFO : train_loss                0.02333
+2019-09-28 11:23:30,317 INFO : valid_loss                0.48956
+2019-09-28 11:23:30,317 INFO : train_misclass            0.00000
+2019-09-28 11:23:30,317 INFO : valid_misclass            0.21348
+2019-09-28 11:23:30,317 INFO : runtime                   1.10937
+2019-09-28 11:23:30,317 INFO : 
+2019-09-28 11:23:30,957 INFO : Time only for training updates: 0.64s
+2019-09-28 11:23:31,395 INFO : Epoch 391
+2019-09-28 11:23:31,395 INFO : train_loss                0.02331
+2019-09-28 11:23:31,395 INFO : valid_loss                0.49024
+2019-09-28 11:23:31,395 INFO : train_misclass            0.00000
+2019-09-28 11:23:31,395 INFO : valid_misclass            0.21348
+2019-09-28 11:23:31,395 INFO : runtime                   1.06250
+2019-09-28 11:23:31,395 INFO : 
+2019-09-28 11:23:32,051 INFO : Time only for training updates: 0.66s
+2019-09-28 11:23:32,473 INFO : Epoch 392
+2019-09-28 11:23:32,473 INFO : train_loss                0.02318
+2019-09-28 11:23:32,473 INFO : valid_loss                0.48597
+2019-09-28 11:23:32,473 INFO : train_misclass            0.00000
+2019-09-28 11:23:32,473 INFO : valid_misclass            0.21348
+2019-09-28 11:23:32,473 INFO : runtime                   1.09375
+2019-09-28 11:23:32,473 INFO : 
+2019-09-28 11:23:33,145 INFO : Time only for training updates: 0.67s
+2019-09-28 11:23:33,555 INFO : Epoch 393
+2019-09-28 11:23:33,555 INFO : train_loss                0.02343
+2019-09-28 11:23:33,555 INFO : valid_loss                0.49219
+2019-09-28 11:23:33,555 INFO : train_misclass            0.00000
+2019-09-28 11:23:33,555 INFO : valid_misclass            0.21348
+2019-09-28 11:23:33,555 INFO : runtime                   1.09375
+2019-09-28 11:23:33,555 INFO : 
+2019-09-28 11:23:34,211 INFO : Time only for training updates: 0.66s
+2019-09-28 11:23:34,664 INFO : Epoch 394
+2019-09-28 11:23:34,664 INFO : train_loss                0.02322
+2019-09-28 11:23:34,664 INFO : valid_loss                0.48769
+2019-09-28 11:23:34,664 INFO : train_misclass            0.00000
+2019-09-28 11:23:34,664 INFO : valid_misclass            0.21348
+2019-09-28 11:23:34,664 INFO : runtime                   1.06658
+2019-09-28 11:23:34,664 INFO : 
+2019-09-28 11:23:35,321 INFO : Time only for training updates: 0.66s
+2019-09-28 11:23:35,786 INFO : Epoch 395
+2019-09-28 11:23:35,786 INFO : train_loss                0.02345
+2019-09-28 11:23:35,786 INFO : valid_loss                0.48901
+2019-09-28 11:23:35,786 INFO : train_misclass            0.00000
+2019-09-28 11:23:35,786 INFO : valid_misclass            0.21348
+2019-09-28 11:23:35,786 INFO : runtime                   1.10937
+2019-09-28 11:23:35,786 INFO : 
+2019-09-28 11:23:36,442 INFO : Time only for training updates: 0.66s
+2019-09-28 11:23:36,864 INFO : Epoch 396
+2019-09-28 11:23:36,864 INFO : train_loss                0.02324
+2019-09-28 11:23:36,864 INFO : valid_loss                0.48850
+2019-09-28 11:23:36,864 INFO : train_misclass            0.00000
+2019-09-28 11:23:36,864 INFO : valid_misclass            0.21348
+2019-09-28 11:23:36,864 INFO : runtime                   1.12178
+2019-09-28 11:23:36,864 INFO : 
+2019-09-28 11:23:37,521 INFO : Time only for training updates: 0.66s
+2019-09-28 11:23:37,927 INFO : Epoch 397
+2019-09-28 11:23:37,927 INFO : train_loss                0.02331
+2019-09-28 11:23:37,927 INFO : valid_loss                0.48925
+2019-09-28 11:23:37,927 INFO : train_misclass            0.00000
+2019-09-28 11:23:37,927 INFO : valid_misclass            0.20225
+2019-09-28 11:23:37,927 INFO : runtime                   1.07812
+2019-09-28 11:23:37,927 INFO : 
+2019-09-28 11:23:38,583 INFO : Time only for training updates: 0.66s
+2019-09-28 11:23:38,989 INFO : Epoch 398
+2019-09-28 11:23:38,989 INFO : train_loss                0.02327
+2019-09-28 11:23:38,989 INFO : valid_loss                0.48679
+2019-09-28 11:23:39,005 INFO : train_misclass            0.00000
+2019-09-28 11:23:39,005 INFO : valid_misclass            0.21348
+2019-09-28 11:23:39,005 INFO : runtime                   1.06249
+2019-09-28 11:23:39,005 INFO : 
+2019-09-28 11:23:39,661 INFO : Time only for training updates: 0.66s
+2019-09-28 11:23:40,083 INFO : Epoch 399
+2019-09-28 11:23:40,083 INFO : train_loss                0.02320
+2019-09-28 11:23:40,083 INFO : valid_loss                0.48537
+2019-09-28 11:23:40,083 INFO : train_misclass            0.00000
+2019-09-28 11:23:40,083 INFO : valid_misclass            0.21348
+2019-09-28 11:23:40,083 INFO : runtime                   1.07812
+2019-09-28 11:23:40,083 INFO : 
+2019-09-28 11:23:40,755 INFO : Time only for training updates: 0.67s
+2019-09-28 11:23:41,177 INFO : Epoch 400
+2019-09-28 11:23:41,177 INFO : train_loss                0.02306
+2019-09-28 11:23:41,177 INFO : valid_loss                0.48432
+2019-09-28 11:23:41,177 INFO : train_misclass            0.00000
+2019-09-28 11:23:41,177 INFO : valid_misclass            0.21348
+2019-09-28 11:23:41,177 INFO : runtime                   1.09375
+2019-09-28 11:23:41,177 INFO : 
+<braindecode.experiments.experiment.Experiment object at 0x000001B30FEA14A8>
+     train_loss  valid_loss  train_misclass  valid_misclass   runtime
+0      0.524470    0.465551        0.224719        0.191011  0.000000
+1      0.493125    0.468181        0.185393        0.168539  1.796866
+2      0.484228    0.478011        0.188202        0.179775  1.062495
+3      0.470360    0.477442        0.179775        0.191011  1.062498
+4      0.449642    0.465922        0.171348        0.179775  1.062495
+5      0.434550    0.456579        0.162921        0.191011  1.062496
+6      0.424308    0.454302        0.160112        0.179775  1.062496
+7      0.414155    0.452557        0.157303        0.179775  1.093749
+8      0.404685    0.455565        0.157303        0.191011  1.062497
+9      0.393831    0.451855        0.148876        0.191011  1.062494
+10     0.384526    0.446697        0.146067        0.202247  1.062497
+11     0.375516    0.443790        0.146067        0.202247  1.062496
+12     0.366037    0.439751        0.137640        0.191011  1.062497
+13     0.362308    0.444853        0.134831        0.179775  1.078121
+14     0.354665    0.440220        0.134831        0.191011  1.078119
+15     0.347330    0.442672        0.123596        0.179775  1.062497
+16     0.338598    0.438101        0.123596        0.191011  1.062497
+17     0.330279    0.434824        0.115169        0.191011  1.093747
+18     0.324950    0.434258        0.109551        0.179775  1.062498
+19     0.319086    0.434413        0.103933        0.179775  1.078118
+20     0.313456    0.432873        0.101124        0.179775  1.093746
+21     0.307928    0.435041        0.098315        0.179775  1.078123
+22     0.300706    0.434847        0.098315        0.179775  1.078121
+23     0.297766    0.435326        0.092697        0.191011  1.093745
+24     0.292659    0.435195        0.089888        0.179775  1.093746
+25     0.284836    0.431582        0.089888        0.191011  1.078124
+26     0.282974    0.442322        0.084270        0.191011  1.062495
+27     0.274936    0.442081        0.078652        0.191011  1.078123
+28     0.276523    0.453064        0.081461        0.191011  1.062496
+29     0.265729    0.443770        0.081461        0.179775  1.062495
+..          ...         ...             ...             ...       ...
+371    0.023354    0.487618        0.000000        0.213483  1.052336
+372    0.023376    0.489931        0.000000        0.213483  1.062495
+373    0.023215    0.489917        0.000000        0.202247  1.089637
+374    0.023185    0.487689        0.000000        0.213483  1.093746
+375    0.023135    0.487384        0.000000        0.213483  1.078123
+376    0.023160    0.485141        0.000000        0.213483  1.062495
+377    0.023057    0.483688        0.000000        0.213483  1.062498
+378    0.023249    0.488609        0.000000        0.213483  1.093746
+379    0.023339    0.491665        0.000000        0.213483  1.078123
+380    0.023334    0.490469        0.000000        0.213483  1.069851
+381    0.023023    0.485597        0.000000        0.213483  1.086390
+382    0.023181    0.487345        0.000000        0.213483  1.093745
+383    0.023259    0.487892        0.000000        0.213483  1.093749
+384    0.023349    0.487743        0.000000        0.213483  1.078117
+385    0.023117    0.486814        0.000000        0.213483  1.094614
+386    0.023269    0.490608        0.000000        0.213483  1.078118
+387    0.023360    0.490354        0.000000        0.213483  1.093747
+388    0.023131    0.486231        0.000000        0.213483  1.078121
+389    0.023171    0.487888        0.000000        0.213483  1.078122
+390    0.023328    0.489558        0.000000        0.213483  1.109370
+391    0.023311    0.490236        0.000000        0.213483  1.062497
+392    0.023179    0.485965        0.000000        0.213483  1.093746
+393    0.023432    0.492188        0.000000        0.213483  1.093748
+394    0.023217    0.487692        0.000000        0.213483  1.066580
+395    0.023448    0.489009        0.000000        0.213483  1.109371
+396    0.023243    0.488497        0.000000        0.213483  1.121781
+397    0.023313    0.489254        0.000000        0.202247  1.078124
+398    0.023266    0.486787        0.000000        0.213483  1.062493
+399    0.023200    0.485372        0.000000        0.213483  1.078123
+400    0.023062    0.484324        0.000000        0.213483  1.093745
+
+[401 rows x 5 columns]
+{'loss': 0.481746643781662, 'misclass': 0.23036649214659688, 'runtime': 0.0}
+0.23036649214659688
+prediction 
+[2 1 1 2 2 2 0 1 1 0 2 2 2 0 1 0 0 2 2 1 0 1 2 2 2 1 1 2 2 1 1 0 0 1 0 0 2
+ 1 1 1 2 1 2 1 1 1 0 0 2 2 2 2 0 1 2 1 1 1 1 0 0 1 0 1 1 0 2 2 0 0 0 1 0 2
+ 2 2 1 2 0 0 2 0 1 2 0 1 1 2 0 0 0 2 0 2 0 0 0 2 1 1 0 0 2 0 1 2 2 1 0 2 1
+ 1 2 0 0 2 1 2 0 0 0 2 0 2 1 2 1 1 0 0 0 1 1 2 2 1 1 0 0 0 1 0 2 2 2 0 2 0
+ 0 2 1 2 1 1 2 2 1 2 2 1 2 2 1 1 2 2 1 0 2 0 0 2 2 2 1 1 1 2 0 2 1 0 2 1 0
+ 1 0 0 2 0 2]
+real labels 
+[2 1 0 2 1 1 0 1 0 0 1 2 1 0 2 0 0 1 1 1 0 2 2 2 2 0 1 1 2 0 1 0 0 1 0 0 2
+ 1 2 1 2 1 2 1 1 1 0 0 2 1 1 1 0 1 1 1 1 1 1 0 0 1 0 1 2 0 1 2 0 0 1 1 0 2
+ 2 2 1 1 0 0 1 0 0 1 0 1 1 2 0 0 0 1 0 2 0 0 0 2 1 1 0 0 2 0 1 2 2 1 0 2 2
+ 2 2 0 0 2 0 1 0 1 0 2 0 2 1 2 1 2 0 0 0 1 1 2 2 1 1 0 0 0 1 0 2 1 2 0 1 0
+ 0 2 1 1 1 0 2 2 1 2 1 2 1 2 1 1 2 2 0 0 2 0 0 2 2 2 1 2 2 2 0 1 1 0 1 1 0
+ 1 0 0 2 0 2]
+[[59  8  0]
+ [ 2 43 24]
+ [ 0 10 45]]

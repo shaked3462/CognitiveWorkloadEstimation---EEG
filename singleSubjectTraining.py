@@ -17,7 +17,7 @@ batch_size = 32
 cuda = True
 
 if finetuning == True:
-    path = 'Finetune'
+    path = 'Finetune\\{}-{}'.format(model_type,cross_train_type)
 else:
     path = 'SingleSubject'
 
