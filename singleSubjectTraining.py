@@ -8,9 +8,9 @@ from braindecode.datautil.signal_target import SignalAndTarget
 # finetuning = False
 finetuning = True
 epoches = 400
-model_type = 'shallow'
-train_type = 'trialwise'
-cross_train_type = 'trialwise'
+model_type = 'deep'
+train_type = 'cropped'
+cross_train_type = train_type
 n_classes = 3
 
 batch_size = 32
