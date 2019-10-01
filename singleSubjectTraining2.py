@@ -5,10 +5,10 @@ from torchvision import datasets, models, transforms
 from utils import plot
 from braindecode.datautil.signal_target import SignalAndTarget
 
-# finetuning = False
-finetuning = True
+finetuning = False
+# finetuning = True
 epoches = 400
-model_type = 'deep'
+model_type = 'shallow'
 train_type = 'trialwise'
 cross_train_type = train_type
 n_classes = 3
@@ -19,7 +19,7 @@ cuda = True
 if finetuning == True:
     path = 'Finetune\\{}-{}'.format(model_type,cross_train_type)
 else:
-    path = 'SingleSubject'
+    path = 'SingleSubject\\{}-{}'.format(model_type,cross_train_type)
 
 subject_id = sys.argv[1]
 

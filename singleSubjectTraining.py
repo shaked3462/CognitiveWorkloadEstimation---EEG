@@ -19,7 +19,7 @@ cuda = True
 if finetuning == True:
     path = 'Finetune\\{}-{}'.format(model_type,cross_train_type)
 else:
-    path = 'SingleSubject'
+    path = 'SingleSubject\\{}-{}'.format(model_type,cross_train_type)
 
 subject_id = sys.argv[1]
 
