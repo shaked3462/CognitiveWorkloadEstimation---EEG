@@ -9,7 +9,7 @@ finetuning = False
 # finetuning = True
 epoches = 400
 model_type = 'shallow'
-train_type = 'trialwise'
+train_type = 'cropped'
 cross_train_type = train_type
 n_classes = 3
 
